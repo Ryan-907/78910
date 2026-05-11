@@ -132,7 +132,7 @@ while turn <=10:
         ]
 
         response = generator(prompts, truncation=True, max_new_tokens = 300)
-        raw = response[0]['generated_text']
+        raw = response[0]['generated_text'][-1]['content'] # Causes issues if return_full_text changes
         parsed = LlmResponse.model_validate_json(raw)
 
         if parsed.function:
