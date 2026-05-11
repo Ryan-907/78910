@@ -99,7 +99,7 @@ PROMPT = inspect.cleandoc("""
 # Model Set up
 model = AutoModelForCausalLM.from_pretrained(MODEL, dtype=torch.bfloat16, device_map='auto', low_cpu_mem_usage=True)
 tokenizer = AutoTokenizer.from_pretrained(MODEL)
-generator = pipeline('text-generation', model=model, tokenizer=tokenizer, return_full_text=False)
+generator = pipeline('text-generation', model=model, tokenizer=tokenizer, return_full_text=True)
 
 # Used for filling in PROMPT. Gives functions as a JSON dict and shows the JSON output expected
 # of the model
