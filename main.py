@@ -168,7 +168,8 @@ def run_agent(generator, prompt_base: dict, requester_name: str,
             messages.append({"role": "assistant", "content": context})
 
         raw_output = generator(messages, truncation=True, max_new_tokens=300)
-        raw = raw_output[0]["generated_text"][-1]["content"]
+        generated = raw_output[0]["generated_text"]
+        raw = generated[-1]["content"] if isinstance(generated, list) else generated
 
         try:
             parsed = LlmResponse.model_validate_json(raw)
