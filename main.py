@@ -171,10 +171,15 @@ def run_agent(generator, prompt_base: dict, requester_name: str,
         generated = raw_output[0]["generated_text"]
         raw = generated[-1]["content"] if isinstance(generated, list) else generated
 
+        # Strip markdown code fences the model sometimes wraps around JSON
+        stripped = raw.strip()
+        if stripped.startswith("```"):
+            stripped = stripped.split("\n", 1)[-1]
+            stripped = stripped.rsplit("```", 1)[0].strip()
+
         try:
-            parsed = LlmResponse.model_validate_json(raw)
+            parsed = LlmResponse.model_validate_json(stripped)
         except Exception:
-            # Model returned malformed JSON — surface it as the result
             return f"[parse error] {raw}"
 
         if parsed.function:
