@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python clinic.py)",
+      "Bash(python -c \"from clinic import NAME_REGISTRY, SCENARIOS; print\\('clinic OK'\\)\")",
+      "Bash(python -c \"from ci_policy import InformationFlow; print\\('ci_policy OK'\\)\")",
+      "Bash(python -c ' *)"
+    ]
+  }
+}

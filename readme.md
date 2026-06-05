@@ -1,0 +1,7 @@
+This project is an attempt to utilie the operationalized version of Contextual Integrity theory of privacy implemented in the 2006 paper "Contextual Integrity -- Applications and Framework" by Barth et al. in an LLM tooling ecosystem. At a high level, the system utilizes access control rules from CI in agentic systems to ensure only neccessary information is shared.
+
+To accomplish this, I am making an experimental setup as follows:
+
+There exists a central entity (a medical practice) that has employees, contractors, pateints, and helps employees with finance. To this end, they have an LLM with tool access for retreiving relevant information about some person for the task at hand. However, to prevent leakage, we treat the LLM as untrusted and insert a function that evalautes the iformation flow and allows or denies. Thus, if the flow would be inappropriate, the LLM simply does not get the information requested. There is no reasoning about privacy.
+
+First, we must make each organization and populate it with agents that have private information relevant to their role stored in the medical clinic. We then simulate the information flow. E.g. some external (or internal) agent requests some information through a public facing LLM and they recieve it. At first, no rules are in place. 
