@@ -4,7 +4,10 @@
       "Bash(python clinic.py)",
       "Bash(python -c \"from clinic import NAME_REGISTRY, SCENARIOS; print\\('clinic OK'\\)\")",
       "Bash(python -c \"from ci_policy import InformationFlow; print\\('ci_policy OK'\\)\")",
-      "Bash(python -c ' *)"
+      "Bash(python -c ' *)",
+      "Bash(python -c \"import pptx; print\\(pptx.__version__\\)\")",
+      "Bash(C:\\\\Users\\\\Rttho\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python313\\\\Scripts\\\\pip.exe install *)",
+      "Bash(C:\\\\Users\\\\Rttho\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python313\\\\python.exe -c \"from pptx import Presentation; print\\('ok'\\)\")"
     ]
   }
 }

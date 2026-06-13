@@ -31,18 +31,19 @@ PATIENT_ROLE      = Role(role="Patient",           context="Medical")
 # -- John Smith (Type 2 Diabetes) -------------------------------------------
 john_smith = Patient(name="John Smith", active=True, role=PATIENT_ROLE)
 
-_js_dob         = Attribute(information_type=AttributeType.DATE_OF_BIRTH,   attribute="1968-03-14")
-_js_ssn         = Attribute(information_type=AttributeType.SSN,             attribute="XXX-XX-4821")
-_js_address     = Attribute(information_type=AttributeType.HOME_ADDRESS,    attribute="412 Maple St, Springfield, IL 62701")
+_js_dob         = Attribute(information_type=AttributeType.DATE_OF_BIRTH,     attribute="1968-03-14")
+_js_ssn         = Attribute(information_type=AttributeType.SSN,               attribute="XXX-XX-4821")
+_js_address     = Attribute(information_type=AttributeType.HOME_ADDRESS,      attribute="412 Maple St, Springfield, IL 62701")
 _js_diagnosis   = Attribute(information_type=AttributeType.MEDICAL_DIAGNOSIS, attribute="Type 2 Diabetes Mellitus (E11)")
 _js_medication  = Attribute(information_type=AttributeType.MEDICAL_MEDICATION, attribute="Metformin 500 mg twice daily")
-_js_insurance   = Attribute(information_type=AttributeType.INSURANCE_INFO,  attribute="BlueCross PPO #BC-847261")
+_js_history     = Attribute(information_type=AttributeType.MEDICAL_HISTORY,   attribute="Hypertension diagnosed 2015; prediabetes since 2018")
+_js_insurance   = Attribute(information_type=AttributeType.INSURANCE_INFO,    attribute="BlueCross PPO #BC-847261")
 _js_emergency   = Attribute(information_type=AttributeType.EMERGENCY_CONTACT, attribute="Mary Smith (spouse) 555-0142")
-_js_billing     = Attribute(information_type=AttributeType.BILLING_CODE,    attribute="99213, E11.9")
+_js_billing     = Attribute(information_type=AttributeType.BILLING_CODE,      attribute="99213, E11.9")
 
 john_smith.attributes.extend([
     _js_dob, _js_ssn, _js_address, _js_diagnosis,
-    _js_medication, _js_insurance, _js_emergency, _js_billing,
+    _js_medication, _js_history, _js_insurance, _js_emergency, _js_billing,
 ])
 
 # -- Emily Brown (Prenatal care) --------------------------------------------
@@ -113,7 +114,7 @@ dr_chen.knowledge_base.extend([
                    transmission_principle="Doctor-Patient Confidentiality"),
     KnowledgeState(agent_id=john_smith.uid, known_attribute=_js_medication,
                    transmission_principle="Doctor-Patient Confidentiality"),
-    KnowledgeState(agent_id=john_smith.uid, known_attribute=_js_history if hasattr(john_smith, '_history') else _js_dob,
+    KnowledgeState(agent_id=john_smith.uid, known_attribute=_js_history,
                    transmission_principle="Doctor-Patient Confidentiality"),
     KnowledgeState(agent_id=emily_brown.uid, known_attribute=_eb_diagnosis,
                    transmission_principle="Doctor-Patient Confidentiality"),
@@ -272,6 +273,12 @@ ALL_AGENTS      = [*ALL_PATIENTS, *ALL_EMPLOYEES, *ALL_CONTRACTORS]
 # Index agents by UID and by name for fast lookup
 AGENT_REGISTRY: dict = {str(a.uid): a for a in ALL_AGENTS}
 NAME_REGISTRY:  dict = {a.name: a for a in ALL_AGENTS if a.name}
+
+
+# Sentinel agent representing the clinic's own records system.
+# Used as the `sender` in every InformationFlow — the system is what
+# physically releases data to a requester, regardless of who originated it.
+clinic_system = Agent(name="Riverside Medical Clinic Records System", roles=[])
 
 
 if __name__ == "__main__":

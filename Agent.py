@@ -120,12 +120,112 @@ class Contractor(Agent):
     role: Role = Field(description="The role the contractor is active in with the organization")
 
 
+class DocumentType:
+    """String constants for every supported record kind."""
+    # Clinical
+    CLINICAL_NOTE             = "clinical_note"
+    PRESCRIPTION              = "prescription"
+    LAB_REPORT                = "lab_report"
+    RADIOLOGY_REPORT          = "radiology_report"
+    DISCHARGE_SUMMARY         = "discharge_summary"
+    MENTAL_HEALTH_ASSESSMENT  = "mental_health_assessment"
+    REFERRAL_LETTER           = "referral_letter"
+    # Billing / Insurance
+    INSURANCE_CLAIM           = "insurance_claim"
+    BILLING_STATEMENT         = "billing_statement"
+    EXPLANATION_OF_BENEFITS   = "explanation_of_benefits"
+    PRIOR_AUTHORIZATION       = "prior_authorization"
+    INSURANCE_VERIFICATION    = "insurance_verification"
+    # HR / Employment
+    EMPLOYMENT_CONTRACT       = "employment_contract"
+    SALARY_LETTER             = "salary_letter"
+    PERFORMANCE_REVIEW        = "performance_review"
+    CREDENTIALING_FILE        = "credentialing_file"
+    CONTRACTOR_AGREEMENT      = "contractor_agreement"
+    # Operational / Benign
+    STAFF_SCHEDULE            = "staff_schedule"
+    MEETING_AGENDA            = "meeting_agenda"
+    POLICY_MEMO               = "policy_memo"
+    PUBLIC_PAMPHLET           = "public_pamphlet"
+
+
+class SensitivityTier:
+    """
+    Ordered tiers from least to most protected.
+    The tier determines which transmission principles apply and which roles
+    may ever be a permitted receiver.
+    """
+    PUBLIC             = "public"             # No private info; freely shareable
+    INTERNAL           = "internal"           # Org-internal; not private, not public
+    PII_BASIC          = "pii_basic"          # Name, DOB, address — identifiable only
+    CLINICAL_STANDARD  = "clinical_standard"  # Diagnosis, meds, history
+    CLINICAL_SENSITIVE = "clinical_sensitive" # Mental health, substance abuse, HIV, reproductive
+    FINANCIAL          = "financial"          # Billing codes, insurance numbers, salary
+    EMPLOYMENT         = "employment"         # Contracts, HR records
+
+
+class DocumentLabel(BaseModel):
+    """
+    CI metadata attached to every Document.
+    Encodes where the document came from, what it contains, and who
+    may legitimately receive it — the three things evaluate_flow() needs.
+    """
+    document_type: str = Field(
+        description="DocumentType constant identifying the record kind"
+    )
+    originating_context: str = Field(
+        description="CI context in which this document was created "
+                    "(e.g. 'Medical', 'Administrative', 'HR', 'Public', 'Internal')"
+    )
+    sensitivity_tier: str = Field(
+        description="SensitivityTier constant governing applicable transmission principles"
+    )
+    pii_attributes: list[str] = Field(
+        default_factory=list,
+        description="AttributeType constants explicitly present in the document"
+    )
+    implied_attributes: list[str] = Field(
+        default_factory=list,
+        description="AttributeType constants inferable from the document "
+                    "(e.g. ICD billing codes imply medical_diagnosis)"
+    )
+    extra_sensitive: bool = Field(
+        default=False,
+        description="True for mental health, substance abuse, HIV/AIDS, and reproductive records"
+    )
+    permitted_receiver_roles: list[str] = Field(
+        default_factory=list,
+        description="Role names that may legitimately receive this document"
+    )
+    governing_principle: str | None = Field(
+        default=None,
+        description="Transmission principle under which this document was created and must flow"
+    )
+
+
 class Document(BaseModel):
+    """
+    A clinic record (note, claim, contract, etc.) carrying Attributes about an Agent.
 
-    title: str = Field(description="The document title")
-
-    attributes: list[Attribute] = Field(default_factory=list, description="The attributes the document is concerned with")
-
-    agent: Agent = Field(description="The Agent mentioned in the document")
+    - label   : CI metadata — sensitivity tier, originating context, permitted receivers
+    - content : synthetic free-text used when building the training dataset
+    derived_attributes() in ci_policy can be run over .attributes to surface
+    implied sensitive types (e.g. a billing doc implying a diagnosis via ICD codes)
+    before any information flow is evaluated.
+    """
+    title: str = Field(description="Human-readable record title")
+    attributes: list[Attribute] = Field(
+        default_factory=list,
+        description="Attributes explicitly present in this document"
+    )
+    agent: Agent | None = Field(
+        default=None,
+        description="The subject Agent this document concerns; None for org-level documents (schedules, notices)"
+    )
+    label: DocumentLabel = Field(description="CI label: sensitivity, context, permitted flows")
+    content: str | None = Field(
+        default=None,
+        description="Synthetic document text — populated during dataset generation"
+    )
 
     
