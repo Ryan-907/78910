@@ -7,11 +7,11 @@ with realistic private attributes and initial knowledge states.
 Import `clinic` (Organization) or individual agents for use in the simulation.
 """
 
-from Agent import (
+from core.Agent import (
     Agent, Attribute, AttributeType, KnowledgeState, Role,
     Employee, Patient, Contractor,
 )
-from ci_policy import Organization
+from core.ci_policy import Organization
 
 # ---------------------------------------------------------------------------
 # Standard roles

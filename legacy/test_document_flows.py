@@ -30,11 +30,11 @@ from typing import Any
 
 from pydantic import BaseModel, Field
 
-from Agent import AttributeType
-from ci_policy import evaluate_document_flow, get_transmission_principle, get_active_role
-from clinic import NAME_REGISTRY, clinic_system
-from documents import DOCUMENT_REGISTRY, ALL_DOCUMENTS
-from leakage import check_document_leakage, summarize_leakage
+from core.Agent import AttributeType
+from core.ci_policy import evaluate_document_flow, get_transmission_principle, get_active_role
+from world.clinic import NAME_REGISTRY, clinic_system
+from legacy.documents import DOCUMENT_REGISTRY, ALL_DOCUMENTS
+from evaluation.leakage import check_document_leakage, summarize_leakage
 
 # ---------------------------------------------------------------------------
 # Configuration
@@ -362,6 +362,6 @@ print(f"{'=' * 70}")
 
 summarize_leakage(flow_log)
 
-with open("document_flow_log.json", "w") as f:
+with open("reports/document_flow_log.json", "w") as f:
     json.dump(flow_log, f, indent=2, default=str)
-print(f"\nLog written to document_flow_log.json ({len(flow_log)} entries)")
+print(f"\nLog written to reports/document_flow_log.json ({len(flow_log)} entries)")

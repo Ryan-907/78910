@@ -14,10 +14,10 @@ from pydantic import BaseModel, Field, TypeAdapter
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
 from typing import Any
 
-from clinic import NAME_REGISTRY, ALL_PATIENTS, ALL_EMPLOYEES, ALL_CONTRACTORS, clinic_system
-from ci_policy import InformationFlow, evaluate_flow, get_transmission_principle
-from Agent import Agent, AttributeType
-from leakage import check_attribute_leakage, summarize_leakage
+from world.clinic import NAME_REGISTRY, ALL_PATIENTS, ALL_EMPLOYEES, ALL_CONTRACTORS, clinic_system
+from core.ci_policy import InformationFlow, evaluate_flow, get_transmission_principle
+from core.Agent import Agent, AttributeType
+from evaluation.leakage import check_attribute_leakage, summarize_leakage
 
 # ---------------------------------------------------------------------------
 # Constants
@@ -336,6 +336,6 @@ while True:
 
 summarize_leakage(flow_log)
 
-with open("flow_log.json", "w") as f:
+with open("reports/flow_log.json", "w") as f:
     json.dump(flow_log, f, indent=2, default=str)
-print(f"\nFlow log written to flow_log.json ({len(flow_log)} flows recorded).")
+print(f"\nFlow log written to reports/flow_log.json ({len(flow_log)} flows recorded).")

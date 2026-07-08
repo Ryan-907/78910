@@ -6,7 +6,7 @@ from uuid import UUID, uuid4
 
 class Attribute(BaseModel):  # Information about some entity or individual, this an isntance of t in T. T is the set of attributes in Agent.
     
-    information_type: str | None = Field(description=( # May later become a list of possible categories, for simplicity. This is the only thing that really matters. The attribute itself is less important that what its value is, we can use the PII in panorama as the potential types!
+    information_type: str | None = Field(description=( # May later become a list of possible categories, for simplicity. This is the only thing that really matters. The attribute itself is less important than what its value is.
         "Type of information (e.g. health)"
     ), default= None)
 
@@ -120,6 +120,33 @@ class Contractor(Agent):
     role: Role = Field(description="The role the contractor is active in with the organization")
 
 
+class OriginatingContext:
+    MEDICAL        = "Medical"
+    ADMINISTRATIVE = "Administrative"
+    HR             = "HR"
+    LEGAL          = "Legal"
+    PUBLIC         = "Public"
+    INTERNAL       = "Internal"
+
+
+class TransmissionPrinciple:
+    TREATMENT           = "Doctor-Patient Confidentiality"
+    TREATMENT_SENSITIVE = "Doctor-Patient Confidentiality — Extra-Sensitive"
+    NURSING_CARE        = "Need-to-Know — Nursing Care"
+    BILLING             = "Operational — Billing"
+    HR_CONFIDENTIAL     = "Employment — Confidential HR"
+    PUBLIC_DISCLOSURE   = "Public Disclosure"
+    INTERNAL_OPS        = "Internal Operations"
+    LEGAL               = "Legal Hold"
+
+
+class SubjectType:
+    PATIENT      = "patient"
+    EMPLOYEE     = "employee"
+    CONTRACTOR   = "contractor"
+    ORGANIZATION = "organization"
+
+
 class DocumentType:
     """String constants for every supported record kind."""
     # Clinical
@@ -180,6 +207,10 @@ class DocumentLabel(BaseModel):
     sensitivity_tier: str = Field(
         description="SensitivityTier constant governing applicable transmission principles"
     )
+    subject_type: str = Field(
+        default=SubjectType.PATIENT,
+        description="SubjectType constant — patient, employee, contractor, or organization"
+    )
     pii_attributes: list[str] = Field(
         default_factory=list,
         description="AttributeType constants explicitly present in the document"
@@ -193,13 +224,21 @@ class DocumentLabel(BaseModel):
         default=False,
         description="True for mental health, substance abuse, HIV/AIDS, and reproductive records"
     )
+    extra_sensitive_reason: str | None = Field(
+        default=None,
+        description="mental_health | substance_abuse | hiv_aids | reproductive | None"
+    )
     permitted_receiver_roles: list[str] = Field(
         default_factory=list,
         description="Role names that may legitimately receive this document"
     )
+    assignment_required: bool = Field(
+        default=True,
+        description="Whether the gate must confirm the receiver holds this subject in their knowledge base"
+    )
     governing_principle: str | None = Field(
         default=None,
-        description="Transmission principle under which this document was created and must flow"
+        description="TransmissionPrinciple constant governing this document's flow"
     )
 
 

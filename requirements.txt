@@ -43,3 +43,4 @@ urllib3
 typing-inspection
 accelerate  
 anthropic
+python-dotenv

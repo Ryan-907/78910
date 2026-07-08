@@ -1,6 +1,6 @@
 from __future__ import annotations
 from pydantic import BaseModel, Field
-from Agent import (
+from core.Agent import (
     Agent, Role, Employee, Patient, Contractor,
     Attribute, KnowledgeState, AttributeType,
     Document, SensitivityTier,

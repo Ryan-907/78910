@@ -1,2 +1,5 @@
 /.venv
 /secrets.json
+/.env
+/data/dataset.json
+/ci_sim.egg-info

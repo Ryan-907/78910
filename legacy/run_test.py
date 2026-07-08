@@ -16,10 +16,10 @@ import torch
 from pydantic import BaseModel, Field
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
 
-from Agent import AttributeType
-from ci_policy import InformationFlow, evaluate_flow, get_transmission_principle
-from clinic import NAME_REGISTRY, clinic_system
-from leakage import check_attribute_leakage, summarize_leakage
+from core.Agent import AttributeType
+from core.ci_policy import InformationFlow, evaluate_flow, get_transmission_principle
+from world.clinic import NAME_REGISTRY, clinic_system
+from evaluation.leakage import check_attribute_leakage, summarize_leakage
 
 # ---------------------------------------------------------------------------
 # Model

@@ -25,11 +25,11 @@ them as containing clinical information even when the requester only asked for
 "billing_code" or "insurance_info".
 """
 
-from Agent import (
+from core.Agent import (
     Attribute, AttributeType,
     Document, DocumentLabel, DocumentType, SensitivityTier,
 )
-from clinic import (
+from world.clinic import (
     john_smith, emily_brown, robert_lee, maria_gonzalez,
     dr_chen, dr_webb, nurse_davis, nurse_reyes,
     alice_johnson, bob_martinez, carol_white,

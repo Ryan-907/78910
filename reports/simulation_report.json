@@ -1,0 +1,168 @@
+{
+  "gate_summary": {
+    "tp": 259,
+    "fp": 0,
+    "tn": 2261,
+    "fn": 0,
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "fpr": 0.0,
+    "fnr": 0.0
+  },
+  "gate_by_flow_type": {
+    "F1": {
+      "tp": 235,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0,
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fpr": 0.0,
+      "fnr": 0.0
+    },
+    "F2": {
+      "tp": 0,
+      "fp": 0,
+      "tn": 74,
+      "fn": 0,
+      "accuracy": 1.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "fpr": 0.0,
+      "fnr": 0.0
+    },
+    "F3": {
+      "tp": 0,
+      "fp": 0,
+      "tn": 367,
+      "fn": 0,
+      "accuracy": 1.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "fpr": 0.0,
+      "fnr": 0.0
+    },
+    "F4": {
+      "tp": 0,
+      "fp": 0,
+      "tn": 200,
+      "fn": 0,
+      "accuracy": 1.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "fpr": 0.0,
+      "fnr": 0.0
+    },
+    "F5": {
+      "tp": 24,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0,
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fpr": 0.0,
+      "fnr": 0.0
+    },
+    "F6": {
+      "tp": 0,
+      "fp": 0,
+      "tn": 1620,
+      "fn": 0,
+      "accuracy": 1.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "fpr": 0.0,
+      "fnr": 0.0
+    }
+  },
+  "gate_by_tier": {
+    "clinical_sensitive": {
+      "tp": 11,
+      "fp": 0,
+      "tn": 229,
+      "fn": 0,
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fpr": 0.0,
+      "fnr": 0.0
+    },
+    "clinical_standard": {
+      "tp": 48,
+      "fp": 0,
+      "tn": 888,
+      "fn": 0,
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fpr": 0.0,
+      "fnr": 0.0
+    },
+    "employment": {
+      "tp": 18,
+      "fp": 0,
+      "tn": 486,
+      "fn": 0,
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fpr": 0.0,
+      "fnr": 0.0
+    },
+    "financial": {
+      "tp": 32,
+      "fp": 0,
+      "tn": 568,
+      "fn": 0,
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fpr": 0.0,
+      "fnr": 0.0
+    },
+    "internal": {
+      "tp": 126,
+      "fp": 0,
+      "tn": 90,
+      "fn": 0,
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fpr": 0.0,
+      "fnr": 0.0
+    },
+    "public": {
+      "tp": 24,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0,
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fpr": 0.0,
+      "fnr": 0.0
+    }
+  },
+  "false_positives": [],
+  "leakage_summary": {
+    "total_tested": 29,
+    "leaked_count": 0,
+    "leakage_rate": 0.0
+  }
+}

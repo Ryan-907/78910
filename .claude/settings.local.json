@@ -7,7 +7,31 @@
       "Bash(python -c ' *)",
       "Bash(python -c \"import pptx; print\\(pptx.__version__\\)\")",
       "Bash(C:\\\\Users\\\\Rttho\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python313\\\\Scripts\\\\pip.exe install *)",
-      "Bash(C:\\\\Users\\\\Rttho\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python313\\\\python.exe -c \"from pptx import Presentation; print\\('ok'\\)\")"
+      "Bash(C:\\\\Users\\\\Rttho\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python313\\\\python.exe -c \"from pptx import Presentation; print\\('ok'\\)\")",
+      "Bash(python -c \"from agents_pool import EXTENDED_NAME_REGISTRY, EXTENDED_ALL_AGENTS; print\\(f'Agents: {len\\(EXTENDED_ALL_AGENTS\\)}'\\)\")",
+      "Bash(python -c \"from doc_specs import ALL_SPECS; print\\(f'Specs: {len\\(ALL_SPECS\\)}'\\)\")",
+      "Bash(python doc_specs.py)",
+      "Skill(claude-api)",
+      "Skill(claude-api:*)",
+      "PowerShell(.venv\\\\Scripts\\\\pip install python-dotenv)",
+      "Bash(\".venv/Scripts/python.exe\" -m pip install -e . --no-deps --quiet)",
+      "Bash(.venv/Scripts/python.exe -c ' *)",
+      "Bash(\".venv/Scripts/python.exe\" evaluation/run_gate_eval.py)",
+      "Bash(PYTHONIOENCODING=utf-8 \".venv/Scripts/python.exe\" pipeline/validate_dataset.py)",
+      "Bash(\".venv/Scripts/python.exe\" evaluation/rescore_leakage.py)",
+      "Bash(\".venv/Scripts/python.exe\" pipeline/normalize_dataset.py)",
+      "Bash(PYTHONIOENCODING=utf-8 \".venv/Scripts/python.exe\" reporting/simulation_report.py)",
+      "Bash(\".venv/Scripts/python.exe\" reporting/visualize_results.py)",
+      "Bash(PYTHONIOENCODING=utf-8 \".venv/Scripts/python.exe\" reporting/visualize_results.py)",
+      "Bash(\".venv/Scripts/python.exe\" -m py_compile legacy/main.py legacy/run_test.py legacy/test_document_flows.py legacy/documents.py)",
+      "Bash(mkdir -p data reports/figures logs)",
+      "Bash(mv dataset.json data/dataset.json)",
+      "Bash(mv gate_accuracy_report.json leakage_report.json ablation_report.json validation_report.json simulation_report.json reports/)",
+      "Bash(mv figures/*.png reports/figures/)",
+      "Bash(rmdir figures *)",
+      "Bash(mkdir -p notes)",
+      "Bash(mv figures/Drs.md notes/Drs.md)",
+      "Bash(mv generation_log.txt logs/generation_log.txt)"
     ]
   }
 }

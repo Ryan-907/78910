@@ -1,0 +1,196 @@
+{
+  "total_records": 105,
+  "coverage": {
+    "tier_counts": {
+      "clinical_standard": 39,
+      "clinical_sensitive": 10,
+      "financial": 25,
+      "employment": 21,
+      "internal": 9,
+      "public": 1
+    },
+    "dtype_counts": {
+      "clinical_note": 10,
+      "prescription": 8,
+      "lab_report": 8,
+      "radiology_report": 5,
+      "discharge_summary": 5,
+      "mental_health_assessment": 5,
+      "referral_letter": 6,
+      "insurance_claim": 8,
+      "billing_statement": 6,
+      "prior_authorization": 5,
+      "explanation_of_benefits": 4,
+      "insurance_verification": 4,
+      "salary_letter": 6,
+      "employment_contract": 5,
+      "performance_review": 4,
+      "credentialing_file": 3,
+      "contractor_agreement": 3,
+      "staff_schedule": 3,
+      "meeting_agenda": 3,
+      "policy_memo": 3,
+      "public_pamphlet": 1
+    },
+    "stype_counts": {
+      "patient": 74,
+      "employee": 18,
+      "contractor": 3,
+      "organization": 10
+    },
+    "missing_tiers": [
+      "pii_basic"
+    ],
+    "missing_dtypes": [],
+    "missing_stypes": []
+  },
+  "consistency": [],
+  "content": [],
+  "attributes": [
+    {
+      "title": "Clinical Note \u2014 Robert Lee, 2026-01-22",
+      "issue": "attribute value 'History of mild ischemic stroke (I63.9) ' not found in content"
+    },
+    {
+      "title": "Clinical Note \u2014 Michael Chen, 2026-02-12",
+      "issue": "attribute value 'Essential Hypertension (I10) \u2013 Diagnosed' not found in content"
+    },
+    {
+      "title": "Clinical Note \u2014 Michael Chen, 2026-02-12",
+      "issue": "attribute value 'Type 2 Diabetes Mellitus (E11.9) \u2013 Diagn' not found in content"
+    },
+    {
+      "title": "Clinical Note \u2014 Michael Chen, 2026-02-12",
+      "issue": "attribute value 'Hyperlipidemia \u2013 Diagnosed 2019; current' not found in content"
+    },
+    {
+      "title": "Clinical Note \u2014 Maria Gonzalez, 2026-02-03",
+      "issue": "attribute value 'Hypothyroidism (managed by PCP, TSH with' not found in content"
+    },
+    {
+      "title": "Clinical Note \u2014 David Park, 2026-03-01",
+      "issue": "attribute value 'Diagnosed with HIV, Stage 1 (ICD-10: B20' not found in content"
+    },
+    {
+      "title": "Clinical Note \u2014 David Park, 2026-03-01",
+      "issue": "attribute value '601 Magnolia Dr, Springfield, IL 62714' not found in content"
+    },
+    {
+      "title": "Clinical Note \u2014 Sarah Wilson, 2026-03-05",
+      "issue": "attribute value 'Prior history of prescription opioid mis' not found in content"
+    },
+    {
+      "title": "Clinical Note \u2014 Sarah Wilson, 2026-03-05",
+      "issue": "attribute value 'One prior medically supervised detoxific' not found in content"
+    },
+    {
+      "title": "Lab Report \u2014 Emily Brown, 2026-01-20",
+      "issue": "attribute value 'XXX-XX-3307' not found in content"
+    },
+    {
+      "title": "Lab Report \u2014 Emily Brown, 2026-01-20",
+      "issue": "attribute value '89 Birch Lane, Springfield, IL 62702' not found in content"
+    },
+    {
+      "title": "Radiology Report \u2014 Emily Brown, 2026-01-18",
+      "issue": "attribute value 'XXX-XX-3307' not found in content"
+    },
+    {
+      "title": "Radiology Report \u2014 Emily Brown, 2026-01-18",
+      "issue": "attribute value '89 Birch Lane, Springfield, IL 62702' not found in content"
+    },
+    {
+      "title": "Radiology Report \u2014 Linda Torres, 2026-01-10",
+      "issue": "attribute value 'XXX-XX-8824' not found in content"
+    },
+    {
+      "title": "Radiology Report \u2014 Linda Torres, 2026-01-10",
+      "issue": "attribute value '220 Sycamore Blvd, Springfield, IL 62717' not found in content"
+    },
+    {
+      "title": "Referral Letter \u2014 Emily Brown, 2026-01-20",
+      "issue": "attribute value 'XXX-XX-3307' not found in content"
+    },
+    {
+      "title": "Referral Letter \u2014 Emily Brown, 2026-01-20",
+      "issue": "attribute value '89 Birch Lane, Springfield, IL 62702' not found in content"
+    },
+    {
+      "title": "Insurance Claim \u2014 Michael Chen, 2026-02-12",
+      "issue": "attribute value '99213, I10, E11.9' not found in content"
+    },
+    {
+      "title": "Prior Authorization \u2014 Robert Lee, 2026-01-15",
+      "issue": "attribute value 'XXX-XX-6614' not found in content"
+    },
+    {
+      "title": "Prior Authorization \u2014 Maria Gonzalez, 2026-02-10",
+      "issue": "pii_attribute 'medical_diagnosis' missing from attributes list"
+    },
+    {
+      "title": "Explanation Of Benefits \u2014 Robert Lee, 2026-02-10",
+      "issue": "attribute value '230 Oak Ave, Springfield, IL 62703' not found in content"
+    },
+    {
+      "title": "Explanation Of Benefits \u2014 Robert Lee, 2026-02-10",
+      "issue": "attribute value 'XXX-XX-6614' not found in content"
+    },
+    {
+      "title": "Employment Contract \u2014 Dr. Aisha Patel, 2022-03-01",
+      "issue": "pii_attribute 'employment_contract' missing from attributes list"
+    },
+    {
+      "title": "Employment Contract \u2014 Dr. Kevin O'Brien, 2020-07-01",
+      "issue": "pii_attribute 'employment_contract' missing from attributes list"
+    },
+    {
+      "title": "Employment Contract \u2014 Jennifer Walsh, 2024-01-15",
+      "issue": "pii_attribute 'employment_contract' missing from attributes list"
+    },
+    {
+      "title": "Contractor Agreement \u2014 Frank Turner, 2026-01-01",
+      "issue": "attribute value 'IT infrastructure support; $88/hr; no PH' not found in content"
+    },
+    {
+      "title": "Contractor Agreement \u2014 Carol White, 2025-01-01",
+      "issue": "attribute value 'IT systems support; 95/hr; no PHI access' not found in content"
+    },
+    {
+      "title": "Employment Contract \u2014 Dr. Marcus Webb, 2021-09-01",
+      "issue": "pii_attribute 'employment_contract' missing from attributes list"
+    }
+  ],
+  "warnings": [
+    {
+      "title": "Prior Authorization \u2014 Maria Gonzalez, 2026-02-10",
+      "warnings": [
+        "pii_attribute 'medical_diagnosis' missing from returned attributes"
+      ]
+    },
+    {
+      "title": "Employment Contract \u2014 Dr. Aisha Patel, 2022-03-01",
+      "warnings": [
+        "pii_attribute 'employment_contract' missing from returned attributes"
+      ]
+    },
+    {
+      "title": "Employment Contract \u2014 Dr. Kevin O'Brien, 2020-07-01",
+      "warnings": [
+        "pii_attribute 'employment_contract' missing from returned attributes"
+      ]
+    },
+    {
+      "title": "Employment Contract \u2014 Jennifer Walsh, 2024-01-15",
+      "warnings": [
+        "pii_attribute 'employment_contract' missing from returned attributes"
+      ]
+    },
+    {
+      "title": "Employment Contract \u2014 Dr. Marcus Webb, 2021-09-01",
+      "warnings": [
+        "pii_attribute 'employment_contract' missing from returned attributes"
+      ]
+    }
+  ],
+  "total_issues": 28
+}
