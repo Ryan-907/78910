@@ -1,0 +1,26 @@
+{
+  "artifact": "stage1c_linkage_audit_record",
+  "linkage_version": "1.2.0",
+  "vocab_version": "1.2.0",
+  "corpus_sha256": "49cdd9c89112f605ee228da5c2489a2de2b58dc56379a257faed8a6302c1b3d0",
+  "rows_total": 442,
+  "block_a": {
+    "definition": "every detection in the 25 tagger-audit documents",
+    "documents": 25,
+    "rows": 311,
+    "inherits_sample_from": "stage1/artifacts/audit/audit_sample_v1.0.0.json",
+    "tagger_sample_seed": 7926
+  },
+  "block_b": {
+    "definition": "every third_party / organizational detection NOT already in Block A; together with Block A this censuses every filtered detection in the corpus",
+    "documents": 64,
+    "rows": 131
+  },
+  "filtered_census": {
+    "filtered_detections_corpus_wide": 172,
+    "covered_by_sheet": 172
+  },
+  "randomness": "none - both blocks are censuses; row order is (block, doc_id, start, information_type)",
+  "classifier_calls_withheld_to": "stage1/artifacts/audit/linkage_key_v1.2.0.json",
+  "documents_touched": 89
+}

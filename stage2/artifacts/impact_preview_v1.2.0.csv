@@ -1,0 +1,17 @@
+information_type,family,extra_sensitive,subject_linked_documents,tiers,permitted_flows_carrying_it,share_of_permitted_flows
+name,identity,,91,clinical_standard 39; financial 25; employment 17; clinical_sensitive 10,105,0.4054
+date_of_birth,identity,,95,clinical_standard 39; financial 25; employment 21; clinical_sensitive 10,109,0.4208
+ssn,identity,,44,financial 19; clinical_standard 18; clinical_sensitive 7,57,0.2201
+home_address,identity,,85,clinical_standard 32; financial 23; employment 21; clinical_sensitive 9,97,0.3745
+emergency_contact,identity,,22,clinical_standard 16; financial 5; clinical_sensitive 1,32,0.1236
+medical_diagnosis,clinical,,70,clinical_standard 37; financial 24; clinical_sensitive 9,85,0.3282
+medical_medication,clinical,,64,clinical_standard 36; financial 18; clinical_sensitive 10,77,0.2973
+medical_history,clinical,,27,clinical_standard 19; clinical_sensitive 4; financial 4,33,0.1274
+mental_health,clinical,yes,19,clinical_sensitive 10; clinical_standard 4; employment 4; financial 1,22,0.0849
+billing_code,financial,,65,clinical_standard 34; financial 22; clinical_sensitive 9,81,0.3127
+insurance_info,financial,,71,clinical_standard 36; financial 25; clinical_sensitive 10,91,0.3514
+salary,employment,,20,employment 20,17,0.0656
+employment_contract,employment,,17,employment 16; financial 1,17,0.0656
+contract_terms,employment,,2,employment 2,0,0.0
+job_title,employment,,24,employment 20; clinical_standard 3; financial 1,23,0.0888
+medical_license,employment,,13,employment 11; financial 2,13,0.0502

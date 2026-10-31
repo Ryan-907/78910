@@ -1,0 +1,1435 @@
+doc_id,information_type,rule,value,start,end
+doc_000,billing_code,billing.cpt_labeled,99213,531,536
+doc_000,billing_code,billing.icd_labeled,E11.9,546,551
+doc_000,billing_code,billing.icd_parenthetical,E11,1186,1189
+doc_000,date_of_birth,dob.labeled,1968-03-14,748,758
+doc_000,emergency_contact,emergency.labeled,Mary Smith (spouse) 555-0142,912,940
+doc_000,home_address,address.labeled,"412 Maple St, Springfield, IL 62701",811,846
+doc_000,insurance_info,insurance.carrier_plan,BlueCross,867,876
+doc_000,medical_diagnosis,diagnosis.icd_nonpsych,E11.9,546,551
+doc_000,medical_diagnosis,diagnosis.gazetteer,Diabetes Mellitus,1167,1184
+doc_000,medical_diagnosis,diagnosis.icd_nonpsych,E11,1186,1189
+doc_000,medical_diagnosis,diagnosis.gazetteer,Hypertension,1588,1600
+doc_000,medical_diagnosis,diagnosis.gazetteer,Prediabetes,1682,1693
+doc_000,medical_diagnosis,diagnosis.gazetteer,Diabetes,1892,1900
+doc_000,medical_diagnosis,diagnosis.gazetteer,neuropathy,4060,4070
+doc_000,medical_diagnosis,diagnosis.gazetteer,nephropathy,4463,4474
+doc_000,medical_history,history.block,"Active Problem List:
+  • Type 2 Diabetes Mellitus (E11.9) — ongoing
+  • Hypertension diagnosed 2015 — managed with lifestyle modification
+    and pharmacotherapy
+  • Prediabetes since 2018 — progressed to Type 2 DM; currently
+    under active management",1516,1770
+doc_000,medical_history,history.diagnosed_year,diagnosed 2015,1601,1615
+doc_000,medical_history,history.diagnosed_year,since 2018,1694,1704
+doc_000,medical_license,license.npi,1234567890,6467,6477
+doc_000,medical_medication,medication.dose_form,Metformin 500 mg,2217,2233
+doc_000,medical_medication,medication.gazetteer,Metformin,2217,2226
+doc_000,medical_medication,medication.dose_form,Lisinopril 10 mg,2274,2290
+doc_000,medical_medication,medication.gazetteer,Lisinopril,2274,2284
+doc_000,medical_medication,medication.dose_form,Aspirin 81 mg,2346,2359
+doc_000,medical_medication,medication.gazetteer,Aspirin,2346,2353
+doc_000,name,name.registry,Dr. Patricia Holloway,328,349
+doc_000,name,name.registry,John Smith,717,727
+doc_000,ssn,ssn.masked_or_full,XXX-XX-4821,779,790
+doc_001,billing_code,billing.icd_parenthetical,Z34.32,1396,1402
+doc_001,billing_code,billing.cpt_labeled,59400,7578,7583
+doc_001,date_of_birth,dob.labeled,1991-07-22,677,687
+doc_001,home_address,address.labeled,"89 Birch Lane, Springfield, IL 62702",709,745
+doc_001,insurance_info,insurance.carrier_plan,Aetna,767,772
+doc_001,medical_diagnosis,diagnosis.labeled,"Intrauterine pregnancy, 28 weeks (Z34.32)",1362,1403
+doc_001,medical_diagnosis,diagnosis.icd_nonpsych,Z34.32,1396,1402
+doc_001,medical_diagnosis,diagnosis.gazetteer,gestational hypertension,1756,1780
+doc_001,medical_diagnosis,diagnosis.gazetteer,preeclampsia,2289,2301
+doc_001,medical_diagnosis,diagnosis.gazetteer,hypertension,5660,5672
+doc_001,medical_diagnosis,diagnosis.gazetteer,hypertensive,5879,5891
+doc_001,medical_history,history.history_of,"history of gestational hypertension in prior pregnancy and current borderline readings, clo",5501,5592
+doc_001,medical_license,license.labeled,IL-OB-004421,406,418
+doc_001,medical_medication,medication.gazetteer,Prenatal Vitamin,2057,2073
+doc_001,medical_medication,medication.dose_form,Labetalol 100 mg,2110,2126
+doc_001,medical_medication,medication.gazetteer,Labetalol,2110,2119
+doc_001,medical_medication,medication.dose_form,Aspirin 81 mg,2230,2243
+doc_001,medical_medication,medication.gazetteer,Aspirin,2230,2237
+doc_001,medical_medication,medication.dose_form,Labetalol 200 mg,6268,6284
+doc_001,medical_medication,medication.gazetteer,acetaminophen,6773,6786
+doc_001,mental_health,mental.clinical_term,anxiety,3956,3963
+doc_001,name,name.registry,Emily Brown,644,655
+doc_001,ssn,ssn.masked_or_full,XXX-XX-3307,809,820
+doc_002,billing_code,billing.icd_labeled,I48.11,757,763
+doc_002,billing_code,billing.icd_parenthetical,E11.9,1351,1356
+doc_002,billing_code,billing.icd_parenthetical,E78.5,1395,1400
+doc_002,billing_code,billing.icd_parenthetical,I63.9,1456,1461
+doc_002,date_of_birth,dob.labeled,1955-11-09,365,375
+doc_002,home_address,address.labeled,"230 Oak Ave, Springfield, IL 62703",428,462
+doc_002,insurance_info,insurance.carrier_plan,Medicare,483,491
+doc_002,job_title,title.gazetteer,Attending Physician,7607,7626
+doc_002,job_title,title.labeled,CONFIDENTIAL – PROTECTED HEALTH INFORMATION,7865,7908
+doc_002,medical_diagnosis,diagnosis.icd_nonpsych,I48.11,757,763
+doc_002,medical_diagnosis,diagnosis.gazetteer,atrial fibrillation,979,998
+doc_002,medical_diagnosis,diagnosis.gazetteer,Hypertension,1266,1278
+doc_002,medical_diagnosis,diagnosis.gazetteer,Diabetes Mellitus,1332,1349
+doc_002,medical_diagnosis,diagnosis.icd_nonpsych,E11.9,1351,1356
+doc_002,medical_diagnosis,diagnosis.gazetteer,Hyperlipidemia,1379,1393
+doc_002,medical_diagnosis,diagnosis.icd_nonpsych,E78.5,1395,1400
+doc_002,medical_diagnosis,diagnosis.gazetteer,ischemic stroke,1439,1454
+doc_002,medical_diagnosis,diagnosis.icd_nonpsych,I63.9,1456,1461
+doc_002,medical_diagnosis,diagnosis.gazetteer,coronary artery disease,1623,1646
+doc_002,medical_diagnosis,diagnosis.gazetteer,diabetes,1697,1705
+doc_002,medical_diagnosis,diagnosis.gazetteer,anemia,3769,3775
+doc_002,medical_diagnosis,diagnosis.gazetteer,stroke,5219,5225
+doc_002,medical_history,history.block,"Past Medical History:
+  • Atrial Fibrillation, persistent (I48.11) – diagnosed March 2019
+  • Hypertension – diagnosed 2008, managed with Lisinopril
+  • Type 2 Diabetes Mellitus (E11.9) – diagnosed 2012
+  • Hyperlipidemia (E78.5) – diagnosed 2010
+  • History of mild ischemic stroke (I63.9) – January 2021,",1172,1479
+doc_002,medical_history,history.diagnosed_year,diagnosed 2008,1281,1295
+doc_002,medical_history,history.diagnosed_year,diagnosed 2012,1360,1374
+doc_002,medical_history,history.diagnosed_year,diagnosed 2010,1404,1418
+doc_002,medical_history,history.history_of,History of mild ischemic stroke (I63,1423,1459
+doc_002,medical_license,license.npi,1234567890,7679,7689
+doc_002,medical_medication,medication.gazetteer,Lisinopril,1310,1320
+doc_002,medical_medication,medication.gazetteer,Aspirin,1962,1969
+doc_002,medical_medication,medication.dose_form,Warfarin 5 mg,2137,2150
+doc_002,medical_medication,medication.gazetteer,Warfarin,2137,2145
+doc_002,medical_medication,medication.dose_form,Lisinopril 10 mg,2185,2201
+doc_002,medical_medication,medication.dose_form,Metformin 1000 mg,2218,2235
+doc_002,medical_medication,medication.gazetteer,Metformin,2218,2227
+doc_002,medical_medication,medication.dose_form,Atorvastatin 40 mg,2253,2271
+doc_002,medical_medication,medication.gazetteer,Atorvastatin,2253,2265
+doc_002,medical_medication,medication.dose_form,Metoprolol Succinate 50 mg,2299,2325
+doc_002,medical_medication,medication.gazetteer,Metoprolol,2299,2309
+doc_002,name,name.registry,Robert Lee,334,344
+doc_002,name,name.registry,Dr. Patricia Nguyen,640,659
+doc_002,ssn,ssn.masked_or_full,XXX-XX-6614,396,407
+doc_003,billing_code,billing.cpt_labeled,99214,827,832
+doc_003,billing_code,billing.icd_labeled,N18.3,842,847
+doc_003,date_of_birth,dob.labeled,1960-12-04,682,692
+doc_003,home_address,address.labeled,"88 Birchwood Ct, Springfield, IL 62716",713,751
+doc_003,insurance_info,insurance.carrier_plan,Medicare,772,780
+doc_003,medical_diagnosis,diagnosis.icd_nonpsych,N18.3,842,847
+doc_003,medical_diagnosis,diagnosis.gazetteer,Chronic Kidney Disease,1066,1088
+doc_003,medical_diagnosis,diagnosis.gazetteer,Diabetes,1475,1483
+doc_003,medical_diagnosis,diagnosis.gazetteer,Hypertension,1577,1589
+doc_003,medical_history,history.block,"- Type 2 Diabetes diagnosed 2012; currently managed with oral hypoglycemic agents
+  and dietary modification
+- Hypertension since 2005; under pharmacologic management
+- Chronic Kidney Disease, Stage 3, established diagnosis; see active problem list",1466,1715
+doc_003,medical_history,history.diagnosed_year,diagnosed 2012,1484,1498
+doc_003,medical_history,history.diagnosed_year,since 2005,1590,1600
+doc_003,medical_license,license.npi,1487320956,6753,6763
+doc_003,medical_medication,medication.dose_form,Lisinopril 10mg,1863,1878
+doc_003,medical_medication,medication.gazetteer,Lisinopril,1863,1873
+doc_003,medical_medication,medication.dose_form,Metformin 500mg,1985,2000
+doc_003,medical_medication,medication.gazetteer,Metformin,1985,1994
+doc_003,medical_medication,medication.dose_form,Aspirin 81mg,2108,2120
+doc_003,medical_medication,medication.gazetteer,Aspirin,2108,2115
+doc_003,name,name.registry,Dr. Patricia Nguyen,390,409
+doc_003,name,name.registry,James Carter,649,661
+doc_004,billing_code,billing.cpt_labeled,99213,1149,1154
+doc_004,billing_code,billing.icd_parenthetical,I10,2038,2041
+doc_004,billing_code,billing.icd_parenthetical,E11.9,2168,2173
+doc_004,date_of_birth,dob.labeled,09/27/1958,706,716
+doc_004,home_address,address.labeled,"115 Walnut St, Springfield, IL 62718",771,807
+doc_004,insurance_info,insurance.carrier_plan,United Health,829,842
+doc_004,insurance_info,insurance.member_id,UH-441230,863,872
+doc_004,job_title,title.gazetteer,ATTENDING PHYSICIAN,358,377
+doc_004,job_title,title.gazetteer,NURSE,403,408
+doc_004,medical_diagnosis,diagnosis.icd_nonpsych,I10,1176,1179
+doc_004,medical_diagnosis,diagnosis.gazetteer,Hypertension,1191,1203
+doc_004,medical_diagnosis,diagnosis.icd_nonpsych,E11.9,1226,1231
+doc_004,medical_diagnosis,diagnosis.gazetteer,Diabetes Mellitus,1240,1257
+doc_004,medical_diagnosis,diagnosis.gazetteer,Hyperlipidemia,2277,2291
+doc_004,medical_diagnosis,diagnosis.gazetteer,coronary artery disease,2484,2507
+doc_004,medical_diagnosis,diagnosis.gazetteer,myocardial infarction,2509,2530
+doc_004,medical_diagnosis,diagnosis.gazetteer,chronic kidney disease,2593,2615
+doc_004,medical_diagnosis,diagnosis.gazetteer,hypertensive,5887,5899
+doc_004,medical_diagnosis,diagnosis.gazetteer,diabetes,5926,5934
+doc_004,medical_diagnosis,diagnosis.gazetteer,nephropathy,6218,6229
+doc_004,medical_diagnosis,diagnosis.gazetteer,neuropathy,6247,6257
+doc_004,medical_history,history.block,"Past Medical History:
+  • Essential Hypertension (I10) – Diagnosed approximately 2018; managed
+    pharmacologically and with lifestyle modification.
+  • Type 2 Diabetes Mellitus (E11.9) – Diagnosed approximately 2015; managed
+    with oral hypoglycemic agents and dietary counseling.
+  • Hyperlipidemia – Diagnosed 2019; currently managed with dietary",1988,2341
+doc_004,medical_history,history.diagnosed_year,Diagnosed approximately 2018,2045,2073
+doc_004,medical_history,history.diagnosed_year,Diagnosed approximately 2015,2177,2205
+doc_004,medical_history,history.diagnosed_year,Diagnosed 2019,2294,2308
+doc_004,medical_history,history.history_of,Remote history of appendectomy (1984),2406,2443
+doc_004,medical_license,license.npi,1234567890,9002,9012
+doc_004,medical_medication,medication.dose_form,Lisinopril 20mg,3133,3148
+doc_004,medical_medication,medication.gazetteer,Lisinopril,3133,3143
+doc_004,medical_medication,medication.dose_form,Metformin 1000mg,3226,3242
+doc_004,medical_medication,medication.gazetteer,Metformin,3226,3235
+doc_004,name,name.registry,Dr. Patricia Nguyen,379,398
+doc_004,name,name.registry,Michael Chen,672,684
+doc_004,ssn,ssn.masked_or_full,XXX-XX-2267,738,749
+doc_005,billing_code,billing.cpt_labeled,99215,1069,1074
+doc_005,billing_code,billing.icd_parenthetical,C50.911,2465,2472
+doc_005,date_of_birth,dob.labeled,1963-06-18,710,720
+doc_005,emergency_contact,emergency.labeled,Marco Torres (spouse) 555-0341,875,905
+doc_005,home_address,address.labeled,"220 Sycamore Blvd, Springfield, IL 62717",773,813
+doc_005,insurance_info,insurance.carrier_plan,Aetna,834,839
+doc_005,job_title,title.gazetteer,Oncologist,8093,8103
+doc_005,medical_diagnosis,diagnosis.icd_nonpsych,C50.911,1095,1102
+doc_005,medical_diagnosis,diagnosis.gazetteer,carcinoma,2440,2449
+doc_005,medical_diagnosis,diagnosis.gazetteer,cancer,2675,2681
+doc_005,medical_diagnosis,diagnosis.gazetteer,neuropathy,3831,3841
+doc_005,medical_diagnosis,diagnosis.gazetteer,tumor,6999,7004
+doc_005,medical_history,history.block,"Relevant Oncologic History:
+  • Genetic status    : BRCA1 positive
+  • Surgical history  : Lumpectomy, right breast, performed 2025-11-10
+  • Chemotherapy      : 4 cycles chemotherapy completed (Cycle 4 concluded
+                        prior to this visit; regimen: dose-dense AC-T)
+  • Primary Diagnosis : Invasive ductal carcinoma, right breast (C50.911),",2116,2475
+doc_005,medical_medication,medication.dose_form,Tamoxifen 20mg,3160,3174
+doc_005,medical_medication,medication.gazetteer,Tamoxifen,3160,3169
+doc_005,medical_medication,medication.dose_form,Ondansetron 8mg,3229,3244
+doc_005,medical_medication,medication.gazetteer,Ondansetron,3229,3240
+doc_005,medical_medication,medication.dose_form,Loratadine 10mg,3295,3310
+doc_005,medical_medication,medication.gazetteer,Loratadine,3295,3305
+doc_005,name,name.registry,Dr. Priya Nambiar,359,376
+doc_005,name,name.registry,Linda Torres,677,689
+doc_005,name,name.registry,Dr. Elaine Chu,6662,6676
+doc_005,ssn,ssn.masked_or_full,XXX-XX-8824,741,752
+doc_006,billing_code,billing.cpt_labeled,99215,1039,1044
+doc_006,billing_code,billing.icd_labeled,G30.0,1054,1059
+doc_006,date_of_birth,dob.labeled,"January 30, 1942",759,775
+doc_006,emergency_contact,emergency.labeled,"Thomas Moore (son, legal guardian) — 555-0267",965,1010
+doc_006,home_address,address.labeled,"9 Linden Lane, Springfield, IL 62719",834,870
+doc_006,insurance_info,insurance.carrier_plan,Medicare,894,902
+doc_006,insurance_info,insurance.member_id,3HJ2-MP6-QR44,928,941
+doc_006,job_title,title.gazetteer,ATTENDING PHYSICIAN,439,458
+doc_006,job_title,title.gazetteer,PHYSICIAN,7539,7548
+doc_006,medical_diagnosis,diagnosis.icd_nonpsych,G30.0,1054,1059
+doc_006,medical_diagnosis,diagnosis.gazetteer,Alzheimer,1257,1266
+doc_006,medical_diagnosis,diagnosis.gazetteer,Hypertension,2077,2089
+doc_006,medical_diagnosis,diagnosis.gazetteer,Hyperlipidemia,2148,2162
+doc_006,medical_diagnosis,diagnosis.gazetteer,Diabetes Mellitus,2230,2247
+doc_006,medical_diagnosis,diagnosis.gazetteer,cataract,2424,2432
+doc_006,medical_diagnosis,diagnosis.gazetteer,Dementia,2510,2518
+doc_006,medical_diagnosis,diagnosis.gazetteer,Coronary artery disease,2567,2590
+doc_006,medical_history,history.block,"Past Medical History:
+  • Alzheimer's disease, early onset — diagnosed November 2024 (ICD-10: G30.0)
+  • Hypertension — managed with Lisinopril 10mg daily (diagnosed 2016)
+  • Hyperlipidemia — managed with Atorvastatin 20mg daily (diagnosed 2018)
+  • Type 2 Diabetes Mellitus (well-controlled, diet-managed) — diagnosed 2019
+  • Mild depressive disorder — previously treated, currently in remission",1972,2371
+doc_006,medical_history,history.diagnosed_year,diagnosed 2016,2128,2142
+doc_006,medical_history,history.diagnosed_year,diagnosed 2018,2203,2217
+doc_006,medical_history,history.diagnosed_year,diagnosed 2019,2282,2296
+doc_006,medical_license,license.npi,1234567890,7863,7873
+doc_006,medical_medication,medication.dose_form,Lisinopril 10mg,2105,2120
+doc_006,medical_medication,medication.gazetteer,Lisinopril,2105,2115
+doc_006,medical_medication,medication.dose_form,Atorvastatin 20mg,2178,2195
+doc_006,medical_medication,medication.gazetteer,Atorvastatin,2178,2190
+doc_006,medical_medication,medication.dose_form,Donepezil 10mg,3112,3126
+doc_006,medical_medication,medication.gazetteer,Donepezil,3112,3121
+doc_006,medical_medication,medication.dose_form,Aspirin 81mg,3291,3303
+doc_006,medical_medication,medication.gazetteer,Aspirin,3291,3298
+doc_006,mental_health,mental.clinical_term,depressive,2306,2316
+doc_006,mental_health,mental.clinical_term,MMSE,4493,4497
+doc_006,mental_health,mental.clinical_term,MoCA,4706,4710
+doc_006,name,name.registry,Dr. Susan Hargrove,462,480
+doc_006,name,name.registry,Patricia Moore,721,735
+doc_006,ssn,ssn.masked_or_full,XXX-XX-1183,799,810
+doc_007,billing_code,billing.cpt_labeled,90837,1224,1229
+doc_007,billing_code,billing.icd_labeled,F33.1,1239,1244
+doc_007,date_of_birth,dob.labeled,1983-05-30,1532,1542
+doc_007,home_address,address.labeled,"15 Elm Court, Springfield, IL 62704",1594,1629
+doc_007,insurance_info,insurance.carrier_plan,United Health,1265,1278
+doc_007,job_title,title.gazetteer,Attending Psychiatrist,1834,1856
+doc_007,medical_diagnosis,diagnosis.labeled,"Major Depressive Disorder, recurrent (F33.1)",2621,2665
+doc_007,medical_diagnosis,diagnosis.gazetteer,Hypothyroidism,3117,3131
+doc_007,medical_diagnosis,diagnosis.gazetteer,anemia,3225,3231
+doc_007,medical_diagnosis,diagnosis.labeled,"Major Depressive Disorder, recurrent, moderate — in partial remission",7358,7427
+doc_007,medical_history,history.history_of,history of manic or hypomanic episodes,2949,2987
+doc_007,medical_history,history.history_of,history of psychotic features associated with depressive episodes,3024,3089
+doc_007,medical_history,history.history_of,history of depression and anxiety,3362,3395
+doc_007,medical_medication,medication.dose_form,Sertraline 100 mg,3864,3881
+doc_007,medical_medication,medication.gazetteer,Sertraline,3864,3874
+doc_007,medical_medication,medication.dose_form,Levothyroxine 50 mcg,4231,4251
+doc_007,medical_medication,medication.gazetteer,Levothyroxine,4231,4244
+doc_007,mental_health,mental.category_marker,MENTAL HEALTH,249,262
+doc_007,mental_health,mental.category_marker,MHDDCA,430,436
+doc_007,mental_health,mental.category_marker,Psychiatric,1110,1121
+doc_007,mental_health,mental.category_marker,Psychotherapy,1124,1137
+doc_007,mental_health,mental.icd_f_code,F33.1,1239,1244
+doc_007,mental_health,mental.category_marker,Psychiatry,1913,1923
+doc_007,mental_health,mental.clinical_term,Major Depressive Disorder,2300,2325
+doc_007,mental_health,mental.clinical_term,manic,2960,2965
+doc_007,mental_health,mental.clinical_term,bipolar,2989,2996
+doc_007,mental_health,mental.clinical_term,psychotic,3035,3044
+doc_007,mental_health,mental.clinical_term,depressive,3070,3080
+doc_007,mental_health,mental.clinical_term,depression,3373,3383
+doc_007,mental_health,mental.clinical_term,anxiety,3388,3395
+doc_007,mental_health,mental.clinical_term,suicidal ideation,3619,3636
+doc_007,mental_health,mental.clinical_term,PHQ-9,5606,5611
+doc_007,mental_health,mental.clinical_term,psychosis,7870,7879
+doc_007,mental_health,mental.category_marker,behavioral health,8744,8761
+doc_007,mental_health,mental.clinical_term,self-harm,9111,9120
+doc_007,name,name.registry,Maria Gonzalez,1497,1511
+doc_008,billing_code,billing.cpt_labeled,99213,1382,1387
+doc_008,billing_code,billing.icd_labeled,B20,1397,1400
+doc_008,date_of_birth,dob.labeled,1975-08-22,1633,1643
+doc_008,insurance_info,insurance.carrier_plan,Medicaid,1663,1671
+doc_008,job_title,title.gazetteer,ATTENDING PHYSICIAN,1812,1831
+doc_008,job_title,title.gazetteer,PHYSICIAN,8765,8774
+doc_008,medical_diagnosis,diagnosis.gazetteer,HIV,448,451
+doc_008,medical_diagnosis,diagnosis.gazetteer,AIDS,452,456
+doc_008,medical_diagnosis,diagnosis.icd_nonpsych,B20,1397,1400
+doc_008,medical_diagnosis,diagnosis.labeled,"HIV, Stage 1 — ICD-10: B20",1703,1729
+doc_008,medical_diagnosis,diagnosis.gazetteer,hyperlipidemia,2782,2796
+doc_008,medical_diagnosis,diagnosis.gazetteer,diabetes,3071,3079
+doc_008,medical_diagnosis,diagnosis.gazetteer,hypertension,3093,3105
+doc_008,medical_diagnosis,diagnosis.gazetteer,Hepatitis,4902,4911
+doc_008,medical_diagnosis,diagnosis.gazetteer,neuropathy,5490,5500
+doc_008,medical_history,history.block,"Diagnosed with HIV, Stage 1 (ICD-10: B20) in April 2019. Patient has maintained
+consistent antiretroviral therapy adherence since initiation of treatment in
+May 2019. No history of opportunistic infections. No AIDS-defining illnesses.
+Past medical history notable for mild hyperlipidemia (managed with dietary
+modification), seasonal allergic rhinitis, and appendectomy (2003). No prior
+hospitalizations related to HIV. Non-smoker; occasional alcohol use (self-reported",2509,2979
+doc_008,medical_history,history.history_of,history of opportunistic infections,2679,2714
+doc_008,medical_license,license.npi,1234567890,1999,2009
+doc_008,medical_medication,medication.dose_form,Biktarvy 50mg/200mg,3293,3312
+doc_008,medical_medication,medication.gazetteer,Biktarvy,3293,3301
+doc_008,medical_medication,medication.gazetteer,bictegravir,3319,3330
+doc_008,medical_medication,medication.gazetteer,emtricitabine,3331,3344
+doc_008,medical_medication,medication.gazetteer,tenofovir,3345,3354
+doc_008,medical_medication,medication.dose_form,Loratadine 10mg,3476,3491
+doc_008,medical_medication,medication.gazetteer,Loratadine,3476,3486
+doc_008,medical_medication,medication.dose_form,Triglycerides 142 mg,4728,4748
+doc_008,mental_health,mental.category_marker,Psychiatric,5595,5606
+doc_008,mental_health,mental.clinical_term,depression,5618,5628
+doc_008,mental_health,mental.clinical_term,anxiety,5630,5637
+doc_008,mental_health,mental.clinical_term,suicidal ideation,5642,5659
+doc_008,mental_health,mental.category_marker,MENTAL HEALTH,8118,8131
+doc_008,mental_health,mental.clinical_term,PHQ-9,8143,8148
+doc_008,name,name.registry,David Park,1603,1613
+doc_009,billing_code,billing.cpt_labeled,99214,1183,1188
+doc_009,billing_code,billing.icd_labeled,F11.20,1986,1992
+doc_009,billing_code,billing.icd_labeled,F41.1,3142,3147
+doc_009,date_of_birth,dob.labeled,1989-03-15,1588,1598
+doc_009,home_address,address.labeled,"47 Chestnut Ave, Springfield, IL 62715",1653,1691
+doc_009,insurance_info,insurance.carrier_plan,BlueCross,1713,1722
+doc_009,insurance_info,insurance.member_id,BC-921047,1742,1751
+doc_009,medical_diagnosis,diagnosis.labeled,"Opioid Use Disorder, moderate (ICD-10: F11.20)",1947,1993
+doc_009,medical_history,history.block,"Relevant Medical History:
+  - Opioid Use Disorder, moderate — diagnosed 2023-11-02; initiated MAT 2023-11-14
+  - Prior history of prescription opioid misuse (oxycodone); began 2021 following
+    lumbar strain injury
+  - One prior medically supervised detoxification episode, 2023-09 (St. Luke's
+    Inpatient, Springfield, IL)",2781,3108
+doc_009,medical_history,history.diagnosed_year,diagnosed 2023,2843,2857
+doc_009,medical_history,history.history_of,history of prescription opioid misuse (oxycodone),2900,2949
+doc_009,medical_history,history.history_of,"history of benzodiazepine, alcohol, or stimulant use disorder",3196,3257
+doc_009,medical_history,history.history_of,history of alcohol use disorder (deceased),3384,3426
+doc_009,medical_license,license.npi,1245897631,9567,9577
+doc_009,medical_medication,medication.gazetteer,oxycodone,2939,2948
+doc_009,medical_medication,medication.gazetteer,Buprenorphine,3916,3929
+doc_009,medical_medication,medication.dose_form,Naloxone 8mg/2mg,3930,3946
+doc_009,medical_medication,medication.gazetteer,Naloxone,3930,3938
+doc_009,medical_medication,medication.dose_form,Sertraline 50mg,4077,4092
+doc_009,medical_medication,medication.gazetteer,Sertraline,4077,4087
+doc_009,medical_medication,medication.dose_form,Melatonin 5mg,4142,4155
+doc_009,medical_medication,medication.gazetteer,Fentanyl,5100,5108
+doc_009,medical_medication,medication.dose_form,"Naloxone
+   8mg/2mg",7394,7413
+doc_009,mental_health,mental.category_marker,42 CFR PART 2,106,119
+doc_009,mental_health,mental.clinical_term,SUBSTANCE ABUSE,122,137
+doc_009,mental_health,mental.clinical_term,substance use disorder,208,230
+doc_009,mental_health,mental.icd_f_code,F11.20,1210,1216
+doc_009,mental_health,mental.clinical_term,Opioid Use Disorder,1947,1966
+doc_009,mental_health,mental.clinical_term,detoxification,3032,3046
+doc_009,mental_health,mental.clinical_term,Anxiety,3112,3119
+doc_009,mental_health,mental.icd_f_code,F41.1,3142,3147
+doc_009,mental_health,mental.clinical_term,alcohol use disorder,3395,3415
+doc_009,mental_health,mental.category_marker,Psychiatric,6909,6920
+doc_009,mental_health,mental.clinical_term,Generalized Anxiety,7600,7619
+doc_009,name,name.registry,Sarah Wilson,1554,1566
+doc_009,ssn,ssn.masked_or_full,XXX-XX-5518,1620,1631
+doc_010,billing_code,billing.cpt_labeled,99213,1467,1472
+doc_010,date_of_birth,dob.labeled,1968-03-14,605,615
+doc_010,home_address,address.labeled,"412 Maple St, Springfield, IL 62701",625,660
+doc_010,insurance_info,insurance.carrier_plan,BlueCross,672,681
+doc_010,job_title,title.gazetteer,Physician,294,303
+doc_010,medical_diagnosis,diagnosis.icd_nonpsych,E11.9,713,718
+doc_010,medical_diagnosis,diagnosis.gazetteer,Diabetes Mellitus,727,744
+doc_010,medical_license,license.labeled,IL-MD-082947,350,362
+doc_010,medical_license,license.npi,1234567890,390,400
+doc_010,medical_medication,medication.dose_form,Metformin 500 mg,877,893
+doc_010,medical_medication,medication.gazetteer,Metformin,877,886
+doc_010,name,name.registry,Dr. Patricia Nguyen,305,324
+doc_010,name,name.registry,John Smith,579,589
+doc_011,date_of_birth,dob.labeled,1991-07-22,188,198
+doc_011,home_address,address.labeled,"89 Birch Lane, Springfield, IL 62702",208,244
+doc_011,insurance_info,insurance.carrier_plan,Aetna,256,261
+doc_011,job_title,title.gazetteer,Physician,702,711
+doc_011,medical_diagnosis,diagnosis.icd_nonpsych,Z34.32,289,295
+doc_011,medical_diagnosis,diagnosis.labeled,"Z34.32 — Intrauterine pregnancy, 28 weeks",289,330
+doc_011,medical_license,license.labeled,IL-MD-048821,754,766
+doc_011,medical_license,license.npi,1234567890,772,782
+doc_011,medical_medication,medication.dose_form,Ferrous Sulfate 325 mg,365,387
+doc_011,medical_medication,medication.gazetteer,Ferrous Sulfate,365,380
+doc_011,medical_medication,medication.dose_form,Folic Acid 1 mg,390,405
+doc_011,medical_medication,medication.gazetteer,Folic Acid,390,400
+doc_011,name,name.registry,Emily Brown,161,172
+doc_012,billing_code,billing.icd_parenthetical,I48.11,329,335
+doc_012,date_of_birth,dob.labeled,1955-11-09,187,197
+doc_012,home_address,address.labeled,"230 Oak Ave, Springfield, IL 62703",207,241
+doc_012,insurance_info,insurance.carrier_plan,Medicare,253,261
+doc_012,job_title,title.gazetteer,Physician,852,861
+doc_012,medical_diagnosis,diagnosis.gazetteer,Atrial Fibrillation,296,315
+doc_012,medical_diagnosis,diagnosis.labeled,"Atrial Fibrillation, persistent (I48.11)",296,336
+doc_012,medical_diagnosis,diagnosis.icd_nonpsych,I48.11,329,335
+doc_012,medical_license,license.labeled,IL-MD-048291,902,914
+doc_012,medical_license,license.npi,1234567890,920,930
+doc_012,medical_medication,medication.dose_form,Warfarin 5 mg,370,383
+doc_012,medical_medication,medication.gazetteer,Warfarin,370,378
+doc_012,name,name.registry,Robert Lee,161,171
+doc_012,name,name.registry,Dr. Angela Torres,863,880
+doc_013,date_of_birth,dob.labeled,1960-12-04,193,203
+doc_013,home_address,address.labeled,"88 Birchwood Ct, Springfield, IL 62716",213,251
+doc_013,job_title,title.gazetteer,Physician,658,667
+doc_013,medical_diagnosis,diagnosis.icd_nonpsych,N18.3,323,328
+doc_013,medical_diagnosis,diagnosis.gazetteer,Diabetes,595,603
+doc_013,medical_diagnosis,diagnosis.gazetteer,hypertension,620,632
+doc_013,medical_history,history.diagnosed_year,diagnosed 2012,604,618
+doc_013,medical_history,history.diagnosed_year,since 2005,633,643
+doc_013,medical_license,license.labeled,IL-MD-047832,713,725
+doc_013,medical_license,license.npi,1245387690,731,741
+doc_013,medical_medication,medication.dose_form,Lisinopril 10mg,257,272
+doc_013,medical_medication,medication.gazetteer,Lisinopril,257,267
+doc_013,name,name.registry,James Carter,165,177
+doc_014,billing_code,billing.icd_parenthetical,I10,394,397
+doc_014,billing_code,billing.icd_parenthetical,E11.9,545,550
+doc_014,date_of_birth,dob.labeled,1958-09-27,178,188
+doc_014,home_address,address.labeled,"115 Walnut St, Springfield, IL 62718",198,234
+doc_014,job_title,title.gazetteer,Physician,565,574
+doc_014,medical_diagnosis,diagnosis.icd_nonpsych,I10,253,256
+doc_014,medical_diagnosis,diagnosis.icd_nonpsych,E11.9,258,263
+doc_014,medical_diagnosis,diagnosis.gazetteer,hypertension,380,392
+doc_014,medical_diagnosis,diagnosis.gazetteer,Diabetes Mellitus,526,543
+doc_014,medical_license,license.labeled,IL-MD-058342,614,626
+doc_014,medical_license,license.npi,1234567890,632,642
+doc_014,medical_medication,medication.dose_form,Lisinopril 20mg,272,287
+doc_014,medical_medication,medication.gazetteer,Lisinopril,272,282
+doc_014,medical_medication,medication.dose_form,Metformin 1000mg,407,423
+doc_014,medical_medication,medication.gazetteer,Metformin,407,416
+doc_014,name,name.registry,Michael Chen,150,162
+doc_014,name,name.registry,Dr. Sarah Nguyen,576,592
+doc_015,date_of_birth,dob.labeled,1963-06-18,188,198
+doc_015,emergency_contact,emergency.labeled,Marco Torres (spouse) 555-0341,808,838
+doc_015,home_address,address.labeled,"220 Sycamore Blvd, Springfield, IL 62717",208,248
+doc_015,insurance_info,insurance.carrier_plan,Aetna,260,265
+doc_015,job_title,title.gazetteer,physician,579,588
+doc_015,medical_diagnosis,diagnosis.icd_nonpsych,C50.911,298,305
+doc_015,medical_diagnosis,diagnosis.gazetteer,carcinoma,324,333
+doc_015,medical_license,license.labeled,IL-MD-204817,901,913
+doc_015,medical_medication,medication.dose_form,Tamoxifen 20mg,353,367
+doc_015,medical_medication,medication.gazetteer,Tamoxifen,353,362
+doc_015,name,name.registry,Linda Torres,160,172
+doc_015,name,name.registry,Dr. Anita Sharma,863,879
+doc_016,date_of_birth,dob.labeled,01/30/1942,201,211
+doc_016,home_address,address.labeled,"9 Linden Lane, Springfield, IL 62719",221,257
+doc_016,insurance_info,insurance.carrier_plan,Medicare,269,277
+doc_016,job_title,title.gazetteer,Physician,797,806
+doc_016,medical_diagnosis,diagnosis.icd_nonpsych,G30.0,427,432
+doc_016,medical_license,license.labeled,IL-MD-047832,851,863
+doc_016,medical_license,license.dea,FE3291047,928,937
+doc_016,medical_medication,medication.dose_form,Donepezil 10mg,313,327
+doc_016,medical_medication,medication.gazetteer,Donepezil,313,322
+doc_016,name,name.registry,Patricia Moore,171,185
+doc_017,date_of_birth,dob.labeled,1983-05-30,195,205
+doc_017,home_address,address.labeled,"15 Elm Court, Springfield, IL 62704",215,250
+doc_017,insurance_info,insurance.carrier_plan,United Health,262,275
+doc_017,job_title,title.gazetteer,Physician,652,661
+doc_017,medical_license,license.labeled,IL-MD-047832,699,711
+doc_017,medical_license,license.npi,1234567890,717,727
+doc_017,medical_medication,medication.dose_form,Sertraline 100 mg,296,313
+doc_017,medical_medication,medication.gazetteer,Sertraline,296,306
+doc_017,mental_health,mental.icd_f_code,F33.1,465,470
+doc_017,mental_health,mental.clinical_term,suicidal ideation,612,629
+doc_017,name,name.registry,Maria Gonzalez,165,179
+doc_017,name,name.registry,Dr. Ellen Park,663,677
+doc_018,billing_code,billing.icd_parenthetical,E11,399,402
+doc_018,date_of_birth,dob.labeled,1968-03-14,244,254
+doc_018,emergency_contact,emergency.labeled,Mary Smith (spouse) 555-0142,1120,1148
+doc_018,home_address,address.labeled,"412 Maple St, Springfield, IL 62701",290,325
+doc_018,insurance_info,insurance.carrier_plan,BlueCross,337,346
+doc_018,job_title,title.gazetteer,Physician,169,178
+doc_018,medical_diagnosis,diagnosis.labeled,Type 2 Diabetes Mellitus (E11),373,403
+doc_018,medical_diagnosis,diagnosis.gazetteer,Diabetes Mellitus,380,397
+doc_018,medical_diagnosis,diagnosis.icd_nonpsych,E11,399,402
+doc_018,medical_diagnosis,diagnosis.icd_nonpsych,E11.9,426,431
+doc_018,medical_diagnosis,diagnosis.gazetteer,diabetes,911,919
+doc_018,medical_diagnosis,diagnosis.gazetteer,Hypertension,1048,1060
+doc_018,medical_diagnosis,diagnosis.gazetteer,prediabetes,1077,1088
+doc_018,medical_history,history.section,Hypertension diagnosed 2015; prediabetes since 2018.,1048,1100
+doc_018,medical_history,history.diagnosed_year,diagnosed 2015,1061,1075
+doc_018,medical_history,history.diagnosed_year,since 2018,1089,1099
+doc_018,medical_medication,medication.dose_form,Fasting Glucose       118 mg,640,668
+doc_018,medical_medication,medication.dose_form,Metformin 500 mg,825,841
+doc_018,medical_medication,medication.gazetteer,Metformin,825,834
+doc_018,name,name.registry,Dr. Patricia Nguyen,180,199
+doc_018,name,name.registry,John Smith,218,228
+doc_018,ssn,ssn.masked_or_full,XXX-XX-4821,269,280
+doc_019,billing_code,billing.icd_parenthetical,I48.11,371,377
+doc_019,date_of_birth,dob.labeled,1955-11-09,166,176
+doc_019,home_address,address.labeled,"230 Oak Ave, Springfield, IL 62703",186,220
+doc_019,insurance_info,insurance.carrier_plan,Medicare,258,266
+doc_019,job_title,title.gazetteer,Physician,299,308
+doc_019,medical_diagnosis,diagnosis.gazetteer,Atrial Fibrillation,338,357
+doc_019,medical_diagnosis,diagnosis.labeled,"Atrial Fibrillation, persistent (I48.11)",338,378
+doc_019,medical_diagnosis,diagnosis.icd_nonpsych,I48.11,371,377
+doc_019,medical_medication,medication.dose_form,Warfarin 5 mg,756,769
+doc_019,medical_medication,medication.gazetteer,Warfarin,756,764
+doc_019,name,name.registry,Robert Lee,140,150
+doc_019,ssn,ssn.masked_or_full,XXX-XX-6614,235,246
+doc_020,billing_code,billing.icd_parenthetical,Z34.32,190,196
+doc_020,date_of_birth,dob.labeled,1991-07-22,102,112
+doc_020,insurance_info,insurance.carrier_plan,Aetna,124,129
+doc_020,medical_diagnosis,diagnosis.labeled,"Intrauterine pregnancy, 28 weeks (Z34.32)",156,197
+doc_020,medical_diagnosis,diagnosis.icd_nonpsych,Z34.32,190,196
+doc_020,medical_diagnosis,diagnosis.gazetteer,anemia,704,710
+doc_020,medical_diagnosis,diagnosis.gazetteer,gestational hypertension,832,856
+doc_020,medical_medication,medication.dose_form,Hemoglobin         11.2 g,396,421
+doc_020,medical_medication,medication.dose_form,Ferrous Sulfate 325 mg,993,1015
+doc_020,medical_medication,medication.gazetteer,Ferrous Sulfate,993,1008
+doc_020,name,name.registry,Emily Brown,75,86
+doc_021,billing_code,billing.icd_parenthetical,N18.3,804,809
+doc_021,date_of_birth,dob.labeled,1960-12-04,241,251
+doc_021,home_address,address.labeled,"88 Birchwood Ct, Springfield, IL 62716",261,299
+doc_021,insurance_info,insurance.carrier_plan,Medicare,337,345
+doc_021,job_title,title.gazetteer,Physician,164,173
+doc_021,medical_diagnosis,diagnosis.icd_nonpsych,N18.3,390,395
+doc_021,medical_diagnosis,diagnosis.gazetteer,Chronic Kidney Disease,771,793
+doc_021,medical_diagnosis,diagnosis.labeled,"Chronic Kidney Disease, Stage 3 (N18.3)",771,810
+doc_021,medical_diagnosis,diagnosis.gazetteer,Diabetes,1095,1103
+doc_021,medical_diagnosis,diagnosis.gazetteer,hypertension,1120,1132
+doc_021,medical_history,history.diagnosed_year,diagnosed 2012,1104,1118
+doc_021,medical_history,history.diagnosed_year,since 2005,1133,1143
+doc_021,medical_medication,medication.dose_form,Lisinopril 10mg,831,846
+doc_021,medical_medication,medication.gazetteer,Lisinopril,831,841
+doc_021,name,name.registry,Dr. Patricia Nguyen,175,194
+doc_021,name,name.registry,James Carter,213,225
+doc_021,name,name.registry,Dr. Leon Park,1215,1228
+doc_021,ssn,ssn.masked_or_full,XXX-XX-3391,314,325
+doc_022,billing_code,billing.icd_parenthetical,I10,683,686
+doc_022,billing_code,billing.icd_parenthetical,E11.9,715,720
+doc_022,date_of_birth,dob.labeled,1958-09-27,242,252
+doc_022,insurance_info,insurance.carrier_plan,United Health,264,277
+doc_022,job_title,title.gazetteer,Physician,165,174
+doc_022,medical_diagnosis,diagnosis.gazetteer,hypertension,669,681
+doc_022,medical_diagnosis,diagnosis.icd_nonpsych,I10,683,686
+doc_022,medical_diagnosis,diagnosis.gazetteer,Diabetes Mellitus,696,713
+doc_022,medical_diagnosis,diagnosis.icd_nonpsych,E11.9,715,720
+doc_022,medical_diagnosis,diagnosis.labeled,HbA1c above target; LDL significantly elevated. Glycemic control suboptimal. Statin therapy initiation to be considered,808,928
+doc_022,medical_medication,medication.dose_form,Lisinopril 20mg,743,758
+doc_022,medical_medication,medication.gazetteer,Lisinopril,743,753
+doc_022,medical_medication,medication.dose_form,Metformin 1000mg,766,782
+doc_022,medical_medication,medication.gazetteer,Metformin,766,775
+doc_022,name,name.registry,Dr. Patricia Nguyen,176,195
+doc_022,name,name.registry,Michael Chen,214,226
+doc_023,billing_code,billing.icd_parenthetical,C50.911,344,351
+doc_023,date_of_birth,dob.labeled,1963-06-18,142,152
+doc_023,emergency_contact,emergency.labeled,Marco Torres (spouse) 555-0341,1028,1058
+doc_023,home_address,address.labeled,"220 Sycamore Blvd, Springfield, IL 62717",188,228
+doc_023,insurance_info,insurance.carrier_plan,Aetna,240,245
+doc_023,medical_diagnosis,diagnosis.icd_nonpsych,C50.911,283,290
+doc_023,medical_diagnosis,diagnosis.labeled,"Invasive ductal carcinoma, right breast (C50.911)",303,352
+doc_023,medical_diagnosis,diagnosis.gazetteer,carcinoma,319,328
+doc_023,medical_diagnosis,diagnosis.gazetteer,anemia,855,861
+doc_023,medical_medication,medication.dose_form,Tamoxifen 20mg,370,384
+doc_023,medical_medication,medication.gazetteer,Tamoxifen,370,379
+doc_023,name,name.registry,Linda Torres,114,126
+doc_023,ssn,ssn.masked_or_full,XXX-XX-8824,167,178
+doc_024,billing_code,billing.icd_parenthetical,G30.0,391,396
+doc_024,date_of_birth,dob.labeled,1942-01-30,83,93
+doc_024,emergency_contact,emergency.labeled,"Thomas Moore (son, legal guardian) 555-0267",220,263
+doc_024,home_address,address.labeled,"9 Linden Lane, Springfield, IL 62719",120,156
+doc_024,insurance_info,insurance.carrier_plan,Medicare,168,176
+doc_024,job_title,title.gazetteer,Physician,298,307
+doc_024,medical_diagnosis,diagnosis.icd_nonpsych,G30.0,339,344
+doc_024,medical_diagnosis,diagnosis.gazetteer,Alzheimer,357,366
+doc_024,medical_diagnosis,diagnosis.labeled,"Alzheimer's disease, early onset (G30.0)",357,397
+doc_024,medical_diagnosis,diagnosis.labeled,Liver enzymes within normal limits. Renal function stable. No contraindications noted for current medication regimen. Fo,858,978
+doc_024,medical_medication,medication.dose_form,Donepezil 10mg,418,432
+doc_024,medical_medication,medication.gazetteer,Donepezil,418,427
+doc_024,name,name.registry,Patricia Moore,53,67
+doc_024,ssn,ssn.labeled,XXX-XX-1183,99,110
+doc_025,billing_code,billing.icd_parenthetical,B20,444,447
+doc_025,date_of_birth,dob.labeled,1975-08-22,249,259
+doc_025,home_address,address.labeled,"601 Magnolia Dr, Springfield, IL 62714",295,333
+doc_025,insurance_info,insurance.carrier_plan,Medicaid,345,353
+doc_025,medical_diagnosis,diagnosis.icd_nonpsych,B20,388,391
+doc_025,medical_diagnosis,diagnosis.gazetteer,HIV,430,433
+doc_025,medical_diagnosis,diagnosis.labeled,"HIV, Stage 1 (B20)",430,448
+doc_025,medical_medication,medication.dose_form,Biktarvy 50mg/200mg,469,488
+doc_025,medical_medication,medication.gazetteer,Biktarvy,469,477
+doc_025,name,name.registry,David Park,223,233
+doc_025,ssn,ssn.masked_or_full,XXX-XX-7743,274,285
+doc_026,billing_code,billing.icd_parenthetical,Z34.32,336,342
+doc_026,date_of_birth,dob.labeled,1991-07-22,79,89
+doc_026,insurance_info,insurance.carrier_plan,Aetna,259,264
+doc_026,job_title,title.gazetteer,Physician,124,133
+doc_026,job_title,title.gazetteer,Radiologist,1052,1063
+doc_026,medical_diagnosis,diagnosis.icd_nonpsych,Z34.32,241,247
+doc_026,medical_diagnosis,diagnosis.gazetteer,gestational hypertension,356,380
+doc_026,medical_history,history.history_of,History of gestational hypertension in prior pregnancy,345,399
+doc_026,name,name.registry,Emily Brown,52,63
+doc_026,name,name.registry,Dr. Sarah Nguyen,135,151
+doc_026,name,name.registry,Dr. Marcus Webb,1065,1080
+doc_027,billing_code,billing.icd_parenthetical,C50.911,466,473
+doc_027,date_of_birth,dob.labeled,1963-06-18,285,295
+doc_027,emergency_contact,emergency.labeled,Marco Torres (spouse) 555-0341,1181,1211
+doc_027,insurance_info,insurance.carrier_plan,Aetna,307,312
+doc_027,job_title,title.gazetteer,Radiologist,1086,1097
+doc_027,medical_diagnosis,diagnosis.icd_nonpsych,C50.911,350,357
+doc_027,medical_diagnosis,diagnosis.gazetteer,carcinoma,441,450
+doc_027,medical_medication,medication.dose_form,Tamoxifen 20mg,549,563
+doc_027,medical_medication,medication.gazetteer,Tamoxifen,549,558
+doc_027,name,name.registry,Linda Torres,257,269
+doc_027,name,name.registry,Dr. Priya Anand,1099,1114
+doc_028,billing_code,billing.icd_parenthetical,I48.11,354,360
+doc_028,date_of_birth,dob.labeled,1955-11-09,194,204
+doc_028,insurance_info,insurance.carrier_plan,Medicare,216,224
+doc_028,job_title,title.gazetteer,Physician,79,88
+doc_028,job_title,title.gazetteer,Radiologist,1105,1116
+doc_028,medical_diagnosis,diagnosis.icd_nonpsych,I48.11,269,275
+doc_028,medical_diagnosis,diagnosis.gazetteer,Atrial Fibrillation,321,340
+doc_028,medical_history,history.history_of,"history of Atrial Fibrillation, persistent (I48",610,657
+doc_028,medical_medication,medication.dose_form,Warfarin 5 mg,384,397
+doc_028,medical_medication,medication.gazetteer,Warfarin,384,392
+doc_028,name,name.registry,Robert Lee,168,178
+doc_029,billing_code,billing.icd_parenthetical,N18.3,288,293
+doc_029,date_of_birth,dob.labeled,1960-12-04,232,242
+doc_029,job_title,title.gazetteer,Physician,160,169
+doc_029,job_title,title.gazetteer,Radiologist,1131,1142
+doc_029,medical_diagnosis,diagnosis.gazetteer,Chronic Kidney Disease,255,277
+doc_029,medical_diagnosis,diagnosis.icd_nonpsych,N18.3,288,293
+doc_029,medical_diagnosis,diagnosis.gazetteer,Diabetes,931,939
+doc_029,medical_diagnosis,diagnosis.gazetteer,hypertension,961,973
+doc_029,medical_history,history.history_of,history of Type 2 Diabetes (diagnosed 2012) and hypertension (since 2005),913,986
+doc_029,medical_history,history.diagnosed_year,diagnosed 2012,941,955
+doc_029,medical_history,history.diagnosed_year,since 2005,975,985
+doc_029,medical_medication,medication.dose_form,Lisinopril 10mg,1051,1066
+doc_029,medical_medication,medication.gazetteer,Lisinopril,1051,1061
+doc_029,name,name.registry,James Carter,204,216
+doc_030,billing_code,billing.icd_parenthetical,G30.0,633,638
+doc_030,date_of_birth,dob.labeled,1942-01-30,259,269
+doc_030,emergency_contact,emergency.labeled,"Thomas Moore (son, legal guardian) 555-0267",407,450
+doc_030,home_address,address.labeled,"9 Linden Lane, Springfield, IL 62719",279,315
+doc_030,insurance_info,insurance.carrier_plan,Medicare,327,335
+doc_030,job_title,title.gazetteer,Radiologist,1200,1211
+doc_030,medical_diagnosis,diagnosis.icd_nonpsych,G30.0,382,387
+doc_030,medical_diagnosis,diagnosis.gazetteer,Alzheimer,599,608
+doc_030,medical_medication,medication.dose_form,Donepezil 10mg,538,552
+doc_030,medical_medication,medication.gazetteer,Donepezil,538,547
+doc_030,name,name.registry,Patricia Moore,229,243
+doc_030,name,name.registry,Dr. Helen Voss,1213,1227
+doc_031,billing_code,billing.icd_parenthetical,Z34.32,333,339
+doc_031,date_of_birth,dob.labeled,1991-07-22,115,125
+doc_031,emergency_contact,emergency.labeled,James Brown (Spouse) — (217) 555-0184,249,286
+doc_031,home_address,address.labeled,"89 Birch Lane, Springfield, IL 62702",135,171
+doc_031,insurance_info,insurance.carrier_plan,Aetna,209,214
+doc_031,job_title,title.gazetteer,Attending Physician,912,931
+doc_031,medical_diagnosis,diagnosis.icd_nonpsych,Z34.32,333,339
+doc_031,medical_diagnosis,diagnosis.gazetteer,Gestational hypertension,368,392
+doc_031,name,name.registry,Emily Brown,88,99
+doc_031,name,name.registry,Dr. Sandra Reyes,933,949
+doc_031,ssn,ssn.masked_or_full,XXX-XX-3307,186,197
+doc_032,billing_code,billing.icd_parenthetical,E11,391,394
+doc_032,date_of_birth,dob.labeled,1968-03-14,139,149
+doc_032,emergency_contact,emergency.labeled,Mary Smith (spouse) 555-0142,250,278
+doc_032,home_address,address.labeled,"412 Maple St, Springfield, IL 62701",159,194
+doc_032,insurance_info,insurance.carrier_plan,BlueCross,206,215
+doc_032,medical_diagnosis,diagnosis.icd_nonpsych,E11.9,339,344
+doc_032,medical_diagnosis,diagnosis.gazetteer,Diabetes Mellitus,372,389
+doc_032,medical_diagnosis,diagnosis.icd_nonpsych,E11,391,394
+doc_032,medical_diagnosis,diagnosis.gazetteer,Hypertension,422,434
+doc_032,medical_diagnosis,diagnosis.gazetteer,prediabetes,451,462
+doc_032,medical_diagnosis,diagnosis.gazetteer,Diabetes,811,819
+doc_032,medical_history,history.diagnosed_year,diagnosed 2015,435,449
+doc_032,medical_history,history.diagnosed_year,since 2018,463,473
+doc_032,medical_medication,medication.dose_form,Metformin 500 mg,713,729
+doc_032,medical_medication,medication.gazetteer,Metformin,713,722
+doc_032,name,name.registry,John Smith,113,123
+doc_033,billing_code,billing.icd_parenthetical,C50.911,346,353
+doc_033,date_of_birth,dob.labeled,1963-06-18,98,108
+doc_033,emergency_contact,emergency.labeled,Marco Torres (spouse) 555-0341,257,287
+doc_033,home_address,address.labeled,"220 Sycamore Blvd, Springfield, IL 62717",118,158
+doc_033,insurance_info,insurance.carrier_plan,Aetna,187,192
+doc_033,job_title,title.gazetteer,Physician,1175,1184
+doc_033,medical_diagnosis,diagnosis.icd_nonpsych,C50.911,230,237
+doc_033,medical_diagnosis,diagnosis.labeled,"Invasive ductal carcinoma, right breast (C50.911)",305,354
+doc_033,medical_diagnosis,diagnosis.gazetteer,carcinoma,321,330
+doc_033,medical_diagnosis,diagnosis.gazetteer,neuropathy,602,612
+doc_033,medical_medication,medication.gazetteer,ondansetron,798,809
+doc_033,medical_medication,medication.dose_form,Tamoxifen 20mg,845,859
+doc_033,medical_medication,medication.gazetteer,Tamoxifen,845,854
+doc_033,medical_medication,medication.dose_form,Ondansetron 8mg,978,993
+doc_033,name,name.registry,Linda Torres,70,82
+doc_033,ssn,ssn.labeled,XXX-XX-8824,164,175
+doc_034,billing_code,billing.icd_parenthetical,I48.11,432,438
+doc_034,billing_code,billing.icd_parenthetical,I10,507,510
+doc_034,billing_code,billing.icd_parenthetical,E11.9,539,544
+doc_034,date_of_birth,dob.labeled,1955-11-09,151,161
+doc_034,emergency_contact,emergency.labeled,Margaret Lee (Spouse) — (217) 555-0142,284,322
+doc_034,home_address,address.labeled,"230 Oak Ave, Springfield, IL 62703",188,222
+doc_034,insurance_info,insurance.carrier_plan,Medicare,234,242
+doc_034,job_title,title.gazetteer,ATTENDING PHYSICIAN,324,343
+doc_034,job_title,title.gazetteer,Physician,1033,1042
+doc_034,medical_diagnosis,diagnosis.gazetteer,Atrial Fibrillation,399,418
+doc_034,medical_diagnosis,diagnosis.icd_nonpsych,I48.11,432,438
+doc_034,medical_diagnosis,diagnosis.gazetteer,hypertension,493,505
+doc_034,medical_diagnosis,diagnosis.icd_nonpsych,I10,507,510
+doc_034,medical_diagnosis,diagnosis.gazetteer,diabetes mellitus,520,537
+doc_034,medical_diagnosis,diagnosis.icd_nonpsych,E11.9,539,544
+doc_034,medical_history,history.block,"Patient has a documented history of hypertension (I10), type 2 diabetes mellitus (E11.9), and prior paroxysmal AFib episodes managed outpatient.",457,602
+doc_034,medical_history,history.history_of,"history of hypertension (I10), type 2 diabetes mellitus (E11",482,542
+doc_034,medical_medication,medication.gazetteer,metoprolol,740,750
+doc_034,medical_medication,medication.dose_form,Warfarin 5 mg,885,898
+doc_034,medical_medication,medication.gazetteer,Warfarin,885,893
+doc_034,name,name.registry,Robert Lee,125,135
+doc_034,name,name.registry,Dr. Sandra Okafor,345,362
+doc_034,ssn,ssn.labeled,XXX-XX-6614,167,178
+doc_035,billing_code,billing.icd_parenthetical,F11.20,452,458
+doc_035,date_of_birth,dob.labeled,1989-03-15,218,228
+doc_035,emergency_contact,emergency.labeled,James Wilson (Spouse) — (217) 555-0183,358,396
+doc_035,home_address,address.labeled,"47 Chestnut Ave, Springfield, IL 62715",264,302
+doc_035,insurance_info,insurance.carrier_plan,BlueCross,314,323
+doc_035,job_title,title.gazetteer,Physician,1174,1183
+doc_035,medical_history,history.block,"Patient presents with prior history of opioid misuse beginning approximately 2021, with one prior ED visit for withdrawal symptoms (2024). No co-occurring psychiatric diagnoses on record. Non-smoker; occasional alcohol use reported.",477,710
+doc_035,medical_history,history.history_of,"history of opioid misuse beginning approximately 2021, with one prior ED visit for withdraw",505,596
+doc_035,medical_medication,medication.gazetteer,Buprenorphine,819,832
+doc_035,medical_medication,medication.dose_form,Naloxone 8mg/2mg,833,849
+doc_035,medical_medication,medication.gazetteer,Naloxone,833,841
+doc_035,mental_health,mental.clinical_term,Opioid Use Disorder,421,440
+doc_035,mental_health,mental.icd_f_code,F11.20,452,458
+doc_035,mental_health,mental.category_marker,psychiatric,632,643
+doc_035,name,name.registry,Dr. Elena Marsh,94,109
+doc_035,name,name.registry,Sarah Wilson,190,202
+doc_035,ssn,ssn.masked_or_full,XXX-XX-5518,243,254
+doc_036,billing_code,billing.icd_parenthetical,F33.1,745,750
+doc_036,date_of_birth,dob.labeled,1983-05-30,521,531
+doc_036,home_address,address.labeled,"15 Elm Court, Springfield, IL 62704",580,615
+doc_036,insurance_info,insurance.carrier_plan,United Health,634,647
+doc_036,medical_diagnosis,diagnosis.labeled,"Major Depressive Disorder, recurrent (F33.1)",707,751
+doc_036,medical_diagnosis,diagnosis.labeled,"Major Depressive Disorder, recurrent (F33.1) — partially remitted on current regimen.",1018,1103
+doc_036,medical_medication,medication.dose_form,Sertraline 100 mg,1123,1140
+doc_036,medical_medication,medication.gazetteer,Sertraline,1123,1133
+doc_036,mental_health,mental.category_marker,Mental Health,71,84
+doc_036,mental_health,mental.icd_f_code,F33.1,689,694
+doc_036,mental_health,mental.clinical_term,Major Depressive Disorder,707,732
+doc_036,mental_health,mental.clinical_term,suicidal ideation,864,881
+doc_036,mental_health,mental.clinical_term,PHQ-9,919,924
+doc_036,mental_health,mental.clinical_term,depression,945,955
+doc_036,name,name.registry,Maria Gonzalez,488,502
+doc_036,ssn,ssn.masked_or_full,XXX-XX-9052,550,561
+doc_037,billing_code,billing.icd_parenthetical,F11.20,950,956
+doc_037,date_of_birth,dob.labeled,1989-03-15,475,485
+doc_037,home_address,address.labeled,"47 Chestnut Ave, Springfield, IL 62715",521,559
+doc_037,insurance_info,insurance.carrier_plan,BlueCross,571,580
+doc_037,medical_medication,medication.gazetteer,Buprenorphine,1070,1083
+doc_037,medical_medication,medication.dose_form,Naloxone 8mg/2mg,1084,1100
+doc_037,medical_medication,medication.gazetteer,Naloxone,1084,1092
+doc_037,mental_health,mental.category_marker,42 CFR Part 2,76,89
+doc_037,mental_health,mental.clinical_term,Substance Abuse,91,106
+doc_037,mental_health,mental.category_marker,Mental Health,153,166
+doc_037,mental_health,mental.category_marker,MHDDCA,219,225
+doc_037,mental_health,mental.icd_f_code,F11.20,618,624
+doc_037,mental_health,mental.clinical_term,generalized anxiety,685,704
+doc_037,mental_health,mental.clinical_term,suicidal ideation,772,789
+doc_037,mental_health,mental.clinical_term,GAD-7,835,840
+doc_037,mental_health,mental.clinical_term,anxiety,865,872
+doc_037,mental_health,mental.clinical_term,Opioid Use Disorder,919,938
+doc_037,mental_health,mental.category_marker,psychiatric,1029,1040
+doc_037,name,name.registry,Sarah Wilson,447,459
+doc_037,ssn,ssn.masked_or_full,XXX-XX-5518,500,511
+doc_038,billing_code,billing.icd_parenthetical,B20,675,678
+doc_038,date_of_birth,dob.labeled,1975-08-22,506,516
+doc_038,home_address,address.labeled,"601 Magnolia Dr, Springfield, IL 62714",552,590
+doc_038,insurance_info,insurance.carrier_plan,Medicaid,602,610
+doc_038,medical_diagnosis,diagnosis.gazetteer,HIV,279,282
+doc_038,medical_diagnosis,diagnosis.gazetteer,AIDS,328,332
+doc_038,medical_diagnosis,diagnosis.icd_nonpsych,B20,645,648
+doc_038,medical_diagnosis,diagnosis.labeled,"HIV, Stage 1 (B20)",661,679
+doc_038,medical_medication,medication.dose_form,Biktarvy 50mg/200mg,700,719
+doc_038,medical_medication,medication.gazetteer,Biktarvy,700,708
+doc_038,mental_health,mental.category_marker,MENTAL HEALTH,25,38
+doc_038,mental_health,mental.category_marker,MHDDCA,209,215
+doc_038,mental_health,mental.clinical_term,suicidal ideation,887,904
+doc_038,mental_health,mental.clinical_term,PHQ-9,909,914
+doc_038,mental_health,mental.clinical_term,depression,930,940
+doc_038,mental_health,mental.clinical_term,psychosis,975,984
+doc_038,name,name.registry,David Park,480,490
+doc_038,ssn,ssn.masked_or_full,XXX-XX-7743,531,542
+doc_039,billing_code,billing.icd_parenthetical,G30.0,760,765
+doc_039,date_of_birth,dob.labeled,1942-01-30,523,533
+doc_039,emergency_contact,emergency.labeled,"Thomas Moore (son, legal guardian) 555-0267",670,713
+doc_039,home_address,address.labeled,"9 Linden Lane, Springfield, IL 62719",570,606
+doc_039,insurance_info,insurance.carrier_plan,Medicare,618,626
+doc_039,medical_diagnosis,diagnosis.icd_nonpsych,G30.0,435,440
+doc_039,medical_diagnosis,diagnosis.gazetteer,Alzheimer,726,735
+doc_039,medical_diagnosis,diagnosis.labeled,"Alzheimer's disease, early onset (G30.0)",726,766
+doc_039,medical_diagnosis,diagnosis.labeled,Progressive behavioral symptoms consistent with early-onset Alzheimer's disease; sundowning pattern emerging.,1121,1230
+doc_039,medical_medication,medication.dose_form,Donepezil 10mg,788,802
+doc_039,medical_medication,medication.gazetteer,Donepezil,788,797
+doc_039,mental_health,mental.category_marker,MENTAL HEALTH,15,28
+doc_039,mental_health,mental.category_marker,MHDDCA,131,137
+doc_039,mental_health,mental.category_marker,psychiatry,1376,1386
+doc_039,name,name.registry,Patricia Moore,493,507
+doc_039,ssn,ssn.masked_or_full,XXX-XX-1183,549,560
+doc_040,billing_code,billing.icd_parenthetical,N18.3,1069,1074
+doc_040,date_of_birth,dob.labeled,1960-12-04,467,477
+doc_040,home_address,address.labeled,"88 Birchwood Ct, Springfield, IL 62716",514,552
+doc_040,insurance_info,insurance.carrier_plan,Medicare,564,572
+doc_040,medical_diagnosis,diagnosis.icd_nonpsych,N18.3,423,428
+doc_040,medical_diagnosis,diagnosis.gazetteer,Diabetes,968,976
+doc_040,medical_diagnosis,diagnosis.gazetteer,hypertension,993,1005
+doc_040,medical_diagnosis,diagnosis.gazetteer,Chronic Kidney Disease,1036,1058
+doc_040,medical_history,history.diagnosed_year,diagnosed 2012,977,991
+doc_040,medical_history,history.diagnosed_year,since 2005,1006,1016
+doc_040,medical_medication,medication.dose_form,Lisinopril 10mg,905,920
+doc_040,medical_medication,medication.gazetteer,Lisinopril,905,915
+doc_040,mental_health,mental.category_marker,MENTAL HEALTH,15,28
+doc_040,mental_health,mental.category_marker,MHDDCA,131,137
+doc_040,mental_health,mental.clinical_term,depression,660,670
+doc_040,mental_health,mental.clinical_term,suicidal ideation,816,833
+doc_040,mental_health,mental.clinical_term,PHQ-9,839,844
+doc_040,mental_health,mental.clinical_term,depressive,1086,1096
+doc_040,mental_health,mental.category_marker,psychiatric,1159,1170
+doc_040,mental_health,mental.category_marker,behavioral health,1299,1316
+doc_040,name,name.registry,James Carter,439,451
+doc_040,ssn,ssn.masked_or_full,XXX-XX-3391,493,504
+doc_041,billing_code,billing.icd_parenthetical,E11,552,555
+doc_041,date_of_birth,dob.labeled,1968-03-14,202,212
+doc_041,emergency_contact,emergency.labeled,Mary Smith (spouse) 555-0142,1014,1042
+doc_041,home_address,address.street_city_state_zip,"412 Maple St, Springfield, IL 62701",365,400
+doc_041,insurance_info,insurance.carrier_plan,BlueCross,224,233
+doc_041,medical_diagnosis,diagnosis.icd_nonpsych,E11.9,271,276
+doc_041,medical_diagnosis,diagnosis.gazetteer,nephropathy,439,450
+doc_041,medical_diagnosis,diagnosis.gazetteer,Diabetes Mellitus,533,550
+doc_041,medical_diagnosis,diagnosis.icd_nonpsych,E11,552,555
+doc_041,medical_diagnosis,diagnosis.gazetteer,Hypertension,646,658
+doc_041,medical_diagnosis,diagnosis.gazetteer,prediabetes,675,686
+doc_041,medical_history,history.diagnosed_year,diagnosed 2015,659,673
+doc_041,medical_history,history.diagnosed_year,since 2018,687,697
+doc_041,medical_medication,medication.dose_form,Metformin 500 mg,581,597
+doc_041,medical_medication,medication.gazetteer,Metformin,581,590
+doc_041,name,name.registry,John Smith,176,186
+doc_041,name,name.registry,Dr. Patricia Nguyen,1121,1140
+doc_042,billing_code,billing.icd_parenthetical,I48.11,554,560
+doc_042,billing_code,billing.cpt_labeled,99214,981,986
+doc_042,date_of_birth,dob.labeled,1955-11-09,249,259
+doc_042,home_address,address.street_city_state_zip,"230 Oak Ave, Springfield, IL 62703",401,435
+doc_042,insurance_info,insurance.carrier_plan,Medicare,271,279
+doc_042,medical_diagnosis,diagnosis.gazetteer,atrial fibrillation,488,507
+doc_042,medical_diagnosis,diagnosis.labeled,"Atrial Fibrillation, persistent (I48.11)",521,561
+doc_042,medical_diagnosis,diagnosis.icd_nonpsych,I48.11,554,560
+doc_042,medical_history,history.section,"Mr. Lee has a documented history of persistent AFib with ongoing rate-control management. He is currently maintained on Warfarin 5 mg daily; INR monitored monthly. Despite pharmacological therapy, sym",580,780
+doc_042,medical_history,history.history_of,history of persistent AFib with ongoing rate-control management,605,668
+doc_042,medical_license,license.npi,1234567890,1181,1191
+doc_042,medical_medication,medication.dose_form,Warfarin 5 mg,700,713
+doc_042,medical_medication,medication.gazetteer,Warfarin,700,708
+doc_042,name,name.registry,Robert Lee,223,233
+doc_042,name,name.registry,Dr. Patricia Nguyen,1127,1146
+doc_043,billing_code,billing.icd_parenthetical,Z34.32,404,410
+doc_043,date_of_birth,dob.labeled,1991-07-22,210,220
+doc_043,insurance_info,insurance.carrier_plan,Aetna,232,237
+doc_043,medical_diagnosis,diagnosis.icd_nonpsych,Z34.32,404,410
+doc_043,medical_diagnosis,diagnosis.gazetteer,gestational hypertension,507,531
+doc_043,medical_diagnosis,diagnosis.gazetteer,preeclampsia,640,652
+doc_043,medical_diagnosis,diagnosis.gazetteer,hypertensive,989,1001
+doc_043,medical_license,license.npi,1234567890,1178,1188
+doc_043,name,name.registry,Emily Brown,183,194
+doc_043,name,name.registry,Dr. Sarah Nguyen,1119,1135
+doc_044,billing_code,billing.icd_parenthetical,C50.911,624,631
+doc_044,date_of_birth,dob.labeled,1963-06-18,286,296
+doc_044,emergency_contact,emergency.labeled,Marco Torres (spouse) 555-0341,417,447
+doc_044,home_address,address.labeled,"220 Sycamore Blvd, Springfield, IL 62717",325,365
+doc_044,insurance_info,insurance.carrier_plan,Aetna,377,382
+doc_044,job_title,title.gazetteer,Attending Physician,1090,1109
+doc_044,medical_diagnosis,diagnosis.icd_nonpsych,C50.911,169,176
+doc_044,medical_diagnosis,diagnosis.gazetteer,carcinoma,599,608
+doc_044,medical_medication,medication.dose_form,Tamoxifen 20mg,835,849
+doc_044,medical_medication,medication.gazetteer,Tamoxifen,835,844
+doc_044,name,name.registry,Linda Torres,266,278
+doc_044,ssn,ssn.labeled,XXX-XX-8824,304,315
+doc_045,billing_code,billing.icd_parenthetical,N18.3,508,513
+doc_045,date_of_birth,dob.labeled,1960-12-04,217,227
+doc_045,home_address,address.labeled,"88 Birchwood Ct, Springfield, IL 62716",237,275
+doc_045,insurance_info,insurance.carrier_plan,Medicare,314,322
+doc_045,medical_diagnosis,diagnosis.gazetteer,Chronic Kidney Disease,475,497
+doc_045,medical_diagnosis,diagnosis.icd_nonpsych,N18.3,508,513
+doc_045,medical_diagnosis,diagnosis.gazetteer,Diabetes,583,591
+doc_045,medical_diagnosis,diagnosis.gazetteer,hypertension,611,623
+doc_045,medical_history,history.block,"Mr. Carter carries a history of Type 2 Diabetes diagnosed 2012 and hypertension since 2005, both of which are contributing factors to his progressive renal decline.",544,709
+doc_045,medical_history,history.history_of,"history of Type 2 Diabetes diagnosed 2012 and hypertension since 2005, both of which are co",565,656
+doc_045,medical_history,history.diagnosed_year,diagnosed 2012,592,606
+doc_045,medical_history,history.diagnosed_year,since 2005,624,634
+doc_045,medical_medication,medication.dose_form,Lisinopril 10mg,731,746
+doc_045,medical_medication,medication.gazetteer,Lisinopril,731,741
+doc_045,name,name.registry,James Carter,189,201
+doc_045,name,name.registry,Dr. Patricia Nguyen,1069,1088
+doc_045,ssn,ssn.masked_or_full,XXX-XX-3391,291,302
+doc_046,billing_code,billing.icd_parenthetical,I10,479,482
+doc_046,billing_code,billing.icd_parenthetical,E11.9,514,519
+doc_046,date_of_birth,dob.labeled,1958-09-27,209,219
+doc_046,home_address,address.labeled,"115 Walnut St, Springfield, IL 62718",229,265
+doc_046,insurance_info,insurance.carrier_plan,United Health,277,290
+doc_046,medical_diagnosis,diagnosis.gazetteer,hypertension,465,477
+doc_046,medical_diagnosis,diagnosis.icd_nonpsych,I10,479,482
+doc_046,medical_diagnosis,diagnosis.gazetteer,Diabetes Mellitus,495,512
+doc_046,medical_diagnosis,diagnosis.icd_nonpsych,E11.9,514,519
+doc_046,medical_diagnosis,diagnosis.gazetteer,hyperlipidemia,943,957
+doc_046,medical_diagnosis,diagnosis.gazetteer,hypertensive,1063,1075
+doc_046,medical_medication,medication.dose_form,Lisinopril 20mg,629,644
+doc_046,medical_medication,medication.gazetteer,Lisinopril,629,639
+doc_046,medical_medication,medication.dose_form,Metformin 1000mg,655,671
+doc_046,medical_medication,medication.gazetteer,Metformin,655,664
+doc_046,name,name.registry,Michael Chen,181,193
+doc_046,name,name.registry,Dr. Patricia Nguyen,1136,1155
+doc_047,billing_code,billing.cpt_line_item,99213,718,723
+doc_047,date_of_birth,dob.labeled,1968-03-14,252,262
+doc_047,emergency_contact,emergency.labeled,Mary Smith (spouse) 555-0142,353,381
+doc_047,home_address,address.labeled,"412 Maple St, Springfield, IL 62701",298,333
+doc_047,insurance_info,insurance.carrier_plan,BlueCross,422,431
+doc_047,medical_diagnosis,diagnosis.icd_nonpsych,E11.9,727,732
+doc_047,medical_diagnosis,diagnosis.gazetteer,Hypertension,1050,1062
+doc_047,medical_diagnosis,diagnosis.gazetteer,prediabetes,1079,1090
+doc_047,medical_history,history.diagnosed_year,diagnosed 2015,1063,1077
+doc_047,medical_history,history.diagnosed_year,since 2018,1091,1101
+doc_047,medical_license,license.npi,1234567890,602,612
+doc_047,medical_medication,medication.dose_form,Metformin 500 mg,1003,1019
+doc_047,medical_medication,medication.gazetteer,Metformin,1003,1012
+doc_047,name,name.registry,John Smith,226,236
+doc_047,ssn,ssn.masked_or_full,XXX-XX-4821,277,288
+doc_048,billing_code,billing.icd_parenthetical,Z34.32,494,500
+doc_048,billing_code,billing.cpt_line_item,59400,792,797
+doc_048,date_of_birth,dob.labeled,1991-07-22,256,266
+doc_048,home_address,address.labeled,"89 Birch Lane, Springfield, IL 62702",302,338
+doc_048,insurance_info,insurance.carrier_plan,Aetna,379,384
+doc_048,medical_diagnosis,diagnosis.labeled,"Intrauterine pregnancy, 28 weeks (Z34.32)",460,501
+doc_048,medical_diagnosis,diagnosis.icd_nonpsych,Z34.32,494,500
+doc_048,medical_diagnosis,diagnosis.gazetteer,Gestational hypertension,520,544
+doc_048,name,name.registry,Emily Brown,229,240
+doc_048,ssn,ssn.masked_or_full,XXX-XX-3307,281,292
+doc_049,billing_code,billing.icd_parenthetical,I48.11,515,521
+doc_049,date_of_birth,dob.labeled,1955-11-09,275,285
+doc_049,home_address,address.labeled,"230 Oak Ave, Springfield, IL 62703",321,355
+doc_049,insurance_info,insurance.carrier_plan,Medicare,404,412
+doc_049,insurance_info,insurance.member_id,1EG4-TE5-MK72,431,444
+doc_049,medical_diagnosis,diagnosis.gazetteer,Atrial Fibrillation,482,501
+doc_049,medical_diagnosis,diagnosis.labeled,"Atrial Fibrillation, persistent (I48.11)",482,522
+doc_049,medical_diagnosis,diagnosis.icd_nonpsych,I48.11,515,521
+doc_049,medical_license,license.npi,1234567890,118,128
+doc_049,medical_medication,medication.dose_form,Warfarin 5 mg,543,556
+doc_049,medical_medication,medication.gazetteer,Warfarin,543,551
+doc_049,name,name.registry,Robert Lee,249,259
+doc_049,name,name.registry,Dr. Angela Reyes,942,958
+doc_049,ssn,ssn.masked_or_full,XXX-XX-6614,300,311
+doc_050,billing_code,billing.cpt_line_item,99214,611,616
+doc_050,billing_code,billing.icd_parenthetical,N18.3,989,994
+doc_050,date_of_birth,dob.labeled,1960-12-04,268,278
+doc_050,home_address,address.labeled,"88 Birchwood Ct, Springfield, IL 62716",288,326
+doc_050,insurance_info,insurance.carrier_plan,Medicare,401,409
+doc_050,insurance_info,insurance.member_id,2FG8-KL4-NP91,428,441
+doc_050,medical_diagnosis,diagnosis.icd_nonpsych,N18.3,620,625
+doc_050,medical_diagnosis,diagnosis.gazetteer,Diabetes,896,904
+doc_050,medical_diagnosis,diagnosis.gazetteer,hypertension,921,933
+doc_050,medical_diagnosis,diagnosis.gazetteer,Chronic Kidney Disease,956,978
+doc_050,medical_diagnosis,diagnosis.labeled,"Chronic Kidney Disease, Stage 3 (N18.3) — routine follow-up",956,1015
+doc_050,medical_history,history.diagnosed_year,diagnosed 2012,905,919
+doc_050,medical_history,history.diagnosed_year,since 2005,934,944
+doc_050,medical_medication,medication.dose_form,Lisinopril 10mg,821,836
+doc_050,medical_medication,medication.gazetteer,Lisinopril,821,831
+doc_050,name,name.registry,James Carter,240,252
+doc_050,name,name.registry,Dr. Sandra Howell,485,502
+doc_050,ssn,ssn.masked_or_full,XXX-XX-3391,341,352
+doc_051,billing_code,billing.cpt_line_item,99213,806,811
+doc_051,date_of_birth,dob.labeled,1958-09-27,330,340
+doc_051,home_address,address.labeled,"115 Walnut St, Springfield, IL 62718",376,412
+doc_051,insurance_info,insurance.carrier_plan,United Health,529,542
+doc_051,medical_diagnosis,diagnosis.icd_nonpsych,I10,815,818
+doc_051,medical_diagnosis,diagnosis.gazetteer,Hypertension,843,855
+doc_051,medical_diagnosis,diagnosis.icd_nonpsych,E11.9,883,888
+doc_051,medical_diagnosis,diagnosis.gazetteer,Diabetes,918,926
+doc_051,medical_license,license.npi,1234567890,1142,1152
+doc_051,medical_medication,medication.dose_form,Lisinopril 20mg,957,972
+doc_051,medical_medication,medication.gazetteer,Lisinopril,957,967
+doc_051,medical_medication,medication.dose_form,Metformin 1000mg,980,996
+doc_051,medical_medication,medication.gazetteer,Metformin,980,989
+doc_051,name,name.registry,Michael Chen,302,314
+doc_051,name,name.registry,Dr. Sandra Okafor,710,727
+doc_051,ssn,ssn.masked_or_full,XXX-XX-2267,355,366
+doc_052,billing_code,billing.icd_parenthetical,C50.911,558,565
+doc_052,date_of_birth,dob.labeled,1963-06-18,253,263
+doc_052,emergency_contact,emergency.labeled,Marco Torres (spouse) 555-0341,359,389
+doc_052,home_address,address.labeled,"220 Sycamore Blvd, Springfield, IL 62717",299,339
+doc_052,insurance_info,insurance.carrier_plan,Aetna,430,435
+doc_052,medical_diagnosis,diagnosis.labeled,"Invasive ductal carcinoma, right breast (C50.911)",517,566
+doc_052,medical_diagnosis,diagnosis.gazetteer,carcinoma,533,542
+doc_052,medical_diagnosis,diagnosis.icd_nonpsych,C50.911,558,565
+doc_052,medical_license,license.npi,1234567890,1151,1161
+doc_052,medical_medication,medication.dose_form,Tamoxifen 20mg,676,690
+doc_052,medical_medication,medication.gazetteer,Tamoxifen,676,685
+doc_052,name,name.registry,Linda Torres,225,237
+doc_052,name,name.registry,Dr. Susan Patel,1125,1140
+doc_052,ssn,ssn.masked_or_full,XXX-XX-8824,278,289
+doc_053,billing_code,billing.cpt_labeled,99215,638,643
+doc_053,date_of_birth,dob.labeled,1942-01-30,258,268
+doc_053,emergency_contact,emergency.labeled,"Thomas Moore (son, legal guardian) 555-0267",360,403
+doc_053,home_address,address.labeled,"9 Linden Lane, Springfield, IL 62719",304,340
+doc_053,insurance_info,insurance.carrier_plan,Medicare,452,460
+doc_053,insurance_info,insurance.member_id,3HJ2-MP6-QR44,482,495
+doc_053,medical_diagnosis,diagnosis.icd_nonpsych,G30.0,704,709
+doc_053,medical_medication,medication.dose_form,Donepezil 10mg,865,879
+doc_053,medical_medication,medication.gazetteer,Donepezil,865,874
+doc_053,name,name.registry,Patricia Moore,228,242
+doc_053,name,name.registry,Dr. Sandra Ellison,554,572
+doc_053,ssn,ssn.masked_or_full,XXX-XX-1183,283,294
+doc_054,date_of_birth,dob.labeled,1983-05-30,254,264
+doc_054,home_address,address.labeled,"15 Elm Court, Springfield, IL 62704",300,335
+doc_054,insurance_info,insurance.carrier_plan,United Health,376,389
+doc_054,medical_license,license.npi,1234567890,565,575
+doc_054,medical_medication,medication.dose_form,Sertraline 100 mg,749,766
+doc_054,medical_medication,medication.gazetteer,Sertraline,749,759
+doc_054,mental_health,mental.icd_f_code,F33.1,666,671
+doc_054,mental_health,mental.clinical_term,Major Depressive Disorder,674,699
+doc_054,mental_health,mental.category_marker,Psychotherapy,803,816
+doc_054,name,name.registry,Maria Gonzalez,224,238
+doc_054,name,name.registry,Dr. Patricia Okafor,535,554
+doc_054,ssn,ssn.masked_or_full,XXX-XX-9052,279,290
+doc_055,billing_code,billing.cpt_line_item,99213,572,577
+doc_055,date_of_birth,dob.labeled,1968-03-14,242,252
+doc_055,home_address,address.labeled,"412 Maple St, Springfield, IL 62701",262,297
+doc_055,insurance_info,insurance.carrier_plan,BlueCross,364,373
+doc_055,medical_diagnosis,diagnosis.gazetteer,Diabetes,589,597
+doc_055,medical_diagnosis,diagnosis.icd_nonpsych,E11.9,615,620
+doc_055,medical_medication,medication.dose_form,Metformin 500 mg,640,656
+doc_055,medical_medication,medication.gazetteer,Metformin,640,649
+doc_055,name,name.registry,John Smith,216,226
+doc_055,ssn,ssn.masked_or_full,XXX-XX-4821,312,323
+doc_056,billing_code,billing.cpt_line_item,59400,610,615
+doc_056,date_of_birth,dob.labeled,07/22/1991,244,254
+doc_056,home_address,address.labeled,"89 Birch Lane, Springfield, IL 62702",264,300
+doc_056,insurance_info,insurance.carrier_plan,Aetna,369,374
+doc_056,medical_diagnosis,diagnosis.icd_nonpsych,Z34.32,672,678
+doc_056,name,name.registry,Emily Brown,217,228
+doc_056,ssn,ssn.masked_or_full,XXX-XX-3307,315,326
+doc_057,date_of_birth,dob.labeled,1955-11-09,255,265
+doc_057,home_address,address.labeled,"230 Oak Ave, Springfield, IL 62703",284,318
+doc_057,insurance_info,insurance.carrier_plan,Medicare,337,345
+doc_057,medical_diagnosis,diagnosis.icd_nonpsych,I48.11,593,599
+doc_057,medical_diagnosis,diagnosis.gazetteer,Atrial fibrillation,618,637
+doc_057,medical_medication,medication.dose_form,Warfarin 5 mg,663,676
+doc_057,medical_medication,medication.gazetteer,Warfarin,663,671
+doc_057,name,name.registry,Robert Lee,226,236
+doc_057,name,name.registry,Dr. Angela Morrow,476,493
+doc_058,billing_code,billing.icd_labeled,N18.3,687,692
+doc_058,date_of_birth,dob.labeled,12/04/1960,236,246
+doc_058,home_address,address.labeled,"88 Birchwood Ct, Springfield, IL 62716",256,294
+doc_058,insurance_info,insurance.carrier_plan,Medicare,306,314
+doc_058,medical_diagnosis,diagnosis.icd_nonpsych,N18.3,687,692
+doc_058,name,name.registry,James Carter,208,220
+doc_058,name,name.registry,Dr. Sandra Okafor,504,521
+doc_059,billing_code,billing.cpt_labeled,99215,505,510
+doc_059,date_of_birth,dob.labeled,1963-06-18,240,250
+doc_059,home_address,address.labeled,"220 Sycamore Blvd, Springfield, IL 62717",286,326
+doc_059,insurance_info,insurance.carrier_plan,Aetna,338,343
+doc_059,medical_diagnosis,diagnosis.icd_nonpsych,C50.911,559,566
+doc_059,medical_medication,medication.dose_form,Tamoxifen 20mg,600,614
+doc_059,medical_medication,medication.gazetteer,Tamoxifen,600,609
+doc_059,name,name.registry,Linda Torres,212,224
+doc_059,name,name.registry,Dr. Anita Sharma,463,479
+doc_059,ssn,ssn.masked_or_full,XXX-XX-8824,265,276
+doc_060,billing_code,billing.cpt_line_item,99215,614,619
+doc_060,date_of_birth,dob.labeled,01/30/1942,286,296
+doc_060,home_address,address.labeled,"9 Linden Lane, Springfield, IL 62719",306,342
+doc_060,insurance_info,insurance.carrier_plan,Medicare,380,388
+doc_060,medical_diagnosis,diagnosis.icd_nonpsych,G30.0,651,656
+doc_060,name,name.registry,Patricia Moore,256,270
+doc_060,name,name.registry,Dr. Helen Cartwright,510,530
+doc_060,ssn,ssn.masked_or_full,XXX-XX-1183,357,368
+doc_061,billing_code,billing.icd_parenthetical,E11,514,517
+doc_061,billing_code,billing.icd_labeled,E11.9,529,534
+doc_061,date_of_birth,dob.labeled,1968-03-14,279,289
+doc_061,emergency_contact,emergency.labeled,Mary Smith (spouse) 555-0142,416,444
+doc_061,home_address,address.labeled,"412 Maple St, Springfield, IL 62701",325,360
+doc_061,insurance_info,insurance.carrier_plan,BlueCross,372,381
+doc_061,medical_diagnosis,diagnosis.labeled,Type 2 Diabetes Mellitus (E11) — ICD-10: E11.9,488,534
+doc_061,medical_diagnosis,diagnosis.gazetteer,Diabetes Mellitus,495,512
+doc_061,medical_diagnosis,diagnosis.icd_nonpsych,E11,514,517
+doc_061,medical_diagnosis,diagnosis.icd_nonpsych,E11.9,529,534
+doc_061,medical_diagnosis,diagnosis.gazetteer,Hypertension,948,960
+doc_061,medical_diagnosis,diagnosis.gazetteer,prediabetes,977,988
+doc_061,medical_history,history.diagnosed_year,diagnosed 2015,961,975
+doc_061,medical_history,history.diagnosed_year,since 2018,989,999
+doc_061,medical_license,license.npi,1234567890,1095,1105
+doc_061,medical_medication,medication.gazetteer,Metformin,557,566
+doc_061,medical_medication,medication.dose_form,Release 500 mg,576,590
+doc_061,medical_medication,medication.dose_form,Metformin 500 mg,643,659
+doc_061,name,name.registry,John Smith,253,263
+doc_061,name,name.registry,Dr. Angela Torres,1066,1083
+doc_061,ssn,ssn.masked_or_full,XXX-XX-4821,304,315
+doc_062,billing_code,billing.icd_parenthetical,I48.11,375,381
+doc_062,date_of_birth,dob.labeled,1955-11-09,212,222
+doc_062,home_address,address.labeled,"230 Oak Ave, Springfield, IL 62703",232,266
+doc_062,insurance_info,insurance.carrier_plan,Medicare,278,286
+doc_062,job_title,title.gazetteer,Physician,969,978
+doc_062,medical_diagnosis,diagnosis.gazetteer,Atrial Fibrillation,342,361
+doc_062,medical_diagnosis,diagnosis.labeled,"Atrial Fibrillation, persistent (I48.11)",342,382
+doc_062,medical_diagnosis,diagnosis.icd_nonpsych,I48.11,375,381
+doc_062,medical_diagnosis,diagnosis.gazetteer,stroke,848,854
+doc_062,medical_license,license.npi,1234567890,1007,1017
+doc_062,medical_medication,medication.dose_form,Warfarin 5 mg,405,418
+doc_062,medical_medication,medication.gazetteer,Warfarin,405,413
+doc_062,name,name.registry,Robert Lee,186,196
+doc_062,name,name.registry,Dr. Angela Torres,980,997
+doc_063,billing_code,billing.icd_parenthetical,F33.1,813,818
+doc_063,date_of_birth,dob.labeled,1983-05-30,618,628
+doc_063,home_address,address.labeled,"15 Elm Court, Springfield, IL 62704",664,699
+doc_063,insurance_info,insurance.carrier_plan,United Health,711,724
+doc_063,job_title,title.gazetteer,Attending Psychiatrist,1272,1294
+doc_063,medical_diagnosis,diagnosis.labeled,"Major Depressive Disorder, recurrent (F33.1)",775,819
+doc_063,medical_license,license.npi,1234567890,1320,1330
+doc_063,medical_medication,medication.dose_form,Sertraline 100 mg,842,859
+doc_063,medical_medication,medication.gazetteer,Sertraline,842,852
+doc_063,mental_health,mental.category_marker,mental health,57,70
+doc_063,mental_health,mental.category_marker,MHDDCA,178,184
+doc_063,mental_health,mental.category_marker,PSYCHIATRIC,449,460
+doc_063,mental_health,mental.clinical_term,Major Depressive Disorder,775,800
+doc_063,mental_health,mental.icd_f_code,F33.1,813,818
+doc_063,name,name.registry,Maria Gonzalez,588,602
+doc_063,ssn,ssn.masked_or_full,XXX-XX-9052,643,654
+doc_064,date_of_birth,dob.labeled,1989-03-15,425,435
+doc_064,home_address,address.labeled,"47 Chestnut Ave, Springfield, IL 62715",445,483
+doc_064,insurance_info,insurance.carrier_plan,BlueCross,495,504
+doc_064,medical_diagnosis,diagnosis.labeled,"Opioid Use Disorder, moderate",553,582
+doc_064,medical_medication,medication.gazetteer,Buprenorphine,677,690
+doc_064,medical_medication,medication.dose_form,Naloxone 8mg/2mg,691,707
+doc_064,medical_medication,medication.gazetteer,Naloxone,691,699
+doc_064,mental_health,mental.category_marker,42 CFR PART 2,27,40
+doc_064,mental_health,mental.clinical_term,substance use disorder,88,110
+doc_064,mental_health,mental.clinical_term,Opioid Use Disorder,553,572
+doc_064,mental_health,mental.icd_f_code,F11.20,596,602
+doc_064,name,name.registry,Sarah Wilson,397,409
+doc_065,billing_code,billing.icd_parenthetical,C50.911,365,372
+doc_065,date_of_birth,dob.labeled,1963-06-18,125,135
+doc_065,home_address,address.labeled,"220 Sycamore Blvd, Springfield, IL 62717",171,211
+doc_065,insurance_info,insurance.carrier_plan,Aetna,244,249
+doc_065,medical_diagnosis,diagnosis.icd_nonpsych,C50.911,287,294
+doc_065,medical_diagnosis,diagnosis.labeled,"Invasive ductal carcinoma, right breast (C50.911)",324,373
+doc_065,medical_diagnosis,diagnosis.gazetteer,carcinoma,340,349
+doc_065,medical_medication,medication.dose_form,Tamoxifen 20mg,568,582
+doc_065,medical_medication,medication.gazetteer,Tamoxifen,568,577
+doc_065,name,name.registry,Linda Torres,97,109
+doc_065,ssn,ssn.masked_or_full,XXX-XX-8824,150,161
+doc_066,billing_code,billing.cpt_line_item,99213,659,664
+doc_066,date_of_birth,dob.labeled,1968-03-14,219,229
+doc_066,home_address,address.labeled,"412 Maple St, Springfield, IL 62701",272,307
+doc_066,insurance_info,insurance.carrier_plan,BlueCross,130,139
+doc_066,medical_diagnosis,diagnosis.gazetteer,Diabetes,729,737
+doc_066,medical_diagnosis,diagnosis.icd_nonpsych,E11.9,760,765
+doc_066,medical_license,license.npi,1234567890,414,424
+doc_066,name,name.registry,John Smith,193,203
+doc_066,ssn,ssn.masked_or_full,XXX-XX-4821,244,255
+doc_067,billing_code,billing.cpt_line_item,59400,515,520
+doc_067,date_of_birth,dob.labeled,1991-07-22,179,189
+doc_067,insurance_info,insurance.carrier_plan,Aetna,122,127
+doc_067,insurance_info,insurance.member_id,AE-201934,201,210
+doc_067,medical_diagnosis,diagnosis.icd_nonpsych,Z34.32,609,615
+doc_067,name,name.registry,Emily Brown,152,163
+doc_067,name,name.registry,Dr. Sandra Okafor,311,328
+doc_068,billing_code,billing.cpt_line_item,99214,570,575
+doc_068,date_of_birth,dob.labeled,1955-11-09,176,186
+doc_068,insurance_info,insurance.carrier_plan,Medicare,201,209
+doc_068,medical_diagnosis,diagnosis.gazetteer,Atrial Fibrillation,628,647
+doc_068,medical_diagnosis,diagnosis.labeled,"Atrial Fibrillation, persistent  I48.11",628,667
+doc_068,medical_diagnosis,diagnosis.icd_nonpsych,I48.11,661,667
+doc_068,medical_license,license.npi,1234567890,453,463
+doc_068,medical_medication,medication.dose_form,Warfarin 5 mg,1039,1052
+doc_068,medical_medication,medication.gazetteer,Warfarin,1039,1047
+doc_068,name,name.registry,Robert Lee,150,160
+doc_069,date_of_birth,dob.labeled,1960-12-04,217,227
+doc_069,home_address,address.labeled,"88 Birchwood Ct, Springfield, IL 62716",282,320
+doc_069,insurance_info,insurance.carrier_plan,Medicare,242,250
+doc_069,medical_diagnosis,diagnosis.icd_nonpsych,N18.3,669,674
+doc_069,medical_diagnosis,diagnosis.gazetteer,Chronic Kidney Disease,686,708
+doc_069,medical_medication,medication.dose_form,Lisinopril 10mg,1071,1086
+doc_069,medical_medication,medication.gazetteer,Lisinopril,1071,1081
+doc_069,name,name.registry,James Carter,189,201
+doc_069,name,name.registry,Dr. Anita Sharma,371,387
+doc_070,billing_code,billing.icd_parenthetical,E11,586,589
+doc_070,date_of_birth,dob.labeled,1968-03-14,131,141
+doc_070,emergency_contact,emergency.labeled,Mary Smith (spouse),735,754
+doc_070,home_address,address.labeled,"412 Maple St, Springfield, IL 62701",182,217
+doc_070,insurance_info,insurance.carrier_plan,BlueCross,257,266
+doc_070,job_title,title.gazetteer,Billing Specialist,810,828
+doc_070,medical_diagnosis,diagnosis.icd_nonpsych,E11.9,535,540
+doc_070,medical_diagnosis,diagnosis.labeled,Type 2 Diabetes Mellitus (E11),560,590
+doc_070,medical_diagnosis,diagnosis.gazetteer,Diabetes Mellitus,567,584
+doc_070,medical_diagnosis,diagnosis.icd_nonpsych,E11,586,589
+doc_070,medical_diagnosis,diagnosis.gazetteer,Hypertension,658,670
+doc_070,medical_diagnosis,diagnosis.gazetteer,prediabetes,687,698
+doc_070,medical_history,history.diagnosed_year,diagnosed 2015,671,685
+doc_070,medical_history,history.diagnosed_year,since 2018,699,709
+doc_070,medical_medication,medication.dose_form,Metformin 500 mg,611,627
+doc_070,medical_medication,medication.gazetteer,Metformin,611,620
+doc_070,name,name.registry,John Smith,105,115
+doc_070,ssn,ssn.masked_or_full,XXX-XX-4821,156,167
+doc_071,billing_code,billing.icd_parenthetical,Z34.32,440,446
+doc_071,billing_code,billing.cpt_labeled,59400,721,726
+doc_071,date_of_birth,dob.labeled,1991-07-22,132,142
+doc_071,home_address,address.labeled,"89 Birch Lane, Springfield, IL 62702",183,219
+doc_071,insurance_info,insurance.carrier_plan,Aetna,252,257
+doc_071,job_title,title.gazetteer,Billing Specialist,941,959
+doc_071,medical_diagnosis,diagnosis.labeled,"Intrauterine pregnancy, 28 weeks (Z34.32)",406,447
+doc_071,medical_diagnosis,diagnosis.icd_nonpsych,Z34.32,440,446
+doc_071,medical_diagnosis,diagnosis.gazetteer,Gestational hypertension,466,490
+doc_071,name,name.registry,Emily Brown,105,116
+doc_071,ssn,ssn.masked_or_full,XXX-XX-3307,157,168
+doc_072,billing_code,billing.icd_parenthetical,G30.0,484,489
+doc_072,date_of_birth,dob.labeled,1942-01-30,135,145
+doc_072,home_address,address.labeled,"9 Linden Lane, Springfield, IL 62719",181,217
+doc_072,insurance_info,insurance.carrier_plan,Medicare,260,268
+doc_072,job_title,title.gazetteer,Billing Specialist,956,974
+doc_072,medical_diagnosis,diagnosis.gazetteer,Alzheimer,450,459
+doc_072,medical_diagnosis,diagnosis.labeled,"Alzheimer's disease, early onset (G30.0)",450,490
+doc_072,medical_diagnosis,diagnosis.icd_nonpsych,G30.0,484,489
+doc_072,medical_medication,medication.dose_form,Donepezil 10mg,511,525
+doc_072,medical_medication,medication.gazetteer,Donepezil,511,520
+doc_072,name,name.registry,Patricia Moore,105,119
+doc_072,ssn,ssn.masked_or_full,XXX-XX-1183,160,171
+doc_073,billing_code,billing.icd_parenthetical,I10,422,425
+doc_073,billing_code,billing.icd_parenthetical,E11.9,454,459
+doc_073,date_of_birth,dob.labeled,1958-09-27,141,151
+doc_073,employment_contract,employment.effective_date,Effective Date: 01/01/2026,339,365
+doc_073,home_address,address.labeled,"115 Walnut St, Springfield, IL 62718",187,223
+doc_073,insurance_info,insurance.carrier_plan,United Health,253,266
+doc_073,job_title,title.gazetteer,Billing Specialist,1032,1050
+doc_073,medical_diagnosis,diagnosis.labeled,Essential hypertension (I10); Type 2 Diabetes Mellitus (E11.9),398,460
+doc_073,medical_diagnosis,diagnosis.gazetteer,hypertension,408,420
+doc_073,medical_diagnosis,diagnosis.icd_nonpsych,I10,422,425
+doc_073,medical_diagnosis,diagnosis.gazetteer,Diabetes Mellitus,435,452
+doc_073,medical_diagnosis,diagnosis.icd_nonpsych,E11.9,454,459
+doc_073,medical_diagnosis,diagnosis.gazetteer,Diabetes,698,706
+doc_073,medical_medication,medication.dose_form,Lisinopril 20mg,482,497
+doc_073,medical_medication,medication.gazetteer,Lisinopril,482,492
+doc_073,medical_medication,medication.dose_form,Metformin 1000mg,505,521
+doc_073,medical_medication,medication.gazetteer,Metformin,505,514
+doc_073,name,name.registry,Michael Chen,113,125
+doc_073,ssn,ssn.masked_or_full,XXX-XX-2267,166,177
+doc_074,date_of_birth,dob.labeled,1975-04-18,367,377
+doc_074,employment_contract,employment.effective_date,"Effective Date:       January 1, 2026",549,586
+doc_074,home_address,address.labeled,"304 Willow Rd, Springfield, IL 62706",454,490
+doc_074,job_title,title.gazetteer,physician,711,720
+doc_074,medical_license,license.labeled,IL-MD-48821,400,411
+doc_074,name,name.registry,Dr. Sarah Chen,161,175
+doc_074,salary,salary.labeled_amount,"$215,000",538,546
+doc_075,date_of_birth,dob.labeled,1969-09-03,423,433
+doc_075,employment_contract,employment.effective_date,Effective Date: 2026-01-01,623,649
+doc_075,home_address,address.labeled,"57 Pine St, Springfield, IL 62707",494,527
+doc_075,job_title,title.labeled,Staff Physician — Cardiology,563,591
+doc_075,job_title,title.gazetteer,Physician,569,578
+doc_075,medical_license,license.labeled,IL-MD-30115,453,464
+doc_075,name,name.registry,Dr. Marcus Webb,196,211
+doc_075,salary,salary.labeled_amount,"$240,000",672,680
+doc_076,date_of_birth,dob.labeled,1978-11-14,393,403
+doc_076,employment_contract,employment.effective_date,"effective January 1, 2026",289,314
+doc_076,employment_contract,employment.effective_date,Effective Date:         2026-01-01,569,603
+doc_076,home_address,address.street_city_state_zip,"3200 Riverside Drive, Peoria, IL 61615",52,90
+doc_076,home_address,address.labeled,"83 Hawthorn Rd, Springfield, IL 62720",471,508
+doc_076,job_title,title.gazetteer,Physician,679,688
+doc_076,medical_license,license.labeled,IL-MD-55432,425,436
+doc_076,mental_health,mental.category_marker,Psychiatry,438,448
+doc_076,name,name.registry,Dr. Aisha Patel,194,209
+doc_077,date_of_birth,dob.labeled,1965-04-22,465,475
+doc_077,employment_contract,employment.effective_date,"Effective Date:     January 1, 2026",701,736
+doc_077,home_address,address.labeled,"401 Aspen Way, Springfield, IL 62721",498,534
+doc_077,job_title,title.gazetteer,Physician,613,622
+doc_077,job_title,title.labeled,Physician — Oncology/Hematology,613,644
+doc_077,medical_license,license.labeled,IL-MD-61209,557,568
+doc_077,name,name.registry,Dr. Kevin O'Brien,198,215
+doc_077,salary,salary.labeled_amount,"$260,000",690,698
+doc_078,date_of_birth,dob.labeled,1985-12-01,424,434
+doc_078,employment_contract,employment.effective_date,"Effective Date:        January 1, 2026",565,603
+doc_078,home_address,address.street_city_state_zip,"19 Cedar Blvd, Springfield, IL 62708",179,215
+doc_078,job_title,title.gazetteer,Nurse,454,459
+doc_078,job_title,title.labeled,Nurse (Medical),454,469
+doc_078,salary,salary.labeled_amount,"$72,000",555,562
+doc_079,date_of_birth,dob.labeled,1980-08-19,433,443
+doc_079,employment_contract,employment.effective_date,"Effective Date:       January 1, 2026",601,638
+doc_079,home_address,address.street_city_state_zip,"123 Riverside Drive, Springfield, IL 62701",52,94
+doc_079,home_address,address.street_city_state_zip,"88 Ash Lane, Springfield, IL 62710",184,218
+doc_079,job_title,title.gazetteer,Billing Specialist,464,482
+doc_079,job_title,title.labeled,Billing Specialist (Administrative),464,499
+doc_079,name,name.registry,Alice Johnson,170,183
+doc_079,salary,salary.labeled_amount,"$55,000",591,598
+doc_080,date_of_birth,dob.labeled,1978-11-14,135,145
+doc_080,employment_contract,employment.agreement_title,EMPLOYMENT CONTRACT,25,44
+doc_080,employment_contract,employment.effective_date,"Effective Date: March 1, 2022",309,338
+doc_080,home_address,address.labeled,"83 Hawthorn Rd, Springfield, IL 62720",160,197
+doc_080,job_title,title.labeled,Staff Psychiatrist,251,269
+doc_080,job_title,title.gazetteer,Psychiatrist,257,269
+doc_080,medical_license,license.labeled,IL-MD-55432,215,226
+doc_080,mental_health,mental.category_marker,Psychiatry,228,238
+doc_080,mental_health,mental.category_marker,Behavioral Health,282,299
+doc_080,mental_health,mental.category_marker,psychiatric,510,521
+doc_080,mental_health,mental.category_marker,42 CFR Part 2,685,698
+doc_080,mental_health,mental.clinical_term,substance use disorder,728,750
+doc_080,name,name.registry,Dr. Aisha Patel,104,119
+doc_080,salary,salary.labeled_amount,"$195,000",368,376
+doc_081,date_of_birth,dob.labeled,1965-04-22,145,155
+doc_081,employment_contract,employment.agreement_title,EMPLOYMENT CONTRACT,25,44
+doc_081,home_address,address.labeled,"401 Aspen Way, Springfield, IL 62721",170,206
+doc_081,job_title,title.labeled,Staff Oncologist,268,284
+doc_081,job_title,title.gazetteer,Oncologist,274,284
+doc_081,medical_license,license.labeled,IL-MD-61209,224,235
+doc_081,name,name.registry,Dr. Kevin O'Brien,112,129
+doc_081,salary,salary.labeled_amount,"$260,000",477,485
+doc_082,date_of_birth,dob.labeled,1992-06-30,132,142
+doc_082,employment_contract,employment.agreement_title,EMPLOYMENT CONTRACT,25,44
+doc_082,employment_contract,employment.effective_date,"effective August 1, 2023",368,392
+doc_082,home_address,address.labeled,"56 Fern Ct, Springfield, IL 62722",157,190
+doc_082,job_title,title.labeled,Staff Registered Nurse,202,224
+doc_082,job_title,title.gazetteer,Registered Nurse,208,224
+doc_082,job_title,title.gazetteer,attending psychiatrist,605,627
+doc_082,job_title,title.gazetteer,HR Manager,1243,1253
+doc_082,mental_health,mental.category_marker,Psychiatric,237,248
+doc_082,salary,salary.labeled_amount,"$74,000",661,668
+doc_083,date_of_birth,dob.labeled,1984-02-28,171,181
+doc_083,employment_contract,employment.agreement_title,EMPLOYMENT CONTRACT,25,44
+doc_083,home_address,address.labeled,"77 Cypress Dr, Springfield, IL 62724",196,232
+doc_083,job_title,title.gazetteer,Billing Specialist,243,261
+doc_083,job_title,title.labeled,Billing Specialist (Administrative),243,278
+doc_083,job_title,title.gazetteer,HR Manager,1251,1261
+doc_083,name,name.registry,Jennifer Walsh,141,155
+doc_083,salary,salary.labeled_amount,"$52,000",419,426
+doc_084,date_of_birth,dob.labeled,1975-04-18,258,268
+doc_084,employment_contract,employment.agreement_title,Employment Contract,393,412
+doc_084,employment_contract,employment.agreement_title,Full-Time Physician Agreement,414,443
+doc_084,employment_contract,employment.effective_date,"effective March 1, 2021",445,468
+doc_084,home_address,address.labeled,"304 Willow Rd, Springfield, IL 62706",332,368
+doc_084,job_title,title.gazetteer,Physician,214,223
+doc_084,job_title,title.labeled,"Physician, Internal Medicine",214,242
+doc_084,medical_license,license.labeled,IL-MD-48821,286,297
+doc_084,name,name.registry,Dr. Sarah Chen,193,207
+doc_084,salary,salary.labeled_amount,"$215,000",384,392
+doc_085,date_of_birth,dob.labeled,1985-12-01,239,249
+doc_085,employment_contract,employment.agreement_title,Employment Contract,324,343
+doc_085,employment_contract,employment.effective_date,effective 2019-03-10,366,386
+doc_085,home_address,address.labeled,"19 Cedar Blvd, Springfield, IL 62708",264,300
+doc_085,job_title,title.gazetteer,Nurse,208,213
+doc_085,job_title,title.labeled,Nurse (Medical),208,223
+doc_085,salary,salary.labeled_amount,"$72,000",316,323
+doc_086,date_of_birth,dob.labeled,1980-08-19,263,273
+doc_086,employment_contract,employment.agreement_title,employment contract,924,943
+doc_086,employment_contract,employment.effective_date,effective 2026-02-01,1032,1052
+doc_086,home_address,address.labeled,"88 Ash Lane, Springfield, IL 62710",288,322
+doc_086,job_title,title.gazetteer,Billing Specialist,212,230
+doc_086,job_title,title.labeled,Billing Specialist (Administrative),212,247
+doc_086,name,name.registry,Alice Johnson,187,200
+doc_086,salary,salary.labeled_amount,"$55,000",338,345
+doc_087,date_of_birth,dob.labeled,1990-02-14,234,244
+doc_087,employment_contract,employment.agreement_title,employment contract,679,698
+doc_087,home_address,address.labeled,"72 Spruce Ave, Springfield, IL 62709",259,295
+doc_087,job_title,title.gazetteer,Nurse,203,208
+doc_087,job_title,title.labeled,Nurse (Medical),203,218
+doc_087,salary,salary.labeled_amount,"$68,000",311,318
+doc_088,date_of_birth,dob.labeled,1975-04-18,165,175
+doc_088,employment_contract,employment.agreement_title,Employment Contract,837,856
+doc_088,employment_contract,employment.agreement_title,Full-time attending physician agreement,858,897
+doc_088,employment_contract,employment.effective_date,effective 07/01/2025,898,918
+doc_088,employment_contract,employment.contract_id,EMP-2025-CHEN-001,989,1006
+doc_088,home_address,address.labeled,"304 Willow Rd, Springfield, IL 62706",190,226
+doc_088,job_title,title.gazetteer,PHYSICIAN,94,103
+doc_088,job_title,title.gazetteer,Attending Physician,233,252
+doc_088,job_title,title.labeled,Attending Physician — Internal Medicine,233,272
+doc_088,job_title,title.labeled,Employment — Confidential HR,1222,1250
+doc_088,medical_license,license.labeled,IL-MD-48821,319,330
+doc_088,name,name.registry,Dr. Sarah Chen,135,149
+doc_088,salary,salary.labeled_amount,"$215,000",828,836
+doc_089,date_of_birth,dob.labeled,1978-11-14,173,183
+doc_089,employment_contract,employment.agreement_title,"EMPLOYMENT DETAILS
+Employment Contract",639,677
+doc_089,employment_contract,employment.effective_date,effective 2026-01-01,713,733
+doc_089,home_address,address.labeled,"83 Hawthorn Rd, Springfield, IL 62720",198,235
+doc_089,job_title,title.gazetteer,PHYSICIAN,94,103
+doc_089,job_title,title.gazetteer,Attending Psychiatrist,689,711
+doc_089,medical_license,license.labeled,IL-MD-55432,281,292
+doc_089,medical_medication,medication.gazetteer,Buprenorphine,555,568
+doc_089,mental_health,mental.category_marker,Psychiatry,294,304
+doc_089,mental_health,mental.category_marker,Behavioral Health,770,787
+doc_089,name,name.registry,Dr. Aisha Patel,142,157
+doc_089,salary,salary.labeled_amount,"$195,000",749,757
+doc_090,date_of_birth,dob.labeled,1965-04-22,168,178
+doc_090,employment_contract,employment.agreement_title,"EMPLOYMENT
+Employment Contract",752,782
+doc_090,employment_contract,employment.agreement_title,Full-Time Physician Agreement,784,813
+doc_090,employment_contract,employment.effective_date,effective 2022-07-01,816,836
+doc_090,home_address,address.labeled,"401 Aspen Way, Springfield, IL 62721",193,229
+doc_090,job_title,title.gazetteer,PHYSICIAN,96,105
+doc_090,job_title,title.gazetteer,Attending Physician,236,255
+doc_090,job_title,title.labeled,Attending Physician — Oncology/Hematology,236,277
+doc_090,medical_license,license.labeled,IL-MD-61209,306,317
+doc_090,name,name.registry,Dr. Kevin O'Brien,135,152
+doc_090,salary,salary.labeled_amount,"$260,000",852,860
+doc_091,contract_terms,contract.independent,Contractor Agreement,28,48
+doc_091,contract_terms,contract.no_phi,no PHI access permitted,344,367
+doc_091,date_of_birth,dob.labeled,1988-10-07,128,138
+doc_091,home_address,address.labeled,"330 Poplar St, Springfield, IL 62712",153,189
+doc_091,job_title,title.gazetteer,IT Contractor,25,38
+doc_091,job_title,title.labeled,IT Contractor (Administrative),216,246
+doc_091,job_title,title.gazetteer,HR Manager,1160,1170
+doc_091,name,name.registry,Carol White,101,112
+doc_091,salary,salary.hourly_rate,$95.00/hr,395,404
+doc_092,contract_terms,contract.independent,INDEPENDENT CONTRACTOR,25,47
+doc_092,date_of_birth,dob.labeled,1985-03-12,179,189
+doc_092,home_address,address.labeled,"512 Birch Pl, Springfield, IL 62726",204,239
+doc_092,name,name.registry,Frank Turner,151,163
+doc_092,salary,salary.hourly_rate,$88/hr,510,516
+doc_093,contract_terms,contract.independent,CONTRACTOR AGREEMENT,28,48
+doc_093,contract_terms,contract.independent,SCOPE OF WORK,369,382
+doc_093,contract_terms,contract.no_phi,No PHI access permitted,799,822
+doc_093,date_of_birth,dob.labeled,1988-10-07,137,147
+doc_093,home_address,address.labeled,"330 Poplar St, Springfield, IL 62712",162,198
+doc_093,job_title,title.gazetteer,IT CONTRACTOR,25,38
+doc_093,job_title,title.labeled,IT Contractor (Administrative),225,255
+doc_093,name,name.registry,Carol White,110,121
+doc_093,salary,salary.hourly_rate,$90/hr,333,339
+doc_093,salary,salary.hourly_rate,$95/hr,361,367
+doc_094,job_title,title.gazetteer,Nurse,421,426
+doc_094,job_title,title.labeled,INTERNAL — NOT FOR PATIENT DISTRIBUTION,936,975
+doc_095,job_title,title.gazetteer,Physician,329,338
+doc_095,job_title,title.gazetteer,Medical Assistant,457,474
+doc_096,job_title,title.gazetteer,Nurse,482,487
+doc_096,job_title,title.gazetteer,HR Manager,698,708
+doc_097,employment_contract,employment.effective_date,"effective February 1, 2026",884,910
+doc_098,employment_contract,employment.effective_date,"effective April 1, 2026",554,577
+doc_098,job_title,title.gazetteer,Billing Specialist,811,829
+doc_098,job_title,title.gazetteer,Medical Assistant,833,850
+doc_099,job_title,title.labeled,Internal Use Only,180,197
+doc_099,job_title,title.gazetteer,Clinical Director,210,227
+doc_099,job_title,title.gazetteer,Charge Nurse,229,241
+doc_099,job_title,title.gazetteer,HR Manager,263,273
+doc_100,job_title,title.labeled,based access controls will be enforced in the EHR system beg,530,590
+doc_101,employment_contract,employment.effective_date,"EFFECTIVE DATE: February 15, 2026",244,277
+doc_101,employment_contract,employment.effective_date,"Effective February 15, 2026",479,506
+doc_102,job_title,title.labeled,Internal Use Only,1306,1323
+doc_103,employment_contract,employment.effective_date,"Effective Date: January 1, 2026",53,84
+doc_104,date_of_birth,dob.labeled,1969-09-03,165,175
+doc_104,employment_contract,employment.agreement_title,EMPLOYMENT CONTRACT,25,44
+doc_104,employment_contract,employment.agreement_title,"EMPLOYMENT
+This Employment Contract",301,336
+doc_104,employment_contract,employment.effective_date,"effective September 1, 2021",418,445
+doc_104,home_address,address.labeled,"57 Pine St, Springfield, IL 62707",190,223
+doc_104,job_title,title.labeled,Staff Cardiologist,272,290
+doc_104,job_title,title.gazetteer,Cardiologist,278,290
+doc_104,medical_license,license.labeled,IL-MD-30115,241,252
+doc_104,name,name.registry,Dr. Marcus Webb,134,149
+doc_104,salary,salary.labeled_amount,"$240,000",476,484

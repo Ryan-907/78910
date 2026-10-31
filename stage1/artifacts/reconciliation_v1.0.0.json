@@ -1,0 +1,5895 @@
+{
+  "artifact": "stage1_reconciliation",
+  "artifact_version": "1.0.0",
+  "vocab_version": "1.1.0",
+  "corpus_sha256": "49cdd9c89112f605ee228da5c2489a2de2b58dc56379a257faed8a6302c1b3d0",
+  "sources": {
+    "A_authored": "label.pii_attributes (pipeline/doc_specs.py, spec-first)",
+    "B_extracted": "stage1/tagger.py over document content",
+    "C_generation": "attributes[].information_type (generating model)"
+  },
+  "note": "A report, not a repair. Neither side is corrected and data/dataset.json is untouched. 'authored_not_found' does not mean the spec is wrong — it may equally be a tagger miss; see the Stage 4 audit.",
+  "raw_types_outside_vocabulary": {
+    "document_date": 2,
+    "document_type": 4
+  },
+  "summary": {
+    "documents": 105,
+    "agree_exactly": 0,
+    "docs_with_authored_not_found": 10,
+    "docs_with_found_not_authored": 105,
+    "authored_pairs": 291,
+    "extracted_pairs": 801,
+    "generation_pairs": 669,
+    "authored_not_found_pairs": 10,
+    "found_not_authored_pairs": 520,
+    "found_not_authored_corroborated_pairs": 348,
+    "mean_jaccard": 0.3248
+  },
+  "by_information_type": {
+    "name": {
+      "authored_docs": 0,
+      "extracted_docs": 91,
+      "generation_docs": 30,
+      "both": 0,
+      "authored_not_found": 0,
+      "found_not_authored": 91,
+      "found_not_authored_corroborated": 26,
+      "spec_confirmation_rate": null
+    },
+    "date_of_birth": {
+      "authored_docs": 95,
+      "extracted_docs": 95,
+      "generation_docs": 95,
+      "both": 95,
+      "authored_not_found": 0,
+      "found_not_authored": 0,
+      "found_not_authored_corroborated": 0,
+      "spec_confirmation_rate": 1.0
+    },
+    "ssn": {
+      "authored_docs": 0,
+      "extracted_docs": 44,
+      "generation_docs": 51,
+      "both": 0,
+      "authored_not_found": 0,
+      "found_not_authored": 44,
+      "found_not_authored_corroborated": 44,
+      "spec_confirmation_rate": null
+    },
+    "home_address": {
+      "authored_docs": 8,
+      "extracted_docs": 85,
+      "generation_docs": 92,
+      "both": 8,
+      "authored_not_found": 0,
+      "found_not_authored": 77,
+      "found_not_authored_corroborated": 77,
+      "spec_confirmation_rate": 1.0
+    },
+    "emergency_contact": {
+      "authored_docs": 5,
+      "extracted_docs": 22,
+      "generation_docs": 28,
+      "both": 5,
+      "authored_not_found": 0,
+      "found_not_authored": 17,
+      "found_not_authored_corroborated": 17,
+      "spec_confirmation_rate": 1.0
+    },
+    "medical_diagnosis": {
+      "authored_docs": 39,
+      "extracted_docs": 70,
+      "generation_docs": 69,
+      "both": 38,
+      "authored_not_found": 1,
+      "found_not_authored": 32,
+      "found_not_authored_corroborated": 30,
+      "spec_confirmation_rate": 0.9744
+    },
+    "medical_medication": {
+      "authored_docs": 36,
+      "extracted_docs": 65,
+      "generation_docs": 64,
+      "both": 36,
+      "authored_not_found": 0,
+      "found_not_authored": 29,
+      "found_not_authored_corroborated": 28,
+      "spec_confirmation_rate": 1.0
+    },
+    "medical_history": {
+      "authored_docs": 21,
+      "extracted_docs": 27,
+      "generation_docs": 38,
+      "both": 16,
+      "authored_not_found": 5,
+      "found_not_authored": 11,
+      "found_not_authored_corroborated": 10,
+      "spec_confirmation_rate": 0.7619
+    },
+    "mental_health": {
+      "authored_docs": 5,
+      "extracted_docs": 19,
+      "generation_docs": 9,
+      "both": 5,
+      "authored_not_found": 0,
+      "found_not_authored": 14,
+      "found_not_authored_corroborated": 4,
+      "spec_confirmation_rate": 1.0
+    },
+    "billing_code": {
+      "authored_docs": 18,
+      "extracted_docs": 65,
+      "generation_docs": 70,
+      "both": 15,
+      "authored_not_found": 3,
+      "found_not_authored": 50,
+      "found_not_authored_corroborated": 49,
+      "spec_confirmation_rate": 0.8333
+    },
+    "insurance_info": {
+      "authored_docs": 27,
+      "extracted_docs": 71,
+      "generation_docs": 71,
+      "both": 27,
+      "authored_not_found": 0,
+      "found_not_authored": 44,
+      "found_not_authored_corroborated": 44,
+      "spec_confirmation_rate": 1.0
+    },
+    "salary": {
+      "authored_docs": 11,
+      "extracted_docs": 20,
+      "generation_docs": 18,
+      "both": 10,
+      "authored_not_found": 1,
+      "found_not_authored": 10,
+      "found_not_authored_corroborated": 7,
+      "spec_confirmation_rate": 0.9091
+    },
+    "employment_contract": {
+      "authored_docs": 12,
+      "extracted_docs": 23,
+      "generation_docs": 8,
+      "both": 12,
+      "authored_not_found": 0,
+      "found_not_authored": 11,
+      "found_not_authored_corroborated": 0,
+      "spec_confirmation_rate": 1.0
+    },
+    "contract_terms": {
+      "authored_docs": 3,
+      "extracted_docs": 3,
+      "generation_docs": 3,
+      "both": 3,
+      "authored_not_found": 0,
+      "found_not_authored": 0,
+      "found_not_authored_corroborated": 0,
+      "spec_confirmation_rate": 1.0
+    },
+    "job_title": {
+      "authored_docs": 0,
+      "extracted_docs": 62,
+      "generation_docs": 4,
+      "both": 0,
+      "authored_not_found": 0,
+      "found_not_authored": 62,
+      "found_not_authored_corroborated": 4,
+      "spec_confirmation_rate": null
+    },
+    "medical_license": {
+      "authored_docs": 11,
+      "extracted_docs": 39,
+      "generation_docs": 19,
+      "both": 11,
+      "authored_not_found": 0,
+      "found_not_authored": 28,
+      "found_not_authored_corroborated": 8,
+      "spec_confirmation_rate": 1.0
+    }
+  },
+  "by_sensitivity_tier": {
+    "clinical_sensitive": {
+      "documents": 10,
+      "agree_exactly": 0,
+      "docs_authored_not_found": 0,
+      "docs_found_not_authored": 10,
+      "authored_not_found_pairs": 0,
+      "found_not_authored_pairs": 60,
+      "authored_pairs": 35,
+      "extracted_pairs": 95,
+      "mean_jaccard": 0.374
+    },
+    "clinical_standard": {
+      "documents": 39,
+      "agree_exactly": 0,
+      "docs_authored_not_found": 6,
+      "docs_found_not_authored": 39,
+      "authored_not_found_pairs": 6,
+      "found_not_authored_pairs": 230,
+      "authored_pairs": 129,
+      "extracted_pairs": 353,
+      "mean_jaccard": 0.3437
+    },
+    "employment": {
+      "documents": 21,
+      "agree_exactly": 0,
+      "docs_authored_not_found": 1,
+      "docs_found_not_authored": 21,
+      "authored_not_found_pairs": 1,
+      "found_not_authored_pairs": 84,
+      "authored_pairs": 53,
+      "extracted_pairs": 136,
+      "mean_jaccard": 0.3884
+    },
+    "financial": {
+      "documents": 25,
+      "agree_exactly": 0,
+      "docs_authored_not_found": 3,
+      "docs_found_not_authored": 25,
+      "authored_not_found_pairs": 3,
+      "found_not_authored_pairs": 135,
+      "authored_pairs": 74,
+      "extracted_pairs": 206,
+      "mean_jaccard": 0.352
+    },
+    "internal": {
+      "documents": 9,
+      "agree_exactly": 0,
+      "docs_authored_not_found": 0,
+      "docs_found_not_authored": 9,
+      "authored_not_found_pairs": 0,
+      "found_not_authored_pairs": 10,
+      "authored_pairs": 0,
+      "extracted_pairs": 10,
+      "mean_jaccard": 0.0
+    },
+    "public": {
+      "documents": 1,
+      "agree_exactly": 0,
+      "docs_authored_not_found": 0,
+      "docs_found_not_authored": 1,
+      "authored_not_found_pairs": 0,
+      "found_not_authored_pairs": 1,
+      "authored_pairs": 0,
+      "extracted_pairs": 1,
+      "mean_jaccard": 0.0
+    }
+  },
+  "by_document_type": {
+    "billing_statement": {
+      "documents": 6,
+      "agree_exactly": 0,
+      "docs_authored_not_found": 1,
+      "docs_found_not_authored": 6,
+      "authored_not_found_pairs": 1,
+      "found_not_authored_pairs": 25,
+      "authored_pairs": 18,
+      "extracted_pairs": 42,
+      "mean_jaccard": 0.3988
+    },
+    "clinical_note": {
+      "documents": 10,
+      "agree_exactly": 0,
+      "docs_authored_not_found": 0,
+      "docs_found_not_authored": 10,
+      "authored_not_found_pairs": 0,
+      "found_not_authored_pairs": 68,
+      "authored_pairs": 40,
+      "extracted_pairs": 108,
+      "mean_jaccard": 0.3734
+    },
+    "contractor_agreement": {
+      "documents": 3,
+      "agree_exactly": 0,
+      "docs_authored_not_found": 0,
+      "docs_found_not_authored": 3,
+      "authored_not_found_pairs": 0,
+      "found_not_authored_pairs": 8,
+      "authored_pairs": 9,
+      "extracted_pairs": 17,
+      "mean_jaccard": 0.5333
+    },
+    "credentialing_file": {
+      "documents": 3,
+      "agree_exactly": 0,
+      "docs_authored_not_found": 0,
+      "docs_found_not_authored": 3,
+      "authored_not_found_pairs": 0,
+      "found_not_authored_pairs": 14,
+      "authored_pairs": 9,
+      "extracted_pairs": 23,
+      "mean_jaccard": 0.3968
+    },
+    "discharge_summary": {
+      "documents": 5,
+      "agree_exactly": 0,
+      "docs_authored_not_found": 3,
+      "docs_found_not_authored": 5,
+      "authored_not_found_pairs": 3,
+      "found_not_authored_pairs": 28,
+      "authored_pairs": 25,
+      "extracted_pairs": 50,
+      "mean_jaccard": 0.4214
+    },
+    "employment_contract": {
+      "documents": 5,
+      "agree_exactly": 0,
+      "docs_authored_not_found": 0,
+      "docs_found_not_authored": 5,
+      "authored_not_found_pairs": 0,
+      "found_not_authored_pairs": 19,
+      "authored_pairs": 15,
+      "extracted_pairs": 34,
+      "mean_jaccard": 0.4464
+    },
+    "explanation_of_benefits": {
+      "documents": 4,
+      "agree_exactly": 0,
+      "docs_authored_not_found": 1,
+      "docs_found_not_authored": 4,
+      "authored_not_found_pairs": 1,
+      "found_not_authored_pairs": 15,
+      "authored_pairs": 12,
+      "extracted_pairs": 26,
+      "mean_jaccard": 0.4223
+    },
+    "insurance_claim": {
+      "documents": 8,
+      "agree_exactly": 0,
+      "docs_authored_not_found": 1,
+      "docs_found_not_authored": 8,
+      "authored_not_found_pairs": 1,
+      "found_not_authored_pairs": 49,
+      "authored_pairs": 24,
+      "extracted_pairs": 72,
+      "mean_jaccard": 0.3196
+    },
+    "insurance_verification": {
+      "documents": 4,
+      "agree_exactly": 0,
+      "docs_authored_not_found": 0,
+      "docs_found_not_authored": 4,
+      "authored_not_found_pairs": 0,
+      "found_not_authored_pairs": 30,
+      "authored_pairs": 8,
+      "extracted_pairs": 38,
+      "mean_jaccard": 0.2135
+    },
+    "lab_report": {
+      "documents": 8,
+      "agree_exactly": 0,
+      "docs_authored_not_found": 0,
+      "docs_found_not_authored": 8,
+      "authored_not_found_pairs": 0,
+      "found_not_authored_pairs": 46,
+      "authored_pairs": 24,
+      "extracted_pairs": 70,
+      "mean_jaccard": 0.3554
+    },
+    "meeting_agenda": {
+      "documents": 3,
+      "agree_exactly": 0,
+      "docs_authored_not_found": 0,
+      "docs_found_not_authored": 3,
+      "authored_not_found_pairs": 0,
+      "found_not_authored_pairs": 4,
+      "authored_pairs": 0,
+      "extracted_pairs": 4,
+      "mean_jaccard": 0.0
+    },
+    "mental_health_assessment": {
+      "documents": 5,
+      "agree_exactly": 0,
+      "docs_authored_not_found": 0,
+      "docs_found_not_authored": 5,
+      "authored_not_found_pairs": 0,
+      "found_not_authored_pairs": 31,
+      "authored_pairs": 15,
+      "extracted_pairs": 46,
+      "mean_jaccard": 0.3283
+    },
+    "performance_review": {
+      "documents": 4,
+      "agree_exactly": 0,
+      "docs_authored_not_found": 0,
+      "docs_found_not_authored": 4,
+      "authored_not_found_pairs": 0,
+      "found_not_authored_pairs": 15,
+      "authored_pairs": 8,
+      "extracted_pairs": 23,
+      "mean_jaccard": 0.3548
+    },
+    "policy_memo": {
+      "documents": 3,
+      "agree_exactly": 0,
+      "docs_authored_not_found": 0,
+      "docs_found_not_authored": 3,
+      "authored_not_found_pairs": 0,
+      "found_not_authored_pairs": 3,
+      "authored_pairs": 0,
+      "extracted_pairs": 3,
+      "mean_jaccard": 0.0
+    },
+    "prescription": {
+      "documents": 8,
+      "agree_exactly": 0,
+      "docs_authored_not_found": 0,
+      "docs_found_not_authored": 8,
+      "authored_not_found_pairs": 0,
+      "found_not_authored_pairs": 43,
+      "authored_pairs": 24,
+      "extracted_pairs": 67,
+      "mean_jaccard": 0.3594
+    },
+    "prior_authorization": {
+      "documents": 5,
+      "agree_exactly": 0,
+      "docs_authored_not_found": 0,
+      "docs_found_not_authored": 5,
+      "authored_not_found_pairs": 0,
+      "found_not_authored_pairs": 26,
+      "authored_pairs": 20,
+      "extracted_pairs": 46,
+      "mean_jaccard": 0.4486
+    },
+    "public_pamphlet": {
+      "documents": 1,
+      "agree_exactly": 0,
+      "docs_authored_not_found": 0,
+      "docs_found_not_authored": 1,
+      "authored_not_found_pairs": 0,
+      "found_not_authored_pairs": 1,
+      "authored_pairs": 0,
+      "extracted_pairs": 1,
+      "mean_jaccard": 0.0
+    },
+    "radiology_report": {
+      "documents": 5,
+      "agree_exactly": 0,
+      "docs_authored_not_found": 0,
+      "docs_found_not_authored": 5,
+      "authored_not_found_pairs": 0,
+      "found_not_authored_pairs": 29,
+      "authored_pairs": 10,
+      "extracted_pairs": 39,
+      "mean_jaccard": 0.2587
+    },
+    "referral_letter": {
+      "documents": 6,
+      "agree_exactly": 0,
+      "docs_authored_not_found": 3,
+      "docs_found_not_authored": 6,
+      "authored_not_found_pairs": 3,
+      "found_not_authored_pairs": 35,
+      "authored_pairs": 18,
+      "extracted_pairs": 50,
+      "mean_jaccard": 0.2862
+    },
+    "salary_letter": {
+      "documents": 6,
+      "agree_exactly": 0,
+      "docs_authored_not_found": 1,
+      "docs_found_not_authored": 6,
+      "authored_not_found_pairs": 1,
+      "found_not_authored_pairs": 28,
+      "authored_pairs": 12,
+      "extracted_pairs": 39,
+      "mean_jaccard": 0.2859
+    },
+    "staff_schedule": {
+      "documents": 3,
+      "agree_exactly": 0,
+      "docs_authored_not_found": 0,
+      "docs_found_not_authored": 3,
+      "authored_not_found_pairs": 0,
+      "found_not_authored_pairs": 3,
+      "authored_pairs": 0,
+      "extracted_pairs": 3,
+      "mean_jaccard": 0.0
+    }
+  },
+  "documents": [
+    {
+      "doc_id": "doc_000",
+      "title": "Clinical Note — John Smith, 2026-01-15",
+      "document_type": "clinical_note",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_license",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_license",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.3636,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_001",
+      "title": "Clinical Note — Emily Brown, 2026-01-20",
+      "document_type": "clinical_note",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_license",
+        "medical_medication",
+        "mental_health",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "medical_license",
+        "mental_health",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.3636,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "name",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "name",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_002",
+      "title": "Clinical Note — Robert Lee, 2026-01-22",
+      "document_type": "clinical_note",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_license",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_license",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.3636,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "name",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "name",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_003",
+      "title": "Clinical Note — James Carter, 2026-02-05",
+      "document_type": "clinical_note",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_license",
+        "medical_medication",
+        "name"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "medical_license",
+        "name"
+      ],
+      "jaccard": 0.4444,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "home_address",
+        "insurance_info"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info"
+      ]
+    },
+    {
+      "doc_id": "doc_004",
+      "title": "Clinical Note — Michael Chen, 2026-02-12",
+      "document_type": "clinical_note",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_license",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_license",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.3636,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "name",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "name",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_005",
+      "title": "Clinical Note — Linda Torres, 2026-02-18",
+      "document_type": "clinical_note",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.3636,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_006",
+      "title": "Clinical Note — Patricia Moore, 2026-02-20",
+      "document_type": "clinical_note",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_license",
+        "medical_medication",
+        "mental_health",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_license",
+        "mental_health",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.3077,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "name",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "name",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_007",
+      "title": "Clinical Note — Maria Gonzalez, 2026-02-03",
+      "document_type": "clinical_note",
+      "sensitivity_tier": "clinical_sensitive",
+      "subject_type": "patient",
+      "extra_sensitive": true,
+      "authored": [
+        "date_of_birth",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "mental_health",
+        "name"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "mental_health",
+        "name"
+      ],
+      "jaccard": 0.4,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "name"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "name",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_008",
+      "title": "Clinical Note — David Park, 2026-03-01",
+      "document_type": "clinical_note",
+      "sensitivity_tier": "clinical_sensitive",
+      "subject_type": "patient",
+      "extra_sensitive": true,
+      "authored": [
+        "date_of_birth",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "insurance_info",
+        "job_title",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_license",
+        "medical_medication",
+        "mental_health",
+        "name"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "insurance_info",
+        "job_title",
+        "medical_license",
+        "mental_health",
+        "name"
+      ],
+      "jaccard": 0.4,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "insurance_info"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info"
+      ]
+    },
+    {
+      "doc_id": "doc_009",
+      "title": "Clinical Note — Sarah Wilson, 2026-03-05",
+      "document_type": "clinical_note",
+      "sensitivity_tier": "clinical_sensitive",
+      "subject_type": "patient",
+      "extra_sensitive": true,
+      "authored": [
+        "date_of_birth",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_license",
+        "medical_medication",
+        "mental_health",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "medical_license",
+        "mental_health",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.3636,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_010",
+      "title": "Prescription — John Smith, 2026-01-15",
+      "document_type": "prescription",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "medical_license",
+        "medical_medication"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_diagnosis",
+        "medical_license",
+        "medical_medication",
+        "name"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_license",
+        "medical_medication",
+        "name"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_diagnosis",
+        "name"
+      ],
+      "jaccard": 0.3333,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "name"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "name"
+      ]
+    },
+    {
+      "doc_id": "doc_011",
+      "title": "Prescription — Emily Brown, 2026-01-20",
+      "document_type": "prescription",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "medical_license",
+        "medical_medication"
+      ],
+      "extracted": [
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_diagnosis",
+        "medical_license",
+        "medical_medication",
+        "name"
+      ],
+      "generation": [
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_license",
+        "medical_medication"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_diagnosis",
+        "name"
+      ],
+      "jaccard": 0.375,
+      "found_not_authored_corroborated": [
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis"
+      ],
+      "generation_not_authored": [
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis"
+      ]
+    },
+    {
+      "doc_id": "doc_012",
+      "title": "Prescription — Robert Lee, 2026-01-22",
+      "document_type": "prescription",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "medical_license",
+        "medical_medication"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_diagnosis",
+        "medical_license",
+        "medical_medication",
+        "name"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_license",
+        "medical_medication"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_diagnosis",
+        "name"
+      ],
+      "jaccard": 0.3333,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis"
+      ]
+    },
+    {
+      "doc_id": "doc_013",
+      "title": "Prescription — James Carter, 2026-02-05",
+      "document_type": "prescription",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "medical_license",
+        "medical_medication"
+      ],
+      "extracted": [
+        "date_of_birth",
+        "home_address",
+        "job_title",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_license",
+        "medical_medication",
+        "name"
+      ],
+      "generation": [
+        "date_of_birth",
+        "home_address",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_license",
+        "medical_medication"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "home_address",
+        "job_title",
+        "medical_diagnosis",
+        "medical_history",
+        "name"
+      ],
+      "jaccard": 0.375,
+      "found_not_authored_corroborated": [
+        "home_address",
+        "medical_diagnosis",
+        "medical_history"
+      ],
+      "generation_not_authored": [
+        "home_address",
+        "medical_diagnosis",
+        "medical_history"
+      ]
+    },
+    {
+      "doc_id": "doc_014",
+      "title": "Prescription — Michael Chen, 2026-02-12",
+      "document_type": "prescription",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "medical_license",
+        "medical_medication"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "job_title",
+        "medical_diagnosis",
+        "medical_license",
+        "medical_medication",
+        "name"
+      ],
+      "generation": [
+        "date_of_birth",
+        "home_address",
+        "medical_diagnosis",
+        "medical_license",
+        "medical_medication"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "home_address",
+        "job_title",
+        "medical_diagnosis",
+        "name"
+      ],
+      "jaccard": 0.375,
+      "found_not_authored_corroborated": [
+        "home_address",
+        "medical_diagnosis"
+      ],
+      "generation_not_authored": [
+        "home_address",
+        "medical_diagnosis"
+      ]
+    },
+    {
+      "doc_id": "doc_015",
+      "title": "Prescription — Linda Torres, 2026-02-18",
+      "document_type": "prescription",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "medical_license",
+        "medical_medication"
+      ],
+      "extracted": [
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_diagnosis",
+        "medical_license",
+        "medical_medication",
+        "name"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_license",
+        "medical_medication"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_diagnosis",
+        "name"
+      ],
+      "jaccard": 0.3333,
+      "found_not_authored_corroborated": [
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history"
+      ]
+    },
+    {
+      "doc_id": "doc_016",
+      "title": "Prescription — Patricia Moore, 2026-02-20",
+      "document_type": "prescription",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "medical_license",
+        "medical_medication"
+      ],
+      "extracted": [
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_diagnosis",
+        "medical_license",
+        "medical_medication",
+        "name"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_license",
+        "medical_medication"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_diagnosis",
+        "name"
+      ],
+      "jaccard": 0.375,
+      "found_not_authored_corroborated": [
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis"
+      ]
+    },
+    {
+      "doc_id": "doc_017",
+      "title": "Prescription — Maria Gonzalez, 2026-02-03",
+      "document_type": "prescription",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "medical_license",
+        "medical_medication"
+      ],
+      "extracted": [
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_license",
+        "medical_medication",
+        "mental_health",
+        "name"
+      ],
+      "generation": [
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_license",
+        "medical_medication"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "mental_health",
+        "name"
+      ],
+      "jaccard": 0.375,
+      "found_not_authored_corroborated": [
+        "home_address",
+        "insurance_info"
+      ],
+      "generation_not_authored": [
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis"
+      ]
+    },
+    {
+      "doc_id": "doc_018",
+      "title": "Lab Report — John Smith, 2026-01-15",
+      "document_type": "lab_report",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "medical_diagnosis",
+        "medical_medication"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_history",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.2727,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_history",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_history",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_019",
+      "title": "Lab Report — Robert Lee, 2026-01-22",
+      "document_type": "lab_report",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "medical_diagnosis",
+        "medical_medication"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_diagnosis",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.3333,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_020",
+      "title": "Lab Report — Emily Brown, 2026-01-20",
+      "document_type": "lab_report",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "medical_diagnosis",
+        "medical_medication"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication",
+        "name"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "insurance_info",
+        "name"
+      ],
+      "jaccard": 0.5,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "insurance_info"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "medical_history",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_021",
+      "title": "Lab Report — James Carter, 2026-02-05",
+      "document_type": "lab_report",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "medical_diagnosis",
+        "medical_medication"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_history",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.3,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "medical_history",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "medical_history",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_022",
+      "title": "Lab Report — Michael Chen, 2026-02-12",
+      "document_type": "lab_report",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "medical_diagnosis",
+        "medical_medication"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "insurance_info",
+        "job_title",
+        "medical_diagnosis",
+        "medical_medication",
+        "name"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "insurance_info",
+        "job_title",
+        "name"
+      ],
+      "jaccard": 0.4286,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "insurance_info"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "insurance_info"
+      ]
+    },
+    {
+      "doc_id": "doc_023",
+      "title": "Lab Report — Linda Torres, 2026-02-18",
+      "document_type": "lab_report",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "medical_diagnosis",
+        "medical_medication"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.3333,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_024",
+      "title": "Lab Report — Patricia Moore, 2026-02-20",
+      "document_type": "lab_report",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "medical_diagnosis",
+        "medical_medication"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_diagnosis",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.3,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_025",
+      "title": "Lab Report — David Park, 2026-03-01",
+      "document_type": "lab_report",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "medical_diagnosis",
+        "medical_medication"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.375,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_026",
+      "title": "Radiology Report — Emily Brown, 2026-01-18",
+      "document_type": "radiology_report",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "medical_diagnosis"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "insurance_info",
+        "job_title",
+        "medical_diagnosis",
+        "medical_history",
+        "name"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "insurance_info",
+        "job_title",
+        "medical_history",
+        "name"
+      ],
+      "jaccard": 0.2857,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "insurance_info",
+        "medical_history"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "medical_history",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_027",
+      "title": "Radiology Report — Linda Torres, 2026-01-10",
+      "document_type": "radiology_report",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "medical_diagnosis"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "insurance_info",
+        "job_title",
+        "medical_diagnosis",
+        "medical_medication",
+        "name"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "emergency_contact",
+        "insurance_info",
+        "job_title",
+        "medical_medication",
+        "name"
+      ],
+      "jaccard": 0.25,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "emergency_contact",
+        "insurance_info",
+        "medical_medication"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_history",
+        "medical_medication",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_028",
+      "title": "Radiology Report — Robert Lee, 2026-01-05",
+      "document_type": "radiology_report",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "medical_diagnosis"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "insurance_info",
+        "job_title",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "name"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "insurance_info",
+        "job_title",
+        "medical_history",
+        "medical_medication",
+        "name"
+      ],
+      "jaccard": 0.25,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "insurance_info",
+        "medical_medication"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "medical_medication"
+      ]
+    },
+    {
+      "doc_id": "doc_029",
+      "title": "Radiology Report — James Carter, 2026-01-28",
+      "document_type": "radiology_report",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "medical_diagnosis"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "job_title",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "name"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "job_title",
+        "medical_history",
+        "medical_medication",
+        "name"
+      ],
+      "jaccard": 0.2857,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "medical_history",
+        "medical_medication"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "medical_history",
+        "medical_medication"
+      ]
+    },
+    {
+      "doc_id": "doc_030",
+      "title": "Radiology Report — Patricia Moore, 2026-02-15",
+      "document_type": "radiology_report",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "medical_diagnosis"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_diagnosis",
+        "medical_medication",
+        "name"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_medication",
+        "name"
+      ],
+      "jaccard": 0.2222,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_medication"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_medication"
+      ]
+    },
+    {
+      "doc_id": "doc_031",
+      "title": "Discharge Summary — Emily Brown, 2026-01-20",
+      "document_type": "discharge_summary",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "medical_diagnosis",
+        "medical_history"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_diagnosis",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [
+        "medical_history"
+      ],
+      "found_not_authored": [
+        "billing_code",
+        "insurance_info",
+        "job_title",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.4,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "insurance_info",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "insurance_info",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_032",
+      "title": "Discharge Summary — John Smith, 2026-01-16",
+      "document_type": "discharge_summary",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "medical_diagnosis",
+        "medical_history"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "name"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "insurance_info",
+        "medical_medication",
+        "name"
+      ],
+      "jaccard": 0.5556,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "insurance_info",
+        "medical_medication"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "insurance_info",
+        "medical_medication"
+      ]
+    },
+    {
+      "doc_id": "doc_033",
+      "title": "Discharge Summary — Linda Torres, 2026-02-19",
+      "document_type": "discharge_summary",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "medical_diagnosis",
+        "medical_history"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_diagnosis",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [
+        "medical_history"
+      ],
+      "found_not_authored": [
+        "billing_code",
+        "insurance_info",
+        "job_title",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.3636,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "insurance_info",
+        "medical_medication",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "insurance_info",
+        "medical_medication",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_034",
+      "title": "Discharge Summary — Robert Lee, 2026-01-08",
+      "document_type": "discharge_summary",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "medical_diagnosis",
+        "medical_history"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "insurance_info",
+        "job_title",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.4545,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "insurance_info",
+        "medical_medication",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "insurance_info",
+        "medical_medication",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_035",
+      "title": "Discharge Summary — Sarah Wilson, 2026-03-10",
+      "document_type": "discharge_summary",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "medical_diagnosis",
+        "medical_history"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_history",
+        "medical_medication",
+        "mental_health",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "mental_health",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [
+        "medical_diagnosis"
+      ],
+      "found_not_authored": [
+        "billing_code",
+        "insurance_info",
+        "job_title",
+        "medical_medication",
+        "mental_health",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.3333,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "insurance_info",
+        "medical_medication",
+        "mental_health",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "insurance_info",
+        "medical_medication",
+        "mental_health",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_036",
+      "title": "Mental Health Assessment — Maria Gonzalez, 2026-02-03",
+      "document_type": "mental_health_assessment",
+      "sensitivity_tier": "clinical_sensitive",
+      "subject_type": "patient",
+      "extra_sensitive": true,
+      "authored": [
+        "date_of_birth",
+        "medical_medication",
+        "mental_health"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication",
+        "mental_health",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_medication",
+        "mental_health",
+        "name",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.3333,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "name",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "name",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_037",
+      "title": "Mental Health Assessment — Sarah Wilson, 2026-03-05",
+      "document_type": "mental_health_assessment",
+      "sensitivity_tier": "clinical_sensitive",
+      "subject_type": "patient",
+      "extra_sensitive": true,
+      "authored": [
+        "date_of_birth",
+        "medical_medication",
+        "mental_health"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_medication",
+        "mental_health",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_medication",
+        "mental_health",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.375,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_038",
+      "title": "Mental Health Assessment — David Park, 2026-03-01",
+      "document_type": "mental_health_assessment",
+      "sensitivity_tier": "clinical_sensitive",
+      "subject_type": "patient",
+      "extra_sensitive": true,
+      "authored": [
+        "date_of_birth",
+        "medical_medication",
+        "mental_health"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication",
+        "mental_health",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication",
+        "mental_health",
+        "name",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.3333,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "name",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "name",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_039",
+      "title": "Mental Health Assessment — Patricia Moore, 2026-02-20",
+      "document_type": "mental_health_assessment",
+      "sensitivity_tier": "clinical_sensitive",
+      "subject_type": "patient",
+      "extra_sensitive": true,
+      "authored": [
+        "date_of_birth",
+        "medical_medication",
+        "mental_health"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication",
+        "mental_health",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication",
+        "mental_health",
+        "name",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.3,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "name",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "name",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_040",
+      "title": "Mental Health Assessment — James Carter, 2026-02-05",
+      "document_type": "mental_health_assessment",
+      "sensitivity_tier": "clinical_sensitive",
+      "subject_type": "patient",
+      "extra_sensitive": true,
+      "authored": [
+        "date_of_birth",
+        "medical_medication",
+        "mental_health"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "mental_health",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "mental_health",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.3,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_041",
+      "title": "Referral Letter — John Smith, 2026-01-15",
+      "document_type": "referral_letter",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "medical_diagnosis",
+        "medical_history"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "name"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_medication",
+        "name"
+      ],
+      "jaccard": 0.3333,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_medication"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_medication"
+      ]
+    },
+    {
+      "doc_id": "doc_042",
+      "title": "Referral Letter — Robert Lee, 2026-01-22",
+      "document_type": "referral_letter",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "medical_diagnosis",
+        "medical_history"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_license",
+        "medical_medication",
+        "name"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "name"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "medical_license",
+        "medical_medication",
+        "name"
+      ],
+      "jaccard": 0.3333,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "medical_medication",
+        "name"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "medical_medication",
+        "name"
+      ]
+    },
+    {
+      "doc_id": "doc_043",
+      "title": "Referral Letter — Emily Brown, 2026-01-20",
+      "document_type": "referral_letter",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "medical_diagnosis",
+        "medical_history"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_license",
+        "name"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "name",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [
+        "medical_history"
+      ],
+      "found_not_authored": [
+        "billing_code",
+        "insurance_info",
+        "medical_license",
+        "name"
+      ],
+      "jaccard": 0.2857,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "insurance_info",
+        "name"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "name",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_044",
+      "title": "Referral Letter — Linda Torres, 2026-02-18",
+      "document_type": "referral_letter",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "medical_diagnosis",
+        "medical_history"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_diagnosis",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [
+        "medical_history"
+      ],
+      "found_not_authored": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.1818,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_medication",
+        "name",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_045",
+      "title": "Referral Letter — James Carter, 2026-02-05",
+      "document_type": "referral_letter",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "medical_diagnosis",
+        "medical_history"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.3333,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "medical_medication",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "medical_medication",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_046",
+      "title": "Referral Letter — Michael Chen, 2026-02-12",
+      "document_type": "referral_letter",
+      "sensitivity_tier": "clinical_standard",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "medical_diagnosis",
+        "medical_history"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication",
+        "name"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [
+        "medical_history"
+      ],
+      "found_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "medical_medication",
+        "name"
+      ],
+      "jaccard": 0.25,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "medical_medication"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "home_address",
+        "insurance_info",
+        "medical_medication"
+      ]
+    },
+    {
+      "doc_id": "doc_047",
+      "title": "Insurance Claim — John Smith, 2026-01-15",
+      "document_type": "insurance_claim",
+      "sensitivity_tier": "financial",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "billing_code",
+        "date_of_birth",
+        "insurance_info"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_license",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "emergency_contact",
+        "home_address",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_license",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.2727,
+      "found_not_authored_corroborated": [
+        "emergency_contact",
+        "home_address",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "emergency_contact",
+        "home_address",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_048",
+      "title": "Insurance Claim — Emily Brown, 2026-01-20",
+      "document_type": "insurance_claim",
+      "sensitivity_tier": "financial",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "billing_code",
+        "date_of_birth",
+        "insurance_info"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "home_address",
+        "medical_diagnosis",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.4286,
+      "found_not_authored_corroborated": [
+        "home_address",
+        "medical_diagnosis",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "home_address",
+        "medical_diagnosis",
+        "medical_history",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_049",
+      "title": "Insurance Claim — Robert Lee, 2026-01-22",
+      "document_type": "insurance_claim",
+      "sensitivity_tier": "financial",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "billing_code",
+        "date_of_birth",
+        "insurance_info"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_license",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "home_address",
+        "medical_diagnosis",
+        "medical_license",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.3333,
+      "found_not_authored_corroborated": [
+        "home_address",
+        "medical_diagnosis",
+        "medical_medication",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "home_address",
+        "medical_diagnosis",
+        "medical_medication",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_050",
+      "title": "Insurance Claim — James Carter, 2026-02-05",
+      "document_type": "insurance_claim",
+      "sensitivity_tier": "financial",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "billing_code",
+        "date_of_birth",
+        "insurance_info"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "home_address",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.3333,
+      "found_not_authored_corroborated": [
+        "home_address",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "home_address",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_051",
+      "title": "Insurance Claim — Michael Chen, 2026-02-12",
+      "document_type": "insurance_claim",
+      "sensitivity_tier": "financial",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "billing_code",
+        "date_of_birth",
+        "insurance_info"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_license",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "home_address",
+        "medical_diagnosis",
+        "medical_license",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.3333,
+      "found_not_authored_corroborated": [
+        "home_address",
+        "medical_diagnosis",
+        "medical_medication",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "home_address",
+        "medical_diagnosis",
+        "medical_medication",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_052",
+      "title": "Insurance Claim — Linda Torres, 2026-02-18",
+      "document_type": "insurance_claim",
+      "sensitivity_tier": "financial",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "billing_code",
+        "date_of_birth",
+        "insurance_info"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_license",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "emergency_contact",
+        "home_address",
+        "medical_diagnosis",
+        "medical_license",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.3,
+      "found_not_authored_corroborated": [
+        "emergency_contact",
+        "home_address",
+        "medical_diagnosis",
+        "medical_medication",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "emergency_contact",
+        "home_address",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_053",
+      "title": "Insurance Claim — Patricia Moore, 2026-02-20",
+      "document_type": "insurance_claim",
+      "sensitivity_tier": "financial",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "billing_code",
+        "date_of_birth",
+        "insurance_info"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "emergency_contact",
+        "home_address",
+        "medical_diagnosis",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.3333,
+      "found_not_authored_corroborated": [
+        "emergency_contact",
+        "home_address",
+        "medical_diagnosis",
+        "medical_medication",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "emergency_contact",
+        "home_address",
+        "medical_diagnosis",
+        "medical_medication",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_054",
+      "title": "Insurance Claim — Maria Gonzalez, 2026-02-03",
+      "document_type": "insurance_claim",
+      "sensitivity_tier": "financial",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "billing_code",
+        "date_of_birth",
+        "insurance_info"
+      ],
+      "extracted": [
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_license",
+        "medical_medication",
+        "mental_health",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_medication",
+        "mental_health",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [
+        "billing_code"
+      ],
+      "found_not_authored": [
+        "home_address",
+        "medical_license",
+        "medical_medication",
+        "mental_health",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.2222,
+      "found_not_authored_corroborated": [
+        "home_address",
+        "medical_medication",
+        "mental_health",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "home_address",
+        "medical_medication",
+        "mental_health",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_055",
+      "title": "Billing Statement — John Smith, 2026-02-01",
+      "document_type": "billing_statement",
+      "sensitivity_tier": "financial",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "billing_code",
+        "date_of_birth",
+        "insurance_info"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_medication",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "home_address",
+        "medical_diagnosis",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.375,
+      "found_not_authored_corroborated": [
+        "home_address",
+        "medical_medication",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "home_address",
+        "medical_medication",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_056",
+      "title": "Billing Statement — Emily Brown, 2026-02-01",
+      "document_type": "billing_statement",
+      "sensitivity_tier": "financial",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "billing_code",
+        "date_of_birth",
+        "insurance_info"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "home_address",
+        "medical_diagnosis",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.4286,
+      "found_not_authored_corroborated": [
+        "home_address",
+        "medical_diagnosis",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "home_address",
+        "medical_diagnosis",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_057",
+      "title": "Billing Statement — Robert Lee, 2026-02-05",
+      "document_type": "billing_statement",
+      "sensitivity_tier": "financial",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "billing_code",
+        "date_of_birth",
+        "insurance_info"
+      ],
+      "extracted": [
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication",
+        "name"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [
+        "billing_code"
+      ],
+      "found_not_authored": [
+        "home_address",
+        "medical_diagnosis",
+        "medical_medication",
+        "name"
+      ],
+      "jaccard": 0.2857,
+      "found_not_authored_corroborated": [
+        "home_address",
+        "medical_diagnosis",
+        "medical_medication"
+      ],
+      "generation_not_authored": [
+        "home_address",
+        "medical_diagnosis",
+        "medical_medication"
+      ]
+    },
+    {
+      "doc_id": "doc_058",
+      "title": "Billing Statement — James Carter, 2026-02-15",
+      "document_type": "billing_statement",
+      "sensitivity_tier": "financial",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "billing_code",
+        "date_of_birth",
+        "insurance_info"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "name"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "home_address",
+        "medical_diagnosis",
+        "name"
+      ],
+      "jaccard": 0.5,
+      "found_not_authored_corroborated": [
+        "home_address",
+        "medical_diagnosis"
+      ],
+      "generation_not_authored": [
+        "home_address",
+        "medical_diagnosis"
+      ]
+    },
+    {
+      "doc_id": "doc_059",
+      "title": "Billing Statement — Linda Torres, 2026-03-01",
+      "document_type": "billing_statement",
+      "sensitivity_tier": "financial",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "billing_code",
+        "date_of_birth",
+        "insurance_info"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "home_address",
+        "medical_diagnosis",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.375,
+      "found_not_authored_corroborated": [
+        "home_address",
+        "medical_diagnosis",
+        "medical_medication",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "emergency_contact",
+        "home_address",
+        "medical_diagnosis",
+        "medical_medication",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_060",
+      "title": "Billing Statement — Patricia Moore, 2026-03-01",
+      "document_type": "billing_statement",
+      "sensitivity_tier": "financial",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "billing_code",
+        "date_of_birth",
+        "insurance_info"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "home_address",
+        "medical_diagnosis",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.4286,
+      "found_not_authored_corroborated": [
+        "home_address",
+        "medical_diagnosis",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "emergency_contact",
+        "home_address",
+        "medical_diagnosis",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_061",
+      "title": "Prior Authorization — John Smith, 2026-01-10",
+      "document_type": "prior_authorization",
+      "sensitivity_tier": "financial",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_license",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "medical_history",
+        "medical_license",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.3636,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "medical_history",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "medical_history",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_062",
+      "title": "Prior Authorization — Robert Lee, 2026-01-15",
+      "document_type": "prior_authorization",
+      "sensitivity_tier": "financial",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_diagnosis",
+        "medical_license",
+        "medical_medication",
+        "name"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "home_address",
+        "job_title",
+        "medical_license",
+        "name"
+      ],
+      "jaccard": 0.4444,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "home_address"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "home_address",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_063",
+      "title": "Prior Authorization — Maria Gonzalez, 2026-02-10",
+      "document_type": "prior_authorization",
+      "sensitivity_tier": "clinical_sensitive",
+      "subject_type": "patient",
+      "extra_sensitive": true,
+      "authored": [
+        "date_of_birth",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_diagnosis",
+        "medical_license",
+        "medical_medication",
+        "mental_health",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_medication",
+        "mental_health",
+        "name",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "home_address",
+        "job_title",
+        "medical_license",
+        "mental_health",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.3636,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "home_address",
+        "mental_health",
+        "name",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "home_address",
+        "mental_health",
+        "name",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_064",
+      "title": "Prior Authorization — Sarah Wilson, 2026-03-01",
+      "document_type": "prior_authorization",
+      "sensitivity_tier": "clinical_sensitive",
+      "subject_type": "patient",
+      "extra_sensitive": true,
+      "authored": [
+        "date_of_birth",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication"
+      ],
+      "extracted": [
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication",
+        "mental_health",
+        "name"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication",
+        "mental_health"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "home_address",
+        "mental_health",
+        "name"
+      ],
+      "jaccard": 0.5714,
+      "found_not_authored_corroborated": [
+        "home_address",
+        "mental_health"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "home_address",
+        "mental_health"
+      ]
+    },
+    {
+      "doc_id": "doc_065",
+      "title": "Prior Authorization — Linda Torres, 2026-02-01",
+      "document_type": "prior_authorization",
+      "sensitivity_tier": "financial",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "home_address",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.5,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "home_address",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "medical_history",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_066",
+      "title": "Explanation Of Benefits — John Smith, 2026-02-10",
+      "document_type": "explanation_of_benefits",
+      "sensitivity_tier": "financial",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "billing_code",
+        "date_of_birth",
+        "insurance_info"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_license",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "home_address",
+        "medical_diagnosis",
+        "medical_license",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.375,
+      "found_not_authored_corroborated": [
+        "home_address",
+        "medical_diagnosis",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "emergency_contact",
+        "home_address",
+        "medical_diagnosis",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_067",
+      "title": "Explanation Of Benefits — Emily Brown, 2026-02-10",
+      "document_type": "explanation_of_benefits",
+      "sensitivity_tier": "financial",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "billing_code",
+        "date_of_birth",
+        "insurance_info"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "insurance_info",
+        "medical_diagnosis",
+        "name"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "insurance_info",
+        "medical_diagnosis"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "medical_diagnosis",
+        "name"
+      ],
+      "jaccard": 0.6,
+      "found_not_authored_corroborated": [
+        "medical_diagnosis"
+      ],
+      "generation_not_authored": [
+        "medical_diagnosis"
+      ]
+    },
+    {
+      "doc_id": "doc_068",
+      "title": "Explanation Of Benefits — Robert Lee, 2026-02-10",
+      "document_type": "explanation_of_benefits",
+      "sensitivity_tier": "financial",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "billing_code",
+        "date_of_birth",
+        "insurance_info"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_license",
+        "medical_medication",
+        "name"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "medical_diagnosis",
+        "medical_license",
+        "medical_medication",
+        "name"
+      ],
+      "jaccard": 0.4286,
+      "found_not_authored_corroborated": [
+        "medical_diagnosis",
+        "medical_medication"
+      ],
+      "generation_not_authored": [
+        "home_address",
+        "medical_diagnosis",
+        "medical_medication",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_069",
+      "title": "Explanation Of Benefits — James Carter, 2026-02-20",
+      "document_type": "explanation_of_benefits",
+      "sensitivity_tier": "financial",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "billing_code",
+        "date_of_birth",
+        "insurance_info"
+      ],
+      "extracted": [
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication",
+        "name"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [
+        "billing_code"
+      ],
+      "found_not_authored": [
+        "home_address",
+        "medical_diagnosis",
+        "medical_medication",
+        "name"
+      ],
+      "jaccard": 0.2857,
+      "found_not_authored_corroborated": [
+        "home_address",
+        "medical_diagnosis",
+        "medical_medication"
+      ],
+      "generation_not_authored": [
+        "home_address",
+        "medical_diagnosis",
+        "medical_medication"
+      ]
+    },
+    {
+      "doc_id": "doc_070",
+      "title": "Insurance Verification — John Smith, 2026-01-14",
+      "document_type": "insurance_verification",
+      "sensitivity_tier": "financial",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "insurance_info"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "job_title",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.1818,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "medical_diagnosis",
+        "medical_history",
+        "medical_medication",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_071",
+      "title": "Insurance Verification — Emily Brown, 2026-01-19",
+      "document_type": "insurance_verification",
+      "sensitivity_tier": "financial",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "insurance_info"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_diagnosis",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_history",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "home_address",
+        "job_title",
+        "medical_diagnosis",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.25,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "home_address",
+        "medical_diagnosis",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "home_address",
+        "medical_diagnosis",
+        "medical_history",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_072",
+      "title": "Insurance Verification — Patricia Moore, 2026-02-19",
+      "document_type": "insurance_verification",
+      "sensitivity_tier": "financial",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "insurance_info"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_diagnosis",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "emergency_contact",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "home_address",
+        "job_title",
+        "medical_diagnosis",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.2222,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "home_address",
+        "medical_diagnosis",
+        "medical_medication",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "emergency_contact",
+        "home_address",
+        "medical_diagnosis",
+        "medical_medication",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_073",
+      "title": "Insurance Verification — Michael Chen, 2026-02-11",
+      "document_type": "insurance_verification",
+      "sensitivity_tier": "financial",
+      "subject_type": "patient",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "insurance_info"
+      ],
+      "extracted": [
+        "billing_code",
+        "date_of_birth",
+        "employment_contract",
+        "home_address",
+        "insurance_info",
+        "job_title",
+        "medical_diagnosis",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "generation": [
+        "billing_code",
+        "date_of_birth",
+        "home_address",
+        "insurance_info",
+        "medical_diagnosis",
+        "medical_medication",
+        "ssn"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "billing_code",
+        "employment_contract",
+        "home_address",
+        "job_title",
+        "medical_diagnosis",
+        "medical_medication",
+        "name",
+        "ssn"
+      ],
+      "jaccard": 0.2,
+      "found_not_authored_corroborated": [
+        "billing_code",
+        "home_address",
+        "medical_diagnosis",
+        "medical_medication",
+        "ssn"
+      ],
+      "generation_not_authored": [
+        "billing_code",
+        "home_address",
+        "medical_diagnosis",
+        "medical_medication",
+        "ssn"
+      ]
+    },
+    {
+      "doc_id": "doc_074",
+      "title": "Salary Letter — Dr. Sarah Chen, 2026-01-01",
+      "document_type": "salary_letter",
+      "sensitivity_tier": "employment",
+      "subject_type": "employee",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "salary"
+      ],
+      "extracted": [
+        "date_of_birth",
+        "employment_contract",
+        "home_address",
+        "job_title",
+        "medical_license",
+        "name",
+        "salary"
+      ],
+      "generation": [
+        "date_of_birth",
+        "home_address",
+        "medical_license",
+        "name",
+        "salary"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "employment_contract",
+        "home_address",
+        "job_title",
+        "medical_license",
+        "name"
+      ],
+      "jaccard": 0.2857,
+      "found_not_authored_corroborated": [
+        "home_address",
+        "medical_license",
+        "name"
+      ],
+      "generation_not_authored": [
+        "home_address",
+        "medical_license",
+        "name"
+      ]
+    },
+    {
+      "doc_id": "doc_075",
+      "title": "Salary Letter — Dr. Marcus Webb, 2026-01-01",
+      "document_type": "salary_letter",
+      "sensitivity_tier": "employment",
+      "subject_type": "employee",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "salary"
+      ],
+      "extracted": [
+        "date_of_birth",
+        "employment_contract",
+        "home_address",
+        "job_title",
+        "medical_license",
+        "name",
+        "salary"
+      ],
+      "generation": [
+        "date_of_birth",
+        "home_address",
+        "medical_license",
+        "name",
+        "salary"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "employment_contract",
+        "home_address",
+        "job_title",
+        "medical_license",
+        "name"
+      ],
+      "jaccard": 0.2857,
+      "found_not_authored_corroborated": [
+        "home_address",
+        "medical_license",
+        "name"
+      ],
+      "generation_not_authored": [
+        "home_address",
+        "medical_license",
+        "name"
+      ]
+    },
+    {
+      "doc_id": "doc_076",
+      "title": "Salary Letter — Dr. Aisha Patel, 2026-01-01",
+      "document_type": "salary_letter",
+      "sensitivity_tier": "employment",
+      "subject_type": "employee",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "salary"
+      ],
+      "extracted": [
+        "date_of_birth",
+        "employment_contract",
+        "home_address",
+        "job_title",
+        "medical_license",
+        "mental_health",
+        "name"
+      ],
+      "generation": [
+        "date_of_birth",
+        "home_address",
+        "medical_license",
+        "name",
+        "salary"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [
+        "salary"
+      ],
+      "found_not_authored": [
+        "employment_contract",
+        "home_address",
+        "job_title",
+        "medical_license",
+        "mental_health",
+        "name"
+      ],
+      "jaccard": 0.125,
+      "found_not_authored_corroborated": [
+        "home_address",
+        "medical_license",
+        "name"
+      ],
+      "generation_not_authored": [
+        "home_address",
+        "medical_license",
+        "name"
+      ]
+    },
+    {
+      "doc_id": "doc_077",
+      "title": "Salary Letter — Dr. Kevin O'Brien, 2026-01-01",
+      "document_type": "salary_letter",
+      "sensitivity_tier": "employment",
+      "subject_type": "employee",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "salary"
+      ],
+      "extracted": [
+        "date_of_birth",
+        "employment_contract",
+        "home_address",
+        "job_title",
+        "medical_license",
+        "name",
+        "salary"
+      ],
+      "generation": [
+        "date_of_birth",
+        "home_address",
+        "medical_license",
+        "name",
+        "salary"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "employment_contract",
+        "home_address",
+        "job_title",
+        "medical_license",
+        "name"
+      ],
+      "jaccard": 0.2857,
+      "found_not_authored_corroborated": [
+        "home_address",
+        "medical_license",
+        "name"
+      ],
+      "generation_not_authored": [
+        "home_address",
+        "medical_license",
+        "name"
+      ]
+    },
+    {
+      "doc_id": "doc_078",
+      "title": "Salary Letter — Nurse Patricia Davis, 2026-01-01",
+      "document_type": "salary_letter",
+      "sensitivity_tier": "employment",
+      "subject_type": "employee",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "salary"
+      ],
+      "extracted": [
+        "date_of_birth",
+        "employment_contract",
+        "home_address",
+        "job_title",
+        "salary"
+      ],
+      "generation": [
+        "date_of_birth",
+        "home_address",
+        "job_title",
+        "name",
+        "salary"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "employment_contract",
+        "home_address",
+        "job_title"
+      ],
+      "jaccard": 0.4,
+      "found_not_authored_corroborated": [
+        "home_address",
+        "job_title"
+      ],
+      "generation_not_authored": [
+        "home_address",
+        "job_title",
+        "name"
+      ]
+    },
+    {
+      "doc_id": "doc_079",
+      "title": "Salary Letter — Alice Johnson, 2026-01-01",
+      "document_type": "salary_letter",
+      "sensitivity_tier": "employment",
+      "subject_type": "employee",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "salary"
+      ],
+      "extracted": [
+        "date_of_birth",
+        "employment_contract",
+        "home_address",
+        "job_title",
+        "name",
+        "salary"
+      ],
+      "generation": [
+        "date_of_birth",
+        "home_address",
+        "job_title",
+        "name",
+        "salary"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "employment_contract",
+        "home_address",
+        "job_title",
+        "name"
+      ],
+      "jaccard": 0.3333,
+      "found_not_authored_corroborated": [
+        "home_address",
+        "job_title",
+        "name"
+      ],
+      "generation_not_authored": [
+        "home_address",
+        "job_title",
+        "name"
+      ]
+    },
+    {
+      "doc_id": "doc_080",
+      "title": "Employment Contract — Dr. Aisha Patel, 2022-03-01",
+      "document_type": "employment_contract",
+      "sensitivity_tier": "employment",
+      "subject_type": "employee",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "employment_contract",
+        "salary"
+      ],
+      "extracted": [
+        "date_of_birth",
+        "employment_contract",
+        "home_address",
+        "job_title",
+        "medical_license",
+        "mental_health",
+        "name",
+        "salary"
+      ],
+      "generation": [
+        "date_of_birth",
+        "home_address",
+        "medical_license",
+        "name",
+        "salary"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "home_address",
+        "job_title",
+        "medical_license",
+        "mental_health",
+        "name"
+      ],
+      "jaccard": 0.375,
+      "found_not_authored_corroborated": [
+        "home_address",
+        "medical_license",
+        "name"
+      ],
+      "generation_not_authored": [
+        "home_address",
+        "medical_license",
+        "name"
+      ]
+    },
+    {
+      "doc_id": "doc_081",
+      "title": "Employment Contract — Dr. Kevin O'Brien, 2020-07-01",
+      "document_type": "employment_contract",
+      "sensitivity_tier": "employment",
+      "subject_type": "employee",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "employment_contract",
+        "salary"
+      ],
+      "extracted": [
+        "date_of_birth",
+        "employment_contract",
+        "home_address",
+        "job_title",
+        "medical_license",
+        "name",
+        "salary"
+      ],
+      "generation": [
+        "date_of_birth",
+        "home_address",
+        "medical_license",
+        "name",
+        "salary"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "home_address",
+        "job_title",
+        "medical_license",
+        "name"
+      ],
+      "jaccard": 0.4286,
+      "found_not_authored_corroborated": [
+        "home_address",
+        "medical_license",
+        "name"
+      ],
+      "generation_not_authored": [
+        "home_address",
+        "medical_license",
+        "name"
+      ]
+    },
+    {
+      "doc_id": "doc_082",
+      "title": "Employment Contract — Nurse Lisa Kim, 2023-08-01",
+      "document_type": "employment_contract",
+      "sensitivity_tier": "employment",
+      "subject_type": "employee",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "employment_contract",
+        "salary"
+      ],
+      "extracted": [
+        "date_of_birth",
+        "employment_contract",
+        "home_address",
+        "job_title",
+        "mental_health",
+        "salary"
+      ],
+      "generation": [
+        "date_of_birth",
+        "employment_contract",
+        "home_address",
+        "name",
+        "salary"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "home_address",
+        "job_title",
+        "mental_health"
+      ],
+      "jaccard": 0.5,
+      "found_not_authored_corroborated": [
+        "home_address"
+      ],
+      "generation_not_authored": [
+        "home_address",
+        "name"
+      ]
+    },
+    {
+      "doc_id": "doc_083",
+      "title": "Employment Contract — Jennifer Walsh, 2024-01-15",
+      "document_type": "employment_contract",
+      "sensitivity_tier": "employment",
+      "subject_type": "employee",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "employment_contract",
+        "salary"
+      ],
+      "extracted": [
+        "date_of_birth",
+        "employment_contract",
+        "home_address",
+        "job_title",
+        "name",
+        "salary"
+      ],
+      "generation": [
+        "date_of_birth",
+        "home_address",
+        "name",
+        "salary"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "home_address",
+        "job_title",
+        "name"
+      ],
+      "jaccard": 0.5,
+      "found_not_authored_corroborated": [
+        "home_address",
+        "name"
+      ],
+      "generation_not_authored": [
+        "home_address",
+        "name"
+      ]
+    },
+    {
+      "doc_id": "doc_084",
+      "title": "Performance Review — Dr. Sarah Chen, 2026-01-15",
+      "document_type": "performance_review",
+      "sensitivity_tier": "employment",
+      "subject_type": "employee",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "employment_contract"
+      ],
+      "extracted": [
+        "date_of_birth",
+        "employment_contract",
+        "home_address",
+        "job_title",
+        "medical_license",
+        "name",
+        "salary"
+      ],
+      "generation": [
+        "date_of_birth",
+        "employment_contract",
+        "home_address",
+        "medical_license",
+        "name",
+        "salary"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "home_address",
+        "job_title",
+        "medical_license",
+        "name",
+        "salary"
+      ],
+      "jaccard": 0.2857,
+      "found_not_authored_corroborated": [
+        "home_address",
+        "medical_license",
+        "name",
+        "salary"
+      ],
+      "generation_not_authored": [
+        "home_address",
+        "medical_license",
+        "name",
+        "salary"
+      ]
+    },
+    {
+      "doc_id": "doc_085",
+      "title": "Performance Review — Nurse Patricia Davis, 2026-01-15",
+      "document_type": "performance_review",
+      "sensitivity_tier": "employment",
+      "subject_type": "employee",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "employment_contract"
+      ],
+      "extracted": [
+        "date_of_birth",
+        "employment_contract",
+        "home_address",
+        "job_title",
+        "salary"
+      ],
+      "generation": [
+        "date_of_birth",
+        "employment_contract",
+        "home_address",
+        "job_title",
+        "name",
+        "salary"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "home_address",
+        "job_title",
+        "salary"
+      ],
+      "jaccard": 0.4,
+      "found_not_authored_corroborated": [
+        "home_address",
+        "job_title",
+        "salary"
+      ],
+      "generation_not_authored": [
+        "home_address",
+        "job_title",
+        "name",
+        "salary"
+      ]
+    },
+    {
+      "doc_id": "doc_086",
+      "title": "Performance Review — Alice Johnson, 2026-01-15",
+      "document_type": "performance_review",
+      "sensitivity_tier": "employment",
+      "subject_type": "employee",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "employment_contract"
+      ],
+      "extracted": [
+        "date_of_birth",
+        "employment_contract",
+        "home_address",
+        "job_title",
+        "name",
+        "salary"
+      ],
+      "generation": [
+        "date_of_birth",
+        "employment_contract",
+        "home_address",
+        "job_title",
+        "name",
+        "salary"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "home_address",
+        "job_title",
+        "name",
+        "salary"
+      ],
+      "jaccard": 0.3333,
+      "found_not_authored_corroborated": [
+        "home_address",
+        "job_title",
+        "name",
+        "salary"
+      ],
+      "generation_not_authored": [
+        "home_address",
+        "job_title",
+        "name",
+        "salary"
+      ]
+    },
+    {
+      "doc_id": "doc_087",
+      "title": "Performance Review — Nurse Tom Reyes, 2026-01-15",
+      "document_type": "performance_review",
+      "sensitivity_tier": "employment",
+      "subject_type": "employee",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "employment_contract"
+      ],
+      "extracted": [
+        "date_of_birth",
+        "employment_contract",
+        "home_address",
+        "job_title",
+        "salary"
+      ],
+      "generation": [
+        "date_of_birth",
+        "employment_contract",
+        "home_address",
+        "name",
+        "salary"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "home_address",
+        "job_title",
+        "salary"
+      ],
+      "jaccard": 0.4,
+      "found_not_authored_corroborated": [
+        "home_address",
+        "salary"
+      ],
+      "generation_not_authored": [
+        "home_address",
+        "name",
+        "salary"
+      ]
+    },
+    {
+      "doc_id": "doc_088",
+      "title": "Credentialing File — Dr. Sarah Chen, 2026-01-01",
+      "document_type": "credentialing_file",
+      "sensitivity_tier": "employment",
+      "subject_type": "employee",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "employment_contract",
+        "medical_license"
+      ],
+      "extracted": [
+        "date_of_birth",
+        "employment_contract",
+        "home_address",
+        "job_title",
+        "medical_license",
+        "name",
+        "salary"
+      ],
+      "generation": [
+        "date_of_birth",
+        "employment_contract",
+        "home_address",
+        "medical_license",
+        "name",
+        "salary"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "home_address",
+        "job_title",
+        "name",
+        "salary"
+      ],
+      "jaccard": 0.4286,
+      "found_not_authored_corroborated": [
+        "home_address",
+        "name",
+        "salary"
+      ],
+      "generation_not_authored": [
+        "home_address",
+        "name",
+        "salary"
+      ]
+    },
+    {
+      "doc_id": "doc_089",
+      "title": "Credentialing File — Dr. Aisha Patel, 2026-01-01",
+      "document_type": "credentialing_file",
+      "sensitivity_tier": "employment",
+      "subject_type": "employee",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "employment_contract",
+        "medical_license"
+      ],
+      "extracted": [
+        "date_of_birth",
+        "employment_contract",
+        "home_address",
+        "job_title",
+        "medical_license",
+        "medical_medication",
+        "mental_health",
+        "name",
+        "salary"
+      ],
+      "generation": [
+        "date_of_birth",
+        "employment_contract",
+        "home_address",
+        "medical_license",
+        "salary"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "home_address",
+        "job_title",
+        "medical_medication",
+        "mental_health",
+        "name",
+        "salary"
+      ],
+      "jaccard": 0.3333,
+      "found_not_authored_corroborated": [
+        "home_address",
+        "salary"
+      ],
+      "generation_not_authored": [
+        "home_address",
+        "salary"
+      ]
+    },
+    {
+      "doc_id": "doc_090",
+      "title": "Credentialing File — Dr. Kevin O'Brien, 2026-01-01",
+      "document_type": "credentialing_file",
+      "sensitivity_tier": "employment",
+      "subject_type": "employee",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "employment_contract",
+        "medical_license"
+      ],
+      "extracted": [
+        "date_of_birth",
+        "employment_contract",
+        "home_address",
+        "job_title",
+        "medical_license",
+        "name",
+        "salary"
+      ],
+      "generation": [
+        "date_of_birth",
+        "employment_contract",
+        "home_address",
+        "medical_license",
+        "name",
+        "salary"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "home_address",
+        "job_title",
+        "name",
+        "salary"
+      ],
+      "jaccard": 0.4286,
+      "found_not_authored_corroborated": [
+        "home_address",
+        "name",
+        "salary"
+      ],
+      "generation_not_authored": [
+        "home_address",
+        "name",
+        "salary"
+      ]
+    },
+    {
+      "doc_id": "doc_091",
+      "title": "Contractor Agreement — Carol White, 2026-01-01",
+      "document_type": "contractor_agreement",
+      "sensitivity_tier": "employment",
+      "subject_type": "contractor",
+      "extra_sensitive": false,
+      "authored": [
+        "contract_terms",
+        "date_of_birth",
+        "home_address"
+      ],
+      "extracted": [
+        "contract_terms",
+        "date_of_birth",
+        "home_address",
+        "job_title",
+        "name",
+        "salary"
+      ],
+      "generation": [
+        "contract_terms",
+        "date_of_birth",
+        "home_address"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "job_title",
+        "name",
+        "salary"
+      ],
+      "jaccard": 0.5,
+      "found_not_authored_corroborated": [],
+      "generation_not_authored": []
+    },
+    {
+      "doc_id": "doc_092",
+      "title": "Contractor Agreement — Frank Turner, 2026-01-01",
+      "document_type": "contractor_agreement",
+      "sensitivity_tier": "employment",
+      "subject_type": "contractor",
+      "extra_sensitive": false,
+      "authored": [
+        "contract_terms",
+        "date_of_birth",
+        "home_address"
+      ],
+      "extracted": [
+        "contract_terms",
+        "date_of_birth",
+        "home_address",
+        "name",
+        "salary"
+      ],
+      "generation": [
+        "contract_terms",
+        "date_of_birth",
+        "home_address"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "name",
+        "salary"
+      ],
+      "jaccard": 0.6,
+      "found_not_authored_corroborated": [],
+      "generation_not_authored": []
+    },
+    {
+      "doc_id": "doc_093",
+      "title": "Contractor Agreement — Carol White, 2025-01-01",
+      "document_type": "contractor_agreement",
+      "sensitivity_tier": "employment",
+      "subject_type": "contractor",
+      "extra_sensitive": false,
+      "authored": [
+        "contract_terms",
+        "date_of_birth",
+        "home_address"
+      ],
+      "extracted": [
+        "contract_terms",
+        "date_of_birth",
+        "home_address",
+        "job_title",
+        "name",
+        "salary"
+      ],
+      "generation": [
+        "contract_terms",
+        "date_of_birth",
+        "home_address"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "job_title",
+        "name",
+        "salary"
+      ],
+      "jaccard": 0.5,
+      "found_not_authored_corroborated": [],
+      "generation_not_authored": []
+    },
+    {
+      "doc_id": "doc_094",
+      "title": "Staff Schedule — Riverside Medical Clinic, 2026-06-16",
+      "document_type": "staff_schedule",
+      "sensitivity_tier": "internal",
+      "subject_type": "organization",
+      "extra_sensitive": false,
+      "authored": [],
+      "extracted": [
+        "job_title"
+      ],
+      "generation": [],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "job_title"
+      ],
+      "jaccard": 0.0,
+      "found_not_authored_corroborated": [],
+      "generation_not_authored": []
+    },
+    {
+      "doc_id": "doc_095",
+      "title": "Staff Schedule — Riverside Medical Clinic, 2026-06-23",
+      "document_type": "staff_schedule",
+      "sensitivity_tier": "internal",
+      "subject_type": "organization",
+      "extra_sensitive": false,
+      "authored": [],
+      "extracted": [
+        "job_title"
+      ],
+      "generation": [],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "job_title"
+      ],
+      "jaccard": 0.0,
+      "found_not_authored_corroborated": [],
+      "generation_not_authored": []
+    },
+    {
+      "doc_id": "doc_096",
+      "title": "Staff Schedule — Riverside Medical Clinic, 2026-07-07",
+      "document_type": "staff_schedule",
+      "sensitivity_tier": "internal",
+      "subject_type": "organization",
+      "extra_sensitive": false,
+      "authored": [],
+      "extracted": [
+        "job_title"
+      ],
+      "generation": [],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "job_title"
+      ],
+      "jaccard": 0.0,
+      "found_not_authored_corroborated": [],
+      "generation_not_authored": []
+    },
+    {
+      "doc_id": "doc_097",
+      "title": "Meeting Agenda — Riverside Medical Clinic, 2026-01-10",
+      "document_type": "meeting_agenda",
+      "sensitivity_tier": "internal",
+      "subject_type": "organization",
+      "extra_sensitive": false,
+      "authored": [],
+      "extracted": [
+        "employment_contract"
+      ],
+      "generation": [],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "employment_contract"
+      ],
+      "jaccard": 0.0,
+      "found_not_authored_corroborated": [],
+      "generation_not_authored": []
+    },
+    {
+      "doc_id": "doc_098",
+      "title": "Meeting Agenda — Riverside Medical Clinic, 2026-02-10",
+      "document_type": "meeting_agenda",
+      "sensitivity_tier": "internal",
+      "subject_type": "organization",
+      "extra_sensitive": false,
+      "authored": [],
+      "extracted": [
+        "employment_contract",
+        "job_title"
+      ],
+      "generation": [],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "employment_contract",
+        "job_title"
+      ],
+      "jaccard": 0.0,
+      "found_not_authored_corroborated": [],
+      "generation_not_authored": []
+    },
+    {
+      "doc_id": "doc_099",
+      "title": "Meeting Agenda — Riverside Medical Clinic, 2026-03-10",
+      "document_type": "meeting_agenda",
+      "sensitivity_tier": "internal",
+      "subject_type": "organization",
+      "extra_sensitive": false,
+      "authored": [],
+      "extracted": [
+        "job_title"
+      ],
+      "generation": [],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "job_title"
+      ],
+      "jaccard": 0.0,
+      "found_not_authored_corroborated": [],
+      "generation_not_authored": []
+    },
+    {
+      "doc_id": "doc_100",
+      "title": "Policy Memo — Riverside Medical Clinic, 2026-01-05",
+      "document_type": "policy_memo",
+      "sensitivity_tier": "internal",
+      "subject_type": "organization",
+      "extra_sensitive": false,
+      "authored": [],
+      "extracted": [
+        "job_title"
+      ],
+      "generation": [],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "job_title"
+      ],
+      "jaccard": 0.0,
+      "found_not_authored_corroborated": [],
+      "generation_not_authored": []
+    },
+    {
+      "doc_id": "doc_101",
+      "title": "Policy Memo — Riverside Medical Clinic, 2026-02-01",
+      "document_type": "policy_memo",
+      "sensitivity_tier": "internal",
+      "subject_type": "organization",
+      "extra_sensitive": false,
+      "authored": [],
+      "extracted": [
+        "employment_contract"
+      ],
+      "generation": [],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "employment_contract"
+      ],
+      "jaccard": 0.0,
+      "found_not_authored_corroborated": [],
+      "generation_not_authored": []
+    },
+    {
+      "doc_id": "doc_102",
+      "title": "Policy Memo — Riverside Medical Clinic, 2026-03-01",
+      "document_type": "policy_memo",
+      "sensitivity_tier": "internal",
+      "subject_type": "organization",
+      "extra_sensitive": false,
+      "authored": [],
+      "extracted": [
+        "job_title"
+      ],
+      "generation": [],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "job_title"
+      ],
+      "jaccard": 0.0,
+      "found_not_authored_corroborated": [],
+      "generation_not_authored": []
+    },
+    {
+      "doc_id": "doc_103",
+      "title": "Public Pamphlet — Riverside Medical Clinic, 2026-01-01",
+      "document_type": "public_pamphlet",
+      "sensitivity_tier": "public",
+      "subject_type": "organization",
+      "extra_sensitive": false,
+      "authored": [],
+      "extracted": [
+        "employment_contract"
+      ],
+      "generation": [],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "employment_contract"
+      ],
+      "jaccard": 0.0,
+      "found_not_authored_corroborated": [],
+      "generation_not_authored": []
+    },
+    {
+      "doc_id": "doc_104",
+      "title": "Employment Contract — Dr. Marcus Webb, 2021-09-01",
+      "document_type": "employment_contract",
+      "sensitivity_tier": "employment",
+      "subject_type": "employee",
+      "extra_sensitive": false,
+      "authored": [
+        "date_of_birth",
+        "employment_contract",
+        "salary"
+      ],
+      "extracted": [
+        "date_of_birth",
+        "employment_contract",
+        "home_address",
+        "job_title",
+        "medical_license",
+        "name",
+        "salary"
+      ],
+      "generation": [
+        "date_of_birth",
+        "home_address",
+        "medical_license",
+        "name",
+        "salary"
+      ],
+      "agree_exactly": false,
+      "authored_not_found": [],
+      "found_not_authored": [
+        "home_address",
+        "job_title",
+        "medical_license",
+        "name"
+      ],
+      "jaccard": 0.4286,
+      "found_not_authored_corroborated": [
+        "home_address",
+        "medical_license",
+        "name"
+      ],
+      "generation_not_authored": [
+        "home_address",
+        "medical_license",
+        "name"
+      ]
+    }
+  ]
+}

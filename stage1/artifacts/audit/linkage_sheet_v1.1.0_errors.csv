@@ -1,0 +1,112 @@
+row_id,block,doc_id,document_type,sensitivity_tier,subject_type,information_type,value,region,field_label,section,classifier_said,human_said,linkage_signal,tagger_rule,silent_release
+L0022,A,doc_008,clinical_note,clinical_sensitive,patient,medical_diagnosis,HIV,body,,riverside medical clinic,organizational,subject,section,diagnosis.gazetteer,True
+L0023,A,doc_008,clinical_note,clinical_sensitive,patient,medical_diagnosis,AIDS,body,,riverside medical clinic,organizational,subject,section,diagnosis.gazetteer,True
+L0054,A,doc_008,clinical_note,clinical_sensitive,patient,job_title,PHYSICIAN,body,,physician attestation,third_party,subject,provider_block,title.gazetteer,True
+L0094,A,doc_026,radiology_report,clinical_standard,patient,medical_diagnosis,Z34.32,body,cpt/billing code,riverside medical clinic,organizational,subject,section,diagnosis.icd_nonpsych,True
+L0100,A,doc_026,radiology_report,clinical_standard,patient,name,Dr. Marcus Webb,body,reporting radiologist,impression,third_party,subject,name_match,name.registry,True
+L0134,A,doc_036,mental_health_assessment,clinical_sensitive,patient,mental_health,Mental Health,letterhead,,,organizational,subject,region,mental.category_marker,True
+L0144,A,doc_036,mental_health_assessment,clinical_sensitive,patient,mental_health,suicidal ideation,body,subjective,riverside medical clinic,organizational,subject,section,mental.clinical_term,True
+L0145,A,doc_036,mental_health_assessment,clinical_sensitive,patient,mental_health,PHQ-9,body,objective,riverside medical clinic,organizational,subject,section,mental.clinical_term,True
+L0146,A,doc_036,mental_health_assessment,clinical_sensitive,patient,mental_health,depression,body,objective,riverside medical clinic,organizational,subject,section,mental.clinical_term,True
+L0151,A,doc_037,mental_health_assessment,clinical_sensitive,patient,mental_health,Substance Abuse,letterhead,,,organizational,subject,region,mental.clinical_term,True
+L0175,A,doc_045,referral_letter,clinical_standard,patient,medical_diagnosis,Chronic Kidney Disease,body,,riverside medical clinic,organizational,subject,section,diagnosis.gazetteer,True
+L0176,A,doc_045,referral_letter,clinical_standard,patient,billing_code,N18.3,body,,riverside medical clinic,organizational,subject,section,billing.icd_parenthetical,True
+L0177,A,doc_045,referral_letter,clinical_standard,patient,medical_diagnosis,N18.3,body,,riverside medical clinic,organizational,subject,section,diagnosis.icd_nonpsych,True
+L0186,A,doc_045,referral_letter,clinical_standard,patient,name,Dr. Patricia Nguyen,signature,,pertinent medical history,third_party,subject,name_match,name.registry,True
+L0204,A,doc_059,billing_statement,financial,patient,name,Dr. Anita Sharma,body,provider,service detail,third_party,subject,name_match,name.registry,True
+L0224,A,doc_064,prior_authorization,clinical_sensitive,patient,mental_health,substance use disorder,letterhead,,,organizational,subject,region,mental.clinical_term,True
+L0259,A,doc_070,insurance_verification,financial,patient,job_title,Billing Specialist,body,verification completed by,emergency contact,third_party,subject,field_label,title.gazetteer,True
+L0337,B,doc_007,clinical_note,clinical_sensitive,patient,mental_health,MENTAL HEALTH,body,,riverside medical clinic,organizational,subject,section,mental.category_marker,True
+L0339,B,doc_007,clinical_note,clinical_sensitive,patient,mental_health,Psychiatric,body,visit type,riverside medical clinic,organizational,subject,section,mental.category_marker,True
+L0340,B,doc_007,clinical_note,clinical_sensitive,patient,mental_health,Psychotherapy,body,visit type,riverside medical clinic,organizational,subject,section,mental.category_marker,True
+L0372,B,doc_020,lab_report,clinical_standard,patient,medical_medication,Hemoglobin         11.2 g,body,,riverside medical clinic,organizational,subject,section,medication.dose_form,True
+L0375,B,doc_023,lab_report,clinical_standard,patient,medical_medication,Tamoxifen 20mg,body,current regimen,riverside medical clinic,organizational,subject,section,medication.dose_form,True
+L0376,B,doc_023,lab_report,clinical_standard,patient,medical_medication,Tamoxifen,body,current regimen,riverside medical clinic,organizational,subject,section,medication.gazetteer,True
+L0396,B,doc_040,mental_health_assessment,clinical_sensitive,patient,mental_health,depression,body,,riverside medical clinic,organizational,subject,section,mental.clinical_term,True
+L0397,B,doc_040,mental_health_assessment,clinical_sensitive,patient,mental_health,suicidal ideation,body,,riverside medical clinic,organizational,subject,section,mental.clinical_term,True
+L0398,B,doc_040,mental_health_assessment,clinical_sensitive,patient,mental_health,PHQ-9,body,,riverside medical clinic,organizational,subject,section,mental.clinical_term,True
+L0399,B,doc_040,mental_health_assessment,clinical_sensitive,patient,medical_medication,Lisinopril 10mg,body,,riverside medical clinic,organizational,subject,section,medication.dose_form,True
+L0400,B,doc_040,mental_health_assessment,clinical_sensitive,patient,medical_medication,Lisinopril,body,,riverside medical clinic,organizational,subject,section,medication.gazetteer,True
+L0401,B,doc_040,mental_health_assessment,clinical_sensitive,patient,medical_diagnosis,Diabetes,body,,riverside medical clinic,organizational,subject,section,diagnosis.gazetteer,True
+L0402,B,doc_040,mental_health_assessment,clinical_sensitive,patient,medical_history,diagnosed 2012,body,,riverside medical clinic,organizational,subject,section,history.diagnosed_year,True
+L0403,B,doc_040,mental_health_assessment,clinical_sensitive,patient,medical_diagnosis,hypertension,body,,riverside medical clinic,organizational,subject,section,diagnosis.gazetteer,True
+L0404,B,doc_040,mental_health_assessment,clinical_sensitive,patient,medical_history,since 2005,body,,riverside medical clinic,organizational,subject,section,history.diagnosed_year,True
+L0405,B,doc_040,mental_health_assessment,clinical_sensitive,patient,medical_diagnosis,Chronic Kidney Disease,body,,riverside medical clinic,organizational,subject,section,diagnosis.gazetteer,True
+L0406,B,doc_040,mental_health_assessment,clinical_sensitive,patient,billing_code,N18.3,body,,riverside medical clinic,organizational,subject,section,billing.icd_parenthetical,True
+L0407,B,doc_040,mental_health_assessment,clinical_sensitive,patient,mental_health,depressive,body,,riverside medical clinic,organizational,subject,section,mental.clinical_term,True
+L0408,B,doc_040,mental_health_assessment,clinical_sensitive,patient,mental_health,psychiatric,body,,riverside medical clinic,organizational,subject,section,mental.category_marker,True
+L0409,B,doc_040,mental_health_assessment,clinical_sensitive,patient,mental_health,behavioral health,body,,riverside medical clinic,organizational,subject,section,mental.category_marker,True
+L0410,B,doc_041,referral_letter,clinical_standard,patient,home_address,"412 Maple St, Springfield, IL 62701",body,,riverside medical clinic,organizational,subject,section,address.street_city_state_zip,True
+L0411,B,doc_041,referral_letter,clinical_standard,patient,medical_diagnosis,nephropathy,body,,riverside medical clinic,organizational,subject,section,diagnosis.gazetteer,True
+L0413,B,doc_042,referral_letter,clinical_standard,patient,home_address,"230 Oak Ave, Springfield, IL 62703",body,,riverside medical clinic,organizational,subject,section,address.street_city_state_zip,True
+L0414,B,doc_042,referral_letter,clinical_standard,patient,medical_diagnosis,atrial fibrillation,body,,riverside medical clinic,organizational,subject,section,diagnosis.gazetteer,True
+L0415,B,doc_042,referral_letter,clinical_standard,patient,billing_code,99214,body,,riverside medical clinic,organizational,subject,section,billing.cpt_labeled,True
+L0418,B,doc_043,referral_letter,clinical_standard,patient,billing_code,Z34.32,body,,riverside medical clinic,organizational,subject,section,billing.icd_parenthetical,True
+L0419,B,doc_043,referral_letter,clinical_standard,patient,medical_diagnosis,Z34.32,body,,riverside medical clinic,organizational,subject,section,diagnosis.icd_nonpsych,True
+L0420,B,doc_043,referral_letter,clinical_standard,patient,medical_diagnosis,gestational hypertension,body,,riverside medical clinic,organizational,subject,section,diagnosis.gazetteer,True
+L0421,B,doc_043,referral_letter,clinical_standard,patient,medical_diagnosis,preeclampsia,body,,riverside medical clinic,organizational,subject,section,diagnosis.gazetteer,True
+L0422,B,doc_043,referral_letter,clinical_standard,patient,medical_diagnosis,hypertensive,body,,riverside medical clinic,organizational,subject,section,diagnosis.gazetteer,True
+L0426,B,doc_046,referral_letter,clinical_standard,patient,medical_diagnosis,hypertension,body,,riverside medical clinic,organizational,subject,section,diagnosis.gazetteer,True
+L0427,B,doc_046,referral_letter,clinical_standard,patient,billing_code,I10,body,,riverside medical clinic,organizational,subject,section,billing.icd_parenthetical,True
+L0428,B,doc_046,referral_letter,clinical_standard,patient,medical_diagnosis,I10,body,,riverside medical clinic,organizational,subject,section,diagnosis.icd_nonpsych,True
+L0429,B,doc_046,referral_letter,clinical_standard,patient,medical_diagnosis,Diabetes Mellitus,body,,riverside medical clinic,organizational,subject,section,diagnosis.gazetteer,True
+L0430,B,doc_046,referral_letter,clinical_standard,patient,billing_code,E11.9,body,,riverside medical clinic,organizational,subject,section,billing.icd_parenthetical,True
+L0431,B,doc_046,referral_letter,clinical_standard,patient,medical_diagnosis,E11.9,body,,riverside medical clinic,organizational,subject,section,diagnosis.icd_nonpsych,True
+L0432,B,doc_046,referral_letter,clinical_standard,patient,medical_medication,Lisinopril 20mg,body,,riverside medical clinic,organizational,subject,section,medication.dose_form,True
+L0433,B,doc_046,referral_letter,clinical_standard,patient,medical_medication,Lisinopril,body,,riverside medical clinic,organizational,subject,section,medication.gazetteer,True
+L0434,B,doc_046,referral_letter,clinical_standard,patient,medical_medication,Metformin 1000mg,body,,riverside medical clinic,organizational,subject,section,medication.dose_form,True
+L0435,B,doc_046,referral_letter,clinical_standard,patient,medical_medication,Metformin,body,,riverside medical clinic,organizational,subject,section,medication.gazetteer,True
+L0436,B,doc_046,referral_letter,clinical_standard,patient,medical_diagnosis,hyperlipidemia,body,,riverside medical clinic,organizational,subject,section,diagnosis.gazetteer,True
+L0437,B,doc_046,referral_letter,clinical_standard,patient,medical_diagnosis,hypertensive,body,,riverside medical clinic,organizational,subject,section,diagnosis.gazetteer,True
+L0452,B,doc_063,prior_authorization,clinical_sensitive,patient,mental_health,mental health,letterhead,confidentiality notice,,organizational,subject,region,mental.category_marker,True
+L0453,B,doc_063,prior_authorization,clinical_sensitive,patient,mental_health,MHDDCA,letterhead,confidentiality notice,,organizational,subject,region,mental.category_marker,True
+L0454,B,doc_063,prior_authorization,clinical_sensitive,patient,mental_health,PSYCHIATRIC,body,,riverside medical clinic,organizational,subject,section,mental.category_marker,True
+L0462,B,doc_076,salary_letter,employment,employee,home_address,"3200 Riverside Drive, Peoria, IL 61615",letterhead,,riverside medical clinic,organizational,subject,region,address.street_city_state_zip,True
+L0463,B,doc_076,salary_letter,employment,employee,employment_contract,"effective January 1, 2026",body,,riverside medical clinic,organizational,subject,section,employment.effective_date,True
+L0464,B,doc_078,salary_letter,employment,employee,home_address,"19 Cedar Blvd, Springfield, IL 62708",body,,riverside medical clinic,organizational,subject,section,address.street_city_state_zip,True
+L0466,B,doc_079,salary_letter,employment,employee,home_address,"88 Ash Lane, Springfield, IL 62710",body,,riverside medical clinic,organizational,subject,section,address.street_city_state_zip,True
+L0021,A,doc_003,clinical_note,clinical_standard,patient,medical_license,1487320956,signature,npi,provider signature,third_party,organizational,region,license.npi,False
+L0031,A,doc_008,clinical_note,clinical_sensitive,patient,job_title,ATTENDING PHYSICIAN,body,,attending physician,third_party,organizational,provider_block,title.gazetteer,False
+L0036,A,doc_008,clinical_note,clinical_sensitive,patient,medical_diagnosis,diabetes,body,,medical history,subject,third_party,section,diagnosis.gazetteer,False
+L0099,A,doc_026,radiology_report,clinical_standard,patient,job_title,Radiologist,body,reporting radiologist,impression,subject,third_party,section,title.gazetteer,False
+L0260,A,doc_074,salary_letter,employment,employee,name,Dr. Sarah Chen,body,,riverside medical clinic,subject,third_party,name_match,name.registry,False
+L0272,A,doc_080,employment_contract,employment,employee,mental_health,Psychiatry,body,medical license,employment contract,ambiguous,subject,unresolved,mental.category_marker,False
+L0275,A,doc_080,employment_contract,employment,employee,mental_health,Behavioral Health,body,department,employment contract,subject,organizational,field_label,mental.category_marker,False
+L0278,A,doc_080,employment_contract,employment,employee,mental_health,psychiatric,body,,duties & obligations,ambiguous,subject,unresolved,mental.category_marker,False
+L0279,A,doc_080,employment_contract,employment,employee,mental_health,42 CFR Part 2,body,,duties & obligations,ambiguous,subject,unresolved,mental.category_marker,False
+L0280,A,doc_080,employment_contract,employment,employee,mental_health,substance use disorder,body,,duties & obligations,ambiguous,subject,unresolved,mental.clinical_term,False
+L0293,A,doc_089,credentialing_file,employment,employee,mental_health,Psychiatry,body,medical license,licensure & certifications,ambiguous,subject,unresolved,mental.category_marker,False
+L0294,A,doc_089,credentialing_file,employment,employee,medical_medication,Buprenorphine,body,dea registration,licensure & certifications,ambiguous,subject,unresolved,medication.gazetteer,False
+L0295,A,doc_089,credentialing_file,employment,employee,employment_contract,"EMPLOYMENT DETAILS
+Employment Contract",body,,employment details,subject,organizational,type_default,employment.agreement_title,False
+L0305,A,doc_095,staff_schedule,internal,organization,job_title,Physician,body,physician on duty,primary care,third_party,organizational,field_label_self,title.gazetteer,False
+L0306,A,doc_095,staff_schedule,internal,organization,job_title,Medical Assistant,body,medical assistant,primary care,third_party,organizational,field_label_self,title.gazetteer,False
+L0307,A,doc_098,meeting_agenda,internal,organization,employment_contract,"effective April 1, 2026",body,,agenda items,third_party,organizational,type_default,employment.effective_date,False
+L0308,A,doc_098,meeting_agenda,internal,organization,job_title,Billing Specialist,body,,agenda items,third_party,organizational,type_default,title.gazetteer,False
+L0309,A,doc_098,meeting_agenda,internal,organization,job_title,Medical Assistant,body,,agenda items,third_party,organizational,type_default,title.gazetteer,False
+L0310,A,doc_100,policy_memo,internal,organization,job_title,based access controls will be enforced in the EHR system beg,body,,key changes,third_party,organizational,type_default,title.labeled,False
+L0312,B,doc_000,clinical_note,clinical_standard,patient,name,Dr. Patricia Holloway,body,provider,clinical encounter note,third_party,organizational,name_match,name.registry,False
+L0313,B,doc_000,clinical_note,clinical_standard,patient,medical_license,1234567890,signature,npi,provider attestation,third_party,organizational,region,license.npi,False
+L0314,B,doc_001,clinical_note,clinical_standard,patient,medical_license,IL-OB-004421,body,license #,riverside medical clinic,third_party,organizational,provider_block,license.labeled,False
+L0315,B,doc_002,clinical_note,clinical_standard,patient,name,Dr. Patricia Nguyen,body,attending provider,encounter details,third_party,organizational,name_match,name.registry,False
+L0316,B,doc_002,clinical_note,clinical_standard,patient,medical_diagnosis,coronary artery disease,body,,family history,third_party,organizational,section,diagnosis.gazetteer,False
+L0317,B,doc_002,clinical_note,clinical_standard,patient,medical_diagnosis,diabetes,body,,family history,third_party,organizational,section,diagnosis.gazetteer,False
+L0318,B,doc_002,clinical_note,clinical_standard,patient,job_title,Attending Physician,body,attending physician,provider attestation,third_party,organizational,field_label_self,title.gazetteer,False
+L0319,B,doc_002,clinical_note,clinical_standard,patient,medical_license,1234567890,body,npi,provider attestation,third_party,organizational,provider_block,license.npi,False
+L0320,B,doc_002,clinical_note,clinical_standard,patient,job_title,CONFIDENTIAL – PROTECTED HEALTH INFORMATION,signature,document classification,provider attestation,third_party,organizational,region,title.labeled,False
+L0321,B,doc_004,clinical_note,clinical_standard,patient,job_title,ATTENDING PHYSICIAN,body,attending physician,clinical encounter note,third_party,organizational,field_label_self,title.gazetteer,False
+L0335,B,doc_006,clinical_note,clinical_standard,patient,job_title,PHYSICIAN,body,,physician attestation,third_party,organizational,provider_block,title.gazetteer,False
+L0341,B,doc_007,clinical_note,clinical_sensitive,patient,job_title,Attending Psychiatrist,body,provider,attending clinician,third_party,organizational,field_label,title.gazetteer,False
+L0342,B,doc_007,clinical_note,clinical_sensitive,patient,mental_health,Psychiatry,body,credentials,attending clinician,third_party,organizational,provider_block,mental.category_marker,False
+L0350,B,doc_011,prescription,clinical_standard,patient,job_title,Physician,body,prescribing physician,rx,third_party,organizational,field_label_self,title.gazetteer,False
+L0364,B,doc_016,prescription,clinical_standard,patient,medical_license,FE3291047,signature,dea#,caregiver administration notes,third_party,ambiguous,region,license.dea,False
+L0440,B,doc_049,insurance_claim,financial,patient,medical_license,1234567890,letterhead,npi,riverside medical clinic,organizational,third_party,region,license.npi,False
+L0458,B,doc_068,explanation_of_benefits,financial,patient,medical_license,1234567890,body,rendering provider npi,explanation of benefits,third_party,organizational,field_label,license.npi,False
+L0476,B,doc_094,staff_schedule,internal,organization,job_title,INTERNAL — NOT FOR PATIENT DISTRIBUTION,body,classification,notes,third_party,organizational,field_label,title.labeled,False
+L0477,B,doc_096,staff_schedule,internal,organization,job_title,Nurse,body,,nursing coverage,third_party,organizational,type_default,title.gazetteer,False
+L0478,B,doc_096,staff_schedule,internal,organization,job_title,HR Manager,body,,nursing coverage,third_party,organizational,type_default,title.gazetteer,False
+L0479,B,doc_097,meeting_agenda,internal,organization,employment_contract,"effective February 1, 2026",body,,agenda items,third_party,organizational,type_default,employment.effective_date,False
+L0480,B,doc_099,meeting_agenda,internal,organization,job_title,Internal Use Only,letterhead,classification,riverside medical clinic,third_party,organizational,field_label,title.labeled,False
+L0484,B,doc_101,policy_memo,internal,organization,employment_contract,"EFFECTIVE DATE: February 15, 2026",body,effective date,internal policy memorandum,third_party,organizational,type_default,employment.effective_date,False
+L0485,B,doc_101,policy_memo,internal,organization,employment_contract,"Effective February 15, 2026",body,,policy update,third_party,organizational,type_default,employment.effective_date,False
+L0486,B,doc_102,policy_memo,internal,organization,job_title,Internal Use Only,body,classification,internal policy memorandum,third_party,organizational,field_label,title.labeled,False

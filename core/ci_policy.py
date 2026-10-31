@@ -28,13 +28,18 @@ FUNCTIONS IMPLEMENTED
     derived_attributes(T)          -> list[Attribute]
     get_active_role(p)             -> Role | None
     get_transmission_principle(p)  -> str | None
+    role_context_valid(active_role) -> bool
     evaluate_flow(flow)            -> tuple[bool, str]
+    evaluate_document_flow(receiver, doc) -> tuple[bool, str]
 
 POLICIES DEFINED
     ROLE_ATTRIBUTE_PERMISSIONS     — blanket role → allowed attribute-type set
     ASSIGNMENT_REQUIRED            — attribute types requiring explicit KB authorization
     EXTRA_SENSITIVE                — subset of above with heightened access controls
     ROLE_TRANSMISSION_PRINCIPLES   — role → governing transmission principle string
+    ROLE_CONTEXTS                  — role → the context that role name is authoritative in;
+                                      both evaluate_flow and evaluate_document_flow deny by
+                                      default if active_role.context doesn't match
     ATTRIBUTE_IMPLICATIONS         — attribute types that imply other sensitive types
 '''
 
@@ -139,6 +144,24 @@ ROLE_TRANSMISSION_PRINCIPLES: dict[str, str] = {
     "Patient":            "Self-Access",
 }
 
+# The context each role name is authoritative in. A Role(role, context) only
+# grants that role's permissions when context matches this table — e.g. an
+# agent tagged Role(role="Doctor", context="Administrative") is not treated
+# as a valid Doctor. This is the (Agent, Role) ∈ PotentialState check from
+# the CI formalism: role alone is not sufficient, the pairing with context is
+# what's actually authoritative. Every role currently constructed in world/
+# already satisfies this table, so it changes no existing decision — it only
+# guards against a future or malformed agent whose role/context are mismatched.
+ROLE_CONTEXTS: dict[str, str] = {
+    "Doctor":               "Medical",
+    "Nurse":                "Medical",
+    "Billing Specialist":   "Administrative",
+    "HR Manager":           "Administrative",
+    "IT Contractor":        "Administrative",
+    "Facilities Contractor": "Administrative",
+    "Patient":               "Medical",
+}
+
 # Attribute types that imply other sensitive information.
 # Key insight: ICD billing codes directly encode diagnoses (e.g. F33.1 = MDD).
 # derived_attributes() uses this table to surface implied sensitive types.
@@ -216,6 +239,17 @@ def get_transmission_principle(receiver: Agent) -> str | None:
     return ROLE_TRANSMISSION_PRINCIPLES.get(active.role)
 
 
+def role_context_valid(active_role: Role) -> bool:
+    """
+    True if active_role's context matches the authoritative context for its
+    role name (ROLE_CONTEXTS). A role/context mismatch means the (Agent, Role)
+    pair is not a recognized member of PotentialState — the role name alone
+    is not enough to grant permissions.
+    """
+    expected = ROLE_CONTEXTS.get(active_role.role)
+    return expected is not None and active_role.context == expected
+
+
 # ---------------------------------------------------------------------------
 # CI gate
 # ---------------------------------------------------------------------------
@@ -250,6 +284,12 @@ def evaluate_flow(flow: InformationFlow) -> tuple[bool, str]:
     active_role = get_active_role(receiver)
     if active_role is None:
         return False, "Receiver has no identifiable active role — access denied by default"
+    if not role_context_valid(active_role):
+        return (
+            False,
+            f"Role '{active_role.role}' is not authoritative in context "
+            f"'{active_role.context}' — access denied by default"
+        )
 
     role_name = active_role.role
 
@@ -305,6 +345,12 @@ def evaluate_document_flow(receiver: Agent, doc: Document) -> tuple[bool, str]:
     active_role = get_active_role(receiver)
     if active_role is None:
         return False, "Receiver has no identifiable active role — access denied by default"
+    if not role_context_valid(active_role):
+        return (
+            False,
+            f"Role '{active_role.role}' is not authoritative in context "
+            f"'{active_role.context}' — access denied by default"
+        )
 
     role_name = active_role.role
 

@@ -1,0 +1,571 @@
+Loaded 105 clinic documents. 5 draws x 7 models
+
+--- re-labeling with claude-opus-4-8 (5 draws) ---
+  [claude-opus-4-8] nothing to do — 525 labels already cached
+--- re-labeling with claude-opus-4-8-nothink (5 draws) ---
+  [claude-opus-4-8-nothink] 525 calls to make (0 cached), 4 workers
+  [claude-opus-4-8-nothink] s0    1/525 Clinical Note — James Carter, 2026-02-05   -> clinical_standard
+  [claude-opus-4-8-nothink] s0    2/525 Clinical Note — John Smith, 2026-01-15     -> clinical_standard
+  [claude-opus-4-8-nothink] s0    3/525 Clinical Note — Robert Lee, 2026-01-22     -> clinical_standard
+  [claude-opus-4-8-nothink] s0    4/525 Clinical Note — Emily Brown, 2026-01-20    -> clinical_sensitive
+  [claude-opus-4-8-nothink] s0    5/525 Clinical Note — Michael Chen, 2026-02-12   -> clinical_standard
+  [claude-opus-4-8-nothink] s0    6/525 Clinical Note — Linda Torres, 2026-02-18   -> clinical_standard
+  [claude-opus-4-8-nothink] s0    7/525 Clinical Note — Patricia Moore, 2026-02-20 -> clinical_standard
+  [claude-opus-4-8-nothink] s0    8/525 Clinical Note — Maria Gonzalez, 2026-02-03 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s0    9/525 Clinical Note — David Park, 2026-03-01     -> clinical_sensitive
+  [claude-opus-4-8-nothink] s0   10/525 Clinical Note — Sarah Wilson, 2026-03-05   -> clinical_sensitive
+  [claude-opus-4-8-nothink] s0   11/525 Prescription — Emily Brown, 2026-01-20     -> clinical_sensitive
+  [claude-opus-4-8-nothink] s0   12/525 Prescription — John Smith, 2026-01-15      -> clinical_standard
+  [claude-opus-4-8-nothink] s0   13/525 Prescription — James Carter, 2026-02-05    -> clinical_standard
+  [claude-opus-4-8-nothink] s0   14/525 Prescription — Robert Lee, 2026-01-22      -> clinical_standard
+  [claude-opus-4-8-nothink] s0   15/525 Prescription — Michael Chen, 2026-02-12    -> clinical_standard
+  [claude-opus-4-8-nothink] s0   16/525 Prescription — Maria Gonzalez, 2026-02-03  -> clinical_sensitive
+  [claude-opus-4-8-nothink] s0   17/525 Prescription — Linda Torres, 2026-02-18    -> clinical_standard
+  [claude-opus-4-8-nothink] s0   18/525 Prescription — Patricia Moore, 2026-02-20  -> clinical_standard
+  [claude-opus-4-8-nothink] s0   19/525 Lab Report — Emily Brown, 2026-01-20       -> clinical_sensitive
+  [claude-opus-4-8-nothink] s0   20/525 Lab Report — Robert Lee, 2026-01-22        -> clinical_standard
+  [claude-opus-4-8-nothink] s0   21/525 Lab Report — John Smith, 2026-01-15        -> clinical_standard
+  [claude-opus-4-8-nothink] s0   22/525 Lab Report — Michael Chen, 2026-02-12      -> clinical_standard
+  [claude-opus-4-8-nothink] s0   23/525 Lab Report — James Carter, 2026-02-05      -> clinical_standard
+  [claude-opus-4-8-nothink] s0   24/525 Lab Report — Patricia Moore, 2026-02-20    -> clinical_standard
+  [claude-opus-4-8-nothink] s0   25/525 Lab Report — David Park, 2026-03-01        -> clinical_sensitive
+  [claude-opus-4-8-nothink] s0   26/525 Radiology Report — Emily Brown, 2026-01-18 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s0   27/525 Lab Report — Linda Torres, 2026-02-18      -> clinical_standard
+  [claude-opus-4-8-nothink] s0   28/525 Radiology Report — James Carter, 2026-01-2 -> clinical_standard
+  [claude-opus-4-8-nothink] s0   29/525 Radiology Report — Linda Torres, 2026-01-1 -> clinical_standard
+  [claude-opus-4-8-nothink] s0   30/525 Radiology Report — Patricia Moore, 2026-02 -> clinical_standard
+  [claude-opus-4-8-nothink] s0   31/525 Radiology Report — Robert Lee, 2026-01-05  -> clinical_standard
+  [claude-opus-4-8-nothink] s0   32/525 Discharge Summary — Emily Brown, 2026-01-2 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s0   33/525 Discharge Summary — John Smith, 2026-01-16 -> clinical_standard
+  [claude-opus-4-8-nothink] s0   34/525 Discharge Summary — Linda Torres, 2026-02- -> clinical_standard
+  [claude-opus-4-8-nothink] s0   35/525 Discharge Summary — Sarah Wilson, 2026-03- -> clinical_sensitive
+  [claude-opus-4-8-nothink] s0   36/525 Discharge Summary — Robert Lee, 2026-01-08 -> clinical_standard
+  [claude-opus-4-8-nothink] s0   37/525 Mental Health Assessment — Maria Gonzalez, -> clinical_sensitive
+  [claude-opus-4-8-nothink] s0   38/525 Mental Health Assessment — Sarah Wilson, 2 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s0   39/525 Mental Health Assessment — Patricia Moore, -> clinical_sensitive
+  [claude-opus-4-8-nothink] s0   40/525 Mental Health Assessment — David Park, 202 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s0   41/525 Referral Letter — John Smith, 2026-01-15   -> clinical_standard
+  [claude-opus-4-8-nothink] s0   42/525 Referral Letter — Emily Brown, 2026-01-20  -> clinical_sensitive
+  [claude-opus-4-8-nothink] s0   43/525 Referral Letter — Robert Lee, 2026-01-22   -> clinical_standard
+  [claude-opus-4-8-nothink] s0   44/525 Mental Health Assessment — James Carter, 2 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s0   45/525 Referral Letter — James Carter, 2026-02-05 -> clinical_standard
+  [claude-opus-4-8-nothink] s0   46/525 Referral Letter — Michael Chen, 2026-02-12 -> clinical_standard
+  [claude-opus-4-8-nothink] s0   47/525 Referral Letter — Linda Torres, 2026-02-18 -> clinical_standard
+  [claude-opus-4-8-nothink] s0   48/525 Insurance Claim — Emily Brown, 2026-01-20  -> clinical_sensitive
+  [claude-opus-4-8-nothink] s0   49/525 Insurance Claim — John Smith, 2026-01-15   -> financial
+  [claude-opus-4-8-nothink] s0   50/525 Insurance Claim — Robert Lee, 2026-01-22   -> financial
+  [claude-opus-4-8-nothink] s0   51/525 Insurance Claim — James Carter, 2026-02-05 -> clinical_standard
+  [claude-opus-4-8-nothink] s0   52/525 Insurance Claim — Michael Chen, 2026-02-12 -> financial
+  [claude-opus-4-8-nothink] s0   53/525 Insurance Claim — Linda Torres, 2026-02-18 -> financial
+  [claude-opus-4-8-nothink] s0   54/525 Insurance Claim — Maria Gonzalez, 2026-02- -> clinical_sensitive
+  [claude-opus-4-8-nothink] s0   55/525 Insurance Claim — Patricia Moore, 2026-02- -> financial
+  [claude-opus-4-8-nothink] s0   56/525 Billing Statement — James Carter, 2026-02- -> financial
+  [claude-opus-4-8-nothink] s0   57/525 Billing Statement — Emily Brown, 2026-02-0 -> financial
+  [claude-opus-4-8-nothink] s0   58/525 Billing Statement — Robert Lee, 2026-02-05 -> financial
+  [claude-opus-4-8-nothink] s0   59/525 Billing Statement — John Smith, 2026-02-01 -> financial
+  [claude-opus-4-8-nothink] s0   60/525 Billing Statement — Patricia Moore, 2026-0 -> financial
+  [claude-opus-4-8-nothink] s0   61/525 Billing Statement — Linda Torres, 2026-03- -> financial
+  [claude-opus-4-8-nothink] s0   62/525 Prior Authorization — John Smith, 2026-01- -> clinical_standard
+  [claude-opus-4-8-nothink] s0   63/525 Prior Authorization — Sarah Wilson, 2026-0 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s0   64/525 Prior Authorization — Maria Gonzalez, 2026 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s0   65/525 Prior Authorization — Linda Torres, 2026-0 -> clinical_standard
+  [claude-opus-4-8-nothink] s0   66/525 Explanation Of Benefits — John Smith, 2026 -> financial
+  [claude-opus-4-8-nothink] s0   67/525 Prior Authorization — Robert Lee, 2026-01- -> clinical_standard
+  [claude-opus-4-8-nothink] s0   68/525 Explanation Of Benefits — Robert Lee, 2026 -> financial
+  [claude-opus-4-8-nothink] s0   69/525 Explanation Of Benefits — James Carter, 20 -> financial
+  [claude-opus-4-8-nothink] s0   70/525 Insurance Verification — John Smith, 2026- -> clinical_standard
+  [claude-opus-4-8-nothink] s0   71/525 Insurance Verification — Emily Brown, 2026 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s0   72/525 Salary Letter — Dr. Sarah Chen, 2026-01-01 -> employment
+  [claude-opus-4-8-nothink] s0   73/525 Insurance Verification — Michael Chen, 202 -> financial
+  [claude-opus-4-8-nothink] s0   74/525 Explanation Of Benefits — Emily Brown, 202 -> financial
+  [claude-opus-4-8-nothink] s0   75/525 Insurance Verification — Patricia Moore, 2 -> clinical_standard
+  [claude-opus-4-8-nothink] s0   76/525 Salary Letter — Dr. Marcus Webb, 2026-01-0 -> employment
+  [claude-opus-4-8-nothink] s0   77/525 Salary Letter — Nurse Patricia Davis, 2026 -> employment
+  [claude-opus-4-8-nothink] s0   78/525 Salary Letter — Alice Johnson, 2026-01-01  -> employment
+  [claude-opus-4-8-nothink] s0   79/525 Employment Contract — Dr. Aisha Patel, 202 -> employment
+  [claude-opus-4-8-nothink] s0   80/525 Employment Contract — Dr. Kevin O'Brien, 2 -> employment
+  [claude-opus-4-8-nothink] s0   81/525 Salary Letter — Dr. Kevin O'Brien, 2026-01 -> employment
+  [claude-opus-4-8-nothink] s0   82/525 Salary Letter — Dr. Aisha Patel, 2026-01-0 -> employment
+  [claude-opus-4-8-nothink] s0   83/525 Employment Contract — Nurse Lisa Kim, 2023 -> employment
+  [claude-opus-4-8-nothink] s0   84/525 Performance Review — Nurse Patricia Davis, -> employment
+  [claude-opus-4-8-nothink] s0   85/525 Performance Review — Dr. Sarah Chen, 2026- -> employment
+  [claude-opus-4-8-nothink] s0   86/525 Performance Review — Alice Johnson, 2026-0 -> employment
+  [claude-opus-4-8-nothink] s0   87/525 Credentialing File — Dr. Aisha Patel, 2026 -> employment
+  [claude-opus-4-8-nothink] s0   88/525 Performance Review — Nurse Tom Reyes, 2026 -> employment
+  [claude-opus-4-8-nothink] s0   89/525 Credentialing File — Dr. Sarah Chen, 2026- -> employment
+  [claude-opus-4-8-nothink] s0   90/525 Contractor Agreement — Frank Turner, 2026- -> employment
+  [claude-opus-4-8-nothink] s0   91/525 Contractor Agreement — Carol White, 2026-0 -> employment
+  [claude-opus-4-8-nothink] s0   92/525 Credentialing File — Dr. Kevin O'Brien, 20 -> employment
+  [claude-opus-4-8-nothink] s0   93/525 Contractor Agreement — Carol White, 2025-0 -> employment
+  [claude-opus-4-8-nothink] s0   94/525 Staff Schedule — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8-nothink] s0   95/525 Staff Schedule — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8-nothink] s0   96/525 Meeting Agenda — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8-nothink] s0   97/525 Employment Contract — Jennifer Walsh, 2024 -> employment
+  [claude-opus-4-8-nothink] s0   98/525 Meeting Agenda — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8-nothink] s0   99/525 Meeting Agenda — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8-nothink] s0  100/525 Policy Memo — Riverside Medical Clinic, 20 -> internal
+  [claude-opus-4-8-nothink] s0  101/525 Policy Memo — Riverside Medical Clinic, 20 -> internal
+  [claude-opus-4-8-nothink] s0  102/525 Staff Schedule — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8-nothink] s1  103/525 Clinical Note — John Smith, 2026-01-15     -> clinical_standard
+  [claude-opus-4-8-nothink] s0  104/525 Employment Contract — Dr. Marcus Webb, 202 -> employment
+  [claude-opus-4-8-nothink] s0  105/525 Policy Memo — Riverside Medical Clinic, 20 -> internal
+  [claude-opus-4-8-nothink] s1  106/525 Clinical Note — Emily Brown, 2026-01-20    -> clinical_sensitive
+  [claude-opus-4-8-nothink] s1  107/525 Clinical Note — Robert Lee, 2026-01-22     -> clinical_standard
+  [claude-opus-4-8-nothink] s0  108/525 Public Pamphlet — Riverside Medical Clinic -> public
+  [claude-opus-4-8-nothink] s1  109/525 Clinical Note — James Carter, 2026-02-05   -> clinical_standard
+  [claude-opus-4-8-nothink] s1  110/525 Clinical Note — Michael Chen, 2026-02-12   -> clinical_standard
+  [claude-opus-4-8-nothink] s1  111/525 Clinical Note — Maria Gonzalez, 2026-02-03 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s1  112/525 Clinical Note — Linda Torres, 2026-02-18   -> clinical_standard
+  [claude-opus-4-8-nothink] s1  113/525 Clinical Note — Patricia Moore, 2026-02-20 -> clinical_standard
+  [claude-opus-4-8-nothink] s1  114/525 Clinical Note — David Park, 2026-03-01     -> clinical_sensitive
+  [claude-opus-4-8-nothink] s1  115/525 Prescription — Emily Brown, 2026-01-20     -> clinical_sensitive
+  [claude-opus-4-8-nothink] s1  116/525 Prescription — John Smith, 2026-01-15      -> clinical_standard
+  [claude-opus-4-8-nothink] s1  117/525 Prescription — Robert Lee, 2026-01-22      -> clinical_standard
+  [claude-opus-4-8-nothink] s1  118/525 Prescription — Michael Chen, 2026-02-12    -> clinical_standard
+  [claude-opus-4-8-nothink] s1  119/525 Clinical Note — Sarah Wilson, 2026-03-05   -> clinical_sensitive
+  [claude-opus-4-8-nothink] s1  120/525 Prescription — James Carter, 2026-02-05    -> clinical_standard
+  [claude-opus-4-8-nothink] s1  121/525 Prescription — Linda Torres, 2026-02-18    -> clinical_standard
+  [claude-opus-4-8-nothink] s1  122/525 Prescription — Maria Gonzalez, 2026-02-03  -> clinical_sensitive
+  [claude-opus-4-8-nothink] s1  123/525 Prescription — Patricia Moore, 2026-02-20  -> clinical_standard
+  [claude-opus-4-8-nothink] s1  124/525 Lab Report — James Carter, 2026-02-05      -> clinical_standard
+  [claude-opus-4-8-nothink] s1  125/525 Lab Report — Robert Lee, 2026-01-22        -> clinical_standard
+  [claude-opus-4-8-nothink] s1  126/525 Lab Report — Emily Brown, 2026-01-20       -> clinical_sensitive
+  [claude-opus-4-8-nothink] s1  127/525 Lab Report — Patricia Moore, 2026-02-20    -> clinical_standard
+  [claude-opus-4-8-nothink] s1  128/525 Lab Report — David Park, 2026-03-01        -> clinical_sensitive
+  [claude-opus-4-8-nothink] s1  129/525 Lab Report — John Smith, 2026-01-15        -> clinical_standard
+  [claude-opus-4-8-nothink] s1  130/525 Lab Report — Linda Torres, 2026-02-18      -> clinical_standard
+  [claude-opus-4-8-nothink] s1  131/525 Lab Report — Michael Chen, 2026-02-12      -> clinical_standard
+  [claude-opus-4-8-nothink] s1  132/525 Radiology Report — Linda Torres, 2026-01-1 -> clinical_standard
+  [claude-opus-4-8-nothink] s1  133/525 Radiology Report — Robert Lee, 2026-01-05  -> clinical_standard
+  [claude-opus-4-8-nothink] s1  134/525 Radiology Report — James Carter, 2026-01-2 -> clinical_standard
+  [claude-opus-4-8-nothink] s1  135/525 Radiology Report — Patricia Moore, 2026-02 -> clinical_standard
+  [claude-opus-4-8-nothink] s1  136/525 Radiology Report — Emily Brown, 2026-01-18 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s1  137/525 Discharge Summary — Emily Brown, 2026-01-2 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s1  138/525 Discharge Summary — John Smith, 2026-01-16 -> clinical_standard
+  [claude-opus-4-8-nothink] s1  139/525 Discharge Summary — Linda Torres, 2026-02- -> clinical_standard
+  [claude-opus-4-8-nothink] s1  140/525 Discharge Summary — Sarah Wilson, 2026-03- -> clinical_sensitive
+  [claude-opus-4-8-nothink] s1  141/525 Discharge Summary — Robert Lee, 2026-01-08 -> clinical_standard
+  [claude-opus-4-8-nothink] s1  142/525 Mental Health Assessment — Maria Gonzalez, -> clinical_sensitive
+  [claude-opus-4-8-nothink] s1  143/525 Mental Health Assessment — David Park, 202 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s1  144/525 Mental Health Assessment — Patricia Moore, -> clinical_sensitive
+  [claude-opus-4-8-nothink] s1  145/525 Mental Health Assessment — Sarah Wilson, 2 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s1  146/525 Referral Letter — Robert Lee, 2026-01-22   -> clinical_standard
+  [claude-opus-4-8-nothink] s1  147/525 Referral Letter — John Smith, 2026-01-15   -> clinical_standard
+  [claude-opus-4-8-nothink] s1  148/525 Mental Health Assessment — James Carter, 2 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s1  149/525 Referral Letter — Emily Brown, 2026-01-20  -> clinical_sensitive
+  [claude-opus-4-8-nothink] s1  150/525 Referral Letter — James Carter, 2026-02-05 -> clinical_standard
+  [claude-opus-4-8-nothink] s1  151/525 Referral Letter — Michael Chen, 2026-02-12 -> clinical_standard
+  [claude-opus-4-8-nothink] s1  152/525 Referral Letter — Linda Torres, 2026-02-18 -> clinical_standard
+  [claude-opus-4-8-nothink] s1  153/525 Insurance Claim — Emily Brown, 2026-01-20  -> clinical_sensitive
+  [claude-opus-4-8-nothink] s1  154/525 Insurance Claim — John Smith, 2026-01-15   -> financial
+  [claude-opus-4-8-nothink] s1  155/525 Insurance Claim — Michael Chen, 2026-02-12 -> financial
+  [claude-opus-4-8-nothink] s1  156/525 Insurance Claim — Robert Lee, 2026-01-22   -> financial
+  [claude-opus-4-8-nothink] s1  157/525 Insurance Claim — James Carter, 2026-02-05 -> clinical_standard
+  [claude-opus-4-8-nothink] s1  158/525 Billing Statement — John Smith, 2026-02-01 -> financial
+  [claude-opus-4-8-nothink] s1  159/525 Insurance Claim — Maria Gonzalez, 2026-02- -> clinical_sensitive
+  [claude-opus-4-8-nothink] s1  160/525 Insurance Claim — Linda Torres, 2026-02-18 -> financial
+  [claude-opus-4-8-nothink] s1  161/525 Billing Statement — Robert Lee, 2026-02-05 -> financial
+  [claude-opus-4-8-nothink] s1  162/525 Insurance Claim — Patricia Moore, 2026-02- -> financial
+  [claude-opus-4-8-nothink] s1  163/525 Billing Statement — Emily Brown, 2026-02-0 -> financial
+  [claude-opus-4-8-nothink] s1  164/525 Billing Statement — James Carter, 2026-02- -> financial
+  [claude-opus-4-8-nothink] s1  165/525 Billing Statement — Linda Torres, 2026-03- -> financial
+  [claude-opus-4-8-nothink] s1  166/525 Billing Statement — Patricia Moore, 2026-0 -> financial
+  [claude-opus-4-8-nothink] s1  167/525 Prior Authorization — Robert Lee, 2026-01- -> clinical_standard
+  [claude-opus-4-8-nothink] s1  168/525 Prior Authorization — John Smith, 2026-01- -> clinical_standard
+  [claude-opus-4-8-nothink] s1  169/525 Prior Authorization — Maria Gonzalez, 2026 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s1  170/525 Prior Authorization — Linda Torres, 2026-0 -> clinical_standard
+  [claude-opus-4-8-nothink] s1  171/525 Prior Authorization — Sarah Wilson, 2026-0 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s1  172/525 Explanation Of Benefits — Emily Brown, 202 -> financial
+  [claude-opus-4-8-nothink] s1  173/525 Explanation Of Benefits — John Smith, 2026 -> financial
+  [claude-opus-4-8-nothink] s1  174/525 Explanation Of Benefits — Robert Lee, 2026 -> financial
+  [claude-opus-4-8-nothink] s1  175/525 Insurance Verification — Emily Brown, 2026 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s1  176/525 Insurance Verification — John Smith, 2026- -> clinical_standard
+  [claude-opus-4-8-nothink] s1  177/525 Insurance Verification — Michael Chen, 202 -> financial
+  [claude-opus-4-8-nothink] s1  178/525 Insurance Verification — Patricia Moore, 2 -> financial
+  [claude-opus-4-8-nothink] s1  179/525 Explanation Of Benefits — James Carter, 20 -> financial
+  [claude-opus-4-8-nothink] s1  180/525 Salary Letter — Dr. Sarah Chen, 2026-01-01 -> employment
+  [claude-opus-4-8-nothink] s1  181/525 Salary Letter — Dr. Kevin O'Brien, 2026-01 -> employment
+  [claude-opus-4-8-nothink] s1  182/525 Salary Letter — Dr. Aisha Patel, 2026-01-0 -> employment
+  [claude-opus-4-8-nothink] s1  183/525 Salary Letter — Dr. Marcus Webb, 2026-01-0 -> employment
+  [claude-opus-4-8-nothink] s1  184/525 Employment Contract — Dr. Aisha Patel, 202 -> employment
+  [claude-opus-4-8-nothink] s1  185/525 Salary Letter — Nurse Patricia Davis, 2026 -> employment
+  [claude-opus-4-8-nothink] s1  186/525 Employment Contract — Dr. Kevin O'Brien, 2 -> employment
+  [claude-opus-4-8-nothink] s1  187/525 Employment Contract — Nurse Lisa Kim, 2023 -> employment
+  [claude-opus-4-8-nothink] s1  188/525 Employment Contract — Jennifer Walsh, 2024 -> employment
+  [claude-opus-4-8-nothink] s1  189/525 Performance Review — Dr. Sarah Chen, 2026- -> employment
+  [claude-opus-4-8-nothink] s1  190/525 Salary Letter — Alice Johnson, 2026-01-01  -> employment
+  [claude-opus-4-8-nothink] s1  191/525 Performance Review — Alice Johnson, 2026-0 -> employment
+  [claude-opus-4-8-nothink] s1  192/525 Performance Review — Nurse Tom Reyes, 2026 -> employment
+  [claude-opus-4-8-nothink] s1  193/525 Credentialing File — Dr. Sarah Chen, 2026- -> employment
+  [claude-opus-4-8-nothink] s1  194/525 Credentialing File — Dr. Kevin O'Brien, 20 -> employment
+  [claude-opus-4-8-nothink] s1  195/525 Credentialing File — Dr. Aisha Patel, 2026 -> employment
+  [claude-opus-4-8-nothink] s1  196/525 Contractor Agreement — Frank Turner, 2026- -> employment
+  [claude-opus-4-8-nothink] s1  197/525 Contractor Agreement — Carol White, 2026-0 -> employment
+  [claude-opus-4-8-nothink] s1  198/525 Staff Schedule — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8-nothink] s1  199/525 Staff Schedule — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8-nothink] s1  200/525 Performance Review — Nurse Patricia Davis, -> employment
+  [claude-opus-4-8-nothink] s1  201/525 Meeting Agenda — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8-nothink] s1  202/525 Meeting Agenda — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8-nothink] s1  203/525 Contractor Agreement — Carol White, 2025-0 -> employment
+  [claude-opus-4-8-nothink] s1  204/525 Policy Memo — Riverside Medical Clinic, 20 -> internal
+  [claude-opus-4-8-nothink] s1  205/525 Policy Memo — Riverside Medical Clinic, 20 -> internal
+  [claude-opus-4-8-nothink] s1  206/525 Meeting Agenda — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8-nothink] s1  207/525 Staff Schedule — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8-nothink] s1  208/525 Policy Memo — Riverside Medical Clinic, 20 -> internal
+  [claude-opus-4-8-nothink] s1  209/525 Employment Contract — Dr. Marcus Webb, 202 -> employment
+  [claude-opus-4-8-nothink] s2  210/525 Clinical Note — John Smith, 2026-01-15     -> clinical_standard
+  [claude-opus-4-8-nothink] s2  211/525 Clinical Note — Emily Brown, 2026-01-20    -> clinical_sensitive
+  [claude-opus-4-8-nothink] s2  212/525 Clinical Note — Robert Lee, 2026-01-22     -> clinical_standard
+  [claude-opus-4-8-nothink] s2  213/525 Clinical Note — Michael Chen, 2026-02-12   -> clinical_standard
+  [claude-opus-4-8-nothink] s2  214/525 Clinical Note — James Carter, 2026-02-05   -> clinical_standard
+  [claude-opus-4-8-nothink] s1  215/525 Public Pamphlet — Riverside Medical Clinic -> public
+  [claude-opus-4-8-nothink] s2  216/525 Clinical Note — Maria Gonzalez, 2026-02-03 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s2  217/525 Clinical Note — David Park, 2026-03-01     -> clinical_sensitive
+  [claude-opus-4-8-nothink] s2  218/525 Clinical Note — Patricia Moore, 2026-02-20 -> clinical_standard
+  [claude-opus-4-8-nothink] s2  219/525 Clinical Note — Linda Torres, 2026-02-18   -> clinical_standard
+  [claude-opus-4-8-nothink] s2  220/525 Clinical Note — Sarah Wilson, 2026-03-05   -> clinical_sensitive
+  [claude-opus-4-8-nothink] s2  221/525 Prescription — Emily Brown, 2026-01-20     -> clinical_sensitive
+  [claude-opus-4-8-nothink] s2  222/525 Prescription — John Smith, 2026-01-15      -> clinical_standard
+  [claude-opus-4-8-nothink] s2  223/525 Prescription — Robert Lee, 2026-01-22      -> clinical_standard
+  [claude-opus-4-8-nothink] s2  224/525 Prescription — Michael Chen, 2026-02-12    -> clinical_standard
+  [claude-opus-4-8-nothink] s2  225/525 Prescription — James Carter, 2026-02-05    -> clinical_standard
+  [claude-opus-4-8-nothink] s2  226/525 Prescription — Maria Gonzalez, 2026-02-03  -> clinical_sensitive
+  [claude-opus-4-8-nothink] s2  227/525 Prescription — Linda Torres, 2026-02-18    -> clinical_standard
+  [claude-opus-4-8-nothink] s2  228/525 Prescription — Patricia Moore, 2026-02-20  -> clinical_standard
+  [claude-opus-4-8-nothink] s2  229/525 Lab Report — John Smith, 2026-01-15        -> clinical_standard
+  [claude-opus-4-8-nothink] s2  230/525 Lab Report — James Carter, 2026-02-05      -> clinical_standard
+  [claude-opus-4-8-nothink] s2  231/525 Lab Report — Robert Lee, 2026-01-22        -> clinical_standard
+  [claude-opus-4-8-nothink] s2  232/525 Lab Report — Emily Brown, 2026-01-20       -> clinical_sensitive
+  [claude-opus-4-8-nothink] s2  233/525 Lab Report — Michael Chen, 2026-02-12      -> clinical_standard
+  [claude-opus-4-8-nothink] s2  234/525 Lab Report — David Park, 2026-03-01        -> clinical_sensitive
+  [claude-opus-4-8-nothink] s2  235/525 Lab Report — Linda Torres, 2026-02-18      -> clinical_standard
+  [claude-opus-4-8-nothink] s2  236/525 Lab Report — Patricia Moore, 2026-02-20    -> clinical_standard
+  [claude-opus-4-8-nothink] s2  237/525 Radiology Report — Emily Brown, 2026-01-18 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s2  238/525 Radiology Report — Linda Torres, 2026-01-1 -> clinical_standard
+  [claude-opus-4-8-nothink] s2  239/525 Radiology Report — Robert Lee, 2026-01-05  -> clinical_standard
+  [claude-opus-4-8-nothink] s2  240/525 Radiology Report — James Carter, 2026-01-2 -> clinical_standard
+  [claude-opus-4-8-nothink] s2  241/525 Discharge Summary — Emily Brown, 2026-01-2 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s2  242/525 Radiology Report — Patricia Moore, 2026-02 -> clinical_standard
+  [claude-opus-4-8-nothink] s2  243/525 Discharge Summary — John Smith, 2026-01-16 -> clinical_standard
+  [claude-opus-4-8-nothink] s2  244/525 Discharge Summary — Linda Torres, 2026-02- -> clinical_standard
+  [claude-opus-4-8-nothink] s2  245/525 Mental Health Assessment — Maria Gonzalez, -> clinical_sensitive
+  [claude-opus-4-8-nothink] s2  246/525 Discharge Summary — Sarah Wilson, 2026-03- -> clinical_sensitive
+  [claude-opus-4-8-nothink] s2  247/525 Mental Health Assessment — Sarah Wilson, 2 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s2  248/525 Mental Health Assessment — Patricia Moore, -> clinical_sensitive
+  [claude-opus-4-8-nothink] s2  249/525 Mental Health Assessment — David Park, 202 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s2  250/525 Mental Health Assessment — James Carter, 2 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s2  251/525 Referral Letter — John Smith, 2026-01-15   -> clinical_standard
+  [claude-opus-4-8-nothink] s2  252/525 Referral Letter — Emily Brown, 2026-01-20  -> clinical_sensitive
+  [claude-opus-4-8-nothink] s2  253/525 Discharge Summary — Robert Lee, 2026-01-08 -> clinical_standard
+  [claude-opus-4-8-nothink] s2  254/525 Referral Letter — Robert Lee, 2026-01-22   -> clinical_standard
+  [claude-opus-4-8-nothink] s2  255/525 Referral Letter — Linda Torres, 2026-02-18 -> clinical_standard
+  [claude-opus-4-8-nothink] s2  256/525 Referral Letter — Michael Chen, 2026-02-12 -> clinical_standard
+  [claude-opus-4-8-nothink] s2  257/525 Referral Letter — James Carter, 2026-02-05 -> clinical_standard
+  [claude-opus-4-8-nothink] s2  258/525 Insurance Claim — John Smith, 2026-01-15   -> financial
+  [claude-opus-4-8-nothink] s2  259/525 Insurance Claim — Emily Brown, 2026-01-20  -> clinical_sensitive
+  [claude-opus-4-8-nothink] s2  260/525 Insurance Claim — Robert Lee, 2026-01-22   -> financial
+  [claude-opus-4-8-nothink] s2  261/525 Insurance Claim — James Carter, 2026-02-05 -> clinical_standard
+  [claude-opus-4-8-nothink] s2  262/525 Insurance Claim — Michael Chen, 2026-02-12 -> financial
+  [claude-opus-4-8-nothink] s2  263/525 Insurance Claim — Patricia Moore, 2026-02- -> financial
+  [claude-opus-4-8-nothink] s2  264/525 Insurance Claim — Maria Gonzalez, 2026-02- -> clinical_sensitive
+  [claude-opus-4-8-nothink] s2  265/525 Billing Statement — John Smith, 2026-02-01 -> financial
+  [claude-opus-4-8-nothink] s2  266/525 Billing Statement — Emily Brown, 2026-02-0 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s2  267/525 Billing Statement — Robert Lee, 2026-02-05 -> financial
+  [claude-opus-4-8-nothink] s2  268/525 Billing Statement — Patricia Moore, 2026-0 -> financial
+  [claude-opus-4-8-nothink] s2  269/525 Billing Statement — Linda Torres, 2026-03- -> financial
+  [claude-opus-4-8-nothink] s2  270/525 Insurance Claim — Linda Torres, 2026-02-18 -> financial
+  [claude-opus-4-8-nothink] s2  271/525 Prior Authorization — John Smith, 2026-01- -> clinical_standard
+  [claude-opus-4-8-nothink] s2  272/525 Prior Authorization — Maria Gonzalez, 2026 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s2  273/525 Prior Authorization — Robert Lee, 2026-01- -> clinical_standard
+  [claude-opus-4-8-nothink] s2  274/525 Prior Authorization — Sarah Wilson, 2026-0 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s2  275/525 Billing Statement — James Carter, 2026-02- -> financial
+  [claude-opus-4-8-nothink] s2  276/525 Explanation Of Benefits — John Smith, 2026 -> financial
+  [claude-opus-4-8-nothink] s2  277/525 Explanation Of Benefits — Robert Lee, 2026 -> financial
+  [claude-opus-4-8-nothink] s2  278/525 Explanation Of Benefits — James Carter, 20 -> financial
+  [claude-opus-4-8-nothink] s2  279/525 Explanation Of Benefits — Emily Brown, 202 -> financial
+  [claude-opus-4-8-nothink] s2  280/525 Insurance Verification — Emily Brown, 2026 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s2  281/525 Prior Authorization — Linda Torres, 2026-0 -> clinical_standard
+  [claude-opus-4-8-nothink] s2  282/525 Insurance Verification — Patricia Moore, 2 -> financial
+  [claude-opus-4-8-nothink] s2  283/525 Salary Letter — Dr. Sarah Chen, 2026-01-01 -> employment
+  [claude-opus-4-8-nothink] s2  284/525 Insurance Verification — Michael Chen, 202 -> financial
+  [claude-opus-4-8-nothink] s2  285/525 Salary Letter — Dr. Aisha Patel, 2026-01-0 -> employment
+  [claude-opus-4-8-nothink] s2  286/525 Salary Letter — Dr. Marcus Webb, 2026-01-0 -> employment
+  [claude-opus-4-8-nothink] s2  287/525 Salary Letter — Dr. Kevin O'Brien, 2026-01 -> employment
+  [claude-opus-4-8-nothink] s2  288/525 Salary Letter — Nurse Patricia Davis, 2026 -> employment
+  [claude-opus-4-8-nothink] s2  289/525 Insurance Verification — John Smith, 2026- -> clinical_standard
+  [claude-opus-4-8-nothink] s2  290/525 Employment Contract — Dr. Kevin O'Brien, 2 -> employment
+  [claude-opus-4-8-nothink] s2  291/525 Employment Contract — Nurse Lisa Kim, 2023 -> employment
+  [claude-opus-4-8-nothink] s2  292/525 Employment Contract — Jennifer Walsh, 2024 -> employment
+  [claude-opus-4-8-nothink] s2  293/525 Performance Review — Dr. Sarah Chen, 2026- -> employment
+  [claude-opus-4-8-nothink] s2  294/525 Employment Contract — Dr. Aisha Patel, 202 -> employment
+  [claude-opus-4-8-nothink] s2  295/525 Performance Review — Alice Johnson, 2026-0 -> employment
+  [claude-opus-4-8-nothink] s2  296/525 Performance Review — Nurse Patricia Davis, -> employment
+  [claude-opus-4-8-nothink] s2  297/525 Performance Review — Nurse Tom Reyes, 2026 -> employment
+  [claude-opus-4-8-nothink] s2  298/525 Credentialing File — Dr. Kevin O'Brien, 20 -> employment
+  [claude-opus-4-8-nothink] s2  299/525 Credentialing File — Dr. Aisha Patel, 2026 -> employment
+  [claude-opus-4-8-nothink] s2  300/525 Credentialing File — Dr. Sarah Chen, 2026- -> employment
+  [claude-opus-4-8-nothink] s2  301/525 Contractor Agreement — Carol White, 2026-0 -> employment
+  [claude-opus-4-8-nothink] s2  302/525 Salary Letter — Alice Johnson, 2026-01-01  -> employment
+  [claude-opus-4-8-nothink] s2  303/525 Contractor Agreement — Frank Turner, 2026- -> employment
+  [claude-opus-4-8-nothink] s2  304/525 Contractor Agreement — Carol White, 2025-0 -> employment
+  [claude-opus-4-8-nothink] s2  305/525 Meeting Agenda — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8-nothink] s2  306/525 Staff Schedule — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8-nothink] s2  307/525 Staff Schedule — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8-nothink] s2  308/525 Meeting Agenda — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8-nothink] s2  309/525 Meeting Agenda — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8-nothink] s2  310/525 Policy Memo — Riverside Medical Clinic, 20 -> internal
+  [claude-opus-4-8-nothink] s2  311/525 Staff Schedule — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8-nothink] s2  312/525 Policy Memo — Riverside Medical Clinic, 20 -> internal
+  [claude-opus-4-8-nothink] s2  313/525 Policy Memo — Riverside Medical Clinic, 20 -> internal
+  [claude-opus-4-8-nothink] s2  314/525 Public Pamphlet — Riverside Medical Clinic -> public
+  [claude-opus-4-8-nothink] s2  315/525 Employment Contract — Dr. Marcus Webb, 202 -> employment
+  [claude-opus-4-8-nothink] s3  316/525 Clinical Note — John Smith, 2026-01-15     -> clinical_standard
+  [claude-opus-4-8-nothink] s3  317/525 Clinical Note — Emily Brown, 2026-01-20    -> clinical_sensitive
+  [claude-opus-4-8-nothink] s3  318/525 Clinical Note — Robert Lee, 2026-01-22     -> clinical_standard
+  [claude-opus-4-8-nothink] s3  319/525 Clinical Note — James Carter, 2026-02-05   -> clinical_standard
+  [claude-opus-4-8-nothink] s3  320/525 Clinical Note — Michael Chen, 2026-02-12   -> clinical_standard
+  [claude-opus-4-8-nothink] s3  321/525 Clinical Note — Linda Torres, 2026-02-18   -> clinical_standard
+  [claude-opus-4-8-nothink] s3  322/525 Clinical Note — Patricia Moore, 2026-02-20 -> clinical_standard
+  [claude-opus-4-8-nothink] s3  323/525 Clinical Note — David Park, 2026-03-01     -> clinical_sensitive
+  [claude-opus-4-8-nothink] s3  324/525 Clinical Note — Maria Gonzalez, 2026-02-03 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s3  325/525 Prescription — Emily Brown, 2026-01-20     -> clinical_sensitive
+  [claude-opus-4-8-nothink] s3  326/525 Prescription — John Smith, 2026-01-15      -> clinical_standard
+  [claude-opus-4-8-nothink] s3  327/525 Clinical Note — Sarah Wilson, 2026-03-05   -> clinical_sensitive
+  [claude-opus-4-8-nothink] s3  328/525 Prescription — Robert Lee, 2026-01-22      -> clinical_standard
+  [claude-opus-4-8-nothink] s3  329/525 Prescription — James Carter, 2026-02-05    -> clinical_standard
+  [claude-opus-4-8-nothink] s3  330/525 Prescription — Michael Chen, 2026-02-12    -> clinical_standard
+  [claude-opus-4-8-nothink] s3  331/525 Prescription — Patricia Moore, 2026-02-20  -> clinical_standard
+  [claude-opus-4-8-nothink] s3  332/525 Prescription — Maria Gonzalez, 2026-02-03  -> clinical_sensitive
+  [claude-opus-4-8-nothink] s3  333/525 Prescription — Linda Torres, 2026-02-18    -> clinical_standard
+  [claude-opus-4-8-nothink] s3  334/525 Lab Report — John Smith, 2026-01-15        -> clinical_standard
+  [claude-opus-4-8-nothink] s3  335/525 Lab Report — Emily Brown, 2026-01-20       -> clinical_sensitive
+  [claude-opus-4-8-nothink] s3  336/525 Lab Report — James Carter, 2026-02-05      -> clinical_standard
+  [claude-opus-4-8-nothink] s3  337/525 Lab Report — Robert Lee, 2026-01-22        -> clinical_standard
+  [claude-opus-4-8-nothink] s3  338/525 Lab Report — Michael Chen, 2026-02-12      -> clinical_standard
+  [claude-opus-4-8-nothink] s3  339/525 Lab Report — Linda Torres, 2026-02-18      -> clinical_standard
+  [claude-opus-4-8-nothink] s3  340/525 Radiology Report — Emily Brown, 2026-01-18 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s3  341/525 Lab Report — Patricia Moore, 2026-02-20    -> clinical_standard
+  [claude-opus-4-8-nothink] s3  342/525 Lab Report — David Park, 2026-03-01        -> clinical_sensitive
+  [claude-opus-4-8-nothink] s3  343/525 Radiology Report — Robert Lee, 2026-01-05  -> clinical_standard
+  [claude-opus-4-8-nothink] s3  344/525 Radiology Report — Linda Torres, 2026-01-1 -> clinical_standard
+  [claude-opus-4-8-nothink] s3  345/525 Radiology Report — James Carter, 2026-01-2 -> clinical_standard
+  [claude-opus-4-8-nothink] s3  346/525 Radiology Report — Patricia Moore, 2026-02 -> clinical_standard
+  [claude-opus-4-8-nothink] s3  347/525 Discharge Summary — Emily Brown, 2026-01-2 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s3  348/525 Discharge Summary — John Smith, 2026-01-16 -> clinical_standard
+  [claude-opus-4-8-nothink] s3  349/525 Discharge Summary — Linda Torres, 2026-02- -> clinical_standard
+  [claude-opus-4-8-nothink] s3  350/525 Discharge Summary — Robert Lee, 2026-01-08 -> clinical_standard
+  [claude-opus-4-8-nothink] s3  351/525 Discharge Summary — Sarah Wilson, 2026-03- -> clinical_sensitive
+  [claude-opus-4-8-nothink] s3  352/525 Mental Health Assessment — Sarah Wilson, 2 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s3  353/525 Mental Health Assessment — Patricia Moore, -> clinical_sensitive
+  [claude-opus-4-8-nothink] s3  354/525 Mental Health Assessment — Maria Gonzalez, -> clinical_sensitive
+  [claude-opus-4-8-nothink] s3  355/525 Mental Health Assessment — David Park, 202 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s3  356/525 Mental Health Assessment — James Carter, 2 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s3  357/525 Referral Letter — John Smith, 2026-01-15   -> clinical_standard
+  [claude-opus-4-8-nothink] s3  358/525 Referral Letter — Robert Lee, 2026-01-22   -> clinical_standard
+  [claude-opus-4-8-nothink] s3  359/525 Referral Letter — Linda Torres, 2026-02-18 -> clinical_standard
+  [claude-opus-4-8-nothink] s3  360/525 Referral Letter — Michael Chen, 2026-02-12 -> clinical_standard
+  [claude-opus-4-8-nothink] s3  361/525 Referral Letter — Emily Brown, 2026-01-20  -> clinical_sensitive
+  [claude-opus-4-8-nothink] s3  362/525 Referral Letter — James Carter, 2026-02-05 -> clinical_standard
+  [claude-opus-4-8-nothink] s3  363/525 Insurance Claim — Emily Brown, 2026-01-20  -> clinical_sensitive
+  [claude-opus-4-8-nothink] s3  364/525 Insurance Claim — Robert Lee, 2026-01-22   -> financial
+  [claude-opus-4-8-nothink] s3  365/525 Insurance Claim — John Smith, 2026-01-15   -> financial
+  [claude-opus-4-8-nothink] s3  366/525 Insurance Claim — James Carter, 2026-02-05 -> financial
+  [claude-opus-4-8-nothink] s3  367/525 Insurance Claim — Patricia Moore, 2026-02- -> financial
+  [claude-opus-4-8-nothink] s3  368/525 Insurance Claim — Michael Chen, 2026-02-12 -> financial
+  [claude-opus-4-8-nothink] s3  369/525 Insurance Claim — Maria Gonzalez, 2026-02- -> clinical_sensitive
+  [claude-opus-4-8-nothink] s3  370/525 Billing Statement — Emily Brown, 2026-02-0 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s3  371/525 Billing Statement — John Smith, 2026-02-01 -> financial
+  [claude-opus-4-8-nothink] s3  372/525 Billing Statement — Robert Lee, 2026-02-05 -> financial
+  [claude-opus-4-8-nothink] s3  373/525 Insurance Claim — Linda Torres, 2026-02-18 -> financial
+  [claude-opus-4-8-nothink] s3  374/525 Billing Statement — James Carter, 2026-02- -> financial
+  [claude-opus-4-8-nothink] s3  375/525 Billing Statement — Linda Torres, 2026-03- -> financial
+  [claude-opus-4-8-nothink] s3  376/525 Billing Statement — Patricia Moore, 2026-0 -> financial
+  [claude-opus-4-8-nothink] s3  377/525 Prior Authorization — Robert Lee, 2026-01- -> clinical_standard
+  [claude-opus-4-8-nothink] s3  378/525 Prior Authorization — Sarah Wilson, 2026-0 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s3  379/525 Prior Authorization — Maria Gonzalez, 2026 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s3  380/525 Prior Authorization — John Smith, 2026-01- -> clinical_standard
+  [claude-opus-4-8-nothink] s3  381/525 Explanation Of Benefits — Emily Brown, 202 -> financial
+  [claude-opus-4-8-nothink] s3  382/525 Prior Authorization — Linda Torres, 2026-0 -> clinical_standard
+  [claude-opus-4-8-nothink] s3  383/525 Explanation Of Benefits — Robert Lee, 2026 -> financial
+  [claude-opus-4-8-nothink] s3  384/525 Explanation Of Benefits — James Carter, 20 -> financial
+  [claude-opus-4-8-nothink] s3  385/525 Explanation Of Benefits — John Smith, 2026 -> financial
+  [claude-opus-4-8-nothink] s3  386/525 Insurance Verification — John Smith, 2026- -> clinical_standard
+  [claude-opus-4-8-nothink] s3  387/525 Insurance Verification — Emily Brown, 2026 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s3  388/525 Salary Letter — Dr. Sarah Chen, 2026-01-01 -> employment
+  [claude-opus-4-8-nothink] s3  389/525 Salary Letter — Dr. Marcus Webb, 2026-01-0 -> employment
+  [claude-opus-4-8-nothink] s3  390/525 Salary Letter — Dr. Aisha Patel, 2026-01-0 -> employment
+  [claude-opus-4-8-nothink] s3  391/525 Insurance Verification — Michael Chen, 202 -> financial
+  [claude-opus-4-8-nothink] s3  392/525 Salary Letter — Dr. Kevin O'Brien, 2026-01 -> employment
+  [claude-opus-4-8-nothink] s3  393/525 Salary Letter — Alice Johnson, 2026-01-01  -> employment
+  [claude-opus-4-8-nothink] s3  394/525 Employment Contract — Dr. Aisha Patel, 202 -> employment
+  [claude-opus-4-8-nothink] s3  395/525 Employment Contract — Dr. Kevin O'Brien, 2 -> employment
+  [claude-opus-4-8-nothink] s3  396/525 Insurance Verification — Patricia Moore, 2 -> clinical_standard
+  [claude-opus-4-8-nothink] s3  397/525 Salary Letter — Nurse Patricia Davis, 2026 -> employment
+  [claude-opus-4-8-nothink] s3  398/525 Employment Contract — Nurse Lisa Kim, 2023 -> employment
+  [claude-opus-4-8-nothink] s3  399/525 Performance Review — Dr. Sarah Chen, 2026- -> employment
+  [claude-opus-4-8-nothink] s3  400/525 Performance Review — Nurse Patricia Davis, -> employment
+  [claude-opus-4-8-nothink] s3  401/525 Performance Review — Alice Johnson, 2026-0 -> employment
+  [claude-opus-4-8-nothink] s3  402/525 Credentialing File — Dr. Sarah Chen, 2026- -> employment
+  [claude-opus-4-8-nothink] s3  403/525 Credentialing File — Dr. Aisha Patel, 2026 -> employment
+  [claude-opus-4-8-nothink] s3  404/525 Credentialing File — Dr. Kevin O'Brien, 20 -> employment
+  [claude-opus-4-8-nothink] s3  405/525 Employment Contract — Jennifer Walsh, 2024 -> employment
+  [claude-opus-4-8-nothink] s3  406/525 Contractor Agreement — Frank Turner, 2026- -> employment
+  [claude-opus-4-8-nothink] s3  407/525 Staff Schedule — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8-nothink] s3  408/525 Contractor Agreement — Carol White, 2025-0 -> employment
+  [claude-opus-4-8-nothink] s3  409/525 Staff Schedule — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8-nothink] s3  410/525 Meeting Agenda — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8-nothink] s3  411/525 Staff Schedule — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8-nothink] s3  412/525 Meeting Agenda — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8-nothink] s3  413/525 Performance Review — Nurse Tom Reyes, 2026 -> employment
+  [claude-opus-4-8-nothink] s3  414/525 Policy Memo — Riverside Medical Clinic, 20 -> internal
+  [claude-opus-4-8-nothink] s3  415/525 Policy Memo — Riverside Medical Clinic, 20 -> internal
+  [claude-opus-4-8-nothink] s3  416/525 Policy Memo — Riverside Medical Clinic, 20 -> internal
+  [claude-opus-4-8-nothink] s3  417/525 Employment Contract — Dr. Marcus Webb, 202 -> employment
+  [claude-opus-4-8-nothink] s3  418/525 Meeting Agenda — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8-nothink] s4  419/525 Clinical Note — John Smith, 2026-01-15     -> clinical_standard
+  [claude-opus-4-8-nothink] s3  420/525 Public Pamphlet — Riverside Medical Clinic -> public
+  [claude-opus-4-8-nothink] s4  421/525 Clinical Note — Emily Brown, 2026-01-20    -> clinical_sensitive
+  [claude-opus-4-8-nothink] s4  422/525 Clinical Note — Robert Lee, 2026-01-22     -> clinical_standard
+  [claude-opus-4-8-nothink] s4  423/525 Clinical Note — James Carter, 2026-02-05   -> clinical_standard
+  [claude-opus-4-8-nothink] s4  424/525 Clinical Note — Michael Chen, 2026-02-12   -> clinical_standard
+  [claude-opus-4-8-nothink] s4  425/525 Clinical Note — Patricia Moore, 2026-02-20 -> clinical_standard
+  [claude-opus-4-8-nothink] s4  426/525 Clinical Note — Linda Torres, 2026-02-18   -> clinical_standard
+  [claude-opus-4-8-nothink] s3  427/525 Contractor Agreement — Carol White, 2026-0 -> employment
+  [claude-opus-4-8-nothink] s4  428/525 Clinical Note — David Park, 2026-03-01     -> clinical_sensitive
+  [claude-opus-4-8-nothink] s4  429/525 Clinical Note — Sarah Wilson, 2026-03-05   -> clinical_sensitive
+  [claude-opus-4-8-nothink] s4  430/525 Clinical Note — Maria Gonzalez, 2026-02-03 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s4  431/525 Prescription — John Smith, 2026-01-15      -> clinical_standard
+  [claude-opus-4-8-nothink] s4  432/525 Prescription — Emily Brown, 2026-01-20     -> clinical_sensitive
+  [claude-opus-4-8-nothink] s4  433/525 Prescription — James Carter, 2026-02-05    -> clinical_standard
+  [claude-opus-4-8-nothink] s4  434/525 Prescription — Robert Lee, 2026-01-22      -> clinical_standard
+  [claude-opus-4-8-nothink] s4  435/525 Prescription — Michael Chen, 2026-02-12    -> clinical_standard
+  [claude-opus-4-8-nothink] s4  436/525 Prescription — Linda Torres, 2026-02-18    -> clinical_standard
+  [claude-opus-4-8-nothink] s4  437/525 Prescription — Maria Gonzalez, 2026-02-03  -> clinical_sensitive
+  [claude-opus-4-8-nothink] s4  438/525 Lab Report — John Smith, 2026-01-15        -> clinical_standard
+  [claude-opus-4-8-nothink] s4  439/525 Lab Report — Emily Brown, 2026-01-20       -> clinical_sensitive
+  [claude-opus-4-8-nothink] s4  440/525 Prescription — Patricia Moore, 2026-02-20  -> clinical_standard
+  [claude-opus-4-8-nothink] s4  441/525 Lab Report — James Carter, 2026-02-05      -> clinical_standard
+  [claude-opus-4-8-nothink] s4  442/525 Lab Report — Michael Chen, 2026-02-12      -> clinical_standard
+  [claude-opus-4-8-nothink] s4  443/525 Lab Report — Robert Lee, 2026-01-22        -> clinical_standard
+  [claude-opus-4-8-nothink] s4  444/525 Lab Report — Linda Torres, 2026-02-18      -> clinical_standard
+  [claude-opus-4-8-nothink] s4  445/525 Lab Report — Patricia Moore, 2026-02-20    -> clinical_standard
+  [claude-opus-4-8-nothink] s4  446/525 Lab Report — David Park, 2026-03-01        -> clinical_sensitive
+  [claude-opus-4-8-nothink] s4  447/525 Radiology Report — Emily Brown, 2026-01-18 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s4  448/525 Radiology Report — Linda Torres, 2026-01-1 -> clinical_standard
+  [claude-opus-4-8-nothink] s4  449/525 Radiology Report — Robert Lee, 2026-01-05  -> clinical_standard
+  [claude-opus-4-8-nothink] s4  450/525 Discharge Summary — Emily Brown, 2026-01-2 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s4  451/525 Radiology Report — Patricia Moore, 2026-02 -> clinical_standard
+  [claude-opus-4-8-nothink] s4  452/525 Discharge Summary — John Smith, 2026-01-16 -> clinical_standard
+  [claude-opus-4-8-nothink] s4  453/525 Radiology Report — James Carter, 2026-01-2 -> clinical_standard
+  [claude-opus-4-8-nothink] s4  454/525 Discharge Summary — Linda Torres, 2026-02- -> clinical_standard
+  [claude-opus-4-8-nothink] s4  455/525 Discharge Summary — Sarah Wilson, 2026-03- -> clinical_sensitive
+  [claude-opus-4-8-nothink] s4  456/525 Mental Health Assessment — Maria Gonzalez, -> clinical_sensitive
+  [claude-opus-4-8-nothink] s4  457/525 Mental Health Assessment — Sarah Wilson, 2 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s4  458/525 Mental Health Assessment — David Park, 202 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s4  459/525 Discharge Summary — Robert Lee, 2026-01-08 -> clinical_standard
+  [claude-opus-4-8-nothink] s4  460/525 Mental Health Assessment — Patricia Moore, -> clinical_sensitive
+  [claude-opus-4-8-nothink] s4  461/525 Mental Health Assessment — James Carter, 2 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s4  462/525 Referral Letter — John Smith, 2026-01-15   -> clinical_standard
+  [claude-opus-4-8-nothink] s4  463/525 Referral Letter — Robert Lee, 2026-01-22   -> clinical_standard
+  [claude-opus-4-8-nothink] s4  464/525 Referral Letter — Emily Brown, 2026-01-20  -> clinical_sensitive
+  [claude-opus-4-8-nothink] s4  465/525 Referral Letter — Linda Torres, 2026-02-18 -> clinical_standard
+  [claude-opus-4-8-nothink] s4  466/525 Referral Letter — Michael Chen, 2026-02-12 -> clinical_standard
+  [claude-opus-4-8-nothink] s4  467/525 Referral Letter — James Carter, 2026-02-05 -> clinical_standard
+  [claude-opus-4-8-nothink] s4  468/525 Insurance Claim — Emily Brown, 2026-01-20  -> clinical_sensitive
+  [claude-opus-4-8-nothink] s4  469/525 Insurance Claim — John Smith, 2026-01-15   -> financial
+  [claude-opus-4-8-nothink] s4  470/525 Insurance Claim — James Carter, 2026-02-05 -> clinical_standard
+  [claude-opus-4-8-nothink] s4  471/525 Insurance Claim — Robert Lee, 2026-01-22   -> financial
+  [claude-opus-4-8-nothink] s4  472/525 Insurance Claim — Maria Gonzalez, 2026-02- -> clinical_sensitive
+  [claude-opus-4-8-nothink] s4  473/525 Insurance Claim — Michael Chen, 2026-02-12 -> financial
+  [claude-opus-4-8-nothink] s4  474/525 Billing Statement — John Smith, 2026-02-01 -> financial
+  [claude-opus-4-8-nothink] s4  475/525 Billing Statement — Emily Brown, 2026-02-0 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s4  476/525 Insurance Claim — Patricia Moore, 2026-02- -> financial
+  [claude-opus-4-8-nothink] s4  477/525 Billing Statement — James Carter, 2026-02- -> financial
+  [claude-opus-4-8-nothink] s4  478/525 Billing Statement — Linda Torres, 2026-03- -> financial
+  [claude-opus-4-8-nothink] s4  479/525 Insurance Claim — Linda Torres, 2026-02-18 -> financial
+  [claude-opus-4-8-nothink] s4  480/525 Prior Authorization — Robert Lee, 2026-01- -> clinical_standard
+  [claude-opus-4-8-nothink] s4  481/525 Prior Authorization — John Smith, 2026-01- -> clinical_standard
+  [claude-opus-4-8-nothink] s4  482/525 Billing Statement — Robert Lee, 2026-02-05 -> financial
+  [claude-opus-4-8-nothink] s4  483/525 Billing Statement — Patricia Moore, 2026-0 -> financial
+  [claude-opus-4-8-nothink] s4  484/525 Prior Authorization — Maria Gonzalez, 2026 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s4  485/525 Prior Authorization — Sarah Wilson, 2026-0 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s4  486/525 Prior Authorization — Linda Torres, 2026-0 -> clinical_standard
+  [claude-opus-4-8-nothink] s4  487/525 Explanation Of Benefits — Emily Brown, 202 -> financial
+  [claude-opus-4-8-nothink] s4  488/525 Explanation Of Benefits — James Carter, 20 -> financial
+  [claude-opus-4-8-nothink] s4  489/525 Explanation Of Benefits — Robert Lee, 2026 -> financial
+  [claude-opus-4-8-nothink] s4  490/525 Insurance Verification — John Smith, 2026- -> clinical_standard
+  [claude-opus-4-8-nothink] s4  491/525 Insurance Verification — Emily Brown, 2026 -> clinical_sensitive
+  [claude-opus-4-8-nothink] s4  492/525 Insurance Verification — Patricia Moore, 2 -> financial
+  [claude-opus-4-8-nothink] s4  493/525 Insurance Verification — Michael Chen, 202 -> financial
+  [claude-opus-4-8-nothink] s4  494/525 Salary Letter — Dr. Sarah Chen, 2026-01-01 -> employment
+  [claude-opus-4-8-nothink] s4  495/525 Salary Letter — Dr. Marcus Webb, 2026-01-0 -> employment
+  [claude-opus-4-8-nothink] s4  496/525 Salary Letter — Dr. Aisha Patel, 2026-01-0 -> employment
+  [claude-opus-4-8-nothink] s4  497/525 Salary Letter — Alice Johnson, 2026-01-01  -> employment
+  [claude-opus-4-8-nothink] s4  498/525 Employment Contract — Dr. Aisha Patel, 202 -> employment
+  [claude-opus-4-8-nothink] s4  499/525 Employment Contract — Dr. Kevin O'Brien, 2 -> employment
+  [claude-opus-4-8-nothink] s4  500/525 Employment Contract — Nurse Lisa Kim, 2023 -> employment
+  [claude-opus-4-8-nothink] s4  501/525 Explanation Of Benefits — John Smith, 2026 -> financial
+  [claude-opus-4-8-nothink] s4  502/525 Employment Contract — Jennifer Walsh, 2024 -> employment
+  [claude-opus-4-8-nothink] s4  503/525 Salary Letter — Dr. Kevin O'Brien, 2026-01 -> employment
+  [claude-opus-4-8-nothink] s4  504/525 Performance Review — Nurse Patricia Davis, -> employment
+  [claude-opus-4-8-nothink] s4  505/525 Performance Review — Dr. Sarah Chen, 2026- -> employment
+  [claude-opus-4-8-nothink] s4  506/525 Performance Review — Alice Johnson, 2026-0 -> employment
+  [claude-opus-4-8-nothink] s4  507/525 Performance Review — Nurse Tom Reyes, 2026 -> employment
+  [claude-opus-4-8-nothink] s4  508/525 Credentialing File — Dr. Sarah Chen, 2026- -> employment
+  [claude-opus-4-8-nothink] s4  509/525 Credentialing File — Dr. Aisha Patel, 2026 -> employment
+  [claude-opus-4-8-nothink] s4  510/525 Credentialing File — Dr. Kevin O'Brien, 20 -> employment
+  [claude-opus-4-8-nothink] s4  511/525 Contractor Agreement — Frank Turner, 2026- -> employment
+  [claude-opus-4-8-nothink] s4  512/525 Contractor Agreement — Carol White, 2026-0 -> employment
+  [claude-opus-4-8-nothink] s4  513/525 Staff Schedule — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8-nothink] s4  514/525 Staff Schedule — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8-nothink] s4  515/525 Staff Schedule — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8-nothink] s4  516/525 Meeting Agenda — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8-nothink] s4  517/525 Meeting Agenda — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8-nothink] s4  518/525 Meeting Agenda — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8-nothink] s4  519/525 Policy Memo — Riverside Medical Clinic, 20 -> internal
+  [claude-opus-4-8-nothink] s4  520/525 Policy Memo — Riverside Medical Clinic, 20 -> internal
+  [claude-opus-4-8-nothink] s4  521/525 Public Pamphlet — Riverside Medical Clinic -> public
+  [claude-opus-4-8-nothink] s4  522/525 Policy Memo — Riverside Medical Clinic, 20 -> internal
+  [claude-opus-4-8-nothink] s4  523/525 Employment Contract — Dr. Marcus Webb, 202 -> employment
+  [claude-opus-4-8-nothink] s4  524/525 Salary Letter — Nurse Patricia Davis, 2026 -> employment
+  [claude-opus-4-8-nothink] s4  525/525 Contractor Agreement — Carol White, 2025-0 -> employment
+  [claude-opus-4-8-nothink] done: 525 labels across 5 sample(s) (525 new calls, 0 errors)
+--- re-labeling with claude-sonnet-5 (5 draws) ---
+  [claude-sonnet-5] nothing to do — 525 labels already cached
+--- re-labeling with claude-haiku-4-5 (5 draws) ---
+  [claude-haiku-4-5] nothing to do — 525 labels already cached
+--- re-labeling with gpt-5.4 (5 draws) ---
+  [gpt-5.4] nothing to do — 525 labels already cached
+--- re-labeling with gpt-5.4-mini (5 draws) ---
+  [gpt-5.4-mini] nothing to do — 525 labels already cached
+--- re-labeling with gpt-5.4-nano (5 draws) ---
+  [gpt-5.4-nano] nothing to do — 525 labels already cached
+
+====================================================================================
+LABEL VARIANCE ACROSS 5 IDENTICAL RE-LABELINGS (no temperature — these models reject it)
+====================================================================================
+
+model                 tier same  ACL same  all same   UNSTABLE FLOWS   leaks (min-max)
+------------------------------------------------------------------------------------
+claude-opus-4-8            93%      56%      52%      115 (4.56%)   34-57 (sd 9.26)
+claude-opus-4-8-nothink       97%      62%      59%      108 (4.29%)  21-52 (sd 13.39)
+claude-sonnet-5            97%      63%      62%       96 (3.81%)   46-64 (sd 7.21)
+claude-haiku-4-5           87%      26%      26%      124 (4.92%)   25-39 (sd 7.23)
+gpt-5.4                    99%      76%      76%       40 (1.59%)      9-9 (sd 0.0)
+gpt-5.4-mini               90%      90%      83%       28 (1.11%)   10-12 (sd 0.84)
+gpt-5.4-nano               99%      91%      88%       13 (0.52%)   13-17 (sd 1.87)
+
+model                 mean tier entropy  distinct ACLs/doc  coin-flip breaches
+------------------------------------------------------------------------------
+claude-opus-4-8                  0.053b               1.55                  66
+claude-opus-4-8-nothink             0.025b               1.50                  73
+claude-sonnet-5                  0.021b               1.42                  68
+claude-haiku-4-5                 0.103b               2.05                  62
+gpt-5.4                          0.007b               1.27                   0
+gpt-5.4-mini                     0.092b               1.13                   2
+gpt-5.4-nano                     0.009b               1.09                   9
+
+Baseline: the gate + a fixed human label produces the SAME decision on all
+2,520 flows, every run, by construction. Every number above is label-induced.
+
+Full report -> reports\variance_report.json

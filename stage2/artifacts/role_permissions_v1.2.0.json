@@ -1,0 +1,213 @@
+{
+  "artifact": "stage2_role_permissions",
+  "vocab_version": "1.2.0",
+  "linkage_version": "1.2.0",
+  "authored_by": "researcher",
+  "provenance": "Hand-authored against frozen vocabulary v1.2.0. No model proposed, ranked, or defaulted any decision; the template was delivered with every cell blank.",
+  "source_template": "stage2/artifacts/permission_template_v1.2.0.xlsx",
+  "roles": {
+    "Doctor": [
+      "billing_code",
+      "contract_terms",
+      "date_of_birth",
+      "emergency_contact",
+      "employment_contract",
+      "home_address",
+      "insurance_info",
+      "job_title",
+      "medical_diagnosis",
+      "medical_history",
+      "medical_license",
+      "medical_medication",
+      "mental_health",
+      "name",
+      "salary"
+    ],
+    "Nurse": [
+      "billing_code",
+      "contract_terms",
+      "date_of_birth",
+      "emergency_contact",
+      "employment_contract",
+      "home_address",
+      "insurance_info",
+      "job_title",
+      "medical_diagnosis",
+      "medical_history",
+      "medical_license",
+      "medical_medication",
+      "name",
+      "salary"
+    ],
+    "Billing Specialist": [
+      "billing_code",
+      "contract_terms",
+      "date_of_birth",
+      "employment_contract",
+      "home_address",
+      "insurance_info",
+      "job_title",
+      "medical_license",
+      "name",
+      "salary"
+    ],
+    "HR Manager": [
+      "contract_terms",
+      "emergency_contact",
+      "employment_contract",
+      "job_title",
+      "medical_license",
+      "salary"
+    ],
+    "IT Contractor": [
+      "contract_terms",
+      "employment_contract",
+      "job_title"
+    ],
+    "Patient": [
+      "billing_code",
+      "date_of_birth",
+      "emergency_contact",
+      "home_address",
+      "insurance_info",
+      "job_title",
+      "medical_diagnosis",
+      "medical_history",
+      "medical_license",
+      "medical_medication",
+      "mental_health",
+      "name",
+      "ssn"
+    ]
+  },
+  "decisions": {
+    "name": {
+      "Doctor": "permit",
+      "Nurse": "permit",
+      "Billing Specialist": "permit",
+      "HR Manager": "deny",
+      "IT Contractor": "deny",
+      "Patient": "permit"
+    },
+    "date_of_birth": {
+      "Doctor": "permit",
+      "Nurse": "permit",
+      "Billing Specialist": "permit",
+      "HR Manager": "deny",
+      "IT Contractor": "deny",
+      "Patient": "permit"
+    },
+    "ssn": {
+      "Doctor": "deny",
+      "Nurse": "deny",
+      "Billing Specialist": "deny",
+      "HR Manager": "deny",
+      "IT Contractor": "deny",
+      "Patient": "permit"
+    },
+    "home_address": {
+      "Doctor": "permit",
+      "Nurse": "permit",
+      "Billing Specialist": "permit",
+      "HR Manager": "deny",
+      "IT Contractor": "deny",
+      "Patient": "permit"
+    },
+    "emergency_contact": {
+      "Doctor": "permit",
+      "Nurse": "permit",
+      "Billing Specialist": "deny",
+      "HR Manager": "permit",
+      "IT Contractor": "deny",
+      "Patient": "permit"
+    },
+    "medical_diagnosis": {
+      "Doctor": "permit",
+      "Nurse": "permit",
+      "Billing Specialist": "deny",
+      "HR Manager": "deny",
+      "IT Contractor": "deny",
+      "Patient": "permit"
+    },
+    "medical_medication": {
+      "Doctor": "permit",
+      "Nurse": "permit",
+      "Billing Specialist": "deny",
+      "HR Manager": "deny",
+      "IT Contractor": "deny",
+      "Patient": "permit"
+    },
+    "medical_history": {
+      "Doctor": "permit",
+      "Nurse": "permit",
+      "Billing Specialist": "deny",
+      "HR Manager": "deny",
+      "IT Contractor": "deny",
+      "Patient": "permit"
+    },
+    "mental_health": {
+      "Doctor": "permit",
+      "Nurse": "deny",
+      "Billing Specialist": "deny",
+      "HR Manager": "deny",
+      "IT Contractor": "deny",
+      "Patient": "permit"
+    },
+    "billing_code": {
+      "Doctor": "permit",
+      "Nurse": "permit",
+      "Billing Specialist": "permit",
+      "HR Manager": "deny",
+      "IT Contractor": "deny",
+      "Patient": "permit"
+    },
+    "insurance_info": {
+      "Doctor": "permit",
+      "Nurse": "permit",
+      "Billing Specialist": "permit",
+      "HR Manager": "deny",
+      "IT Contractor": "deny",
+      "Patient": "permit"
+    },
+    "salary": {
+      "Doctor": "permit",
+      "Nurse": "permit",
+      "Billing Specialist": "permit",
+      "HR Manager": "permit",
+      "IT Contractor": "deny",
+      "Patient": "deny"
+    },
+    "employment_contract": {
+      "Doctor": "permit",
+      "Nurse": "permit",
+      "Billing Specialist": "permit",
+      "HR Manager": "permit",
+      "IT Contractor": "permit",
+      "Patient": "deny"
+    },
+    "contract_terms": {
+      "Doctor": "permit",
+      "Nurse": "permit",
+      "Billing Specialist": "permit",
+      "HR Manager": "permit",
+      "IT Contractor": "permit",
+      "Patient": "deny"
+    },
+    "job_title": {
+      "Doctor": "permit",
+      "Nurse": "permit",
+      "Billing Specialist": "permit",
+      "HR Manager": "permit",
+      "IT Contractor": "permit",
+      "Patient": "permit"
+    },
+    "medical_license": {
+      "Doctor": "permit",
+      "Nurse": "permit",
+      "Billing Specialist": "permit",
+      "HR Manager": "permit",
+      "IT Contractor": "deny",
+      "Patient": "permit"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "artifact": "stage2a_template_record",
+  "vocab_version": "1.2.0",
+  "linkage_version": "1.2.0",
+  "corpus_sha256": "49cdd9c89112f605ee228da5c2489a2de2b58dc56379a257faed8a6302c1b3d0",
+  "roles": [
+    "Doctor",
+    "Nurse",
+    "Billing Specialist",
+    "HR Manager",
+    "IT Contractor",
+    "Patient"
+  ],
+  "decision_values": [
+    "permit",
+    "deny"
+  ],
+  "cells_to_author": 96,
+  "baseline": {
+    "flows_total": 2520,
+    "flows_permitted": 259,
+    "flows_denied": 2261,
+    "agents": 24,
+    "documents": 105
+  },
+  "authored_by": "researcher (NOT a model - see module docstring)",
+  "randomness": "none"
+}

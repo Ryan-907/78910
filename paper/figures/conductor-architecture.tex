@@ -1,0 +1,75 @@
+% Requires: \usepackage{tikz}
+%           \usetikzlibrary{arrows.meta, positioning, fit, backgrounds}
+%
+% Colour is semantic, not decorative:
+%   blue  = the machine-enforced trusted path (Conductor, Store, trusted region)
+%   amber = human authorship (Author, policy edge)
+%   gray  = the untrusted side (Requester, Assistant)
+% It degrades safely: the gate is also the only heavy border, and the policy
+% edge is also the only dashed one, so grayscale printing loses nothing.
+
+\definecolor{condblue}{HTML}{1B4F8A}
+\definecolor{condfill}{HTML}{E7F0F9}
+\definecolor{authamber}{HTML}{A85B12}
+\definecolor{authfill}{HTML}{FBF0E2}
+\definecolor{zonefill}{HTML}{F2F7FC}
+\definecolor{zoneline}{HTML}{8FB3DA}
+\definecolor{ink}{HTML}{2A2A2A}
+
+\begin{figure*}[t]
+\centering
+\begin{tikzpicture}[
+  font=\small,
+  box/.style     = {draw=ink, rounded corners=2pt, align=center, inner sep=5pt, fill=white,
+                    minimum height=12mm, minimum width=24mm, line width=0.6pt},
+  gate/.style    = {box, draw=condblue, fill=condfill, line width=1.4pt},
+  storebox/.style= {box, draw=condblue!75, fill=condfill!55},
+  authbox/.style = {box, draw=authamber, fill=authfill},
+  flow/.style    = {-{Stealth[length=2.2mm]}, line width=0.65pt, draw=ink},
+  permit/.style  = {-{Stealth[length=2.4mm]}, line width=1.0pt, draw=condblue},
+  policy/.style  = {-{Stealth[length=2.2mm]}, line width=0.9pt, dashed, draw=authamber},
+  lbl/.style     = {font=\scriptsize, inner sep=1.5pt, midway, text=ink},
+  blbl/.style    = {font=\scriptsize, inner sep=1.5pt, midway, text=condblue},
+  albl/.style    = {font=\scriptsize, inner sep=1.5pt, midway, text=authamber},
+  zone/.style    = {font=\scriptsize\itshape, text=black!55}
+]
+
+% ---- participants -------------------------------------------------------
+\node[box]      (req)  at (0,0)      {\textbf{Requester}\\[1pt]\scriptsize role, context};
+\node[box]      (asst) at (3.7,0)    {\textbf{Assistant}\\[1pt]\scriptsize LLM};
+\node[gate]     (cond) at (7.9,0)    {\textbf{\textcolor{condblue}{Conductor}}\\[1pt]\scriptsize policy gate};
+\node[storebox] (store)at (12.0,0)   {\textbf{Store}\\[1pt]\scriptsize labeled documents};
+\node[authbox]  (auth) at (7.9,-2.6) {\textbf{Author}\\[1pt]\scriptsize individual, group,\\[-1pt]\scriptsize or legislation};
+
+% ---- trusted region (behind the nodes) ----------------------------------
+\begin{scope}[on background layer]
+  \node[draw=zoneline, dashed, rounded corners=3pt, line width=0.7pt, fill=zonefill,
+        fit=(cond)(store)(auth), inner sep=6mm] (tz) {};
+\end{scope}
+\node[zone, anchor=south east] at ([xshift=-1mm]tz.north west) {untrusted};
+\node[zone, anchor=south west, text=condblue!85] at ([xshift=1mm]tz.north west) {trusted};
+
+% ---- request path -------------------------------------------------------
+\draw[flow] ([yshift=2.5mm]req.east)  -- node[lbl, above]{query}   ([yshift=2.5mm]asst.west);
+\draw[flow] ([yshift=2.5mm]asst.east) -- node[lbl, above]{request} ([yshift=2.5mm]cond.west);
+\draw[flow] ([yshift=2.5mm]cond.east) -- node[lbl, above]{fetch}   ([yshift=2.5mm]store.west);
+
+% ---- return path (the guarantee, emphasised) ----------------------------
+\draw[permit] ([yshift=-2.5mm]store.west) -- node[blbl, below]{documents}
+              ([yshift=-2.5mm]cond.east);
+\draw[permit] ([yshift=-2.5mm]cond.west) -- node[blbl, below, align=center]{permitted\\[-2pt]documents only}
+              ([yshift=-2.5mm]asst.east);
+\draw[flow]   (asst.south) .. controls +(0,-1.1) and +(0,-1.1) ..
+              node[lbl, below]{response} (req.south);
+
+% ---- policy, supplied out of band ---------------------------------------
+\draw[policy] (auth) -- node[albl, right]{policy} (cond);
+
+\end{tikzpicture}
+\caption{The Privacy Conductor architecture. The Requester interacts with an LLM Assistant, which
+reaches the Store only through the Conductor. The Conductor admits or refuses each access using a
+policy supplied out of band by the Author, so the Assistant receives only documents the Requester's
+role already permits. Because the Assistant sits outside the trust boundary, it cannot disclose a
+record it was never given.}
+\label{fig:architecture}
+\end{figure*}

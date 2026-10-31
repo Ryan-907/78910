@@ -3,3 +3,5 @@
 /.env
 /data/dataset.json
 /ci_sim.egg-info
+__pycache__/
+*.pyc

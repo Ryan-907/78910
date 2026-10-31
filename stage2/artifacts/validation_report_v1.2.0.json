@@ -1,0 +1,36 @@
+{
+  "artifact": "stage2a_validation_report",
+  "vocab_version": "1.2.0",
+  "linkage_version": "1.2.0",
+  "template": "stage2/artifacts/permission_template_v1.2.0.xlsx",
+  "valid": true,
+  "cells_expected": 96,
+  "cells_authored": 96,
+  "checks": {
+    "roles": {
+      "missing": [],
+      "unrecognised": []
+    },
+    "vocabulary": {
+      "unknown_types": [],
+      "absent_types": [],
+      "duplicate_rows": []
+    },
+    "completeness": {
+      "blank_cells": [],
+      "invalid_values": []
+    }
+  },
+  "surfaced": {
+    "note": "Both shapes are plausible and neither is an error. Reported so they are confirmed deliberately rather than discovered in the Stage 2b results.",
+    "permitted_to_no_role": [],
+    "permitted_to_every_role": [
+      {
+        "information_type": "job_title",
+        "subject_linked_documents": 24,
+        "permitted_flows_carrying_it": 23
+      }
+    ]
+  },
+  "problems": []
+}

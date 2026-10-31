@@ -1,0 +1,61 @@
+row_id,block,doc_id,document_type,sensitivity_tier,subject_type,information_type,value,region,field_label,section,classifier_said,human_said,linkage_signal,tagger_rule,silent_release
+L0054,A,doc_008,clinical_note,clinical_sensitive,patient,job_title,PHYSICIAN,body,,physician attestation,third_party,subject,provider_block,title.gazetteer,True
+L0100,A,doc_026,radiology_report,clinical_standard,patient,name,Dr. Marcus Webb,body,reporting radiologist,impression,third_party,subject,name_match,name.registry,True
+L0186,A,doc_045,referral_letter,clinical_standard,patient,name,Dr. Patricia Nguyen,signature,,pertinent medical history,third_party,subject,name_match,name.registry,True
+L0204,A,doc_059,billing_statement,financial,patient,name,Dr. Anita Sharma,body,provider,service detail,third_party,subject,name_match,name.registry,True
+L0259,A,doc_070,insurance_verification,financial,patient,job_title,Billing Specialist,body,verification completed by,emergency contact,third_party,subject,field_label,title.gazetteer,True
+L0462,B,doc_076,salary_letter,employment,employee,home_address,"3200 Riverside Drive, Peoria, IL 61615",letterhead,,riverside medical clinic,organizational,subject,region,address.street_city_state_zip,True
+L0021,A,doc_003,clinical_note,clinical_standard,patient,medical_license,1487320956,signature,npi,provider signature,third_party,organizational,region,license.npi,False
+L0031,A,doc_008,clinical_note,clinical_sensitive,patient,job_title,ATTENDING PHYSICIAN,body,,attending physician,third_party,organizational,provider_block,title.gazetteer,False
+L0036,A,doc_008,clinical_note,clinical_sensitive,patient,medical_diagnosis,diabetes,body,,medical history,subject,third_party,section,diagnosis.gazetteer,False
+L0099,A,doc_026,radiology_report,clinical_standard,patient,job_title,Radiologist,body,reporting radiologist,impression,subject,third_party,section,title.gazetteer,False
+L0150,A,doc_037,mental_health_assessment,clinical_sensitive,patient,mental_health,42 CFR Part 2,letterhead,,,subject,organizational,type_default,mental.category_marker,False
+L0152,A,doc_037,mental_health_assessment,clinical_sensitive,patient,mental_health,Mental Health,letterhead,,,subject,organizational,type_default,mental.category_marker,False
+L0153,A,doc_037,mental_health_assessment,clinical_sensitive,patient,mental_health,MHDDCA,letterhead,,,subject,organizational,type_default,mental.category_marker,False
+L0223,A,doc_064,prior_authorization,clinical_sensitive,patient,mental_health,42 CFR PART 2,letterhead,,,subject,organizational,type_default,mental.category_marker,False
+L0260,A,doc_074,salary_letter,employment,employee,name,Dr. Sarah Chen,body,,riverside medical clinic,subject,third_party,name_match,name.registry,False
+L0272,A,doc_080,employment_contract,employment,employee,mental_health,Psychiatry,body,medical license,employment contract,ambiguous,subject,unresolved,mental.category_marker,False
+L0275,A,doc_080,employment_contract,employment,employee,mental_health,Behavioral Health,body,department,employment contract,subject,organizational,field_label,mental.category_marker,False
+L0278,A,doc_080,employment_contract,employment,employee,mental_health,psychiatric,body,,duties & obligations,ambiguous,subject,unresolved,mental.category_marker,False
+L0279,A,doc_080,employment_contract,employment,employee,mental_health,42 CFR Part 2,body,,duties & obligations,ambiguous,subject,unresolved,mental.category_marker,False
+L0280,A,doc_080,employment_contract,employment,employee,mental_health,substance use disorder,body,,duties & obligations,ambiguous,subject,unresolved,mental.clinical_term,False
+L0293,A,doc_089,credentialing_file,employment,employee,mental_health,Psychiatry,body,medical license,licensure & certifications,ambiguous,subject,unresolved,mental.category_marker,False
+L0294,A,doc_089,credentialing_file,employment,employee,medical_medication,Buprenorphine,body,dea registration,licensure & certifications,ambiguous,subject,unresolved,medication.gazetteer,False
+L0295,A,doc_089,credentialing_file,employment,employee,employment_contract,"EMPLOYMENT DETAILS
+Employment Contract",body,,employment details,subject,organizational,type_default,employment.agreement_title,False
+L0305,A,doc_095,staff_schedule,internal,organization,job_title,Physician,body,physician on duty,primary care,third_party,organizational,field_label_self,title.gazetteer,False
+L0307,A,doc_098,meeting_agenda,internal,organization,employment_contract,"effective April 1, 2026",body,,agenda items,third_party,organizational,type_default,employment.effective_date,False
+L0310,A,doc_100,policy_memo,internal,organization,job_title,based access controls will be enforced in the EHR system beg,body,,key changes,third_party,organizational,type_default,title.labeled,False
+L0312,B,doc_000,clinical_note,clinical_standard,patient,name,Dr. Patricia Holloway,body,provider,clinical encounter note,third_party,organizational,name_match,name.registry,False
+L0313,B,doc_000,clinical_note,clinical_standard,patient,medical_license,1234567890,signature,npi,provider attestation,third_party,organizational,region,license.npi,False
+L0314,B,doc_001,clinical_note,clinical_standard,patient,medical_license,IL-OB-004421,body,license #,riverside medical clinic,third_party,organizational,provider_block,license.labeled,False
+L0315,B,doc_002,clinical_note,clinical_standard,patient,name,Dr. Patricia Nguyen,body,attending provider,encounter details,third_party,organizational,name_match,name.registry,False
+L0316,B,doc_002,clinical_note,clinical_standard,patient,medical_diagnosis,coronary artery disease,body,,family history,third_party,organizational,section,diagnosis.gazetteer,False
+L0317,B,doc_002,clinical_note,clinical_standard,patient,medical_diagnosis,diabetes,body,,family history,third_party,organizational,section,diagnosis.gazetteer,False
+L0318,B,doc_002,clinical_note,clinical_standard,patient,job_title,Attending Physician,body,attending physician,provider attestation,third_party,organizational,field_label_self,title.gazetteer,False
+L0319,B,doc_002,clinical_note,clinical_standard,patient,medical_license,1234567890,body,npi,provider attestation,third_party,organizational,provider_block,license.npi,False
+L0320,B,doc_002,clinical_note,clinical_standard,patient,job_title,CONFIDENTIAL – PROTECTED HEALTH INFORMATION,signature,document classification,provider attestation,third_party,organizational,region,title.labeled,False
+L0321,B,doc_004,clinical_note,clinical_standard,patient,job_title,ATTENDING PHYSICIAN,body,attending physician,clinical encounter note,third_party,organizational,field_label_self,title.gazetteer,False
+L0335,B,doc_006,clinical_note,clinical_standard,patient,job_title,PHYSICIAN,body,,physician attestation,third_party,organizational,provider_block,title.gazetteer,False
+L0338,B,doc_007,clinical_note,clinical_sensitive,patient,mental_health,MHDDCA,body,,riverside medical clinic,subject,organizational,type_default,mental.category_marker,False
+L0341,B,doc_007,clinical_note,clinical_sensitive,patient,job_title,Attending Psychiatrist,body,provider,attending clinician,third_party,organizational,field_label,title.gazetteer,False
+L0342,B,doc_007,clinical_note,clinical_sensitive,patient,mental_health,Psychiatry,body,credentials,attending clinician,third_party,organizational,provider_block,mental.category_marker,False
+L0350,B,doc_011,prescription,clinical_standard,patient,job_title,Physician,body,prescribing physician,rx,third_party,organizational,field_label_self,title.gazetteer,False
+L0364,B,doc_016,prescription,clinical_standard,patient,medical_license,FE3291047,signature,dea#,caregiver administration notes,third_party,ambiguous,region,license.dea,False
+L0392,B,doc_039,mental_health_assessment,clinical_sensitive,patient,mental_health,MENTAL HEALTH,letterhead,,,subject,organizational,type_default,mental.category_marker,False
+L0393,B,doc_039,mental_health_assessment,clinical_sensitive,patient,mental_health,MHDDCA,letterhead,,,subject,organizational,type_default,mental.category_marker,False
+L0394,B,doc_040,mental_health_assessment,clinical_sensitive,patient,mental_health,MENTAL HEALTH,letterhead,,,subject,organizational,type_default,mental.category_marker,False
+L0395,B,doc_040,mental_health_assessment,clinical_sensitive,patient,mental_health,MHDDCA,letterhead,,,subject,organizational,type_default,mental.category_marker,False
+L0440,B,doc_049,insurance_claim,financial,patient,medical_license,1234567890,letterhead,npi,riverside medical clinic,organizational,third_party,region,license.npi,False
+L0458,B,doc_068,explanation_of_benefits,financial,patient,medical_license,1234567890,body,rendering provider npi,explanation of benefits,third_party,organizational,field_label,license.npi,False
+L0476,B,doc_094,staff_schedule,internal,organization,job_title,INTERNAL — NOT FOR PATIENT DISTRIBUTION,body,classification,notes,third_party,organizational,field_label,title.labeled,False
+L0477,B,doc_096,staff_schedule,internal,organization,job_title,Nurse,body,,nursing coverage,third_party,organizational,type_default,title.gazetteer,False
+L0478,B,doc_096,staff_schedule,internal,organization,job_title,HR Manager,body,,nursing coverage,third_party,organizational,type_default,title.gazetteer,False
+L0479,B,doc_097,meeting_agenda,internal,organization,employment_contract,"effective February 1, 2026",body,,agenda items,third_party,organizational,type_default,employment.effective_date,False
+L0480,B,doc_099,meeting_agenda,internal,organization,job_title,Internal Use Only,letterhead,classification,riverside medical clinic,third_party,organizational,field_label,title.labeled,False
+L0481,B,doc_099,meeting_agenda,internal,organization,job_title,Clinical Director,body,attendees,riverside medical clinic,third_party,organizational,type_default,title.gazetteer,False
+L0482,B,doc_099,meeting_agenda,internal,organization,job_title,Charge Nurse,body,attendees,riverside medical clinic,third_party,organizational,type_default,title.gazetteer,False
+L0483,B,doc_099,meeting_agenda,internal,organization,job_title,HR Manager,body,attendees,riverside medical clinic,third_party,organizational,type_default,title.gazetteer,False
+L0484,B,doc_101,policy_memo,internal,organization,employment_contract,"EFFECTIVE DATE: February 15, 2026",body,effective date,internal policy memorandum,third_party,organizational,type_default,employment.effective_date,False
+L0485,B,doc_101,policy_memo,internal,organization,employment_contract,"Effective February 15, 2026",body,,policy update,third_party,organizational,type_default,employment.effective_date,False
+L0486,B,doc_102,policy_memo,internal,organization,job_title,Internal Use Only,body,classification,internal policy memorandum,third_party,organizational,field_label,title.labeled,False

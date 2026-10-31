@@ -1,0 +1,30 @@
+{
+  "artifact": "stage1c_correction_check_record",
+  "linkage_version": "1.1.0",
+  "vocab_version": "1.1.0",
+  "corpus_sha256": "49cdd9c89112f605ee228da5c2489a2de2b58dc56379a257faed8a6302c1b3d0",
+  "seed": 7926,
+  "requested_n": 20,
+  "actual_n": 20,
+  "purpose": "Independent verification of the two implementation corrections recorded in REPORT_1B.md 1.4, which moved structural resolution from 29.2% to 67.1% and changed the Stage 2 recommendation.",
+  "affected_population": {
+    "added_label": 5,
+    "added_section": 140,
+    "field_label_self": 36,
+    "provider_block": 22
+  },
+  "affected_total": 203,
+  "quota": {
+    "added_label": 5,
+    "added_section": 5,
+    "field_label_self": 5,
+    "provider_block": 5
+  },
+  "procedure": "floor of 2 per mechanism, remainder by largest share of the remaining affected occurrences (ties by mechanism name); within a mechanism, occurrences sorted by (doc_id, start, type) then shuffled with random.Random(seed); final order by (mechanism, doc_id, start)",
+  "mechanisms": {
+    "field_label_self": "detection span IS the field label, not the value",
+    "provider_block": "credential field inheriting the clinician its block is about",
+    "added_label": "field label added to FIELD_LABEL_OWNER during the corrections",
+    "added_section": "section header added to SECTION_OWNER during the corrections"
+  }
+}

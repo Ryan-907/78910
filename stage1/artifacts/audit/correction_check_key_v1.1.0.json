@@ -1,0 +1,166 @@
+{
+  "artifact": "stage1c_correction_check_key",
+  "note": "Classifier calls for the correction-check rows, kept OUT of the sheet so the reviewer judges cold. Compare only after the pass is complete.",
+  "rows": {
+    "C001": {
+      "classification": "third_party",
+      "signal": "field_label",
+      "mechanism": "added_label",
+      "rule": "title.gazetteer",
+      "doc_id": "doc_063",
+      "information_type": "job_title"
+    },
+    "C002": {
+      "classification": "organizational",
+      "signal": "field_label",
+      "mechanism": "added_label",
+      "rule": "license.npi",
+      "doc_id": "doc_063",
+      "information_type": "medical_license"
+    },
+    "C003": {
+      "classification": "third_party",
+      "signal": "field_label",
+      "mechanism": "added_label",
+      "rule": "license.npi",
+      "doc_id": "doc_066",
+      "information_type": "medical_license"
+    },
+    "C004": {
+      "classification": "third_party",
+      "signal": "field_label",
+      "mechanism": "added_label",
+      "rule": "license.npi",
+      "doc_id": "doc_068",
+      "information_type": "medical_license"
+    },
+    "C005": {
+      "classification": "third_party",
+      "signal": "field_label",
+      "mechanism": "added_label",
+      "rule": "title.gazetteer",
+      "doc_id": "doc_070",
+      "information_type": "job_title"
+    },
+    "C006": {
+      "classification": "subject",
+      "signal": "section",
+      "mechanism": "added_section",
+      "rule": "history.history_of",
+      "doc_id": "doc_009",
+      "information_type": "medical_history"
+    },
+    "C007": {
+      "classification": "subject",
+      "signal": "section",
+      "mechanism": "added_section",
+      "rule": "diagnosis.gazetteer",
+      "doc_id": "doc_027",
+      "information_type": "medical_diagnosis"
+    },
+    "C008": {
+      "classification": "subject",
+      "signal": "section",
+      "mechanism": "added_section",
+      "rule": "diagnosis.gazetteer",
+      "doc_id": "doc_038",
+      "information_type": "medical_diagnosis"
+    },
+    "C009": {
+      "classification": "subject",
+      "signal": "section",
+      "mechanism": "added_section",
+      "rule": "diagnosis.icd_nonpsych",
+      "doc_id": "doc_047",
+      "information_type": "medical_diagnosis"
+    },
+    "C010": {
+      "classification": "subject",
+      "signal": "section",
+      "mechanism": "added_section",
+      "rule": "billing.cpt_line_item",
+      "doc_id": "doc_051",
+      "information_type": "billing_code"
+    },
+    "C011": {
+      "classification": "third_party",
+      "signal": "field_label_self",
+      "mechanism": "field_label_self",
+      "rule": "title.gazetteer",
+      "doc_id": "doc_012",
+      "information_type": "job_title"
+    },
+    "C012": {
+      "classification": "third_party",
+      "signal": "field_label_self",
+      "mechanism": "field_label_self",
+      "rule": "title.gazetteer",
+      "doc_id": "doc_018",
+      "information_type": "job_title"
+    },
+    "C013": {
+      "classification": "third_party",
+      "signal": "field_label_self",
+      "mechanism": "field_label_self",
+      "rule": "title.gazetteer",
+      "doc_id": "doc_022",
+      "information_type": "job_title"
+    },
+    "C014": {
+      "classification": "third_party",
+      "signal": "field_label_self",
+      "mechanism": "field_label_self",
+      "rule": "title.gazetteer",
+      "doc_id": "doc_028",
+      "information_type": "job_title"
+    },
+    "C015": {
+      "classification": "subject",
+      "signal": "field_label_self",
+      "mechanism": "field_label_self",
+      "rule": "employment.agreement_title",
+      "doc_id": "doc_085",
+      "information_type": "employment_contract"
+    },
+    "C016": {
+      "classification": "third_party",
+      "signal": "provider_block",
+      "mechanism": "provider_block",
+      "rule": "title.gazetteer",
+      "doc_id": "doc_006",
+      "information_type": "job_title"
+    },
+    "C017": {
+      "classification": "third_party",
+      "signal": "provider_block",
+      "mechanism": "provider_block",
+      "rule": "license.npi",
+      "doc_id": "doc_006",
+      "information_type": "medical_license"
+    },
+    "C018": {
+      "classification": "third_party",
+      "signal": "provider_block",
+      "mechanism": "provider_block",
+      "rule": "license.labeled",
+      "doc_id": "doc_010",
+      "information_type": "medical_license"
+    },
+    "C019": {
+      "classification": "third_party",
+      "signal": "provider_block",
+      "mechanism": "provider_block",
+      "rule": "license.labeled",
+      "doc_id": "doc_014",
+      "information_type": "medical_license"
+    },
+    "C020": {
+      "classification": "third_party",
+      "signal": "provider_block",
+      "mechanism": "provider_block",
+      "rule": "license.npi",
+      "doc_id": "doc_014",
+      "information_type": "medical_license"
+    }
+  }
+}

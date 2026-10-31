@@ -1,0 +1,17 @@
+information_type,n,subject,third_party,organizational,ambiguous,pct_subject,pct_third_party
+name,133,91,42,0,0,0.6842,0.3158
+date_of_birth,95,95,0,0,0,1.0,0.0
+ssn,44,44,0,0,0,1.0,0.0
+home_address,87,85,0,2,0,0.977,0.0
+emergency_contact,22,22,0,0,0,1.0,0.0
+medical_diagnosis,262,255,7,0,0,0.9733,0.0267
+medical_medication,199,198,0,0,1,0.995,0.0
+medical_history,68,67,1,0,0,0.9853,0.0147
+mental_health,99,91,2,1,5,0.9192,0.0202
+billing_code,91,91,0,0,0,1.0,0.0
+insurance_info,78,78,0,0,0,1.0,0.0
+salary,21,21,0,0,0,1.0,0.0
+employment_contract,39,29,4,6,0,0.7436,0.1026
+contract_terms,6,3,0,3,0,0.5,0.0
+job_title,102,46,50,6,0,0.451,0.4902
+medical_license,46,13,31,2,0,0.2826,0.6739

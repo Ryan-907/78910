@@ -1,0 +1,337 @@
+Loaded 105 clinic documents. Labelers: claude-opus-4-8, claude-sonnet-5, claude-haiku-4-5
+
+--- labeling with claude-opus-4-8 ---
+  [claude-opus-4-8]   1/105 Clinical Note — John Smith, 2026-01-15        -> clinical_standard
+  [claude-opus-4-8]   2/105 Clinical Note — Emily Brown, 2026-01-20       -> clinical_sensitive
+  [claude-opus-4-8]   3/105 Clinical Note — Robert Lee, 2026-01-22        -> clinical_standard
+  [claude-opus-4-8]   4/105 Clinical Note — James Carter, 2026-02-05      -> clinical_standard
+  [claude-opus-4-8]   5/105 Clinical Note — Michael Chen, 2026-02-12      -> clinical_standard
+  [claude-opus-4-8]   6/105 Clinical Note — Linda Torres, 2026-02-18      -> clinical_standard
+  [claude-opus-4-8]   7/105 Clinical Note — Patricia Moore, 2026-02-20    -> clinical_sensitive
+  [claude-opus-4-8]   8/105 Clinical Note — Maria Gonzalez, 2026-02-03    -> clinical_sensitive
+  [claude-opus-4-8]   9/105 Clinical Note — David Park, 2026-03-01        -> clinical_sensitive
+  [claude-opus-4-8]  10/105 Clinical Note — Sarah Wilson, 2026-03-05      -> clinical_sensitive
+  [claude-opus-4-8]  11/105 Prescription — John Smith, 2026-01-15         -> clinical_standard
+  [claude-opus-4-8]  12/105 Prescription — Emily Brown, 2026-01-20        -> clinical_sensitive
+  [claude-opus-4-8]  13/105 Prescription — Robert Lee, 2026-01-22         -> clinical_standard
+  [claude-opus-4-8]  14/105 Prescription — James Carter, 2026-02-05       -> clinical_standard
+  [claude-opus-4-8]  15/105 Prescription — Michael Chen, 2026-02-12       -> clinical_standard
+  [claude-opus-4-8]  16/105 Prescription — Linda Torres, 2026-02-18       -> clinical_standard
+  [claude-opus-4-8]  17/105 Prescription — Patricia Moore, 2026-02-20     -> clinical_standard
+  [claude-opus-4-8]  18/105 Prescription — Maria Gonzalez, 2026-02-03     -> clinical_sensitive
+  [claude-opus-4-8]  19/105 Lab Report — John Smith, 2026-01-15           -> clinical_standard
+  [claude-opus-4-8]  20/105 Lab Report — Robert Lee, 2026-01-22           -> clinical_standard
+  [claude-opus-4-8]  21/105 Lab Report — Emily Brown, 2026-01-20          -> clinical_sensitive
+  [claude-opus-4-8]  22/105 Lab Report — James Carter, 2026-02-05         -> clinical_standard
+  [claude-opus-4-8]  23/105 Lab Report — Michael Chen, 2026-02-12         -> clinical_standard
+  [claude-opus-4-8]  24/105 Lab Report — Linda Torres, 2026-02-18         -> clinical_standard
+  [claude-opus-4-8]  25/105 Lab Report — Patricia Moore, 2026-02-20       -> clinical_standard
+  [claude-opus-4-8]  26/105 Lab Report — David Park, 2026-03-01           -> clinical_sensitive
+  [claude-opus-4-8]  27/105 Radiology Report — Emily Brown, 2026-01-18    -> clinical_sensitive
+  [claude-opus-4-8]  28/105 Radiology Report — Linda Torres, 2026-01-10   -> clinical_standard
+  [claude-opus-4-8]  29/105 Radiology Report — Robert Lee, 2026-01-05     -> clinical_standard
+  [claude-opus-4-8]  30/105 Radiology Report — James Carter, 2026-01-28   -> clinical_standard
+  [claude-opus-4-8]  31/105 Radiology Report — Patricia Moore, 2026-02-15 -> clinical_standard
+  [claude-opus-4-8]  32/105 Discharge Summary — Emily Brown, 2026-01-20   -> clinical_sensitive
+  [claude-opus-4-8]  33/105 Discharge Summary — John Smith, 2026-01-16    -> clinical_standard
+  [claude-opus-4-8]  34/105 Discharge Summary — Linda Torres, 2026-02-19  -> clinical_standard
+  [claude-opus-4-8]  35/105 Discharge Summary — Robert Lee, 2026-01-08    -> clinical_standard
+  [claude-opus-4-8]  36/105 Discharge Summary — Sarah Wilson, 2026-03-10  -> clinical_sensitive
+  [claude-opus-4-8]  37/105 Mental Health Assessment — Maria Gonzalez, 20 -> clinical_sensitive
+  [claude-opus-4-8]  38/105 Mental Health Assessment — Sarah Wilson, 2026 -> clinical_sensitive
+  [claude-opus-4-8]  39/105 Mental Health Assessment — David Park, 2026-0 -> clinical_sensitive
+  [claude-opus-4-8]  40/105 Mental Health Assessment — Patricia Moore, 20 -> clinical_sensitive
+  [claude-opus-4-8]  41/105 Mental Health Assessment — James Carter, 2026 -> clinical_sensitive
+  [claude-opus-4-8]  42/105 Referral Letter — John Smith, 2026-01-15      -> clinical_standard
+  [claude-opus-4-8]  43/105 Referral Letter — Robert Lee, 2026-01-22      -> clinical_standard
+  [claude-opus-4-8]  44/105 Referral Letter — Emily Brown, 2026-01-20     -> clinical_sensitive
+  [claude-opus-4-8]  45/105 Referral Letter — Linda Torres, 2026-02-18    -> clinical_standard
+  [claude-opus-4-8]  46/105 Referral Letter — James Carter, 2026-02-05    -> clinical_standard
+  [claude-opus-4-8]  47/105 Referral Letter — Michael Chen, 2026-02-12    -> clinical_standard
+  [claude-opus-4-8]  48/105 Insurance Claim — John Smith, 2026-01-15      -> financial
+  [claude-opus-4-8]  49/105 Insurance Claim — Emily Brown, 2026-01-20     -> clinical_sensitive
+  [claude-opus-4-8]  50/105 Insurance Claim — Robert Lee, 2026-01-22      -> financial
+  [claude-opus-4-8]  51/105 Insurance Claim — James Carter, 2026-02-05    -> clinical_standard
+  [claude-opus-4-8]  52/105 Insurance Claim — Michael Chen, 2026-02-12    -> financial
+  [claude-opus-4-8]  53/105 Insurance Claim — Linda Torres, 2026-02-18    -> financial
+  [claude-opus-4-8]  54/105 Insurance Claim — Patricia Moore, 2026-02-20  -> financial
+  [claude-opus-4-8]  55/105 Insurance Claim — Maria Gonzalez, 2026-02-03  -> clinical_sensitive
+  [claude-opus-4-8]  56/105 Billing Statement — John Smith, 2026-02-01    -> financial
+  [claude-opus-4-8]  57/105 Billing Statement — Emily Brown, 2026-02-01   -> clinical_sensitive
+  [claude-opus-4-8]  58/105 Billing Statement — Robert Lee, 2026-02-05    -> financial
+  [claude-opus-4-8]  59/105 Billing Statement — James Carter, 2026-02-15  -> financial
+  [claude-opus-4-8]  60/105 Billing Statement — Linda Torres, 2026-03-01  -> clinical_standard
+  [claude-opus-4-8]  61/105 Billing Statement — Patricia Moore, 2026-03-0 -> financial
+  [claude-opus-4-8]  62/105 Prior Authorization — John Smith, 2026-01-10  -> clinical_standard
+  [claude-opus-4-8]  63/105 Prior Authorization — Robert Lee, 2026-01-15  -> clinical_standard
+  [claude-opus-4-8]  64/105 Prior Authorization — Maria Gonzalez, 2026-02 -> clinical_sensitive
+  [claude-opus-4-8]  65/105 Prior Authorization — Sarah Wilson, 2026-03-0 -> clinical_sensitive
+  [claude-opus-4-8]  66/105 Prior Authorization — Linda Torres, 2026-02-0 -> clinical_standard
+  [claude-opus-4-8]  67/105 Explanation Of Benefits — John Smith, 2026-02 -> financial
+  [claude-opus-4-8]  68/105 Explanation Of Benefits — Emily Brown, 2026-0 -> clinical_sensitive
+  [claude-opus-4-8]  69/105 Explanation Of Benefits — Robert Lee, 2026-02 -> financial
+  [claude-opus-4-8]  70/105 Explanation Of Benefits — James Carter, 2026- -> financial
+  [claude-opus-4-8]  71/105 Insurance Verification — John Smith, 2026-01- -> clinical_standard
+  [claude-opus-4-8]  72/105 Insurance Verification — Emily Brown, 2026-01 -> clinical_sensitive
+  [claude-opus-4-8]  73/105 Insurance Verification — Patricia Moore, 2026 -> clinical_standard
+  [claude-opus-4-8]  74/105 Insurance Verification — Michael Chen, 2026-0 -> clinical_standard
+  [claude-opus-4-8]  75/105 Salary Letter — Dr. Sarah Chen, 2026-01-01    -> employment
+  [claude-opus-4-8]  76/105 Salary Letter — Dr. Marcus Webb, 2026-01-01   -> employment
+  [claude-opus-4-8]  77/105 Salary Letter — Dr. Aisha Patel, 2026-01-01   -> employment
+  [claude-opus-4-8]  78/105 Salary Letter — Dr. Kevin O'Brien, 2026-01-01 -> employment
+  [claude-opus-4-8]  79/105 Salary Letter — Nurse Patricia Davis, 2026-01 -> employment
+  [claude-opus-4-8]  80/105 Salary Letter — Alice Johnson, 2026-01-01     -> employment
+  [claude-opus-4-8]  81/105 Employment Contract — Dr. Aisha Patel, 2022-0 -> employment
+  [claude-opus-4-8]  82/105 Employment Contract — Dr. Kevin O'Brien, 2020 -> employment
+  [claude-opus-4-8]  83/105 Employment Contract — Nurse Lisa Kim, 2023-08 -> employment
+  [claude-opus-4-8]  84/105 Employment Contract — Jennifer Walsh, 2024-01 -> employment
+  [claude-opus-4-8]  85/105 Performance Review — Dr. Sarah Chen, 2026-01- -> employment
+  [claude-opus-4-8]  86/105 Performance Review — Nurse Patricia Davis, 20 -> employment
+  [claude-opus-4-8]  87/105 Performance Review — Alice Johnson, 2026-01-1 -> employment
+  [claude-opus-4-8]  88/105 Performance Review — Nurse Tom Reyes, 2026-01 -> employment
+  [claude-opus-4-8]  89/105 Credentialing File — Dr. Sarah Chen, 2026-01- -> employment
+  [claude-opus-4-8]  90/105 Credentialing File — Dr. Aisha Patel, 2026-01 -> employment
+  [claude-opus-4-8]  91/105 Credentialing File — Dr. Kevin O'Brien, 2026- -> employment
+  [claude-opus-4-8]  92/105 Contractor Agreement — Carol White, 2026-01-0 -> employment
+  [claude-opus-4-8]  93/105 Contractor Agreement — Frank Turner, 2026-01- -> employment
+  [claude-opus-4-8]  94/105 Contractor Agreement — Carol White, 2025-01-0 -> employment
+  [claude-opus-4-8]  95/105 Staff Schedule — Riverside Medical Clinic, 20 -> internal
+  [claude-opus-4-8]  96/105 Staff Schedule — Riverside Medical Clinic, 20 -> internal
+  [claude-opus-4-8]  97/105 Staff Schedule — Riverside Medical Clinic, 20 -> internal
+  [claude-opus-4-8]  98/105 Meeting Agenda — Riverside Medical Clinic, 20 -> internal
+  [claude-opus-4-8]  99/105 Meeting Agenda — Riverside Medical Clinic, 20 -> internal
+  [claude-opus-4-8] 100/105 Meeting Agenda — Riverside Medical Clinic, 20 -> internal
+  [claude-opus-4-8] 101/105 Policy Memo — Riverside Medical Clinic, 2026- -> internal
+  [claude-opus-4-8] 102/105 Policy Memo — Riverside Medical Clinic, 2026- -> internal
+  [claude-opus-4-8] 103/105 Policy Memo — Riverside Medical Clinic, 2026- -> internal
+  [claude-opus-4-8] 104/105 Public Pamphlet — Riverside Medical Clinic, 2 -> public
+  [claude-opus-4-8] 105/105 Employment Contract — Dr. Marcus Webb, 2021-0 -> employment
+  [claude-opus-4-8] done: 105 labels (105 new)
+--- labeling with claude-sonnet-5 ---
+  [claude-sonnet-5]   1/105 Clinical Note — John Smith, 2026-01-15        -> clinical_standard
+  [claude-sonnet-5]   2/105 Clinical Note — Emily Brown, 2026-01-20       -> clinical_sensitive
+  [claude-sonnet-5]   3/105 Clinical Note — Robert Lee, 2026-01-22        -> clinical_standard
+  [claude-sonnet-5]   4/105 Clinical Note — James Carter, 2026-02-05      -> clinical_standard
+  [claude-sonnet-5]   5/105 Clinical Note — Michael Chen, 2026-02-12      -> clinical_standard
+  [claude-sonnet-5]   6/105 Clinical Note — Linda Torres, 2026-02-18      -> clinical_standard
+  [claude-sonnet-5]   7/105 Clinical Note — Patricia Moore, 2026-02-20    -> clinical_sensitive
+  [claude-sonnet-5]   8/105 Clinical Note — Maria Gonzalez, 2026-02-03    -> clinical_sensitive
+  [claude-sonnet-5]   9/105 Clinical Note — David Park, 2026-03-01        -> clinical_sensitive
+  [claude-sonnet-5]  10/105 Clinical Note — Sarah Wilson, 2026-03-05      -> clinical_sensitive
+  [claude-sonnet-5]  11/105 Prescription — John Smith, 2026-01-15         -> clinical_standard
+  [claude-sonnet-5]  12/105 Prescription — Emily Brown, 2026-01-20        -> clinical_sensitive
+  [claude-sonnet-5]  13/105 Prescription — Robert Lee, 2026-01-22         -> clinical_standard
+  [claude-sonnet-5]  14/105 Prescription — James Carter, 2026-02-05       -> clinical_standard
+  [claude-sonnet-5]  15/105 Prescription — Michael Chen, 2026-02-12       -> clinical_standard
+  [claude-sonnet-5]  16/105 Prescription — Linda Torres, 2026-02-18       -> clinical_standard
+  [claude-sonnet-5]  17/105 Prescription — Patricia Moore, 2026-02-20     -> clinical_standard
+  [claude-sonnet-5]  18/105 Prescription — Maria Gonzalez, 2026-02-03     -> clinical_sensitive
+  [claude-sonnet-5]  19/105 Lab Report — John Smith, 2026-01-15           -> clinical_standard
+  [claude-sonnet-5]  20/105 Lab Report — Robert Lee, 2026-01-22           -> clinical_standard
+  [claude-sonnet-5]  21/105 Lab Report — Emily Brown, 2026-01-20          -> clinical_sensitive
+  [claude-sonnet-5]  22/105 Lab Report — James Carter, 2026-02-05         -> clinical_standard
+  [claude-sonnet-5]  23/105 Lab Report — Michael Chen, 2026-02-12         -> clinical_standard
+  [claude-sonnet-5]  24/105 Lab Report — Linda Torres, 2026-02-18         -> clinical_standard
+  [claude-sonnet-5]  25/105 Lab Report — Patricia Moore, 2026-02-20       -> clinical_standard
+  [claude-sonnet-5]  26/105 Lab Report — David Park, 2026-03-01           -> clinical_sensitive
+  [claude-sonnet-5]  27/105 Radiology Report — Emily Brown, 2026-01-18    -> clinical_sensitive
+  [claude-sonnet-5]  28/105 Radiology Report — Linda Torres, 2026-01-10   -> clinical_standard
+  [claude-sonnet-5]  29/105 Radiology Report — Robert Lee, 2026-01-05     -> clinical_standard
+  [claude-sonnet-5]  30/105 Radiology Report — James Carter, 2026-01-28   -> clinical_standard
+  [claude-sonnet-5]  31/105 Radiology Report — Patricia Moore, 2026-02-15 -> clinical_standard
+  [claude-sonnet-5]  32/105 Discharge Summary — Emily Brown, 2026-01-20   -> clinical_sensitive
+  [claude-sonnet-5]  33/105 Discharge Summary — John Smith, 2026-01-16    -> clinical_standard
+  [claude-sonnet-5]  34/105 Discharge Summary — Linda Torres, 2026-02-19  -> clinical_standard
+  [claude-sonnet-5]  35/105 Discharge Summary — Robert Lee, 2026-01-08    -> clinical_standard
+  [claude-sonnet-5]  36/105 Discharge Summary — Sarah Wilson, 2026-03-10  -> clinical_sensitive
+  [claude-sonnet-5]  37/105 Mental Health Assessment — Maria Gonzalez, 20 -> clinical_sensitive
+  [claude-sonnet-5]  38/105 Mental Health Assessment — Sarah Wilson, 2026 -> clinical_sensitive
+  [claude-sonnet-5]  39/105 Mental Health Assessment — David Park, 2026-0 -> clinical_sensitive
+  [claude-sonnet-5]  40/105 Mental Health Assessment — Patricia Moore, 20 -> clinical_sensitive
+  [claude-sonnet-5]  41/105 Mental Health Assessment — James Carter, 2026 -> clinical_sensitive
+  [claude-sonnet-5]  42/105 Referral Letter — John Smith, 2026-01-15      -> clinical_standard
+  [claude-sonnet-5]  43/105 Referral Letter — Robert Lee, 2026-01-22      -> clinical_standard
+  [claude-sonnet-5]  44/105 Referral Letter — Emily Brown, 2026-01-20     -> clinical_sensitive
+  [claude-sonnet-5]  45/105 Referral Letter — Linda Torres, 2026-02-18    -> clinical_standard
+  [claude-sonnet-5]  46/105 Referral Letter — James Carter, 2026-02-05    -> clinical_standard
+  [claude-sonnet-5]  47/105 Referral Letter — Michael Chen, 2026-02-12    -> clinical_standard
+  [claude-sonnet-5]  48/105 Insurance Claim — John Smith, 2026-01-15      -> financial
+  [claude-sonnet-5]  49/105 Insurance Claim — Emily Brown, 2026-01-20     -> clinical_sensitive
+  [claude-sonnet-5]  50/105 Insurance Claim — Robert Lee, 2026-01-22      -> financial
+  [claude-sonnet-5]  51/105 Insurance Claim — James Carter, 2026-02-05    -> financial
+  [claude-sonnet-5]  52/105 Insurance Claim — Michael Chen, 2026-02-12    -> financial
+  [claude-sonnet-5]  53/105 Insurance Claim — Linda Torres, 2026-02-18    -> financial
+  [claude-sonnet-5]  54/105 Insurance Claim — Patricia Moore, 2026-02-20  -> financial
+  [claude-sonnet-5]  55/105 Insurance Claim — Maria Gonzalez, 2026-02-03  -> clinical_sensitive
+  [claude-sonnet-5]  56/105 Billing Statement — John Smith, 2026-02-01    -> financial
+  [claude-sonnet-5]  57/105 Billing Statement — Emily Brown, 2026-02-01   -> clinical_sensitive
+  [claude-sonnet-5]  58/105 Billing Statement — Robert Lee, 2026-02-05    -> financial
+  [claude-sonnet-5]  59/105 Billing Statement — James Carter, 2026-02-15  -> financial
+  [claude-sonnet-5]  60/105 Billing Statement — Linda Torres, 2026-03-01  -> financial
+  [claude-sonnet-5]  61/105 Billing Statement — Patricia Moore, 2026-03-0 -> financial
+  [claude-sonnet-5]  62/105 Prior Authorization — John Smith, 2026-01-10  -> clinical_standard
+  [claude-sonnet-5]  63/105 Prior Authorization — Robert Lee, 2026-01-15  -> clinical_standard
+  [claude-sonnet-5]  64/105 Prior Authorization — Maria Gonzalez, 2026-02 -> clinical_sensitive
+  [claude-sonnet-5]  65/105 Prior Authorization — Sarah Wilson, 2026-03-0 -> clinical_sensitive
+  [claude-sonnet-5]  66/105 Prior Authorization — Linda Torres, 2026-02-0 -> financial
+  [claude-sonnet-5]  67/105 Explanation Of Benefits — John Smith, 2026-02 -> financial
+  [claude-sonnet-5]  68/105 Explanation Of Benefits — Emily Brown, 2026-0 -> clinical_sensitive
+  [claude-sonnet-5]  69/105 Explanation Of Benefits — Robert Lee, 2026-02 -> clinical_standard
+  [claude-sonnet-5]  70/105 Explanation Of Benefits — James Carter, 2026- -> financial
+  [claude-sonnet-5]  71/105 Insurance Verification — John Smith, 2026-01- -> financial
+  [claude-sonnet-5]  72/105 Insurance Verification — Emily Brown, 2026-01 -> clinical_sensitive
+  [claude-sonnet-5]  73/105 Insurance Verification — Patricia Moore, 2026 -> financial
+  [claude-sonnet-5]  74/105 Insurance Verification — Michael Chen, 2026-0 -> financial
+  [claude-sonnet-5]  75/105 Salary Letter — Dr. Sarah Chen, 2026-01-01    -> employment
+  [claude-sonnet-5]  76/105 Salary Letter — Dr. Marcus Webb, 2026-01-01   -> employment
+  [claude-sonnet-5]  77/105 Salary Letter — Dr. Aisha Patel, 2026-01-01   -> employment
+  [claude-sonnet-5]  78/105 Salary Letter — Dr. Kevin O'Brien, 2026-01-01 -> employment
+  [claude-sonnet-5]  79/105 Salary Letter — Nurse Patricia Davis, 2026-01 -> employment
+  [claude-sonnet-5]  80/105 Salary Letter — Alice Johnson, 2026-01-01     -> employment
+  [claude-sonnet-5]  81/105 Employment Contract — Dr. Aisha Patel, 2022-0 -> employment
+  [claude-sonnet-5]  82/105 Employment Contract — Dr. Kevin O'Brien, 2020 -> employment
+  [claude-sonnet-5]  83/105 Employment Contract — Nurse Lisa Kim, 2023-08 -> employment
+  [claude-sonnet-5]  84/105 Employment Contract — Jennifer Walsh, 2024-01 -> employment
+  [claude-sonnet-5]  85/105 Performance Review — Dr. Sarah Chen, 2026-01- -> employment
+  [claude-sonnet-5]  86/105 Performance Review — Nurse Patricia Davis, 20 -> employment
+  [claude-sonnet-5]  87/105 Performance Review — Alice Johnson, 2026-01-1 -> employment
+  [claude-sonnet-5]  88/105 Performance Review — Nurse Tom Reyes, 2026-01 -> employment
+  [claude-sonnet-5]  89/105 Credentialing File — Dr. Sarah Chen, 2026-01- -> employment
+  [claude-sonnet-5]  90/105 Credentialing File — Dr. Aisha Patel, 2026-01 -> employment
+  [claude-sonnet-5]  91/105 Credentialing File — Dr. Kevin O'Brien, 2026- -> employment
+  [claude-sonnet-5]  92/105 Contractor Agreement — Carol White, 2026-01-0 -> employment
+  [claude-sonnet-5]  93/105 Contractor Agreement — Frank Turner, 2026-01- -> employment
+  [claude-sonnet-5]  94/105 Contractor Agreement — Carol White, 2025-01-0 -> employment
+  [claude-sonnet-5]  95/105 Staff Schedule — Riverside Medical Clinic, 20 -> internal
+  [claude-sonnet-5]  96/105 Staff Schedule — Riverside Medical Clinic, 20 -> internal
+  [claude-sonnet-5]  97/105 Staff Schedule — Riverside Medical Clinic, 20 -> internal
+  [claude-sonnet-5]  98/105 Meeting Agenda — Riverside Medical Clinic, 20 -> internal
+  [claude-sonnet-5]  99/105 Meeting Agenda — Riverside Medical Clinic, 20 -> employment
+  [claude-sonnet-5] 100/105 Meeting Agenda — Riverside Medical Clinic, 20 -> internal
+  [claude-sonnet-5] 101/105 Policy Memo — Riverside Medical Clinic, 2026- -> internal
+  [claude-sonnet-5] 102/105 Policy Memo — Riverside Medical Clinic, 2026- -> internal
+  [claude-sonnet-5] 103/105 Policy Memo — Riverside Medical Clinic, 2026- -> internal
+  [claude-sonnet-5] 104/105 Public Pamphlet — Riverside Medical Clinic, 2 -> public
+  [claude-sonnet-5] 105/105 Employment Contract — Dr. Marcus Webb, 2021-0 -> employment
+  [claude-sonnet-5] done: 105 labels (105 new)
+--- labeling with claude-haiku-4-5 ---
+  [claude-haiku-4-5]   4/105 Clinical Note — James Carter, 2026-02-05      -> clinical_standard
+  [claude-haiku-4-5]   5/105 Clinical Note — Michael Chen, 2026-02-12      -> clinical_standard
+  [claude-haiku-4-5]   6/105 Clinical Note — Linda Torres, 2026-02-18      -> clinical_standard
+  [claude-haiku-4-5]   7/105 Clinical Note — Patricia Moore, 2026-02-20    -> clinical_standard
+  [claude-haiku-4-5]   8/105 Clinical Note — Maria Gonzalez, 2026-02-03    -> clinical_sensitive
+  [claude-haiku-4-5]   9/105 Clinical Note — David Park, 2026-03-01        -> clinical_sensitive
+  [claude-haiku-4-5]  10/105 Clinical Note — Sarah Wilson, 2026-03-05      -> clinical_sensitive
+  [claude-haiku-4-5]  11/105 Prescription — John Smith, 2026-01-15         -> clinical_standard
+  [claude-haiku-4-5]  12/105 Prescription — Emily Brown, 2026-01-20        -> clinical_sensitive
+  [claude-haiku-4-5]  13/105 Prescription — Robert Lee, 2026-01-22         -> clinical_standard
+  [claude-haiku-4-5]  14/105 Prescription — James Carter, 2026-02-05       -> clinical_standard
+  [claude-haiku-4-5]  15/105 Prescription — Michael Chen, 2026-02-12       -> clinical_standard
+  [claude-haiku-4-5]  16/105 Prescription — Linda Torres, 2026-02-18       -> clinical_standard
+  [claude-haiku-4-5]  17/105 Prescription — Patricia Moore, 2026-02-20     -> clinical_standard
+  [claude-haiku-4-5]  18/105 Prescription — Maria Gonzalez, 2026-02-03     -> clinical_sensitive
+  [claude-haiku-4-5]  19/105 Lab Report — John Smith, 2026-01-15           -> clinical_standard
+  [claude-haiku-4-5]  20/105 Lab Report — Robert Lee, 2026-01-22           -> clinical_standard
+  [claude-haiku-4-5]  21/105 Lab Report — Emily Brown, 2026-01-20          -> clinical_sensitive
+  [claude-haiku-4-5]  22/105 Lab Report — James Carter, 2026-02-05         -> clinical_standard
+  [claude-haiku-4-5]  23/105 Lab Report — Michael Chen, 2026-02-12         -> clinical_standard
+  [claude-haiku-4-5]  24/105 Lab Report — Linda Torres, 2026-02-18         -> clinical_standard
+  [claude-haiku-4-5]  25/105 Lab Report — Patricia Moore, 2026-02-20       -> clinical_standard
+  [claude-haiku-4-5]  26/105 Lab Report — David Park, 2026-03-01           -> clinical_sensitive
+  [claude-haiku-4-5]  27/105 Radiology Report — Emily Brown, 2026-01-18    -> clinical_sensitive
+  [claude-haiku-4-5]  28/105 Radiology Report — Linda Torres, 2026-01-10   -> clinical_standard
+  [claude-haiku-4-5]  29/105 Radiology Report — Robert Lee, 2026-01-05     -> clinical_standard
+  [claude-haiku-4-5]  30/105 Radiology Report — James Carter, 2026-01-28   -> clinical_standard
+  [claude-haiku-4-5]  31/105 Radiology Report — Patricia Moore, 2026-02-15 -> clinical_standard
+  [claude-haiku-4-5]  32/105 Discharge Summary — Emily Brown, 2026-01-20   -> clinical_sensitive
+  [claude-haiku-4-5]  33/105 Discharge Summary — John Smith, 2026-01-16    -> clinical_standard
+  [claude-haiku-4-5]  34/105 Discharge Summary — Linda Torres, 2026-02-19  -> clinical_standard
+  [claude-haiku-4-5]  35/105 Discharge Summary — Robert Lee, 2026-01-08    -> clinical_standard
+  [claude-haiku-4-5]  36/105 Discharge Summary — Sarah Wilson, 2026-03-10  -> clinical_sensitive
+  [claude-haiku-4-5]  37/105 Mental Health Assessment — Maria Gonzalez, 20 -> clinical_sensitive
+  [claude-haiku-4-5]  38/105 Mental Health Assessment — Sarah Wilson, 2026 -> clinical_sensitive
+  [claude-haiku-4-5]  39/105 Mental Health Assessment — David Park, 2026-0 -> clinical_sensitive
+  [claude-haiku-4-5]  40/105 Mental Health Assessment — Patricia Moore, 20 -> clinical_sensitive
+  [claude-haiku-4-5]  41/105 Mental Health Assessment — James Carter, 2026 -> clinical_sensitive
+  [claude-haiku-4-5]  42/105 Referral Letter — John Smith, 2026-01-15      -> clinical_standard
+  [claude-haiku-4-5]  43/105 Referral Letter — Robert Lee, 2026-01-22      -> clinical_standard
+  [claude-haiku-4-5]  44/105 Referral Letter — Emily Brown, 2026-01-20     -> clinical_sensitive
+  [claude-haiku-4-5]  45/105 Referral Letter — Linda Torres, 2026-02-18    -> clinical_standard
+  [claude-haiku-4-5]  46/105 Referral Letter — James Carter, 2026-02-05    -> clinical_standard
+  [claude-haiku-4-5]  47/105 Referral Letter — Michael Chen, 2026-02-12    -> clinical_standard
+  [claude-haiku-4-5]  48/105 Insurance Claim — John Smith, 2026-01-15      -> financial
+  [claude-haiku-4-5]  49/105 Insurance Claim — Emily Brown, 2026-01-20     -> clinical_sensitive
+  [claude-haiku-4-5]  50/105 Insurance Claim — Robert Lee, 2026-01-22      -> financial
+  [claude-haiku-4-5]  51/105 Insurance Claim — James Carter, 2026-02-05    -> financial
+  [claude-haiku-4-5]  52/105 Insurance Claim — Michael Chen, 2026-02-12    -> financial
+  [claude-haiku-4-5]  53/105 Insurance Claim — Linda Torres, 2026-02-18    -> financial
+  [claude-haiku-4-5]  54/105 Insurance Claim — Patricia Moore, 2026-02-20  -> financial
+  [claude-haiku-4-5]  55/105 Insurance Claim — Maria Gonzalez, 2026-02-03  -> clinical_sensitive
+  [claude-haiku-4-5]  56/105 Billing Statement — John Smith, 2026-02-01    -> financial
+  [claude-haiku-4-5]  57/105 Billing Statement — Emily Brown, 2026-02-01   -> financial
+  [claude-haiku-4-5]  58/105 Billing Statement — Robert Lee, 2026-02-05    -> financial
+  [claude-haiku-4-5]  59/105 Billing Statement — James Carter, 2026-02-15  -> financial
+  [claude-haiku-4-5]  60/105 Billing Statement — Linda Torres, 2026-03-01  -> financial
+  [claude-haiku-4-5]  61/105 Billing Statement — Patricia Moore, 2026-03-0 -> financial
+  [claude-haiku-4-5]  62/105 Prior Authorization — John Smith, 2026-01-10  -> clinical_standard
+  [claude-haiku-4-5]  63/105 Prior Authorization — Robert Lee, 2026-01-15  -> clinical_standard
+  [claude-haiku-4-5]  64/105 Prior Authorization — Maria Gonzalez, 2026-02 -> clinical_sensitive
+  [claude-haiku-4-5]  65/105 Prior Authorization — Sarah Wilson, 2026-03-0 -> clinical_sensitive
+  [claude-haiku-4-5]  66/105 Prior Authorization — Linda Torres, 2026-02-0 -> clinical_standard
+  [claude-haiku-4-5]  67/105 Explanation Of Benefits — John Smith, 2026-02 -> financial
+  [claude-haiku-4-5]  68/105 Explanation Of Benefits — Emily Brown, 2026-0 -> financial
+  [claude-haiku-4-5]  69/105 Explanation Of Benefits — Robert Lee, 2026-02 -> financial
+  [claude-haiku-4-5]  70/105 Explanation Of Benefits — James Carter, 2026- -> financial
+  [claude-haiku-4-5]  71/105 Insurance Verification — John Smith, 2026-01- -> clinical_standard
+  [claude-haiku-4-5]  72/105 Insurance Verification — Emily Brown, 2026-01 -> financial
+  [claude-haiku-4-5]  73/105 Insurance Verification — Patricia Moore, 2026 -> clinical_standard
+  [claude-haiku-4-5]  74/105 Insurance Verification — Michael Chen, 2026-0 -> clinical_standard
+  [claude-haiku-4-5]  75/105 Salary Letter — Dr. Sarah Chen, 2026-01-01    -> employment
+  [claude-haiku-4-5]  76/105 Salary Letter — Dr. Marcus Webb, 2026-01-01   -> employment
+  [claude-haiku-4-5]  77/105 Salary Letter — Dr. Aisha Patel, 2026-01-01   -> employment
+  [claude-haiku-4-5]  78/105 Salary Letter — Dr. Kevin O'Brien, 2026-01-01 -> employment
+  [claude-haiku-4-5]  79/105 Salary Letter — Nurse Patricia Davis, 2026-01 -> employment
+  [claude-haiku-4-5]  80/105 Salary Letter — Alice Johnson, 2026-01-01     -> employment
+  [claude-haiku-4-5]  81/105 Employment Contract — Dr. Aisha Patel, 2022-0 -> employment
+  [claude-haiku-4-5]  82/105 Employment Contract — Dr. Kevin O'Brien, 2020 -> employment
+  [claude-haiku-4-5]  83/105 Employment Contract — Nurse Lisa Kim, 2023-08 -> employment
+  [claude-haiku-4-5]  84/105 Employment Contract — Jennifer Walsh, 2024-01 -> employment
+  [claude-haiku-4-5]  85/105 Performance Review — Dr. Sarah Chen, 2026-01- -> employment
+  [claude-haiku-4-5]  86/105 Performance Review — Nurse Patricia Davis, 20 -> employment
+  [claude-haiku-4-5]  87/105 Performance Review — Alice Johnson, 2026-01-1 -> employment
+  [claude-haiku-4-5]  88/105 Performance Review — Nurse Tom Reyes, 2026-01 -> employment
+  [claude-haiku-4-5]  89/105 Credentialing File — Dr. Sarah Chen, 2026-01- -> employment
+  [claude-haiku-4-5]  90/105 Credentialing File — Dr. Aisha Patel, 2026-01 -> employment
+  [claude-haiku-4-5]  91/105 Credentialing File — Dr. Kevin O'Brien, 2026- -> employment
+  [claude-haiku-4-5]  92/105 Contractor Agreement — Carol White, 2026-01-0 -> employment
+  [claude-haiku-4-5]  93/105 Contractor Agreement — Frank Turner, 2026-01- -> employment
+  [claude-haiku-4-5]  94/105 Contractor Agreement — Carol White, 2025-01-0 -> employment
+  [claude-haiku-4-5]  95/105 Staff Schedule — Riverside Medical Clinic, 20 -> internal
+  [claude-haiku-4-5]  96/105 Staff Schedule — Riverside Medical Clinic, 20 -> internal
+  [claude-haiku-4-5]  97/105 Staff Schedule — Riverside Medical Clinic, 20 -> internal
+  [claude-haiku-4-5]  98/105 Meeting Agenda — Riverside Medical Clinic, 20 -> internal
+  [claude-haiku-4-5]  99/105 Meeting Agenda — Riverside Medical Clinic, 20 -> internal
+  [claude-haiku-4-5] 100/105 Meeting Agenda — Riverside Medical Clinic, 20 -> internal
+  [claude-haiku-4-5] 101/105 Policy Memo — Riverside Medical Clinic, 2026- -> internal
+  [claude-haiku-4-5] 102/105 Policy Memo — Riverside Medical Clinic, 2026- -> internal
+  [claude-haiku-4-5] 103/105 Policy Memo — Riverside Medical Clinic, 2026- -> internal
+  [claude-haiku-4-5] 104/105 Public Pamphlet — Riverside Medical Clinic, 2 -> public
+  [claude-haiku-4-5] 105/105 Employment Contract — Dr. Marcus Webb, 2021-0 -> employment
+  [claude-haiku-4-5] done: 105 labels (102 new)
+
+==============================================================================
+LLM-AS-LABELER -> DETERMINISTIC GATE   (baseline: human labels = 0 violations)
+==============================================================================
+
+model                tier-ok roles-ok    LEAKS (induced)   over-block
+----------------------------------------------------------------------
+claude-opus-4-8         78%     55%         40 (1.59%)           31
+claude-sonnet-5         82%     52%         64 (2.54%)           34
+claude-haiku-4-5        84%     30%         39 (1.55%)           28
+
+What caused the induced privacy violations (per field):
+  claude-opus-4-8: {'permitted_roles too broad': 40}
+  claude-sonnet-5: {'permitted_roles too broad': 64}
+  claude-haiku-4-5: {'permitted_roles too broad': 39}
+
+Full report -> reports\labeler_eval_report.json

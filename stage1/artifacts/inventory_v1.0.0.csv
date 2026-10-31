@@ -1,0 +1,106 @@
+doc_id,title,document_type,sensitivity_tier,subject_type,n_types,extracted_types
+doc_000,"Clinical Note — John Smith, 2026-01-15",clinical_note,clinical_standard,patient,11,billing_code;date_of_birth;emergency_contact;home_address;insurance_info;medical_diagnosis;medical_history;medical_license;medical_medication;name;ssn
+doc_001,"Clinical Note — Emily Brown, 2026-01-20",clinical_note,clinical_standard,patient,11,billing_code;date_of_birth;home_address;insurance_info;medical_diagnosis;medical_history;medical_license;medical_medication;mental_health;name;ssn
+doc_002,"Clinical Note — Robert Lee, 2026-01-22",clinical_note,clinical_standard,patient,11,billing_code;date_of_birth;home_address;insurance_info;job_title;medical_diagnosis;medical_history;medical_license;medical_medication;name;ssn
+doc_003,"Clinical Note — James Carter, 2026-02-05",clinical_note,clinical_standard,patient,9,billing_code;date_of_birth;home_address;insurance_info;medical_diagnosis;medical_history;medical_license;medical_medication;name
+doc_004,"Clinical Note — Michael Chen, 2026-02-12",clinical_note,clinical_standard,patient,11,billing_code;date_of_birth;home_address;insurance_info;job_title;medical_diagnosis;medical_history;medical_license;medical_medication;name;ssn
+doc_005,"Clinical Note — Linda Torres, 2026-02-18",clinical_note,clinical_standard,patient,11,billing_code;date_of_birth;emergency_contact;home_address;insurance_info;job_title;medical_diagnosis;medical_history;medical_medication;name;ssn
+doc_006,"Clinical Note — Patricia Moore, 2026-02-20",clinical_note,clinical_standard,patient,13,billing_code;date_of_birth;emergency_contact;home_address;insurance_info;job_title;medical_diagnosis;medical_history;medical_license;medical_medication;mental_health;name;ssn
+doc_007,"Clinical Note — Maria Gonzalez, 2026-02-03",clinical_note,clinical_sensitive,patient,10,billing_code;date_of_birth;home_address;insurance_info;job_title;medical_diagnosis;medical_history;medical_medication;mental_health;name
+doc_008,"Clinical Note — David Park, 2026-03-01",clinical_note,clinical_sensitive,patient,10,billing_code;date_of_birth;insurance_info;job_title;medical_diagnosis;medical_history;medical_license;medical_medication;mental_health;name
+doc_009,"Clinical Note — Sarah Wilson, 2026-03-05",clinical_note,clinical_sensitive,patient,11,billing_code;date_of_birth;home_address;insurance_info;medical_diagnosis;medical_history;medical_license;medical_medication;mental_health;name;ssn
+doc_010,"Prescription — John Smith, 2026-01-15",prescription,clinical_standard,patient,9,billing_code;date_of_birth;home_address;insurance_info;job_title;medical_diagnosis;medical_license;medical_medication;name
+doc_011,"Prescription — Emily Brown, 2026-01-20",prescription,clinical_standard,patient,8,date_of_birth;home_address;insurance_info;job_title;medical_diagnosis;medical_license;medical_medication;name
+doc_012,"Prescription — Robert Lee, 2026-01-22",prescription,clinical_standard,patient,9,billing_code;date_of_birth;home_address;insurance_info;job_title;medical_diagnosis;medical_license;medical_medication;name
+doc_013,"Prescription — James Carter, 2026-02-05",prescription,clinical_standard,patient,8,date_of_birth;home_address;job_title;medical_diagnosis;medical_history;medical_license;medical_medication;name
+doc_014,"Prescription — Michael Chen, 2026-02-12",prescription,clinical_standard,patient,8,billing_code;date_of_birth;home_address;job_title;medical_diagnosis;medical_license;medical_medication;name
+doc_015,"Prescription — Linda Torres, 2026-02-18",prescription,clinical_standard,patient,9,date_of_birth;emergency_contact;home_address;insurance_info;job_title;medical_diagnosis;medical_license;medical_medication;name
+doc_016,"Prescription — Patricia Moore, 2026-02-20",prescription,clinical_standard,patient,8,date_of_birth;home_address;insurance_info;job_title;medical_diagnosis;medical_license;medical_medication;name
+doc_017,"Prescription — Maria Gonzalez, 2026-02-03",prescription,clinical_standard,patient,8,date_of_birth;home_address;insurance_info;job_title;medical_license;medical_medication;mental_health;name
+doc_018,"Lab Report — John Smith, 2026-01-15",lab_report,clinical_standard,patient,11,billing_code;date_of_birth;emergency_contact;home_address;insurance_info;job_title;medical_diagnosis;medical_history;medical_medication;name;ssn
+doc_019,"Lab Report — Robert Lee, 2026-01-22",lab_report,clinical_standard,patient,9,billing_code;date_of_birth;home_address;insurance_info;job_title;medical_diagnosis;medical_medication;name;ssn
+doc_020,"Lab Report — Emily Brown, 2026-01-20",lab_report,clinical_standard,patient,6,billing_code;date_of_birth;insurance_info;medical_diagnosis;medical_medication;name
+doc_021,"Lab Report — James Carter, 2026-02-05",lab_report,clinical_standard,patient,10,billing_code;date_of_birth;home_address;insurance_info;job_title;medical_diagnosis;medical_history;medical_medication;name;ssn
+doc_022,"Lab Report — Michael Chen, 2026-02-12",lab_report,clinical_standard,patient,7,billing_code;date_of_birth;insurance_info;job_title;medical_diagnosis;medical_medication;name
+doc_023,"Lab Report — Linda Torres, 2026-02-18",lab_report,clinical_standard,patient,9,billing_code;date_of_birth;emergency_contact;home_address;insurance_info;medical_diagnosis;medical_medication;name;ssn
+doc_024,"Lab Report — Patricia Moore, 2026-02-20",lab_report,clinical_standard,patient,10,billing_code;date_of_birth;emergency_contact;home_address;insurance_info;job_title;medical_diagnosis;medical_medication;name;ssn
+doc_025,"Lab Report — David Park, 2026-03-01",lab_report,clinical_standard,patient,8,billing_code;date_of_birth;home_address;insurance_info;medical_diagnosis;medical_medication;name;ssn
+doc_026,"Radiology Report — Emily Brown, 2026-01-18",radiology_report,clinical_standard,patient,7,billing_code;date_of_birth;insurance_info;job_title;medical_diagnosis;medical_history;name
+doc_027,"Radiology Report — Linda Torres, 2026-01-10",radiology_report,clinical_standard,patient,8,billing_code;date_of_birth;emergency_contact;insurance_info;job_title;medical_diagnosis;medical_medication;name
+doc_028,"Radiology Report — Robert Lee, 2026-01-05",radiology_report,clinical_standard,patient,8,billing_code;date_of_birth;insurance_info;job_title;medical_diagnosis;medical_history;medical_medication;name
+doc_029,"Radiology Report — James Carter, 2026-01-28",radiology_report,clinical_standard,patient,7,billing_code;date_of_birth;job_title;medical_diagnosis;medical_history;medical_medication;name
+doc_030,"Radiology Report — Patricia Moore, 2026-02-15",radiology_report,clinical_standard,patient,9,billing_code;date_of_birth;emergency_contact;home_address;insurance_info;job_title;medical_diagnosis;medical_medication;name
+doc_031,"Discharge Summary — Emily Brown, 2026-01-20",discharge_summary,clinical_standard,patient,9,billing_code;date_of_birth;emergency_contact;home_address;insurance_info;job_title;medical_diagnosis;name;ssn
+doc_032,"Discharge Summary — John Smith, 2026-01-16",discharge_summary,clinical_standard,patient,9,billing_code;date_of_birth;emergency_contact;home_address;insurance_info;medical_diagnosis;medical_history;medical_medication;name
+doc_033,"Discharge Summary — Linda Torres, 2026-02-19",discharge_summary,clinical_standard,patient,10,billing_code;date_of_birth;emergency_contact;home_address;insurance_info;job_title;medical_diagnosis;medical_medication;name;ssn
+doc_034,"Discharge Summary — Robert Lee, 2026-01-08",discharge_summary,clinical_standard,patient,11,billing_code;date_of_birth;emergency_contact;home_address;insurance_info;job_title;medical_diagnosis;medical_history;medical_medication;name;ssn
+doc_035,"Discharge Summary — Sarah Wilson, 2026-03-10",discharge_summary,clinical_standard,patient,11,billing_code;date_of_birth;emergency_contact;home_address;insurance_info;job_title;medical_history;medical_medication;mental_health;name;ssn
+doc_036,"Mental Health Assessment — Maria Gonzalez, 2026-02-03",mental_health_assessment,clinical_sensitive,patient,9,billing_code;date_of_birth;home_address;insurance_info;medical_diagnosis;medical_medication;mental_health;name;ssn
+doc_037,"Mental Health Assessment — Sarah Wilson, 2026-03-05",mental_health_assessment,clinical_sensitive,patient,8,billing_code;date_of_birth;home_address;insurance_info;medical_medication;mental_health;name;ssn
+doc_038,"Mental Health Assessment — David Park, 2026-03-01",mental_health_assessment,clinical_sensitive,patient,9,billing_code;date_of_birth;home_address;insurance_info;medical_diagnosis;medical_medication;mental_health;name;ssn
+doc_039,"Mental Health Assessment — Patricia Moore, 2026-02-20",mental_health_assessment,clinical_sensitive,patient,10,billing_code;date_of_birth;emergency_contact;home_address;insurance_info;medical_diagnosis;medical_medication;mental_health;name;ssn
+doc_040,"Mental Health Assessment — James Carter, 2026-02-05",mental_health_assessment,clinical_sensitive,patient,10,billing_code;date_of_birth;home_address;insurance_info;medical_diagnosis;medical_history;medical_medication;mental_health;name;ssn
+doc_041,"Referral Letter — John Smith, 2026-01-15",referral_letter,clinical_standard,patient,9,billing_code;date_of_birth;emergency_contact;home_address;insurance_info;medical_diagnosis;medical_history;medical_medication;name
+doc_042,"Referral Letter — Robert Lee, 2026-01-22",referral_letter,clinical_standard,patient,9,billing_code;date_of_birth;home_address;insurance_info;medical_diagnosis;medical_history;medical_license;medical_medication;name
+doc_043,"Referral Letter — Emily Brown, 2026-01-20",referral_letter,clinical_standard,patient,6,billing_code;date_of_birth;insurance_info;medical_diagnosis;medical_license;name
+doc_044,"Referral Letter — Linda Torres, 2026-02-18",referral_letter,clinical_standard,patient,10,billing_code;date_of_birth;emergency_contact;home_address;insurance_info;job_title;medical_diagnosis;medical_medication;name;ssn
+doc_045,"Referral Letter — James Carter, 2026-02-05",referral_letter,clinical_standard,patient,9,billing_code;date_of_birth;home_address;insurance_info;medical_diagnosis;medical_history;medical_medication;name;ssn
+doc_046,"Referral Letter — Michael Chen, 2026-02-12",referral_letter,clinical_standard,patient,7,billing_code;date_of_birth;home_address;insurance_info;medical_diagnosis;medical_medication;name
+doc_047,"Insurance Claim — John Smith, 2026-01-15",insurance_claim,financial,patient,11,billing_code;date_of_birth;emergency_contact;home_address;insurance_info;medical_diagnosis;medical_history;medical_license;medical_medication;name;ssn
+doc_048,"Insurance Claim — Emily Brown, 2026-01-20",insurance_claim,financial,patient,7,billing_code;date_of_birth;home_address;insurance_info;medical_diagnosis;name;ssn
+doc_049,"Insurance Claim — Robert Lee, 2026-01-22",insurance_claim,financial,patient,9,billing_code;date_of_birth;home_address;insurance_info;medical_diagnosis;medical_license;medical_medication;name;ssn
+doc_050,"Insurance Claim — James Carter, 2026-02-05",insurance_claim,financial,patient,9,billing_code;date_of_birth;home_address;insurance_info;medical_diagnosis;medical_history;medical_medication;name;ssn
+doc_051,"Insurance Claim — Michael Chen, 2026-02-12",insurance_claim,financial,patient,9,billing_code;date_of_birth;home_address;insurance_info;medical_diagnosis;medical_license;medical_medication;name;ssn
+doc_052,"Insurance Claim — Linda Torres, 2026-02-18",insurance_claim,financial,patient,10,billing_code;date_of_birth;emergency_contact;home_address;insurance_info;medical_diagnosis;medical_license;medical_medication;name;ssn
+doc_053,"Insurance Claim — Patricia Moore, 2026-02-20",insurance_claim,financial,patient,9,billing_code;date_of_birth;emergency_contact;home_address;insurance_info;medical_diagnosis;medical_medication;name;ssn
+doc_054,"Insurance Claim — Maria Gonzalez, 2026-02-03",insurance_claim,financial,patient,8,date_of_birth;home_address;insurance_info;medical_license;medical_medication;mental_health;name;ssn
+doc_055,"Billing Statement — John Smith, 2026-02-01",billing_statement,financial,patient,8,billing_code;date_of_birth;home_address;insurance_info;medical_diagnosis;medical_medication;name;ssn
+doc_056,"Billing Statement — Emily Brown, 2026-02-01",billing_statement,financial,patient,7,billing_code;date_of_birth;home_address;insurance_info;medical_diagnosis;name;ssn
+doc_057,"Billing Statement — Robert Lee, 2026-02-05",billing_statement,financial,patient,6,date_of_birth;home_address;insurance_info;medical_diagnosis;medical_medication;name
+doc_058,"Billing Statement — James Carter, 2026-02-15",billing_statement,financial,patient,6,billing_code;date_of_birth;home_address;insurance_info;medical_diagnosis;name
+doc_059,"Billing Statement — Linda Torres, 2026-03-01",billing_statement,financial,patient,8,billing_code;date_of_birth;home_address;insurance_info;medical_diagnosis;medical_medication;name;ssn
+doc_060,"Billing Statement — Patricia Moore, 2026-03-01",billing_statement,financial,patient,7,billing_code;date_of_birth;home_address;insurance_info;medical_diagnosis;name;ssn
+doc_061,"Prior Authorization — John Smith, 2026-01-10",prior_authorization,financial,patient,11,billing_code;date_of_birth;emergency_contact;home_address;insurance_info;medical_diagnosis;medical_history;medical_license;medical_medication;name;ssn
+doc_062,"Prior Authorization — Robert Lee, 2026-01-15",prior_authorization,financial,patient,9,billing_code;date_of_birth;home_address;insurance_info;job_title;medical_diagnosis;medical_license;medical_medication;name
+doc_063,"Prior Authorization — Maria Gonzalez, 2026-02-10",prior_authorization,clinical_sensitive,patient,11,billing_code;date_of_birth;home_address;insurance_info;job_title;medical_diagnosis;medical_license;medical_medication;mental_health;name;ssn
+doc_064,"Prior Authorization — Sarah Wilson, 2026-03-01",prior_authorization,clinical_sensitive,patient,7,date_of_birth;home_address;insurance_info;medical_diagnosis;medical_medication;mental_health;name
+doc_065,"Prior Authorization — Linda Torres, 2026-02-01",prior_authorization,financial,patient,8,billing_code;date_of_birth;home_address;insurance_info;medical_diagnosis;medical_medication;name;ssn
+doc_066,"Explanation Of Benefits — John Smith, 2026-02-10",explanation_of_benefits,financial,patient,8,billing_code;date_of_birth;home_address;insurance_info;medical_diagnosis;medical_license;name;ssn
+doc_067,"Explanation Of Benefits — Emily Brown, 2026-02-10",explanation_of_benefits,financial,patient,5,billing_code;date_of_birth;insurance_info;medical_diagnosis;name
+doc_068,"Explanation Of Benefits — Robert Lee, 2026-02-10",explanation_of_benefits,financial,patient,7,billing_code;date_of_birth;insurance_info;medical_diagnosis;medical_license;medical_medication;name
+doc_069,"Explanation Of Benefits — James Carter, 2026-02-20",explanation_of_benefits,financial,patient,6,date_of_birth;home_address;insurance_info;medical_diagnosis;medical_medication;name
+doc_070,"Insurance Verification — John Smith, 2026-01-14",insurance_verification,financial,patient,11,billing_code;date_of_birth;emergency_contact;home_address;insurance_info;job_title;medical_diagnosis;medical_history;medical_medication;name;ssn
+doc_071,"Insurance Verification — Emily Brown, 2026-01-19",insurance_verification,financial,patient,8,billing_code;date_of_birth;home_address;insurance_info;job_title;medical_diagnosis;name;ssn
+doc_072,"Insurance Verification — Patricia Moore, 2026-02-19",insurance_verification,financial,patient,9,billing_code;date_of_birth;home_address;insurance_info;job_title;medical_diagnosis;medical_medication;name;ssn
+doc_073,"Insurance Verification — Michael Chen, 2026-02-11",insurance_verification,financial,patient,10,billing_code;date_of_birth;employment_contract;home_address;insurance_info;job_title;medical_diagnosis;medical_medication;name;ssn
+doc_074,"Salary Letter — Dr. Sarah Chen, 2026-01-01",salary_letter,employment,employee,7,date_of_birth;employment_contract;home_address;job_title;medical_license;name;salary
+doc_075,"Salary Letter — Dr. Marcus Webb, 2026-01-01",salary_letter,employment,employee,7,date_of_birth;employment_contract;home_address;job_title;medical_license;name;salary
+doc_076,"Salary Letter — Dr. Aisha Patel, 2026-01-01",salary_letter,employment,employee,7,date_of_birth;employment_contract;home_address;job_title;medical_license;mental_health;name
+doc_077,"Salary Letter — Dr. Kevin O'Brien, 2026-01-01",salary_letter,employment,employee,7,date_of_birth;employment_contract;home_address;job_title;medical_license;name;salary
+doc_078,"Salary Letter — Nurse Patricia Davis, 2026-01-01",salary_letter,employment,employee,5,date_of_birth;employment_contract;home_address;job_title;salary
+doc_079,"Salary Letter — Alice Johnson, 2026-01-01",salary_letter,employment,employee,6,date_of_birth;employment_contract;home_address;job_title;name;salary
+doc_080,"Employment Contract — Dr. Aisha Patel, 2022-03-01",employment_contract,employment,employee,8,date_of_birth;employment_contract;home_address;job_title;medical_license;mental_health;name;salary
+doc_081,"Employment Contract — Dr. Kevin O'Brien, 2020-07-01",employment_contract,employment,employee,7,date_of_birth;employment_contract;home_address;job_title;medical_license;name;salary
+doc_082,"Employment Contract — Nurse Lisa Kim, 2023-08-01",employment_contract,employment,employee,6,date_of_birth;employment_contract;home_address;job_title;mental_health;salary
+doc_083,"Employment Contract — Jennifer Walsh, 2024-01-15",employment_contract,employment,employee,6,date_of_birth;employment_contract;home_address;job_title;name;salary
+doc_084,"Performance Review — Dr. Sarah Chen, 2026-01-15",performance_review,employment,employee,7,date_of_birth;employment_contract;home_address;job_title;medical_license;name;salary
+doc_085,"Performance Review — Nurse Patricia Davis, 2026-01-15",performance_review,employment,employee,5,date_of_birth;employment_contract;home_address;job_title;salary
+doc_086,"Performance Review — Alice Johnson, 2026-01-15",performance_review,employment,employee,6,date_of_birth;employment_contract;home_address;job_title;name;salary
+doc_087,"Performance Review — Nurse Tom Reyes, 2026-01-15",performance_review,employment,employee,5,date_of_birth;employment_contract;home_address;job_title;salary
+doc_088,"Credentialing File — Dr. Sarah Chen, 2026-01-01",credentialing_file,employment,employee,7,date_of_birth;employment_contract;home_address;job_title;medical_license;name;salary
+doc_089,"Credentialing File — Dr. Aisha Patel, 2026-01-01",credentialing_file,employment,employee,9,date_of_birth;employment_contract;home_address;job_title;medical_license;medical_medication;mental_health;name;salary
+doc_090,"Credentialing File — Dr. Kevin O'Brien, 2026-01-01",credentialing_file,employment,employee,7,date_of_birth;employment_contract;home_address;job_title;medical_license;name;salary
+doc_091,"Contractor Agreement — Carol White, 2026-01-01",contractor_agreement,employment,contractor,6,contract_terms;date_of_birth;home_address;job_title;name;salary
+doc_092,"Contractor Agreement — Frank Turner, 2026-01-01",contractor_agreement,employment,contractor,5,contract_terms;date_of_birth;home_address;name;salary
+doc_093,"Contractor Agreement — Carol White, 2025-01-01",contractor_agreement,employment,contractor,6,contract_terms;date_of_birth;home_address;job_title;name;salary
+doc_094,"Staff Schedule — Riverside Medical Clinic, 2026-06-16",staff_schedule,internal,organization,1,job_title
+doc_095,"Staff Schedule — Riverside Medical Clinic, 2026-06-23",staff_schedule,internal,organization,1,job_title
+doc_096,"Staff Schedule — Riverside Medical Clinic, 2026-07-07",staff_schedule,internal,organization,1,job_title
+doc_097,"Meeting Agenda — Riverside Medical Clinic, 2026-01-10",meeting_agenda,internal,organization,1,employment_contract
+doc_098,"Meeting Agenda — Riverside Medical Clinic, 2026-02-10",meeting_agenda,internal,organization,2,employment_contract;job_title
+doc_099,"Meeting Agenda — Riverside Medical Clinic, 2026-03-10",meeting_agenda,internal,organization,1,job_title
+doc_100,"Policy Memo — Riverside Medical Clinic, 2026-01-05",policy_memo,internal,organization,1,job_title
+doc_101,"Policy Memo — Riverside Medical Clinic, 2026-02-01",policy_memo,internal,organization,1,employment_contract
+doc_102,"Policy Memo — Riverside Medical Clinic, 2026-03-01",policy_memo,internal,organization,1,job_title
+doc_103,"Public Pamphlet — Riverside Medical Clinic, 2026-01-01",public_pamphlet,public,organization,1,employment_contract
+doc_104,"Employment Contract — Dr. Marcus Webb, 2021-09-01",employment_contract,employment,employee,7,date_of_birth;employment_contract;home_address;job_title;medical_license;name;salary

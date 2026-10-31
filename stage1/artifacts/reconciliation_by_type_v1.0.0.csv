@@ -1,0 +1,17 @@
+information_type,authored_docs,extracted_docs,generation_docs,both,authored_not_found,found_not_authored,found_not_authored_corroborated,spec_confirmation_rate
+name,0,91,30,0,0,91,26,
+date_of_birth,95,95,95,95,0,0,0,1.0
+ssn,0,44,51,0,0,44,44,
+home_address,8,85,92,8,0,77,77,1.0
+emergency_contact,5,22,28,5,0,17,17,1.0
+medical_diagnosis,39,70,69,38,1,32,30,0.9744
+medical_medication,36,65,64,36,0,29,28,1.0
+medical_history,21,27,38,16,5,11,10,0.7619
+mental_health,5,19,9,5,0,14,4,1.0
+billing_code,18,65,70,15,3,50,49,0.8333
+insurance_info,27,71,71,27,0,44,44,1.0
+salary,11,20,18,10,1,10,7,0.9091
+employment_contract,12,23,8,12,0,11,0,1.0
+contract_terms,3,3,3,3,0,0,0,1.0
+job_title,0,62,4,0,0,62,4,
+medical_license,11,39,19,11,0,28,8,1.0

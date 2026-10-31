@@ -1,0 +1,1132 @@
+<meta charset="utf-8">
+<title>Paper III Stage 1 — tagger audit sheet</title><style>
+:root{color-scheme:light dark}
+body{font:15px/1.55 -apple-system,Segoe UI,sans-serif;max-width:64rem;margin:2rem auto;
+     padding:0 1rem;color:#111;background:#fff}
+h1{font-size:1.45rem;margin-bottom:.2rem}
+.meta{color:#555;font-size:.85rem;margin-bottom:1.2rem}
+.warn{border-left:4px solid #b34;background:#fff5f5;padding:.7rem 1rem;margin:1rem 0;
+      font-size:.9rem}
+.doc{border:1px solid #ddd;border-radius:7px;padding:1rem 1.2rem;margin-bottom:1.4rem}
+.hdr{font-size:.82rem;color:#555;font-family:ui-monospace,Consolas,monospace;
+     margin-bottom:.7rem}
+.hdr b{color:#111;font-size:1rem}
+pre.content{background:#fafafa;border:1px solid #eee;border-radius:5px;padding:.7rem;
+     font:12px/1.45 ui-monospace,Consolas,monospace;white-space:pre-wrap;
+     max-height:26rem;overflow:auto}
+table{border-collapse:collapse;width:100%;font-size:.84rem;margin-top:.8rem}
+th,td{border:1px solid #ddd;padding:.32rem .5rem;text-align:left;vertical-align:top}
+th{background:#f4f4f4;font-weight:600}
+td.yes{background:#eef7ee} td.no{background:#fbfbfb;color:#777}
+td.ev{font-family:ui-monospace,Consolas,monospace;font-size:.78rem;color:#333}
+td.box{width:3.2rem;text-align:center;color:#bbb}
+mark{background:#ffe9a8;padding:0 .1em;border-radius:2px}
+@media (prefers-color-scheme:dark){
+  body{background:#141414;color:#e8e8e8}
+  pre.content{background:#1c1c1c;border-color:#333}
+  th{background:#222} th,td{border-color:#333}
+  td.yes{background:#16301b} td.no{background:#1a1a1a;color:#888}
+  .warn{background:#2a1618;border-color:#c55}
+  mark{background:#6a5410;color:#fff}
+}
+</style>
+<h1>Paper III Stage 1 — tagger audit sheet</h1>
+<div class="meta">vocabulary v1.0.0 &nbsp;·&nbsp; 25 documents &nbsp;·&nbsp; seed 7926 &nbsp;·&nbsp; 21/21 document types &nbsp;·&nbsp; tiers clinical_sensitive 4, clinical_standard 7, employment 5, financial 5, internal 3, public 1</div>
+<div class="warn"><b>Misses are the dangerous direction.</b> A false positive (tagger reports a type that is absent) causes the future gate check to deny a flow it should permit — visible and self-correcting. A miss (type present, tagger silent) lets the subset test pass over information it never saw: the document is released, the recipient holds an information type they should not, and the decision looks correct. Please read for what is <i>present and unmarked</i>, not only for whether the highlighted spans are right.</div>
+<div class="warn">Record your verdicts in <code>audit_sheet_v1.0.0.csv</code>, one row per (document, information type): put <code>y</code> or <code>n</code> in <code>present_in_document</code>. This page is the evidence view; the CSV is the answer sheet. Then run <code>python -m stage1.score_audit</code>.</div>
+<div class="doc"><div class="hdr"><b>doc_003</b> &nbsp; Clinical Note — James Carter, 2026-02-05<br>clinical_note &nbsp;·&nbsp; clinical_standard &nbsp;·&nbsp; subject James Carter</div><pre class="content">RIVERSIDE MEDICAL CLINIC
+1200 Riverside Drive, Suite 300
+Springfield, IL 62701
+Phone: (217) 555-0180 | Fax: (217) 555-0199
+
+─────────────────────────────────────────────────────────────
+CLINICAL ENCOUNTER NOTE — CONFIDENTIAL
+─────────────────────────────────────────────────────────────
+
+DATE OF SERVICE:    February 5, 2026
+DOCUMENT TYPE:      Office Visit — Follow-Up
+ATTENDING PROVIDER: <mark title="name">Dr. Patricia Nguyen</mark>, MD, Nephrology
+LOCATION:           Riverside Medical Clinic, Main Campus
+
+─────────────────────────────────────────────────────────────
+PATIENT INFORMATION
+─────────────────────────────────────────────────────────────
+Patient Name:       <mark title="name">James Carter</mark>
+Date of Birth:      <mark title="date_of_birth">1960-12-04</mark>
+Home Address:       <mark title="home_address">88 Birchwood Ct, Springfield, IL 62716</mark>
+Insurance:          <mark title="insurance_info">Medicare</mark> Part B #2FG8-KL4-NP91
+Billing Codes:      CPT <mark title="billing_code">99214</mark> | ICD-10 <mark title="billing_code">N18.3</mark>
+
+─────────────────────────────────────────────────────────────
+REASON FOR VISIT
+─────────────────────────────────────────────────────────────
+Mr. Carter presents today for a scheduled follow-up visit for management of
+<mark title="medical_diagnosis">Chronic Kidney Disease</mark>, Stage 3 (N18.3). The patient was last seen approximately
+90 days ago. He reports general compliance with the prescribed regimen and denies
+any acute complaints including chest pain, dyspnea, gross hematuria, or significant
+edema.
+
+─────────────────────────────────────────────────────────────
+PAST MEDICAL HISTORY
+─────────────────────────────────────────────────────────────
+<mark title="medical_history">- Type 2 Diabetes diagnosed 2012; currently managed with oral hypoglycemic agents
+  and dietary modification
+- Hypertension since 2005; under pharmacologic management
+- Chronic Kidney Disease, Stage 3, established diagnosis; see active problem list
+</mark>
+─────────────────────────────────────────────────────────────
+CURRENT MEDICATIONS
+─────────────────────────────────────────────────────────────
+1. <mark title="medical_medication">Lisinopril 10mg</mark> daily (renoprotective / antihypertensive)
+2. Dietary sodium restriction as advised by clinic dietitian
+3. <mark title="medical_medication">Metformin 500mg</mark> twice daily (diabetes management — dose reviewed in context of
+   current eGFR; continued with caution)
+4. <mark title="medical_medication">Aspirin 81mg</mark> daily
+
+─────────────────────────────────────────────────────────────
+ALLERGIES
+─────────────────────────────────────────────────────────────
+NKDA (No Known Drug Allergies)
+
+─────────────────────────────────────────────────────────────
+VITAL SIGNS
+─────────────────────────────────────────────────────────────
+Blood Pressure:     138/84 mmHg
+Heart Rate:         72 bpm
+Respiratory Rate:   16 breaths/min
+Temperature:        98.5°F (36.9°C)
+Oxygen Saturation:  98% on room air
+Weight:             194 lbs (88.0 kg)
+Height:             5&#x27;10&quot; (177.8 cm)
+BMI:                27.8 kg/m²
+
+─────────────────────────────────────────────────────────────
+LABORATORY RESULTS (Drawn 2026-02-03, pre-visit)
+─────────────────────────────────────────────────────────────
+eGFR:               46 mL/min/1.73m²  (stable; prior value 44, Dec 2025)
+Serum Creatinine:   1.62 mg/dL
+BUN:                22 mg/dL
+Potassium:          4.3 mEq/L
+Sodium:             139 mEq/L
+HbA1c:              7.1%
+Urine Protein/Creat Ratio: 85 mg/g (mild proteinuria, stable)
+CBC:                Within normal limits
+
+─────────────────────────────────────────────────────────────
+SUBJECTIVE
+─────────────────────────────────────────────────────────────
+Mr. Carter reports adherence to Lisinopril 10mg daily and states he has been
+attempting to follow dietary sodium restriction, though acknowledges occasional
+difficulty during family gatherings. He denies skipping medications. Fatigue is
+reported as mild and unchanged. No nausea, vomiting, or urinary symptoms noted.
+Sleep quality is described as fair. Patient expresses concern about disease
+progression and inquires about long-term outlook.
+
+─────────────────────────────────────────────────────────────
+OBJECTIVE
+─────────────────────────────────────────────────────────────
+General:        Alert and oriented x3; well-appearing male in no acute distress.
+Cardiovascular: Regular rate and rhythm; no murmurs, rubs, or gallops.
+Respiratory:    Clear to auscultation bilaterally.
+Abdomen:        Soft, non-tender, non-distended; no organomegaly appreciated.
+Extremities:    Trace bilateral ankle edema; no calf tenderness.
+Neurological:   Cranial nerves II-XII intact; no focal deficits.
+
+─────────────────────────────────────────────────────────────
+ASSESSMENT
+─────────────────────────────────────────────────────────────
+1. Chronic Kidney Disease, Stage 3 (N18.3) — eGFR stable at 46 mL/min/1.73m²
+   compared to prior visit. No evidence of acute-on-chronic decline. Mild
+   proteinuria stable. Blood pressure remains mildly elevated but controlled.
+
+2. Hypertension (since 2005) — Partially controlled on current regimen;
+   Lisinopril 10mg daily continued; dose escalation deferred given stable renal
+   function and acceptable BP trend.
+
+3. Type 2 Diabetes (diagnosed 2012) — HbA1c improved to 7.1%; Metformin
+   dose held stable with plan to reassess if eGFR drops below 45 mL/min/1.73m².
+
+─────────────────────────────────────────────────────────────
+PLAN
+─────────────────────────────────────────────────────────────
+1. MEDICATIONS:
+   - Continue Lisinopril 10mg daily; reinforce strict adherence
+   - Continue dietary sodium restriction; referral to dietitian refresher
+     session placed today
+   - Continue Metformin 500mg twice daily with close eGFR monitoring
+   - Continue Aspirin 81mg daily
+
+2. DIETARY COUNSELING:
+   - Discussed importance of sodium restriction (&lt;2g/day) and adequate hydration
+   - Encouraged reduction of high-phosphorus foods; protein intake moderation
+     discussed per CKD Stage 3 guidelines
+   - Patient verbalized understanding and agreed to attend dietitian session
+
+3. LABORATORY FOLLOW-UP:
+   - Repeat BMP, CBC, urine PCR in 90 days
+   - HbA1c recheck in 6 months
+
+4. MONITORING &amp; REFERRALS:
+   - Continue nephrology follow-up every 3 months
+   - Blood pressure home monitoring encouraged; target &lt;130/80 mmHg
+   - Ophthalmology referral reminder issued for annual diabetic eye exam
+
+5. PATIENT EDUCATION:
+   - Counseled on disease trajectory; reassured that current eGFR stability is
+     a positive indicator
+   - Discussed signs and symptoms warranting urgent evaluation (significant edema,
+     decreased urine output, severe fatigue, confusion)
+   - Smoking cessation materials provided (patient is a former smoker; quit 2018)
+
+6. RETURN TO CLINIC:
+   - Follow-up appointment scheduled in 90 days or sooner if clinically indicated
+
+─────────────────────────────────────────────────────────────
+PROVIDER SIGNATURE
+─────────────────────────────────────────────────────────────
+Electronically signed by:
+Dr. Patricia Nguyen, MD
+Nephrology | Riverside Medical Clinic
+NPI: <mark title="medical_license">1487320956</mark>
+Date: February 5, 2026
+
+This document contains protected health information (PHI) governed by HIPAA
+and is subject to Doctor-Patient Confidentiality. Unauthorized disclosure,
+copying, or distribution is strictly prohibited. Intended recipients only.
+─────────────────────────────────────────────────────────────</pre><table><tr><th>information type</th><th>tagger</th><th>evidence</th><th>present?</th></tr><tr><td>name</td><td class="yes">detected</td><td class="ev">Dr. Patricia Nguyen | James Carter</td><td class="box">☐</td></tr><tr><td>date_of_birth</td><td class="yes">detected</td><td class="ev">1960-12-04</td><td class="box">☐</td></tr><tr><td>ssn</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>home_address</td><td class="yes">detected</td><td class="ev">88 Birchwood Ct, Springfield, IL 62716</td><td class="box">☐</td></tr><tr><td>emergency_contact</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_diagnosis</td><td class="yes">detected</td><td class="ev">N18.3 | Chronic Kidney Disease | Diabetes | Hypertension</td><td class="box">☐</td></tr><tr><td>medical_medication</td><td class="yes">detected</td><td class="ev">Lisinopril 10mg | Lisinopril | Metformin 500mg | Metformin | Aspirin 81mg <i>(+1)</i></td><td class="box">☐</td></tr><tr><td>medical_history</td><td class="yes">detected</td><td class="ev">- Type 2 Diabetes diagnosed 2012; currently  | diagnosed 2012 | since 2005</td><td class="box">☐</td></tr><tr><td>mental_health</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>billing_code</td><td class="yes">detected</td><td class="ev">99214 | N18.3</td><td class="box">☐</td></tr><tr><td>insurance_info</td><td class="yes">detected</td><td class="ev">Medicare</td><td class="box">☐</td></tr><tr><td>salary</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>employment_contract</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>contract_terms</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>job_title</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_license</td><td class="yes">detected</td><td class="ev">1487320956</td><td class="box">☐</td></tr></table></div>
+<div class="doc"><div class="hdr"><b>doc_008</b> &nbsp; Clinical Note — David Park, 2026-03-01<br>clinical_note &nbsp;·&nbsp; clinical_sensitive &nbsp;·&nbsp; subject David Park</div><pre class="content">================================================================================
+                        RIVERSIDE MEDICAL CLINIC
+                  4200 North Riverside Blvd, Springfield, IL 62701
+                  Phone: (217) 555-0190 | Fax: (217) 555-0191
+================================================================================
+
+⚠ CONFIDENTIALITY NOTICE — EXTRA SENSITIVE MEDICAL INFORMATION ⚠
+
+This document contains information about <mark title="medical_diagnosis">HIV</mark>/<mark title="medical_diagnosis">AIDS</mark> status and is protected under
+multiple federal and state statutes, including the Health Insurance Portability
+and Accountability Act (HIPAA), 45 CFR Parts 160 &amp; 164, and Illinois AIDS
+Confidentiality Act (410 ILCS 305). This record is STRICTLY CONFIDENTIAL and
+may NOT be disclosed without the express written authorization of the patient,
+except as permitted by law. Unauthorized disclosure may result in civil and
+criminal penalties. If received in error, contact Riverside Medical Clinic
+immediately at (217) 555-0190 and destroy all copies.
+
+================================================================================
+                          CLINICAL VISIT NOTE
+================================================================================
+
+Document Date    : 2026-03-01
+Document Type    : Routine Outpatient Follow-Up — HIV Management
+Visit Type       : Established Patient Office Visit
+Billing Codes    : CPT <mark title="billing_code">99213</mark> | ICD-10 <mark title="billing_code">B20</mark>
+
+--------------------------------------------------------------------------------
+PATIENT INFORMATION
+--------------------------------------------------------------------------------
+Patient Name     : <mark title="name">David Park</mark>
+Date of Birth    : <mark title="date_of_birth">1975-08-22</mark>
+Insurance        : <mark title="insurance_info">Medicaid</mark> #IL-2847601
+Primary Diagnosis: <mark title="medical_diagnosis">HIV, Stage 1 — ICD-10: B20</mark>
+
+--------------------------------------------------------------------------------
+<mark title="job_title">ATTENDING PHYSICIAN</mark>
+--------------------------------------------------------------------------------
+Dr. Miriam L. Okonkwo, MD
+Infectious Disease Specialist
+Riverside Medical Clinic
+NPI: <mark title="medical_license">1234567890</mark>
+
+--------------------------------------------------------------------------------
+CHIEF COMPLAINT
+--------------------------------------------------------------------------------
+Routine HIV disease management follow-up visit. Patient presents for scheduled
+3-month monitoring appointment. No acute complaints reported.
+
+--------------------------------------------------------------------------------
+MEDICAL HISTORY
+--------------------------------------------------------------------------------
+<mark title="medical_history">Diagnosed with HIV, Stage 1 (ICD-10: B20) in April 2019. Patient has maintained
+consistent antiretroviral therapy adherence since initiation of treatment in
+May 2019. No history of opportunistic infections. No AIDS-defining illnesses.
+Past medical history notable for mild hyperlipidemia (managed with dietary
+modification), seasonal allergic rhinitis, and appendectomy (2003). No prior
+hospitalizations related to HIV. Non-smoker; occasional alcohol use (self-reported
+</mark>1–2 drinks per week). No illicit substance use reported. Family history:
+father with type 2 <mark title="medical_diagnosis">diabetes</mark>; mother with <mark title="medical_diagnosis">hypertension</mark>.
+
+--------------------------------------------------------------------------------
+CURRENT MEDICATIONS
+--------------------------------------------------------------------------------
+1. <mark title="medical_medication">Biktarvy 50mg/200mg</mark>/25mg (<mark title="medical_medication">bictegravir</mark>/<mark title="medical_medication">emtricitabine</mark>/<mark title="medical_medication">tenofovir</mark> alafenamide)
+   — 1 tablet orally once daily with or without food
+   — Initiated: May 2019 | No reported side effects
+2. <mark title="medical_medication">Loratadine 10mg</mark> — 1 tablet orally once daily as needed (seasonal allergies)
+3. Multivitamin — 1 tablet orally once daily
+
+Allergies: Penicillin (rash)
+
+--------------------------------------------------------------------------------
+VITAL SIGNS
+--------------------------------------------------------------------------------
+Date / Time      : 2026-03-01 at 10:15 AM
+Blood Pressure   : 118/76 mmHg
+Heart Rate       : 68 bpm (regular)
+Respiratory Rate : 14 breaths/min
+Temperature      : 98.4°F (oral)
+Oxygen Saturation: 99% on room air
+Height           : 5&#x27;9&quot;  (175.3 cm)
+Weight           : 172 lbs (78.0 kg)
+BMI              : 25.4 kg/m²
+
+--------------------------------------------------------------------------------
+LABORATORY RESULTS (drawn 2026-02-26)
+--------------------------------------------------------------------------------
+HIV-1 Viral Load     : &lt; 20 copies/mL — UNDETECTABLE ✓
+CD4+ T-Cell Count    : 712 cells/µL (reference: 500–1500 cells/µL) — STABLE ✓
+CD4+ Percentage      : 34% (within normal limits)
+CD4:CD8 Ratio        : 1.1
+Complete Blood Count : Within normal limits
+Comprehensive Metabolic Panel : Within normal limits
+Lipid Panel          : Total cholesterol 188 mg/dL; LDL 112 mg/dL; HDL 48 mg/dL;
+                       <mark title="medical_medication">Triglycerides 142 mg</mark>/dL — borderline; dietary counseling
+                       reinforced
+Creatinine / eGFR    : 0.94 mg/dL / eGFR &gt;60 mL/min/1.73m² — renal function intact
+<mark title="medical_diagnosis">Hepatitis</mark> B Surface Ag: Negative
+Hepatitis C Antibody  : Negative
+RPR (Syphilis Screen) : Non-reactive
+Gonorrhea / Chlamydia NAAT (urine): Negative
+
+--------------------------------------------------------------------------------
+REVIEW OF SYSTEMS
+--------------------------------------------------------------------------------
+General       : Denies fatigue, unexplained weight loss, or night sweats.
+Respiratory   : Denies cough, dyspnea, or hemoptysis.
+Gastrointestinal: Denies nausea, vomiting, diarrhea, or abdominal pain.
+Neurological  : Denies headaches, confusion, or peripheral <mark title="medical_diagnosis">neuropathy</mark>.
+Skin          : Denies rashes or new lesions.
+Musculoskeletal: Denies myalgia or arthralgia.
+<mark title="mental_health">Psychiatric</mark>   : Denies <mark title="mental_health">depression</mark>, <mark title="mental_health">anxiety</mark>, or <mark title="mental_health">suicidal ideation</mark>. Patient reports
+                good quality of life and stable social support.
+
+--------------------------------------------------------------------------------
+PHYSICAL EXAMINATION
+--------------------------------------------------------------------------------
+General       : Alert and oriented x3. Well-appearing male in no acute distress.
+HEENT         : Normocephalic, atraumatic. Oropharynx clear; no thrush or lesions.
+Lymph Nodes   : No cervical, axillary, or inguinal lymphadenopathy appreciated.
+Cardiovascular: Regular rate and rhythm; no murmurs, rubs, or gallops.
+Respiratory   : Clear to auscultation bilaterally; no wheezes or crackles.
+Abdomen       : Soft, non-tender, non-distended; no hepatosplenomegaly.
+Skin          : No rashes, lesions, or Kaposi sarcoma-type lesions noted.
+Neurological  : Cranial nerves II–XII intact. Strength and sensation grossly normal.
+
+--------------------------------------------------------------------------------
+ASSESSMENT
+--------------------------------------------------------------------------------
+1. HIV, Stage 1 (ICD-10: B20) — Well-controlled. Viral load undetectable
+   (&lt; 20 copies/mL). CD4 count stable at 712 cells/µL. Patient demonstrates
+   excellent antiretroviral adherence on Biktarvy 50mg/200mg/25mg once daily.
+   No clinical evidence of disease progression or opportunistic infection.
+
+2. Borderline hypertriglyceridemia — Mild; no pharmacologic intervention indicated
+   at this time. Dietary and lifestyle counseling provided.
+
+3. Preventive health maintenance — Due for annual dental exam (referred).
+   Influenza vaccination administered this visit. Pneumococcal vaccine status
+   current.
+
+--------------------------------------------------------------------------------
+PLAN
+--------------------------------------------------------------------------------
+1. ANTIRETROVIRAL THERAPY: Continue Biktarvy 50mg/200mg/25mg once daily.
+   No changes indicated. Refill authorized for 90-day supply.
+
+2. LABORATORY MONITORING: Repeat HIV-1 viral load, CD4 count, CBC, CMP,
+   lipid panel, and STI screen in 3 months (target date: approximately 2026-06-01).
+
+3. LIPIDS: Reinforce Mediterranean-style dietary modifications. Recheck lipid
+   panel at next visit. If LDL or triglycerides worsen, consider statin therapy.
+
+4. VACCINATION: Influenza vaccine (IIV4, 0.5 mL IM, left deltoid) administered
+   today. Lot #FLU2026-A. No adverse reaction observed post-30-minute observation.
+
+5. <mark title="mental_health">MENTAL HEALTH</mark> SCREENING: <mark title="mental_health">PHQ-9</mark> score: 2 (minimal). No intervention required.
+   Patient encouraged to maintain social support network.
+
+6. PATIENT EDUCATION: U=U (Undetectable = Untransmittable) concept reinforced.
+   Safe sex practices discussed. PrEP/exposure prevention counseling provided
+   for partners as applicable. Patient verbalized understanding.
+
+7. FOLLOW-UP: Schedule return visit in 3 months or sooner if any new symptoms,
+   side effects, or concerns arise.
+
+8. REFERRALS: Dental referral placed. No additional specialist referrals at
+   this time.
+
+--------------------------------------------------------------------------------
+<mark title="job_title">PHYSICIAN</mark> ATTESTATION
+--------------------------------------------------------------------------------
+I, Dr. Miriam L. Okonkwo, MD, certify that the above clinical note accurately
+reflects the care provided to this patient on 2026-03-01. This document has
+been reviewed and electronically signed.
+
+Electronic Signature: /s/ Dr. Miriam L. Okonkwo, MD
+Date / Time Signed  : 2026-03-01 | 11:42 AM
+Credentials         : MD, Infectious Disease | Board Certified
+
+--------------------------------------------------------------------------------
+NEXT APPOINTMENT: Approximately 2026-06-01 — HIV Management Follow-Up
+--------------------------------------------------------------------------------
+
+================================================================================
+⚠ This document is subject to strict confidentiality protections under HIPAA
+(45 CFR Parts 160 &amp; 164) and the Illinois AIDS Confidentiality Act (410 ILCS
+305). Redisclosure without patient authorization is PROHIBITED. ⚠
+================================================================================</pre><table><tr><th>information type</th><th>tagger</th><th>evidence</th><th>present?</th></tr><tr><td>name</td><td class="yes">detected</td><td class="ev">David Park</td><td class="box">☐</td></tr><tr><td>date_of_birth</td><td class="yes">detected</td><td class="ev">1975-08-22</td><td class="box">☐</td></tr><tr><td>ssn</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>home_address</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>emergency_contact</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_diagnosis</td><td class="yes">detected</td><td class="ev">HIV | AIDS | B20 | HIV, Stage 1 — ICD-10: B20 | hyperlipidemia <i>(+4)</i></td><td class="box">☐</td></tr><tr><td>medical_medication</td><td class="yes">detected</td><td class="ev">Biktarvy 50mg/200mg | Biktarvy | bictegravir | emtricitabine | tenofovir <i>(+3)</i></td><td class="box">☐</td></tr><tr><td>medical_history</td><td class="yes">detected</td><td class="ev">Diagnosed with HIV, Stage 1 (ICD-10: B20) in | history of opportunistic infections</td><td class="box">☐</td></tr><tr><td>mental_health</td><td class="yes">detected</td><td class="ev">Psychiatric | depression | anxiety | suicidal ideation | MENTAL HEALTH <i>(+1)</i></td><td class="box">☐</td></tr><tr><td>billing_code</td><td class="yes">detected</td><td class="ev">99213 | B20</td><td class="box">☐</td></tr><tr><td>insurance_info</td><td class="yes">detected</td><td class="ev">Medicaid</td><td class="box">☐</td></tr><tr><td>salary</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>employment_contract</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>contract_terms</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>job_title</td><td class="yes">detected</td><td class="ev">ATTENDING PHYSICIAN | PHYSICIAN</td><td class="box">☐</td></tr><tr><td>medical_license</td><td class="yes">detected</td><td class="ev">1234567890</td><td class="box">☐</td></tr></table></div>
+<div class="doc"><div class="hdr"><b>doc_014</b> &nbsp; Prescription — Michael Chen, 2026-02-12<br>prescription &nbsp;·&nbsp; clinical_standard &nbsp;·&nbsp; subject Michael Chen</div><pre class="content">RIVERSIDE MEDICAL CLINIC
+123 Clinic Drive, Springfield, IL 62701
+Phone: (217) 555-0100 | Fax: (217) 555-0199
+
+PRESCRIPTION
+Date: 02/12/2026
+
+Patient: <mark title="name">Michael Chen</mark>
+Date of Birth: <mark title="date_of_birth">1958-09-27</mark>
+Address: <mark title="home_address">115 Walnut St, Springfield, IL 62718</mark>
+
+Diagnosis Codes: <mark title="medical_diagnosis">I10</mark>, <mark title="medical_diagnosis">E11.9</mark>
+
+Rx #1:
+<mark title="medical_medication">Lisinopril 20mg</mark>
+Sig: Take one tablet by mouth once daily
+Qty: 90 tablets | Refills: 3
+Indication: Essential <mark title="medical_diagnosis">hypertension</mark> (<mark title="billing_code">I10</mark>)
+
+Rx #2:
+<mark title="medical_medication">Metformin 1000mg</mark>
+Sig: Take one tablet by mouth twice daily with meals
+Qty: 180 tablets | Refills: 3
+Indication: Type 2 <mark title="medical_diagnosis">Diabetes Mellitus</mark> (<mark title="billing_code">E11.9</mark>)
+
+Prescribing <mark title="job_title">Physician</mark>: <mark title="name">Dr. Sarah Nguyen</mark>, MD
+Medical License: <mark title="medical_license">IL-MD-058342</mark>
+NPI: <mark title="medical_license">1234567890</mark>
+
+Signature: _______________________
+Dr. Sarah Nguyen, MD
+Date: 02/12/2026
+
+⚠ This prescription is confidential under Doctor-Patient Confidentiality. Unauthorized disclosure is prohibited.</pre><table><tr><th>information type</th><th>tagger</th><th>evidence</th><th>present?</th></tr><tr><td>name</td><td class="yes">detected</td><td class="ev">Michael Chen | Dr. Sarah Nguyen</td><td class="box">☐</td></tr><tr><td>date_of_birth</td><td class="yes">detected</td><td class="ev">1958-09-27</td><td class="box">☐</td></tr><tr><td>ssn</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>home_address</td><td class="yes">detected</td><td class="ev">115 Walnut St, Springfield, IL 62718</td><td class="box">☐</td></tr><tr><td>emergency_contact</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_diagnosis</td><td class="yes">detected</td><td class="ev">I10 | E11.9 | hypertension | Diabetes Mellitus</td><td class="box">☐</td></tr><tr><td>medical_medication</td><td class="yes">detected</td><td class="ev">Lisinopril 20mg | Lisinopril | Metformin 1000mg | Metformin</td><td class="box">☐</td></tr><tr><td>medical_history</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>mental_health</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>billing_code</td><td class="yes">detected</td><td class="ev">I10 | E11.9</td><td class="box">☐</td></tr><tr><td>insurance_info</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>salary</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>employment_contract</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>contract_terms</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>job_title</td><td class="yes">detected</td><td class="ev">Physician</td><td class="box">☐</td></tr><tr><td>medical_license</td><td class="yes">detected</td><td class="ev">IL-MD-058342 | 1234567890</td><td class="box">☐</td></tr></table></div>
+<div class="doc"><div class="hdr"><b>doc_021</b> &nbsp; Lab Report — James Carter, 2026-02-05<br>lab_report &nbsp;·&nbsp; clinical_standard &nbsp;·&nbsp; subject James Carter</div><pre class="content">RIVERSIDE MEDICAL CLINIC
+1200 Oak Street, Springfield, IL 62701
+Phone: (217) 555-0190 | Fax: (217) 555-0191
+
+LABORATORY REPORT
+
+Date of Report: 02/05/2026
+Ordering <mark title="job_title">Physician</mark>: <mark title="name">Dr. Patricia Nguyen</mark>, MD
+Patient Name: <mark title="name">James Carter</mark>
+Date of Birth: <mark title="date_of_birth">1960-12-04</mark>
+Address: <mark title="home_address">88 Birchwood Ct, Springfield, IL 62716</mark>
+SSN (last 4): <mark title="ssn">XXX-XX-3391</mark>
+Insurance: <mark title="insurance_info">Medicare</mark> Part B #2FG8-KL4-NP91
+Billing Codes: 99214, <mark title="medical_diagnosis">N18.3</mark>
+
+--- RESULTS SUMMARY ---
+
+Test Panel: Comprehensive Metabolic Panel (CMP)
+Specimen Collected: 02/04/2026
+
+  eGFR:               42 mL/min/1.73m²   [Ref: ≥60]   LOW
+  Serum Creatinine:   1.8 mg/dL           [Ref: 0.7–1.3]  HIGH
+  Potassium:          4.9 mEq/L           [Ref: 3.5–5.0]  BORDERLINE
+  BUN:                22 mg/dL            [Ref: 7–20]     ELEVATED
+
+DIAGNOSIS: <mark title="medical_diagnosis">Chronic Kidney Disease, Stage 3 (N18.3)</mark>
+CURRENT MEDICATION: <mark title="medical_medication">Lisinopril 10mg</mark> daily; dietary sodium restriction
+
+CLINICAL NOTE: CKD Stage 3 remains stable. eGFR consistent with prior values. Monitor potassium closely given borderline elevation. Continue current regimen. Follow-up in 3 months. Medical history includes Type 2 <mark title="medical_diagnosis">Diabetes</mark> <mark title="medical_history">diagnosed 2012</mark>; <mark title="medical_diagnosis">hypertension</mark> <mark title="medical_history">since 2005</mark>.
+
+Reported by: Riverside Medical Lab Services
+Authorizing Pathologist: <mark title="name">Dr. Leon Park</mark>, MD</pre><table><tr><th>information type</th><th>tagger</th><th>evidence</th><th>present?</th></tr><tr><td>name</td><td class="yes">detected</td><td class="ev">Dr. Patricia Nguyen | James Carter | Dr. Leon Park</td><td class="box">☐</td></tr><tr><td>date_of_birth</td><td class="yes">detected</td><td class="ev">1960-12-04</td><td class="box">☐</td></tr><tr><td>ssn</td><td class="yes">detected</td><td class="ev">XXX-XX-3391</td><td class="box">☐</td></tr><tr><td>home_address</td><td class="yes">detected</td><td class="ev">88 Birchwood Ct, Springfield, IL 62716</td><td class="box">☐</td></tr><tr><td>emergency_contact</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_diagnosis</td><td class="yes">detected</td><td class="ev">N18.3 | Chronic Kidney Disease | Chronic Kidney Disease, Stage 3 (N18.3) | Diabetes | hypertension</td><td class="box">☐</td></tr><tr><td>medical_medication</td><td class="yes">detected</td><td class="ev">Lisinopril 10mg | Lisinopril</td><td class="box">☐</td></tr><tr><td>medical_history</td><td class="yes">detected</td><td class="ev">diagnosed 2012 | since 2005</td><td class="box">☐</td></tr><tr><td>mental_health</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>billing_code</td><td class="yes">detected</td><td class="ev">N18.3</td><td class="box">☐</td></tr><tr><td>insurance_info</td><td class="yes">detected</td><td class="ev">Medicare</td><td class="box">☐</td></tr><tr><td>salary</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>employment_contract</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>contract_terms</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>job_title</td><td class="yes">detected</td><td class="ev">Physician</td><td class="box">☐</td></tr><tr><td>medical_license</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr></table></div>
+<div class="doc"><div class="hdr"><b>doc_026</b> &nbsp; Radiology Report — Emily Brown, 2026-01-18<br>radiology_report &nbsp;·&nbsp; clinical_standard &nbsp;·&nbsp; subject Emily Brown</div><pre class="content">RIVERSIDE MEDICAL CLINIC
+Radiology Report
+
+Patient: <mark title="name">Emily Brown</mark>
+Date of Birth: <mark title="date_of_birth">1991-07-22</mark>
+Date of Exam: 2026-01-18
+Ordering <mark title="job_title">Physician</mark>: <mark title="name">Dr. Sarah Nguyen</mark>, OB/GYN
+Exam Type: Obstetric Ultrasound, Second/Third Trimester
+CPT/Billing Code: 59400, <mark title="medical_diagnosis">Z34.32</mark>
+Insurance: <mark title="insurance_info">Aetna</mark> HMO #AE-201934
+
+CLINICAL INDICATION:
+Intrauterine pregnancy, 28 weeks (<mark title="billing_code">Z34.32</mark>). <mark title="medical_history">History of gestational hypertension in prior pregnancy</mark>. Routine growth assessment.
+
+FINDINGS:
+Single live intrauterine fetus in cephalic presentation. Estimated gestational age by biometry: 28 weeks, 1 day — consistent with clinical dating. Estimated fetal weight: 1,142 grams (50th percentile). Fetal heart rate: 148 bpm. Amniotic fluid index: 14.2 cm (normal). Placenta: posterior, grade I, no previa. No structural anomalies identified. Fetal anatomy survey unremarkable.
+
+IMPRESSION:
+1. Intrauterine pregnancy, 28 weeks (Z34.32), fetal growth appropriate for gestational age.
+2. No fetal anomalies detected.
+3. Recommend continued obstetric surveillance given prior gestational hypertension.
+
+Reporting <mark title="job_title">Radiologist</mark>: <mark title="name">Dr. Marcus Webb</mark>, MD
+Signed: 2026-01-18
+Riverside Medical Clinic — Radiology Department
+89 Birch Lane area imaging satellite not applicable.</pre><table><tr><th>information type</th><th>tagger</th><th>evidence</th><th>present?</th></tr><tr><td>name</td><td class="yes">detected</td><td class="ev">Emily Brown | Dr. Sarah Nguyen | Dr. Marcus Webb</td><td class="box">☐</td></tr><tr><td>date_of_birth</td><td class="yes">detected</td><td class="ev">1991-07-22</td><td class="box">☐</td></tr><tr><td>ssn</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>home_address</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>emergency_contact</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_diagnosis</td><td class="yes">detected</td><td class="ev">Z34.32 | gestational hypertension</td><td class="box">☐</td></tr><tr><td>medical_medication</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_history</td><td class="yes">detected</td><td class="ev">History of gestational hypertension in prior</td><td class="box">☐</td></tr><tr><td>mental_health</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>billing_code</td><td class="yes">detected</td><td class="ev">Z34.32</td><td class="box">☐</td></tr><tr><td>insurance_info</td><td class="yes">detected</td><td class="ev">Aetna</td><td class="box">☐</td></tr><tr><td>salary</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>employment_contract</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>contract_terms</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>job_title</td><td class="yes">detected</td><td class="ev">Physician | Radiologist</td><td class="box">☐</td></tr><tr><td>medical_license</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr></table></div>
+<div class="doc"><div class="hdr"><b>doc_032</b> &nbsp; Discharge Summary — John Smith, 2026-01-16<br>discharge_summary &nbsp;·&nbsp; clinical_standard &nbsp;·&nbsp; subject John Smith</div><pre class="content">RIVERSIDE MEDICAL CLINIC
+DISCHARGE SUMMARY
+
+Date: 2026-01-16
+Discharge Type: Same-Day
+
+PATIENT INFORMATION
+Name: <mark title="name">John Smith</mark>
+Date of Birth: <mark title="date_of_birth">1968-03-14</mark>
+Address: <mark title="home_address">412 Maple St, Springfield, IL 62701</mark>
+Insurance: <mark title="insurance_info">BlueCross</mark> PPO #BC-847261
+Emergency Contact: <mark title="emergency_contact">Mary Smith (spouse) 555-0142</mark>
+
+ATTENDING PROVIDER: Dr. R. Patel, MD
+Billing Codes: 99213, <mark title="medical_diagnosis">E11.9</mark>
+
+DIAGNOSIS
+Primary: Type 2 <mark title="medical_diagnosis">Diabetes Mellitus</mark> (<mark title="billing_code">E11</mark>)
+
+RELEVANT MEDICAL HISTORY
+<mark title="medical_diagnosis">Hypertension</mark> <mark title="medical_history">diagnosed 2015</mark>; <mark title="medical_diagnosis">prediabetes</mark> <mark title="medical_history">since 2018</mark>
+
+CLINICAL SUMMARY
+Patient presented with symptomatic hypoglycemic episode (diaphoresis, dizziness, BG 54 mg/dL). IV dextrose administered; glucose stabilized to 112 mg/dL within 90 minutes. Episode attributed to missed meal with continued <mark title="medical_medication">Metformin 500 mg</mark> twice daily.
+
+DISPOSITION
+Patient discharged ambulatory and in stable condition. <mark title="medical_diagnosis">Diabetes</mark> self-management education provided regarding meal timing and medication adherence. Follow-up scheduled in 7 days.
+
+DISCHARGE INSTRUCTIONS
+- Monitor blood glucose twice daily
+- Do not skip meals
+- Contact emergency services if BG falls below 70 mg/dL
+- Follow up with primary care within one week
+
+Authorized by: Dr. R. Patel, MD — 2026-01-16</pre><table><tr><th>information type</th><th>tagger</th><th>evidence</th><th>present?</th></tr><tr><td>name</td><td class="yes">detected</td><td class="ev">John Smith</td><td class="box">☐</td></tr><tr><td>date_of_birth</td><td class="yes">detected</td><td class="ev">1968-03-14</td><td class="box">☐</td></tr><tr><td>ssn</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>home_address</td><td class="yes">detected</td><td class="ev">412 Maple St, Springfield, IL 62701</td><td class="box">☐</td></tr><tr><td>emergency_contact</td><td class="yes">detected</td><td class="ev">Mary Smith (spouse) 555-0142</td><td class="box">☐</td></tr><tr><td>medical_diagnosis</td><td class="yes">detected</td><td class="ev">E11.9 | Diabetes Mellitus | E11 | Hypertension | prediabetes <i>(+1)</i></td><td class="box">☐</td></tr><tr><td>medical_medication</td><td class="yes">detected</td><td class="ev">Metformin 500 mg | Metformin</td><td class="box">☐</td></tr><tr><td>medical_history</td><td class="yes">detected</td><td class="ev">diagnosed 2015 | since 2018</td><td class="box">☐</td></tr><tr><td>mental_health</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>billing_code</td><td class="yes">detected</td><td class="ev">E11</td><td class="box">☐</td></tr><tr><td>insurance_info</td><td class="yes">detected</td><td class="ev">BlueCross</td><td class="box">☐</td></tr><tr><td>salary</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>employment_contract</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>contract_terms</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>job_title</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_license</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr></table></div>
+<div class="doc"><div class="hdr"><b>doc_035</b> &nbsp; Discharge Summary — Sarah Wilson, 2026-03-10<br>discharge_summary &nbsp;·&nbsp; clinical_standard &nbsp;·&nbsp; subject Sarah Wilson</div><pre class="content">RIVERSIDE MEDICAL CLINIC
+DISCHARGE SUMMARY
+
+Date of Discharge: 2026-03-10
+Admitting Provider: <mark title="name">Dr. Elena Marsh</mark>, MD
+Discharging Unit: Inpatient Observation — 2B
+
+---
+PATIENT INFORMATION
+Name: <mark title="name">Sarah Wilson</mark>
+Date of Birth: <mark title="date_of_birth">1989-03-15</mark>
+SSN (last 4): <mark title="ssn">XXX-XX-5518</mark>
+Address: <mark title="home_address">47 Chestnut Ave, Springfield, IL 62715</mark>
+Insurance: <mark title="insurance_info">BlueCross</mark> PPO #BC-921047
+Emergency Contact: <mark title="emergency_contact">James Wilson (Spouse) — (217) 555-0183</mark>
+
+---
+DIAGNOSIS
+Primary: <mark title="mental_health">Opioid Use Disorder</mark>, moderate (<mark title="billing_code">F11.20</mark>)
+
+MEDICAL HISTORY
+<mark title="medical_history">Patient presents with prior history of opioid misuse beginning approximately 2021, with one prior ED visit for withdrawal symptoms (2024). No co-occurring psychiatric diagnoses on record. Non-smoker; occasional alcohol use reported.
+</mark>
+---
+HOSPITAL COURSE
+Patient admitted for 48-hour supervised detox observation. Withdrawal symptoms managed; <mark title="medical_medication">Buprenorphine</mark>/<mark title="medical_medication">Naloxone 8mg/2mg</mark> sublingual twice daily initiated on Day 1. Patient tolerated medication without adverse reaction.
+
+DISCHARGE PLAN
+- Continue Buprenorphine/Naloxone 8mg/2mg sublingual twice daily
+- Referred to outpatient MAT program: Springfield Recovery Center
+- Follow-up appointment: 2026-03-17
+
+Billing Codes: 99214, F11.20
+
+Discharging <mark title="job_title">Physician</mark>: Dr. Elena Marsh, MD
+Date: 2026-03-10</pre><table><tr><th>information type</th><th>tagger</th><th>evidence</th><th>present?</th></tr><tr><td>name</td><td class="yes">detected</td><td class="ev">Dr. Elena Marsh | Sarah Wilson</td><td class="box">☐</td></tr><tr><td>date_of_birth</td><td class="yes">detected</td><td class="ev">1989-03-15</td><td class="box">☐</td></tr><tr><td>ssn</td><td class="yes">detected</td><td class="ev">XXX-XX-5518</td><td class="box">☐</td></tr><tr><td>home_address</td><td class="yes">detected</td><td class="ev">47 Chestnut Ave, Springfield, IL 62715</td><td class="box">☐</td></tr><tr><td>emergency_contact</td><td class="yes">detected</td><td class="ev">James Wilson (Spouse) — (217) 555-0183</td><td class="box">☐</td></tr><tr><td>medical_diagnosis</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_medication</td><td class="yes">detected</td><td class="ev">Buprenorphine | Naloxone 8mg/2mg | Naloxone</td><td class="box">☐</td></tr><tr><td>medical_history</td><td class="yes">detected</td><td class="ev">Patient presents with prior history of opioi | history of opioid misuse beginning approxima</td><td class="box">☐</td></tr><tr><td>mental_health</td><td class="yes">detected</td><td class="ev">Opioid Use Disorder | F11.20 | psychiatric</td><td class="box">☐</td></tr><tr><td>billing_code</td><td class="yes">detected</td><td class="ev">F11.20</td><td class="box">☐</td></tr><tr><td>insurance_info</td><td class="yes">detected</td><td class="ev">BlueCross</td><td class="box">☐</td></tr><tr><td>salary</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>employment_contract</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>contract_terms</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>job_title</td><td class="yes">detected</td><td class="ev">Physician</td><td class="box">☐</td></tr><tr><td>medical_license</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr></table></div>
+<div class="doc"><div class="hdr"><b>doc_036</b> &nbsp; Mental Health Assessment — Maria Gonzalez, 2026-02-03<br>mental_health_assessment &nbsp;·&nbsp; clinical_sensitive &nbsp;·&nbsp; subject Maria Gonzalez</div><pre class="content">⚠ CONFIDENTIALITY NOTICE ⚠
+This record is protected under the Illinois <mark title="mental_health">Mental Health</mark> and Developmental Disabilities Confidentiality Act (740 ILCS 110) and HIPAA (45 CFR Parts 160/164). Unauthorized disclosure is prohibited. This document may NOT be released without explicit written patient consent.
+
+──────────────────────────────────────
+RIVERSIDE MEDICAL CLINIC
+MENTAL HEALTH ASSESSMENT — FOLLOW-UP
+──────────────────────────────────────
+Date of Service : 2026-02-03
+Patient Name    : <mark title="name">Maria Gonzalez</mark>
+Date of Birth   : <mark title="date_of_birth">1983-05-30</mark>
+SSN (last 4)    : <mark title="ssn">XXX-XX-9052</mark>
+Address         : <mark title="home_address">15 Elm Court, Springfield, IL 62704</mark>
+Insurance       : <mark title="insurance_info">United Health</mark> PPO #UH-558812
+Billing Codes   : 90837 | <mark title="mental_health">F33.1</mark>
+
+DIAGNOSIS: <mark title="medical_diagnosis">Major Depressive Disorder, recurrent (F33.1)</mark>
+
+SUBJECTIVE: Patient reports persistent low mood, fatigue, and poor concentration over the past 4 weeks. Denies <mark title="mental_health">suicidal ideation</mark>. Sleep mildly disrupted.
+
+OBJECTIVE: <mark title="mental_health">PHQ-9</mark> score: 14 (moderate <mark title="mental_health">depression</mark>). Affect flat; speech coherent; judgment intact.
+
+ASSESSMENT: <mark title="medical_diagnosis">Major Depressive Disorder, recurrent (F33.1) — partially remitted on current regimen.</mark>
+
+PLAN:
+1. Continue <mark title="medical_medication">Sertraline 100 mg</mark> daily — no dose change at this time.
+2. Referral placed for Cognitive Behavioral Therapy (CBT).
+3. Follow-up in 6 weeks; repeat PHQ-9.
+4. Patient instructed to contact clinic immediately if symptoms worsen.
+
+Provider: Dr. A. Patel, MD
+Riverside Medical Clinic</pre><table><tr><th>information type</th><th>tagger</th><th>evidence</th><th>present?</th></tr><tr><td>name</td><td class="yes">detected</td><td class="ev">Maria Gonzalez</td><td class="box">☐</td></tr><tr><td>date_of_birth</td><td class="yes">detected</td><td class="ev">1983-05-30</td><td class="box">☐</td></tr><tr><td>ssn</td><td class="yes">detected</td><td class="ev">XXX-XX-9052</td><td class="box">☐</td></tr><tr><td>home_address</td><td class="yes">detected</td><td class="ev">15 Elm Court, Springfield, IL 62704</td><td class="box">☐</td></tr><tr><td>emergency_contact</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_diagnosis</td><td class="yes">detected</td><td class="ev">Major Depressive Disorder, recurrent (F33.1) | Major Depressive Disorder, recurrent (F33.1)</td><td class="box">☐</td></tr><tr><td>medical_medication</td><td class="yes">detected</td><td class="ev">Sertraline 100 mg | Sertraline</td><td class="box">☐</td></tr><tr><td>medical_history</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>mental_health</td><td class="yes">detected</td><td class="ev">Mental Health | F33.1 | Major Depressive Disorder | suicidal ideation | PHQ-9 <i>(+1)</i></td><td class="box">☐</td></tr><tr><td>billing_code</td><td class="yes">detected</td><td class="ev">F33.1</td><td class="box">☐</td></tr><tr><td>insurance_info</td><td class="yes">detected</td><td class="ev">United Health</td><td class="box">☐</td></tr><tr><td>salary</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>employment_contract</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>contract_terms</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>job_title</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_license</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr></table></div>
+<div class="doc"><div class="hdr"><b>doc_037</b> &nbsp; Mental Health Assessment — Sarah Wilson, 2026-03-05<br>mental_health_assessment &nbsp;·&nbsp; clinical_sensitive &nbsp;·&nbsp; subject Sarah Wilson</div><pre class="content">⚠ CONFIDENTIALITY NOTICE ⚠
+This record contains information protected under <mark title="mental_health">42 CFR Part 2</mark> (<mark title="mental_health">Substance Abuse</mark> Confidentiality Regulations) and the Illinois <mark title="mental_health">Mental Health</mark> and Developmental Disabilities Confidentiality Act (<mark title="mental_health">MHDDCA</mark>). Unauthorized disclosure is strictly prohibited. This record may NOT be disclosed without the patient&#x27;s written consent or a court order.
+
+---
+RIVERSIDE MEDICAL CLINIC
+MENTAL HEALTH ASSESSMENT
+Date: 2026-03-05
+
+Patient: <mark title="name">Sarah Wilson</mark>
+Date of Birth: <mark title="date_of_birth">1989-03-15</mark>
+SSN (last 4): <mark title="ssn">XXX-XX-5518</mark>
+Address: <mark title="home_address">47 Chestnut Ave, Springfield, IL 62715</mark>
+Insurance: <mark title="insurance_info">BlueCross</mark> PPO #BC-921047
+Billing Codes: 99214, <mark title="mental_health">F11.20</mark>
+
+--- SOAP NOTE ---
+S: Patient reports stable mood with mild <mark title="mental_health">generalized anxiety</mark>. Denies cravings or illicit opioid use. Sleep mildly disrupted. No <mark title="mental_health">suicidal ideation</mark>.
+
+O: Alert, cooperative. Affect appropriate. <mark title="mental_health">GAD-7</mark> score: 9 (mild-moderate <mark title="mental_health">anxiety</mark>). No signs of intoxication or withdrawal.
+
+A: <mark title="mental_health">Opioid Use Disorder</mark>, moderate (<mark title="billing_code">F11.20</mark>). Anxiety symptoms noted; consistent with early recovery adjustment. No <mark title="mental_health">psychiatric</mark> decompensation.
+
+P: Continue <mark title="medical_medication">Buprenorphine</mark>/<mark title="medical_medication">Naloxone 8mg/2mg</mark> sublingual twice daily. Initiate CBT referral for anxiety management. Follow-up in 4 weeks. PDMP reviewed — no concerns.
+
+Provider: Dr. M. Okafor, MD
+Riverside Medical Clinic | 2026-03-05</pre><table><tr><th>information type</th><th>tagger</th><th>evidence</th><th>present?</th></tr><tr><td>name</td><td class="yes">detected</td><td class="ev">Sarah Wilson</td><td class="box">☐</td></tr><tr><td>date_of_birth</td><td class="yes">detected</td><td class="ev">1989-03-15</td><td class="box">☐</td></tr><tr><td>ssn</td><td class="yes">detected</td><td class="ev">XXX-XX-5518</td><td class="box">☐</td></tr><tr><td>home_address</td><td class="yes">detected</td><td class="ev">47 Chestnut Ave, Springfield, IL 62715</td><td class="box">☐</td></tr><tr><td>emergency_contact</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_diagnosis</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_medication</td><td class="yes">detected</td><td class="ev">Buprenorphine | Naloxone 8mg/2mg | Naloxone</td><td class="box">☐</td></tr><tr><td>medical_history</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>mental_health</td><td class="yes">detected</td><td class="ev">42 CFR Part 2 | Substance Abuse | Mental Health | MHDDCA | F11.20 <i>(+6)</i></td><td class="box">☐</td></tr><tr><td>billing_code</td><td class="yes">detected</td><td class="ev">F11.20</td><td class="box">☐</td></tr><tr><td>insurance_info</td><td class="yes">detected</td><td class="ev">BlueCross</td><td class="box">☐</td></tr><tr><td>salary</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>employment_contract</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>contract_terms</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>job_title</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_license</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr></table></div>
+<div class="doc"><div class="hdr"><b>doc_045</b> &nbsp; Referral Letter — James Carter, 2026-02-05<br>referral_letter &nbsp;·&nbsp; clinical_standard &nbsp;·&nbsp; subject James Carter</div><pre class="content">RIVERSIDE MEDICAL CLINIC
+1200 Riverside Drive, Springfield, IL 62701
+Phone: (217) 555-0192 | Fax: (217) 555-0198
+
+DATE: February 5, 2026
+
+RE: Referral for Nephrology Consultation
+
+PATIENT: <mark title="name">James Carter</mark>
+DATE OF BIRTH: <mark title="date_of_birth">1960-12-04</mark>
+ADDRESS: <mark title="home_address">88 Birchwood Ct, Springfield, IL 62716</mark>
+SSN (partial): <mark title="ssn">XXX-XX-3391</mark>
+INSURANCE: <mark title="insurance_info">Medicare</mark> Part B #2FG8-KL4-NP91
+
+Dear Nephrology Specialist,
+
+I am referring Mr. James Carter for co-management and dialysis planning related to his diagnosis of <mark title="medical_diagnosis">Chronic Kidney Disease</mark>, Stage 3 (<mark title="billing_code">N18.3</mark>).
+
+PERTINENT MEDICAL HISTORY:
+<mark title="medical_history">Mr. Carter carries a history of Type 2 Diabetes diagnosed 2012 and hypertension since 2005, both of which are contributing factors to his progressive renal decline.
+</mark>
+CURRENT MEDICATIONS: <mark title="medical_medication">Lisinopril 10mg</mark> daily; dietary sodium restriction
+
+BILLING CODES: 99214, N18.3
+
+Most recent GFR trending toward Stage 3b. Patient education regarding renal diet has been initiated. Urgent nephrology input is requested for CKD trajectory assessment and early dialysis access planning.
+
+Please contact our office with findings.
+
+Sincerely,
+<mark title="name">Dr. Patricia Nguyen</mark>, MD
+Riverside Medical Clinic</pre><table><tr><th>information type</th><th>tagger</th><th>evidence</th><th>present?</th></tr><tr><td>name</td><td class="yes">detected</td><td class="ev">James Carter | Dr. Patricia Nguyen</td><td class="box">☐</td></tr><tr><td>date_of_birth</td><td class="yes">detected</td><td class="ev">1960-12-04</td><td class="box">☐</td></tr><tr><td>ssn</td><td class="yes">detected</td><td class="ev">XXX-XX-3391</td><td class="box">☐</td></tr><tr><td>home_address</td><td class="yes">detected</td><td class="ev">88 Birchwood Ct, Springfield, IL 62716</td><td class="box">☐</td></tr><tr><td>emergency_contact</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_diagnosis</td><td class="yes">detected</td><td class="ev">Chronic Kidney Disease | N18.3 | Diabetes | hypertension</td><td class="box">☐</td></tr><tr><td>medical_medication</td><td class="yes">detected</td><td class="ev">Lisinopril 10mg | Lisinopril</td><td class="box">☐</td></tr><tr><td>medical_history</td><td class="yes">detected</td><td class="ev">Mr. Carter carries a history of Type 2 Diabe | history of Type 2 Diabetes diagnosed 2012 an | diagnosed 2012 | since 2005</td><td class="box">☐</td></tr><tr><td>mental_health</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>billing_code</td><td class="yes">detected</td><td class="ev">N18.3</td><td class="box">☐</td></tr><tr><td>insurance_info</td><td class="yes">detected</td><td class="ev">Medicare</td><td class="box">☐</td></tr><tr><td>salary</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>employment_contract</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>contract_terms</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>job_title</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_license</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr></table></div>
+<div class="doc"><div class="hdr"><b>doc_053</b> &nbsp; Insurance Claim — Patricia Moore, 2026-02-20<br>insurance_claim &nbsp;·&nbsp; financial &nbsp;·&nbsp; subject Patricia Moore</div><pre class="content">RIVERSIDE MEDICAL CLINIC
+1200 Riverside Drive, Springfield, IL 62701
+Phone: (217) 555-0100 | Fax: (217) 555-0199
+
+INSURANCE CLAIM FORM
+Claim Date: 02/20/2026
+Claim #: RMC-2026-02-48837
+
+--- PATIENT INFORMATION ---
+Patient Name: <mark title="name">Patricia Moore</mark>
+Date of Birth: <mark title="date_of_birth">1942-01-30</mark>
+SSN (last 4): <mark title="ssn">XXX-XX-1183</mark>
+Address: <mark title="home_address">9 Linden Lane, Springfield, IL 62719</mark>
+Emergency Contact: <mark title="emergency_contact">Thomas Moore (son, legal guardian) 555-0267</mark>
+
+--- INSURANCE INFORMATION ---
+Primary Insurer: <mark title="insurance_info">Medicare</mark> Part A+B
+Member ID: #<mark title="insurance_info">3HJ2-MP6-QR44</mark>
+
+--- CLAIM DETAILS ---
+Service Date: 02/17/2026
+Provider: <mark title="name">Dr. Sandra Ellison</mark>, MD — Neurology
+Place of Service: Office (11)
+
+Line Items:
+  CPT <mark title="billing_code">99215</mark> — Office Visit, High Complexity        $285.00
+  ICD-10 Dx: <mark title="medical_diagnosis">G30.0</mark>
+
+Billing Code(s): 99215, G30.0
+Charge Total: $285.00
+Expected Medicare Reimbursement: $199.40
+Patient Responsibility (Est.): $85.60
+
+Prescription on File: <mark title="medical_medication">Donepezil 10mg</mark> daily at bedtime
+
+Authorized Signature: ______________________
+Billing Dept. — Riverside Medical Clinic</pre><table><tr><th>information type</th><th>tagger</th><th>evidence</th><th>present?</th></tr><tr><td>name</td><td class="yes">detected</td><td class="ev">Patricia Moore | Dr. Sandra Ellison</td><td class="box">☐</td></tr><tr><td>date_of_birth</td><td class="yes">detected</td><td class="ev">1942-01-30</td><td class="box">☐</td></tr><tr><td>ssn</td><td class="yes">detected</td><td class="ev">XXX-XX-1183</td><td class="box">☐</td></tr><tr><td>home_address</td><td class="yes">detected</td><td class="ev">9 Linden Lane, Springfield, IL 62719</td><td class="box">☐</td></tr><tr><td>emergency_contact</td><td class="yes">detected</td><td class="ev">Thomas Moore (son, legal guardian) 555-0267</td><td class="box">☐</td></tr><tr><td>medical_diagnosis</td><td class="yes">detected</td><td class="ev">G30.0</td><td class="box">☐</td></tr><tr><td>medical_medication</td><td class="yes">detected</td><td class="ev">Donepezil 10mg | Donepezil</td><td class="box">☐</td></tr><tr><td>medical_history</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>mental_health</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>billing_code</td><td class="yes">detected</td><td class="ev">99215</td><td class="box">☐</td></tr><tr><td>insurance_info</td><td class="yes">detected</td><td class="ev">Medicare | 3HJ2-MP6-QR44</td><td class="box">☐</td></tr><tr><td>salary</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>employment_contract</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>contract_terms</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>job_title</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_license</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr></table></div>
+<div class="doc"><div class="hdr"><b>doc_059</b> &nbsp; Billing Statement — Linda Torres, 2026-03-01<br>billing_statement &nbsp;·&nbsp; financial &nbsp;·&nbsp; subject Linda Torres</div><pre class="content">RIVERSIDE MEDICAL CLINIC
+1400 Riverside Drive, Springfield, IL 62701
+Phone: (217) 555-0100 | Fax: (217) 555-0199
+
+BILLING STATEMENT
+Statement Date: 2026-03-01
+Account #: RMC-2026-04471
+
+PATIENT INFORMATION
+Name: <mark title="name">Linda Torres</mark>
+Date of Birth: <mark title="date_of_birth">1963-06-18</mark>
+SSN (last 4): <mark title="ssn">XXX-XX-8824</mark>
+Address: <mark title="home_address">220 Sycamore Blvd, Springfield, IL 62717</mark>
+Insurance: <mark title="insurance_info">Aetna</mark> PPO #AE-837524
+
+SERVICE DETAIL
+-------------------------------------------------
+Date of Service: 2026-02-18
+Provider: <mark title="name">Dr. Anita Sharma</mark>, MD (Oncology)
+CPT Code: <mark title="billing_code">99215</mark> — Office Visit, High Complexity
+Diagnosis Code: <mark title="medical_diagnosis">C50.911</mark>
+Description: Oncology follow-up; <mark title="medical_medication">Tamoxifen 20mg</mark> daily; Cycle 4 chemotherapy complete
+
+BILLING SUMMARY
+-------------------------------------------------
+Billed Amount:          $425.00
+Aetna PPO Adjustment:  -$187.60
+Insurance Paid:        -$193.20
+Patient Responsibility:  $44.20
+
+PAYMENT DUE BY: 2026-03-31
+
+Emergency Contact on File: Marco Torres (spouse) 555-0341
+
+Questions? Contact Billing at billing@riversidemedclinic.org
+</pre><table><tr><th>information type</th><th>tagger</th><th>evidence</th><th>present?</th></tr><tr><td>name</td><td class="yes">detected</td><td class="ev">Linda Torres | Dr. Anita Sharma</td><td class="box">☐</td></tr><tr><td>date_of_birth</td><td class="yes">detected</td><td class="ev">1963-06-18</td><td class="box">☐</td></tr><tr><td>ssn</td><td class="yes">detected</td><td class="ev">XXX-XX-8824</td><td class="box">☐</td></tr><tr><td>home_address</td><td class="yes">detected</td><td class="ev">220 Sycamore Blvd, Springfield, IL 62717</td><td class="box">☐</td></tr><tr><td>emergency_contact</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_diagnosis</td><td class="yes">detected</td><td class="ev">C50.911</td><td class="box">☐</td></tr><tr><td>medical_medication</td><td class="yes">detected</td><td class="ev">Tamoxifen 20mg | Tamoxifen</td><td class="box">☐</td></tr><tr><td>medical_history</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>mental_health</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>billing_code</td><td class="yes">detected</td><td class="ev">99215</td><td class="box">☐</td></tr><tr><td>insurance_info</td><td class="yes">detected</td><td class="ev">Aetna</td><td class="box">☐</td></tr><tr><td>salary</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>employment_contract</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>contract_terms</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>job_title</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_license</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr></table></div>
+<div class="doc"><div class="hdr"><b>doc_062</b> &nbsp; Prior Authorization — Robert Lee, 2026-01-15<br>prior_authorization &nbsp;·&nbsp; financial &nbsp;·&nbsp; subject Robert Lee</div><pre class="content">RIVERSIDE MEDICAL CLINIC
+1200 Riverside Drive, Springfield, IL 62704
+Phone: (217) 555-0100 | Fax: (217) 555-0199
+
+PRIOR AUTHORIZATION REQUEST
+Date: 01/15/2026
+
+PATIENT INFORMATION
+Name: <mark title="name">Robert Lee</mark>
+Date of Birth: <mark title="date_of_birth">1955-11-09</mark>
+Address: <mark title="home_address">230 Oak Ave, Springfield, IL 62703</mark>
+Insurance: <mark title="insurance_info">Medicare</mark> Part B #1EG4-TE5-MK72
+
+CLINICAL INFORMATION
+Diagnosis: <mark title="medical_diagnosis">Atrial Fibrillation, persistent (I48.11)</mark>
+Requested Medication: <mark title="medical_medication">Warfarin 5 mg</mark> daily; INR monitored monthly
+Billing Codes: 99214, I48.11
+
+AUTHORIZATION REQUEST DETAILS
+Riverside Medical Clinic requests prior authorization for ongoing anticoagulation therapy with Warfarin 5 mg daily for the above-named patient diagnosed with Atrial Fibrillation, persistent (I48.11). INR monitoring is conducted monthly per established protocol (attached).
+
+Clinical necessity is supported by current ACC/AHA guidelines for <mark title="medical_diagnosis">stroke</mark> risk reduction in persistent atrial fibrillation. Patient has been stable on current dosing regimen.
+
+Prescribing <mark title="job_title">Physician</mark>: <mark title="name">Dr. Angela Torres</mark>, MD
+NPI: <mark title="medical_license">1234567890</mark>
+Signature: _______________________ Date: 01/15/2026
+
+Please direct determination to fax (217) 555-0199.
+Authorization Reference to be assigned by payer.</pre><table><tr><th>information type</th><th>tagger</th><th>evidence</th><th>present?</th></tr><tr><td>name</td><td class="yes">detected</td><td class="ev">Robert Lee | Dr. Angela Torres</td><td class="box">☐</td></tr><tr><td>date_of_birth</td><td class="yes">detected</td><td class="ev">1955-11-09</td><td class="box">☐</td></tr><tr><td>ssn</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>home_address</td><td class="yes">detected</td><td class="ev">230 Oak Ave, Springfield, IL 62703</td><td class="box">☐</td></tr><tr><td>emergency_contact</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_diagnosis</td><td class="yes">detected</td><td class="ev">Atrial Fibrillation | Atrial Fibrillation, persistent (I48.11) | I48.11 | stroke</td><td class="box">☐</td></tr><tr><td>medical_medication</td><td class="yes">detected</td><td class="ev">Warfarin 5 mg | Warfarin</td><td class="box">☐</td></tr><tr><td>medical_history</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>mental_health</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>billing_code</td><td class="yes">detected</td><td class="ev">I48.11</td><td class="box">☐</td></tr><tr><td>insurance_info</td><td class="yes">detected</td><td class="ev">Medicare</td><td class="box">☐</td></tr><tr><td>salary</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>employment_contract</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>contract_terms</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>job_title</td><td class="yes">detected</td><td class="ev">Physician</td><td class="box">☐</td></tr><tr><td>medical_license</td><td class="yes">detected</td><td class="ev">1234567890</td><td class="box">☐</td></tr></table></div>
+<div class="doc"><div class="hdr"><b>doc_064</b> &nbsp; Prior Authorization — Sarah Wilson, 2026-03-01<br>prior_authorization &nbsp;·&nbsp; clinical_sensitive &nbsp;·&nbsp; subject Sarah Wilson</div><pre class="content">⚠ CONFIDENTIALITY NOTICE — <mark title="mental_health">42 CFR PART 2</mark> PROTECTED INFORMATION ⚠
+This document contains <mark title="mental_health">substance use disorder</mark> treatment records protected under 42 CFR Part 2. Unauthorized disclosure is prohibited by federal law. Redisclosure without patient written consent is strictly forbidden.
+
+---
+RIVERSIDE MEDICAL CLINIC
+PRIOR AUTHORIZATION REQUEST
+Document Date: 2026-03-01
+---
+
+PATIENT INFORMATION
+Name: <mark title="name">Sarah Wilson</mark>
+Date of Birth: <mark title="date_of_birth">1989-03-15</mark>
+Address: <mark title="home_address">47 Chestnut Ave, Springfield, IL 62715</mark>
+Insurance: <mark title="insurance_info">BlueCross</mark> PPO #BC-921047
+
+CLINICAL INFORMATION
+Diagnosis: <mark title="medical_diagnosis">Opioid Use Disorder, moderate</mark>
+ICD-10 Code: <mark title="mental_health">F11.20</mark>
+Billing Codes: 99214, F11.20
+
+AUTHORIZATION REQUEST
+Medication Requested: <mark title="medical_medication">Buprenorphine</mark>/<mark title="medical_medication">Naloxone 8mg/2mg</mark> sublingual twice daily
+Indication: Medication-assisted treatment (MAT) for Opioid Use Disorder per established SAMHSA guidelines.
+PrescriberDEA/Waiver: SAMHSA DATA Waiver documentation attached.
+Duration Requested: 12 months
+Clinical Justification: Patient demonstrates moderate OUD with documented treatment compliance. Continued MAT is medically necessary to prevent relapse and support sustained recovery.
+
+ATTACHMENTS
+- SAMHSA DATA Waiver confirmation
+- Recent office visit notes (99214)
+- Pharmacy fill history
+
+Submitted by: Riverside Medical Clinic, Springfield, IL 62701
+Date: 2026-03-01</pre><table><tr><th>information type</th><th>tagger</th><th>evidence</th><th>present?</th></tr><tr><td>name</td><td class="yes">detected</td><td class="ev">Sarah Wilson</td><td class="box">☐</td></tr><tr><td>date_of_birth</td><td class="yes">detected</td><td class="ev">1989-03-15</td><td class="box">☐</td></tr><tr><td>ssn</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>home_address</td><td class="yes">detected</td><td class="ev">47 Chestnut Ave, Springfield, IL 62715</td><td class="box">☐</td></tr><tr><td>emergency_contact</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_diagnosis</td><td class="yes">detected</td><td class="ev">Opioid Use Disorder, moderate</td><td class="box">☐</td></tr><tr><td>medical_medication</td><td class="yes">detected</td><td class="ev">Buprenorphine | Naloxone 8mg/2mg | Naloxone</td><td class="box">☐</td></tr><tr><td>medical_history</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>mental_health</td><td class="yes">detected</td><td class="ev">42 CFR PART 2 | substance use disorder | Opioid Use Disorder | F11.20</td><td class="box">☐</td></tr><tr><td>billing_code</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>insurance_info</td><td class="yes">detected</td><td class="ev">BlueCross</td><td class="box">☐</td></tr><tr><td>salary</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>employment_contract</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>contract_terms</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>job_title</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_license</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr></table></div>
+<div class="doc"><div class="hdr"><b>doc_067</b> &nbsp; Explanation Of Benefits — Emily Brown, 2026-02-10<br>explanation_of_benefits &nbsp;·&nbsp; financial &nbsp;·&nbsp; subject Emily Brown</div><pre class="content">EXPLANATION OF BENEFITS
+Riverside Medical Clinic
+4200 Medical Drive, Springfield, IL 62704
+
+Date Issued: 02/10/2026
+Plan: <mark title="insurance_info">Aetna</mark> HMO #AE-201934
+
+Member: <mark title="name">Emily Brown</mark>
+Date of Birth: <mark title="date_of_birth">1991-07-22</mark>
+Member ID: <mark title="insurance_info">AE-201934</mark>
+Claim Number: CLM-2026-048812
+
+---
+SERVICE SUMMARY
+---
+Service Date: 01/28/2026
+Rendering Provider: <mark title="name">Dr. Sandra Okafor</mark>, OB/GYN
+Facility: Riverside Medical Clinic
+
+Line  Description                          Code     Billed     Allowed    Plan Paid  Patient Resp.
+1     Global OB Care Package               <mark title="billing_code">59400</mark>    $3,200.00  $2,750.00  $2,475.00  $275.00
+2     Routine prenatal supervision, 3rd Tri <mark title="medical_diagnosis">Z34.32</mark>   $0.00      $0.00      $0.00      $0.00
+
+Total Billed: $3,200.00
+Total Plan Paid: $2,475.00
+Patient Responsibility: $275.00 (10% coinsurance)
+
+Note: Global OB fee (CPT 59400) covers all antepartum, delivery, and postpartum services. Diagnosis Z34.32 applied per claim.
+
+Questions? Contact Aetna Member Services: 1-800-872-3862
+Riverside Billing Dept: billing@riversidemedclinic.org</pre><table><tr><th>information type</th><th>tagger</th><th>evidence</th><th>present?</th></tr><tr><td>name</td><td class="yes">detected</td><td class="ev">Emily Brown | Dr. Sandra Okafor</td><td class="box">☐</td></tr><tr><td>date_of_birth</td><td class="yes">detected</td><td class="ev">1991-07-22</td><td class="box">☐</td></tr><tr><td>ssn</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>home_address</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>emergency_contact</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_diagnosis</td><td class="yes">detected</td><td class="ev">Z34.32</td><td class="box">☐</td></tr><tr><td>medical_medication</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_history</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>mental_health</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>billing_code</td><td class="yes">detected</td><td class="ev">59400</td><td class="box">☐</td></tr><tr><td>insurance_info</td><td class="yes">detected</td><td class="ev">Aetna | AE-201934</td><td class="box">☐</td></tr><tr><td>salary</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>employment_contract</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>contract_terms</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>job_title</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_license</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr></table></div>
+<div class="doc"><div class="hdr"><b>doc_070</b> &nbsp; Insurance Verification — John Smith, 2026-01-14<br>insurance_verification &nbsp;·&nbsp; financial &nbsp;·&nbsp; subject John Smith</div><pre class="content">RIVERSIDE MEDICAL CLINIC
+Insurance Verification Form
+Date: 2026-01-14
+
+PATIENT INFORMATION
+Patient Name: <mark title="name">John Smith</mark>
+Date of Birth: <mark title="date_of_birth">1968-03-14</mark>
+SSN (last 4): <mark title="ssn">XXX-XX-4821</mark>
+Home Address: <mark title="home_address">412 Maple St, Springfield, IL 62701</mark>
+
+INSURANCE ELIGIBILITY
+Insurance Plan: <mark title="insurance_info">BlueCross</mark> PPO #BC-847261
+Verification Status: ACTIVE
+Co-Pay: $30.00 (Primary Care Visit)
+Deductible Met (YTD): $450.00 of $1,500.00
+Out-of-Pocket Remaining: $1,050.00
+Authorization Required: No
+
+VISIT &amp; BILLING DETAILS
+Anticipated Service Date: 2026-01-16
+Billing Codes: 99213, <mark title="medical_diagnosis">E11.9</mark>
+Primary Diagnosis: <mark title="medical_diagnosis">Type 2 Diabetes Mellitus (E11)</mark>
+Current Medication: <mark title="medical_medication">Metformin 500 mg</mark> twice daily
+Relevant History: <mark title="medical_diagnosis">Hypertension</mark> <mark title="medical_history">diagnosed 2015</mark>; <mark title="medical_diagnosis">prediabetes</mark> <mark title="medical_history">since 2018</mark>
+
+EMERGENCY CONTACT
+Name: <mark title="emergency_contact">Mary Smith (spouse)</mark>
+Phone: 555-0142
+
+Verification completed by: A. Torres, <mark title="job_title">Billing Specialist</mark>
+Verification Method: Electronic payer portal — BlueCross Provider Network
+Notes: Eligibility confirmed. Patient to present insurance card and photo ID at check-in. Co-pay of $30.00 collected at time of service.
+
+— End of Verification Form —</pre><table><tr><th>information type</th><th>tagger</th><th>evidence</th><th>present?</th></tr><tr><td>name</td><td class="yes">detected</td><td class="ev">John Smith</td><td class="box">☐</td></tr><tr><td>date_of_birth</td><td class="yes">detected</td><td class="ev">1968-03-14</td><td class="box">☐</td></tr><tr><td>ssn</td><td class="yes">detected</td><td class="ev">XXX-XX-4821</td><td class="box">☐</td></tr><tr><td>home_address</td><td class="yes">detected</td><td class="ev">412 Maple St, Springfield, IL 62701</td><td class="box">☐</td></tr><tr><td>emergency_contact</td><td class="yes">detected</td><td class="ev">Mary Smith (spouse)</td><td class="box">☐</td></tr><tr><td>medical_diagnosis</td><td class="yes">detected</td><td class="ev">E11.9 | Type 2 Diabetes Mellitus (E11) | Diabetes Mellitus | E11 | Hypertension <i>(+1)</i></td><td class="box">☐</td></tr><tr><td>medical_medication</td><td class="yes">detected</td><td class="ev">Metformin 500 mg | Metformin</td><td class="box">☐</td></tr><tr><td>medical_history</td><td class="yes">detected</td><td class="ev">diagnosed 2015 | since 2018</td><td class="box">☐</td></tr><tr><td>mental_health</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>billing_code</td><td class="yes">detected</td><td class="ev">E11</td><td class="box">☐</td></tr><tr><td>insurance_info</td><td class="yes">detected</td><td class="ev">BlueCross</td><td class="box">☐</td></tr><tr><td>salary</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>employment_contract</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>contract_terms</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>job_title</td><td class="yes">detected</td><td class="ev">Billing Specialist</td><td class="box">☐</td></tr><tr><td>medical_license</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr></table></div>
+<div class="doc"><div class="hdr"><b>doc_074</b> &nbsp; Salary Letter — Dr. Sarah Chen, 2026-01-01<br>salary_letter &nbsp;·&nbsp; employment &nbsp;·&nbsp; subject Dr. Sarah Chen</div><pre class="content">RIVERSIDE MEDICAL CLINIC
+304 Willow Rd, Springfield, IL 62706
+Human Resources Department
+
+CONFIDENTIAL — SALARY NOTIFICATION LETTER
+
+Date: January 1, 2026
+
+Dear <mark title="name">Dr. Sarah Chen</mark>,
+
+This letter serves as your official annual compensation notification for the period beginning January 1, 2026.
+
+Employee Details:
+  Full Name:          Dr. Sarah Chen
+  Date of Birth:      <mark title="date_of_birth">1975-04-18</mark>
+  Medical License:    <mark title="medical_license">IL-MD-48821</mark> (Internal Medicine)
+  Home Address:       <mark title="home_address">304 Willow Rd, Springfield, IL 62706</mark>
+
+Compensation Summary:
+  Base Annual Salary:   <mark title="salary">$215,000</mark>
+  <mark title="employment_contract">Effective Date:       January 1, 2026</mark>
+  Pay Frequency:        Semi-monthly
+  Pay Per Period:       $8,958.33
+
+This compensation reflects your continued role as a <mark title="job_title">physician</mark> in the Internal Medicine department at Riverside Medical Clinic. Your salary is subject to applicable federal, state, and local tax withholdings.
+
+This document is strictly confidential. Please do not distribute or disclose its contents to unauthorized individuals.
+
+Sincerely,
+
+Human Resources Department
+Riverside Medical Clinic
+hr@riversidemedical.org | (217) 555-0192</pre><table><tr><th>information type</th><th>tagger</th><th>evidence</th><th>present?</th></tr><tr><td>name</td><td class="yes">detected</td><td class="ev">Dr. Sarah Chen</td><td class="box">☐</td></tr><tr><td>date_of_birth</td><td class="yes">detected</td><td class="ev">1975-04-18</td><td class="box">☐</td></tr><tr><td>ssn</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>home_address</td><td class="yes">detected</td><td class="ev">304 Willow Rd, Springfield, IL 62706</td><td class="box">☐</td></tr><tr><td>emergency_contact</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_diagnosis</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_medication</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_history</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>mental_health</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>billing_code</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>insurance_info</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>salary</td><td class="yes">detected</td><td class="ev">$215,000</td><td class="box">☐</td></tr><tr><td>employment_contract</td><td class="yes">detected</td><td class="ev">Effective Date:       January 1, 2026</td><td class="box">☐</td></tr><tr><td>contract_terms</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>job_title</td><td class="yes">detected</td><td class="ev">physician</td><td class="box">☐</td></tr><tr><td>medical_license</td><td class="yes">detected</td><td class="ev">IL-MD-48821</td><td class="box">☐</td></tr></table></div>
+<div class="doc"><div class="hdr"><b>doc_080</b> &nbsp; Employment Contract — Dr. Aisha Patel, 2022-03-01<br>employment_contract &nbsp;·&nbsp; employment &nbsp;·&nbsp; subject Dr. Aisha Patel</div><pre class="content">RIVERSIDE MEDICAL CLINIC
+<mark title="employment_contract">EMPLOYMENT CONTRACT</mark>
+Confidential — HR Use Only
+
+Date: March 1, 2022
+
+Employee: <mark title="name">Dr. Aisha Patel</mark>
+Date of Birth: <mark title="date_of_birth">1978-11-14</mark>
+Home Address: <mark title="home_address">83 Hawthorn Rd, Springfield, IL 62720</mark>
+Medical License: <mark title="medical_license">IL-MD-55432</mark> (<mark title="mental_health">Psychiatry</mark>)
+
+Position: <mark title="job_title">Staff Psychiatrist</mark>
+Department: <mark title="mental_health">Behavioral Health</mark> Services
+<mark title="employment_contract">Effective Date: March 1, 2022</mark>
+
+COMPENSATION
+Annual Salary: <mark title="salary">$195,000</mark>, payable bi-weekly. Salary adjustments subject to annual performance review.
+
+DUTIES &amp; OBLIGATIONS
+Dr. Patel shall provide full-time <mark title="mental_health">psychiatric</mark> services, including inpatient consultation and outpatient management. As a condition of this employment contract, Dr. Patel acknowledges mandatory compliance with <mark title="mental_health">42 CFR Part 2</mark> governing confidentiality of <mark title="mental_health">substance use disorder</mark> patient records. Unauthorized disclosure constitutes grounds for immediate termination.
+
+BENEFITS
+Health, dental, and vision insurance; $3,500 CME annual allowance; malpractice coverage through clinic carrier.
+
+TERMINATION
+Either party may terminate with 60 days written notice. Immediate termination permitted for cause, including license revocation or material breach.
+
+ACKNOWLEDGMENT
+By signing below, both parties agree to the terms of this employment contract.
+
+_______________________          _______________________
+Dr. Aisha Patel                  HR Director, Riverside Medical Clinic
+Date: ___________                Date: ___________</pre><table><tr><th>information type</th><th>tagger</th><th>evidence</th><th>present?</th></tr><tr><td>name</td><td class="yes">detected</td><td class="ev">Dr. Aisha Patel</td><td class="box">☐</td></tr><tr><td>date_of_birth</td><td class="yes">detected</td><td class="ev">1978-11-14</td><td class="box">☐</td></tr><tr><td>ssn</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>home_address</td><td class="yes">detected</td><td class="ev">83 Hawthorn Rd, Springfield, IL 62720</td><td class="box">☐</td></tr><tr><td>emergency_contact</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_diagnosis</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_medication</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_history</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>mental_health</td><td class="yes">detected</td><td class="ev">Psychiatry | Behavioral Health | psychiatric | 42 CFR Part 2 | substance use disorder</td><td class="box">☐</td></tr><tr><td>billing_code</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>insurance_info</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>salary</td><td class="yes">detected</td><td class="ev">$195,000</td><td class="box">☐</td></tr><tr><td>employment_contract</td><td class="yes">detected</td><td class="ev">EMPLOYMENT CONTRACT | Effective Date: March 1, 2022</td><td class="box">☐</td></tr><tr><td>contract_terms</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>job_title</td><td class="yes">detected</td><td class="ev">Staff Psychiatrist | Psychiatrist</td><td class="box">☐</td></tr><tr><td>medical_license</td><td class="yes">detected</td><td class="ev">IL-MD-55432</td><td class="box">☐</td></tr></table></div>
+<div class="doc"><div class="hdr"><b>doc_085</b> &nbsp; Performance Review — Nurse Patricia Davis, 2026-01-15<br>performance_review &nbsp;·&nbsp; employment &nbsp;·&nbsp; subject Nurse Patricia Davis</div><pre class="content">RIVERSIDE MEDICAL CLINIC
+Human Resources Department
+Employee Performance Review — CONFIDENTIAL
+
+Review Date: 2026-01-15
+Review Period: January 1, 2025 – December 31, 2025
+
+Employee Name: Patricia Davis
+Role: <mark title="job_title">Nurse (Medical)</mark>
+Date of Birth: <mark title="date_of_birth">1985-12-01</mark>
+Home Address: <mark title="home_address">19 Cedar Blvd, Springfield, IL 62708</mark>
+Annual Salary: <mark title="salary">$72,000</mark>
+<mark title="employment_contract">Employment Contract</mark>: Full-Time Permanent, <mark title="employment_contract">effective 2019-03-10</mark>
+
+OVERALL RATING: Meets Expectations
+
+PERFORMANCE SUMMARY:
+Patricia Davis has demonstrated consistent professionalism and clinical competence throughout the review period. She reliably fulfills nursing duties across assigned units, maintains accurate patient documentation, and adheres to clinic protocols.
+
+NOTABLE COMMENDATION:
+Patricia is specifically commended for exceptional patient advocacy. She proactively communicated patient concerns to attending physicians on multiple occasions, resulting in timely care adjustments. Colleagues and supervisors consistently noted her compassionate, patient-centered approach.
+
+AREAS FOR DEVELOPMENT:
+Patricia is encouraged to pursue one continuing education unit (CEU) in care coordination by Q3 2026 to support advancement eligibility.
+
+NEXT REVIEW DATE: 2027-01-15
+
+HR Representative Signature: _______________________
+Employee Acknowledgment Signature: _______________________
+
+This document is confidential and governed under Employment — Confidential HR policy. Unauthorized disclosure is prohibited.</pre><table><tr><th>information type</th><th>tagger</th><th>evidence</th><th>present?</th></tr><tr><td>name</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>date_of_birth</td><td class="yes">detected</td><td class="ev">1985-12-01</td><td class="box">☐</td></tr><tr><td>ssn</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>home_address</td><td class="yes">detected</td><td class="ev">19 Cedar Blvd, Springfield, IL 62708</td><td class="box">☐</td></tr><tr><td>emergency_contact</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_diagnosis</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_medication</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_history</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>mental_health</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>billing_code</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>insurance_info</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>salary</td><td class="yes">detected</td><td class="ev">$72,000</td><td class="box">☐</td></tr><tr><td>employment_contract</td><td class="yes">detected</td><td class="ev">Employment Contract | effective 2019-03-10</td><td class="box">☐</td></tr><tr><td>contract_terms</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>job_title</td><td class="yes">detected</td><td class="ev">Nurse | Nurse (Medical)</td><td class="box">☐</td></tr><tr><td>medical_license</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr></table></div>
+<div class="doc"><div class="hdr"><b>doc_089</b> &nbsp; Credentialing File — Dr. Aisha Patel, 2026-01-01<br>credentialing_file &nbsp;·&nbsp; employment &nbsp;·&nbsp; subject Dr. Aisha Patel</div><pre class="content">RIVERSIDE MEDICAL CLINIC
+Credentialing File — Confidential HR Document
+Date: January 1, 2026
+
+<mark title="job_title">PHYSICIAN</mark> CREDENTIALING RECORD
+
+Physician Name: <mark title="name">Dr. Aisha Patel</mark>
+Date of Birth: <mark title="date_of_birth">1978-11-14</mark>
+Home Address: <mark title="home_address">83 Hawthorn Rd, Springfield, IL 62720</mark>
+
+LICENSURE &amp; CERTIFICATIONS
+Medical License: <mark title="medical_license">IL-MD-55432</mark> (<mark title="mental_health">Psychiatry</mark>)
+Licensing State: Illinois
+License Status: Active — Expires 09/30/2027
+
+Board Certification: American Board of Psychiatry and Neurology (ABPN)
+Certification Date: 2008-06-15 | Renewal Due: 2028-06-15
+
+DEA Registration: Schedule III Waiver approved — <mark title="medical_medication">Buprenorphine</mark> prescribing authorized
+DEA Number: BP4872310 | Effective: 2025-03-01
+
+<mark title="employment_contract">EMPLOYMENT DETAILS
+Employment Contract</mark>: Full-time <mark title="job_title">Attending Psychiatrist</mark>, <mark title="employment_contract">effective 2026-01-01</mark>
+Annual Salary: <mark title="salary">$195,000</mark>
+Department: <mark title="mental_health">Behavioral Health</mark>
+
+CREDENTIALING STATUS
+Primary Source Verification: Completed 2025-12-10
+Malpractice History: No adverse actions on file
+CME Hours (Current Cycle): 42 / 50 required
+
+This document is classified as Confidential HR. Unauthorized disclosure is prohibited.
+
+Prepared by: Credentialing Office, Riverside Medical Clinic</pre><table><tr><th>information type</th><th>tagger</th><th>evidence</th><th>present?</th></tr><tr><td>name</td><td class="yes">detected</td><td class="ev">Dr. Aisha Patel</td><td class="box">☐</td></tr><tr><td>date_of_birth</td><td class="yes">detected</td><td class="ev">1978-11-14</td><td class="box">☐</td></tr><tr><td>ssn</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>home_address</td><td class="yes">detected</td><td class="ev">83 Hawthorn Rd, Springfield, IL 62720</td><td class="box">☐</td></tr><tr><td>emergency_contact</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_diagnosis</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_medication</td><td class="yes">detected</td><td class="ev">Buprenorphine</td><td class="box">☐</td></tr><tr><td>medical_history</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>mental_health</td><td class="yes">detected</td><td class="ev">Psychiatry | Behavioral Health</td><td class="box">☐</td></tr><tr><td>billing_code</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>insurance_info</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>salary</td><td class="yes">detected</td><td class="ev">$195,000</td><td class="box">☐</td></tr><tr><td>employment_contract</td><td class="yes">detected</td><td class="ev">EMPLOYMENT DETAILS
+Employment Contract | effective 2026-01-01</td><td class="box">☐</td></tr><tr><td>contract_terms</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>job_title</td><td class="yes">detected</td><td class="ev">PHYSICIAN | Attending Psychiatrist</td><td class="box">☐</td></tr><tr><td>medical_license</td><td class="yes">detected</td><td class="ev">IL-MD-55432</td><td class="box">☐</td></tr></table></div>
+<div class="doc"><div class="hdr"><b>doc_092</b> &nbsp; Contractor Agreement — Frank Turner, 2026-01-01<br>contractor_agreement &nbsp;·&nbsp; employment &nbsp;·&nbsp; subject Frank Turner</div><pre class="content">RIVERSIDE MEDICAL CLINIC
+<mark title="contract_terms">INDEPENDENT CONTRACTOR</mark> AGREEMENT
+
+Date: January 1, 2026
+Department: Information Technology / Administrative
+
+Contractor Name: <mark title="name">Frank Turner</mark>
+Date of Birth: <mark title="date_of_birth">1985-03-12</mark>
+Home Address: <mark title="home_address">512 Birch Pl, Springfield, IL 62726</mark>
+
+SCOPE OF ENGAGEMENT
+Contractor is engaged to provide IT infrastructure support services, including network monitoring, hardware maintenance, and system availability oversight for Riverside Medical Clinic&#x27;s administrative environment.
+
+COMPENSATION &amp; TERMS
+Hourly Rate: <mark title="salary">$88/hr</mark>
+Engagement Type: As-needed; invoiced bi-weekly
+Contract Term: January 1, 2026 – December 31, 2026
+
+PHI ACCESS RESTRICTION
+Contractor is strictly prohibited from accessing, viewing, transmitting, or storing any Protected Health Information (PHI). Network monitoring scope is limited to administrative infrastructure only. Any incidental exposure must be reported immediately to the IT Director.
+
+CONFIDENTIALITY
+Contractor agrees to maintain confidentiality of all clinic systems, credentials, and operational data encountered during the engagement.
+
+ACKNOWLEDGMENT
+By signing below, Contractor agrees to all terms stated herein.
+
+______________________________
+Frank Turner, Contractor
+
+______________________________
+Authorized Representative, Riverside Medical Clinic</pre><table><tr><th>information type</th><th>tagger</th><th>evidence</th><th>present?</th></tr><tr><td>name</td><td class="yes">detected</td><td class="ev">Frank Turner</td><td class="box">☐</td></tr><tr><td>date_of_birth</td><td class="yes">detected</td><td class="ev">1985-03-12</td><td class="box">☐</td></tr><tr><td>ssn</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>home_address</td><td class="yes">detected</td><td class="ev">512 Birch Pl, Springfield, IL 62726</td><td class="box">☐</td></tr><tr><td>emergency_contact</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_diagnosis</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_medication</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_history</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>mental_health</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>billing_code</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>insurance_info</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>salary</td><td class="yes">detected</td><td class="ev">$88/hr</td><td class="box">☐</td></tr><tr><td>employment_contract</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>contract_terms</td><td class="yes">detected</td><td class="ev">INDEPENDENT CONTRACTOR</td><td class="box">☐</td></tr><tr><td>job_title</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_license</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr></table></div>
+<div class="doc"><div class="hdr"><b>doc_095</b> &nbsp; Staff Schedule — Riverside Medical Clinic, 2026-06-23<br>staff_schedule &nbsp;·&nbsp; internal &nbsp;·&nbsp; subject None</div><pre class="content">RIVERSIDE MEDICAL CLINIC
+STAFF SCHEDULE — HOLIDAY WEEK
+Week of: June 23–27, 2026
+Document Type: Internal Staff Schedule
+Sensitivity: Internal Operations
+
+NOTE: Reduced staffing in effect due to Independence Day holiday week. All on-call staff must remain reachable by clinic pager.
+
+---
+DAILY COVERAGE (Mon–Thu)
+
+Primary Care:
+  <mark title="job_title">Physician</mark> on Duty: Dr. K. Okafor (Mon/Wed), Dr. S. Patel (Tue/Thu)
+  Nursing Staff: 2 RNs per shift (reduced from standard 4)
+  <mark title="job_title">Medical Assistant</mark>: 1 per shift
+
+Billing Department:
+  Staffed Tue–Thu only (08:00–14:00)
+  Emergency billing queries: forwarded to on-call billing line
+
+IT Support:
+  On-call only; response SLA: 4 hours
+
+HR:
+  Administrative hold — no in-person HR appointments
+
+---
+FRIDAY, JUNE 27 — SKELETON CREW
+  1 Physician (Dr. K. Okafor)
+  1 RN
+  1 Front Desk
+  All other departments: closed
+
+---
+ON-CALL ASSIGNMENTS (June 23–27):
+  Physician On-Call: Dr. S. Patel
+  Nursing On-Call: RN Team B
+  IT On-Call: Contractor – Helpdesk Tier 2
+
+Approved by: Clinic Operations Manager
+Date Issued: June 23, 2026</pre><table><tr><th>information type</th><th>tagger</th><th>evidence</th><th>present?</th></tr><tr><td>name</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>date_of_birth</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>ssn</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>home_address</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>emergency_contact</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_diagnosis</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_medication</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_history</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>mental_health</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>billing_code</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>insurance_info</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>salary</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>employment_contract</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>contract_terms</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>job_title</td><td class="yes">detected</td><td class="ev">Physician | Medical Assistant</td><td class="box">☐</td></tr><tr><td>medical_license</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr></table></div>
+<div class="doc"><div class="hdr"><b>doc_098</b> &nbsp; Meeting Agenda — Riverside Medical Clinic, 2026-02-10<br>meeting_agenda &nbsp;·&nbsp; internal &nbsp;·&nbsp; subject None</div><pre class="content">RIVERSIDE MEDICAL CLINIC
+Internal Meeting Agenda
+HR Quarterly Review — Q1 2026
+
+Date: February 10, 2026
+Time: 10:00 AM – 11:30 AM
+Location: Conference Room B, Main Campus
+Facilitated by: Human Resources Department
+
+---
+
+AGENDA ITEMS
+
+1. Call to Order &amp; Attendance (10:00 – 10:05)
+
+2. Benefits Enrollment Update (10:05 – 10:25)
+   - Open enrollment period: March 1 – March 31, 2026
+   - Review of medical, dental, and vision plan changes
+   - FSA/HSA contribution limit updates for 2026
+
+3. Policy Updates (10:25 – 10:50)
+   - Revised PTO accrual policy (<mark title="employment_contract">effective April 1, 2026</mark>)
+   - Updated remote work and hybrid scheduling guidelines
+   - HIPAA compliance refresher training requirements
+
+4. Headcount Planning (10:50 – 11:15)
+   - Current staffing levels by department
+   - Approved open positions: 2 RN, 1 <mark title="job_title">Billing Specialist</mark>, 1 <mark title="job_title">Medical Assistant</mark>
+   - Hiring timeline and onboarding schedule Q2 2026
+
+5. Action Items &amp; Next Steps (11:15 – 11:25)
+
+6. Adjourn (11:30)
+
+---
+Distribution: Internal Only
+Next Quarterly Review: May 12, 2026</pre><table><tr><th>information type</th><th>tagger</th><th>evidence</th><th>present?</th></tr><tr><td>name</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>date_of_birth</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>ssn</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>home_address</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>emergency_contact</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_diagnosis</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_medication</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_history</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>mental_health</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>billing_code</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>insurance_info</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>salary</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>employment_contract</td><td class="yes">detected</td><td class="ev">effective April 1, 2026</td><td class="box">☐</td></tr><tr><td>contract_terms</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>job_title</td><td class="yes">detected</td><td class="ev">Billing Specialist | Medical Assistant</td><td class="box">☐</td></tr><tr><td>medical_license</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr></table></div>
+<div class="doc"><div class="hdr"><b>doc_100</b> &nbsp; Policy Memo — Riverside Medical Clinic, 2026-01-05<br>policy_memo &nbsp;·&nbsp; internal &nbsp;·&nbsp; subject None</div><pre class="content">RIVERSIDE MEDICAL CLINIC
+INTERNAL POLICY MEMORANDUM
+
+Date: January 5, 2026
+To: All Clinical, Billing, HR, and IT Staff
+From: Compliance Office
+Re: Updated HIPAA Minimum Necessary Policy — Acknowledgment Required
+
+Effective immediately, Riverside Medical Clinic has revised its HIPAA Minimum Necessary Use and Disclosure Policy (Policy No. HIPAA-MN-2026-01) in response to updated OCR guidance issued in Q4 2025.
+
+Key Changes:
+1. Staff must access only the patient information required to perform their specific job function. Role-<mark title="job_title">based access controls will be enforced in the EHR system beg</mark>inning February 1, 2026.
+2. Verbal disclosures in shared workspaces must be limited to the minimum information necessary. Use of private consultation rooms is required when discussing protected health information (PHI).
+3. All bulk data exports or report pulls involving PHI must receive prior approval from the Compliance Office.
+4. Violations may result in disciplinary action up to and including termination.
+
+Required Action:
+All staff must read the full updated policy (available on the internal portal under Compliance &gt; HIPAA Policies) and submit a signed acknowledgment form to Human Resources no later than January 31, 2026.
+
+Questions should be directed to the Compliance Office at ext. 4400.
+
+Thank you for your continued commitment to patient privacy.</pre><table><tr><th>information type</th><th>tagger</th><th>evidence</th><th>present?</th></tr><tr><td>name</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>date_of_birth</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>ssn</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>home_address</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>emergency_contact</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_diagnosis</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_medication</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_history</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>mental_health</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>billing_code</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>insurance_info</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>salary</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>employment_contract</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>contract_terms</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>job_title</td><td class="yes">detected</td><td class="ev">based access controls will be enforced in th</td><td class="box">☐</td></tr><tr><td>medical_license</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr></table></div>
+<div class="doc"><div class="hdr"><b>doc_103</b> &nbsp; Public Pamphlet — Riverside Medical Clinic, 2026-01-01<br>public_pamphlet &nbsp;·&nbsp; public &nbsp;·&nbsp; subject None</div><pre class="content">RIVERSIDE MEDICAL CLINIC
+Notice of Privacy Practices
+<mark title="employment_contract">Effective Date: January 1, 2026</mark>
+
+YOUR HEALTH INFORMATION RIGHTS
+
+This notice describes how medical information about you may be used and disclosed and how you can access this information. Please review it carefully.
+
+HOW WE USE YOUR INFORMATION
+Riverside Medical Clinic uses your protected health information (PHI) for treatment, payment, and healthcare operations as permitted under the Health Insurance Portability and Accountability Act (HIPAA), 45 CFR Parts 160 and 164.
+
+YOUR RIGHTS INCLUDE:
+- Requesting access to or copies of your medical records
+- Requesting corrections to your health information
+- Requesting restrictions on how we share your information
+- Receiving a list of disclosures we have made
+- Receiving this notice in alternative formats upon request
+
+OUR RESPONSIBILITIES
+We are required by law to maintain the privacy of your PHI, provide this notice, and follow its terms.
+
+COMPLAINTS
+If you believe your privacy rights have been violated, you may file a complaint with our Privacy Officer or with the U.S. Department of Health and Human Services at www.hhs.gov/ocr.
+
+CONTACT US
+Riverside Medical Clinic — Privacy Officer
+400 Riverside Parkway, Suite 100
+Phone: (800) 555-0100
+
+No retaliation will occur for filing a complaint.</pre><table><tr><th>information type</th><th>tagger</th><th>evidence</th><th>present?</th></tr><tr><td>name</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>date_of_birth</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>ssn</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>home_address</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>emergency_contact</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_diagnosis</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_medication</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_history</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>mental_health</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>billing_code</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>insurance_info</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>salary</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>employment_contract</td><td class="yes">detected</td><td class="ev">Effective Date: January 1, 2026</td><td class="box">☐</td></tr><tr><td>contract_terms</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>job_title</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr><tr><td>medical_license</td><td class="no">—</td><td class="ev"></td><td class="box">☐</td></tr></table></div>

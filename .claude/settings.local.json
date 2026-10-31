@@ -31,7 +31,38 @@
       "Bash(rmdir figures *)",
       "Bash(mkdir -p notes)",
       "Bash(mv figures/Drs.md notes/Drs.md)",
-      "Bash(mv generation_log.txt logs/generation_log.txt)"
+      "Bash(mv generation_log.txt logs/generation_log.txt)",
+      "Bash(\".venv/Scripts/python.exe\" -c \"from pipeline.doc_specs import ALL_SPECS; print\\(len\\(ALL_SPECS\\)\\)\")",
+      "Read(//c/Users/Rttho/Desktop/**)",
+      "Bash(python -)",
+      "Bash(PYTHONIOENCODING=utf-8 python -)",
+      "Bash(awk '/\\\\\\\\begin{abstract}/{flag=1;next}/\\\\\\\\end{abstract}/{flag=0}flag' privacy_conductor.tex)",
+      "WebSearch",
+      "WebFetch(domain:arxiv.org)",
+      "Bash(cd /c/Users/Rttho/AppData/Local/Temp/claude/c--Users-Rttho-Desktop-CI-Sim/577f3a62-0c98-4010-9926-34f4c9bac5cb/scratchpad/PrivaCI-Bench && find . -type f -not -path './.git/*' | sort)",
+      "Read(//c/Users/Rttho/AppData/Local/Temp/claude/c--Users-Rttho-Desktop-CI-Sim/577f3a62-0c98-4010-9926-34f4c9bac5cb/scratchpad/PrivaCI-Bench/**)",
+      "Bash(cd /c/Users/Rttho/AppData/Local/Temp/claude/c--Users-Rttho-Desktop-CI-Sim/577f3a62-0c98-4010-9926-34f4c9bac5cb/scratchpad/PrivaCI-Bench && echo \"=== cases/HIPAA dataset_info.json ===\" && cat HF_cache/cases/HIPAA/dataset_info.json && echo \"\" && echo \"=== KBs/HIPAA dataset_info.json ===\" && cat HF_cache/KBs/HIPAA/dataset_info.json)",
+      "Bash(.venv/Scripts/python.exe -c \"import pyarrow; print\\('pyarrow', pyarrow.__version__\\)\")",
+      "Bash(.venv/Scripts/python.exe -c \"import datasets; print\\('datasets', datasets.__version__\\)\")",
+      "Bash(.venv/Scripts/python.exe -m pip install --quiet pyarrow)",
+      "Bash(.venv/Scripts/python.exe -m evaluation.hipaa_flows)",
+      "Bash(.venv/Scripts/python.exe -m evaluation.run_flow_judge_eval --models claude-haiku-4-5 --limit 3)",
+      "Bash(rm -f reports/flow_judge/*.jsonl)",
+      "Bash(.venv/Scripts/python.exe -m evaluation.run_flow_judge_eval)",
+      "Bash(tee reports/flow_judge_run.log)",
+      "Bash(.venv/Scripts/python.exe -m evaluation.hipaa_gate)",
+      "Bash(.venv/Scripts/python.exe -m evaluation.run_gate_vs_llm)",
+      "Bash(.venv/Scripts/python.exe -m evaluation.run_gate_eval)",
+      "Bash(.venv/Scripts/python.exe -m evaluation.run_labeler_eval --models claude-haiku-4-5 --limit 2)",
+      "Bash(.venv/Scripts/python.exe -m evaluation.run_labeler_eval --models claude-haiku-4-5 --limit 3)",
+      "Bash(.venv/Scripts/python.exe -m evaluation.run_labeler_eval)",
+      "Bash(tee reports/labeler_run.log)",
+      "Bash(./.venv/Scripts/python.exe -m evaluation.run_flow_judge_eval --models claude-opus-4-8,claude-opus-4-8-nothink,claude-sonnet-5,claude-haiku-4-5,gpt-5.4,gpt-5.4-mini,gpt-5.4-nano)",
+      "Bash(./.venv/Scripts/python.exe -c ' *)",
+      "Bash(grep -oE \"^@[a-z]+\\\\{[^,]+\" paper/references.bib)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\Rttho\\.claude\\projects\\c--Users-Rttho-Desktop-CI-Sim\\memory"
     ]
   }
 }

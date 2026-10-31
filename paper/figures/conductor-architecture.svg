@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 340" width="7in" height="2.53in"
+     font-family="Charter, Georgia, 'Times New Roman', serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="8" markerHeight="7"
+            orient="auto-start-reverse">
+      <path d="M0,0 L10,4 L0,8 z" fill="#2A2A2A"/>
+    </marker>
+    <marker id="arb" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="8" markerHeight="7"
+            orient="auto-start-reverse">
+      <path d="M0,0 L10,4 L0,8 z" fill="#1B4F8A"/>
+    </marker>
+    <marker id="ara" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="8" markerHeight="7"
+            orient="auto-start-reverse">
+      <path d="M0,0 L10,4 L0,8 z" fill="#A85B12"/>
+    </marker>
+  </defs>
+
+  <rect width="940" height="340" fill="#fff"/>
+
+  <!-- trusted region -->
+  <rect x="460" y="14" width="472" height="312" rx="6"
+        fill="#F2F7FC" stroke="#8FB3DA" stroke-width="1.3" stroke-dasharray="7 5"/>
+  <text x="450" y="32" text-anchor="end" font-size="13" font-style="italic" fill="#8A8A8A">untrusted</text>
+  <text x="474" y="32" font-size="13" font-style="italic" fill="#2E6199">trusted</text>
+
+  <!-- Requester -->
+  <rect x="24" y="86" width="150" height="62" rx="4" fill="#fff" stroke="#2A2A2A" stroke-width="1.2"/>
+  <text x="99" y="112" text-anchor="middle" font-size="16" font-weight="bold" fill="#1A1A1A">Requester</text>
+  <text x="99" y="132" text-anchor="middle" font-size="12.5" fill="#555">role, context</text>
+
+  <!-- Assistant -->
+  <rect x="256" y="86" width="150" height="62" rx="4" fill="#fff" stroke="#2A2A2A" stroke-width="1.2"/>
+  <text x="331" y="112" text-anchor="middle" font-size="16" font-weight="bold" fill="#1A1A1A">Assistant</text>
+  <text x="331" y="132" text-anchor="middle" font-size="12.5" fill="#555">LLM</text>
+
+  <!-- Conductor: the gate -->
+  <rect x="500" y="86" width="150" height="62" rx="4" fill="#E7F0F9" stroke="#1B4F8A" stroke-width="2.8"/>
+  <text x="575" y="112" text-anchor="middle" font-size="16" font-weight="bold" fill="#1B4F8A">Conductor</text>
+  <text x="575" y="132" text-anchor="middle" font-size="12.5" fill="#3C6A9B">policy gate</text>
+
+  <!-- Store -->
+  <rect x="752" y="86" width="165" height="62" rx="4" fill="#F3F8FC" stroke="#5583B4" stroke-width="1.3"/>
+  <text x="834" y="112" text-anchor="middle" font-size="16" font-weight="bold" fill="#1A1A1A">Store</text>
+  <text x="834" y="132" text-anchor="middle" font-size="12.5" fill="#555">labeled documents</text>
+
+  <!-- Author -->
+  <rect x="492" y="250" width="166" height="66" rx="4" fill="#FBF0E2" stroke="#A85B12" stroke-width="1.4"/>
+  <text x="575" y="274" text-anchor="middle" font-size="16" font-weight="bold" fill="#8A4A0E">Author</text>
+  <text x="575" y="292" text-anchor="middle" font-size="12.5" fill="#7A5326">individual, group,</text>
+  <text x="575" y="307" text-anchor="middle" font-size="12.5" fill="#7A5326">or legislation</text>
+
+  <!-- request path -->
+  <line x1="174" y1="104" x2="252" y2="104" stroke="#2A2A2A" stroke-width="1.3" marker-end="url(#ar)"/>
+  <text x="213" y="97" text-anchor="middle" font-size="12.5" fill="#2A2A2A">query</text>
+
+  <line x1="406" y1="104" x2="496" y2="104" stroke="#2A2A2A" stroke-width="1.3" marker-end="url(#ar)"/>
+  <text x="451" y="97" text-anchor="middle" font-size="12.5" fill="#2A2A2A">request</text>
+
+  <line x1="650" y1="104" x2="748" y2="104" stroke="#2A2A2A" stroke-width="1.3" marker-end="url(#ar)"/>
+  <text x="699" y="97" text-anchor="middle" font-size="12.5" fill="#2A2A2A">fetch</text>
+
+  <!-- return path: the guarantee, emphasised -->
+  <line x1="752" y1="132" x2="654" y2="132" stroke="#1B4F8A" stroke-width="2" marker-end="url(#arb)"/>
+  <text x="703" y="152" text-anchor="middle" font-size="12.5" fill="#1B4F8A">documents</text>
+
+  <line x1="500" y1="132" x2="410" y2="132" stroke="#1B4F8A" stroke-width="2" marker-end="url(#arb)"/>
+  <text x="455" y="152" text-anchor="middle" font-size="12.5" fill="#1B4F8A">permitted</text>
+  <text x="455" y="167" text-anchor="middle" font-size="12.5" fill="#1B4F8A">documents only</text>
+
+  <!-- response back to the requester -->
+  <path d="M 331 148 C 300 212, 130 212, 99 148" fill="none" stroke="#2A2A2A" stroke-width="1.3"
+        marker-end="url(#ar)"/>
+  <text x="215" y="218" text-anchor="middle" font-size="12.5" fill="#2A2A2A">response</text>
+
+  <!-- policy, supplied out of band -->
+  <line x1="575" y1="246" x2="575" y2="152" stroke="#A85B12" stroke-width="1.8"
+        stroke-dasharray="6 4" marker-end="url(#ara)"/>
+  <text x="588" y="202" font-size="12.5" fill="#A85B12">policy</text>
+</svg>

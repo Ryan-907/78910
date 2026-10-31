@@ -1,0 +1,3474 @@
+{
+  "n_docs": 105,
+  "baseline": "gate + human labels = 0 violations (proven)",
+  "models": {
+    "claude-opus-4-8": {
+      "n_docs": 105,
+      "n_labeled": 105,
+      "label_agreement": {
+        "tier_exact": 0.781,
+        "roles_exact": 0.5524,
+        "extra_sensitive_acc": 0.8762,
+        "roles_over_granted_total": 48,
+        "roles_under_granted_total": 21
+      },
+      "flows": {
+        "total": 2520,
+        "induced_privacy_violations": 40,
+        "privacy_violation_rate": 0.01587,
+        "induced_overblocks": 31,
+        "overblock_rate": 0.0123
+      },
+      "attribution": {
+        "permitted_roles too broad": 40
+      },
+      "violations": [
+        {
+          "requester": "Alice Johnson",
+          "doc": "Prescription — John Smith, 2026-01-15",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Alice Johnson",
+          "doc": "Prescription — Robert Lee, 2026-01-22",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Jennifer Walsh",
+          "doc": "Prescription — Linda Torres, 2026-02-18",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Jennifer Walsh",
+          "doc": "Prescription — Patricia Moore, 2026-02-20",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Jennifer Walsh",
+          "doc": "Lab Report — James Carter, 2026-02-05",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Patricia Davis",
+          "doc": "Referral Letter — John Smith, 2026-01-15",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Tom Reyes",
+          "doc": "Referral Letter — Robert Lee, 2026-01-22",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Alice Johnson",
+          "doc": "Referral Letter — Robert Lee, 2026-01-22",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Patricia Davis",
+          "doc": "Referral Letter — Emily Brown, 2026-01-20",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_sensitive",
+          "human_roles": [
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Carlos Mendez",
+          "doc": "Referral Letter — Linda Torres, 2026-02-18",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Sarah Chen",
+          "doc": "Insurance Claim — John Smith, 2026-01-15",
+          "human_tier": "financial",
+          "llm_tier": "financial",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Patricia Davis",
+          "doc": "Insurance Claim — John Smith, 2026-01-15",
+          "human_tier": "financial",
+          "llm_tier": "financial",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Sarah Chen",
+          "doc": "Insurance Claim — Emily Brown, 2026-01-20",
+          "human_tier": "financial",
+          "llm_tier": "clinical_sensitive",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Doctor"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Marcus Webb",
+          "doc": "Insurance Claim — Robert Lee, 2026-01-22",
+          "human_tier": "financial",
+          "llm_tier": "financial",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Tom Reyes",
+          "doc": "Insurance Claim — Robert Lee, 2026-01-22",
+          "human_tier": "financial",
+          "llm_tier": "financial",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Kevin O'Brien",
+          "doc": "Insurance Claim — Linda Torres, 2026-02-18",
+          "human_tier": "financial",
+          "llm_tier": "financial",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Carlos Mendez",
+          "doc": "Insurance Claim — Linda Torres, 2026-02-18",
+          "human_tier": "financial",
+          "llm_tier": "financial",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Marcus Webb",
+          "doc": "Insurance Claim — Maria Gonzalez, 2026-02-03",
+          "human_tier": "financial",
+          "llm_tier": "clinical_sensitive",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Doctor"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Aisha Patel",
+          "doc": "Insurance Claim — Maria Gonzalez, 2026-02-03",
+          "human_tier": "financial",
+          "llm_tier": "clinical_sensitive",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Doctor"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Sarah Chen",
+          "doc": "Billing Statement — Emily Brown, 2026-02-01",
+          "human_tier": "financial",
+          "llm_tier": "clinical_sensitive",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Doctor"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Marcus Webb",
+          "doc": "Billing Statement — Robert Lee, 2026-02-05",
+          "human_tier": "financial",
+          "llm_tier": "financial",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Tom Reyes",
+          "doc": "Billing Statement — Robert Lee, 2026-02-05",
+          "human_tier": "financial",
+          "llm_tier": "financial",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Kevin O'Brien",
+          "doc": "Billing Statement — Linda Torres, 2026-03-01",
+          "human_tier": "financial",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Carlos Mendez",
+          "doc": "Billing Statement — Linda Torres, 2026-03-01",
+          "human_tier": "financial",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Patricia Davis",
+          "doc": "Prior Authorization — John Smith, 2026-01-10",
+          "human_tier": "financial",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Tom Reyes",
+          "doc": "Prior Authorization — Robert Lee, 2026-01-15",
+          "human_tier": "financial",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Carlos Mendez",
+          "doc": "Prior Authorization — Linda Torres, 2026-02-01",
+          "human_tier": "financial",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Sarah Chen",
+          "doc": "Explanation Of Benefits — Emily Brown, 2026-02-10",
+          "human_tier": "financial",
+          "llm_tier": "clinical_sensitive",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Doctor"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Marcus Webb",
+          "doc": "Explanation Of Benefits — Robert Lee, 2026-02-10",
+          "human_tier": "financial",
+          "llm_tier": "financial",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Tom Reyes",
+          "doc": "Explanation Of Benefits — Robert Lee, 2026-02-10",
+          "human_tier": "financial",
+          "llm_tier": "financial",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "John Smith",
+          "doc": "Meeting Agenda — Riverside Medical Clinic, 2026-01-10",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Emily Brown",
+          "doc": "Meeting Agenda — Riverside Medical Clinic, 2026-01-10",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Robert Lee",
+          "doc": "Meeting Agenda — Riverside Medical Clinic, 2026-01-10",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Maria Gonzalez",
+          "doc": "Meeting Agenda — Riverside Medical Clinic, 2026-01-10",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "David Park",
+          "doc": "Meeting Agenda — Riverside Medical Clinic, 2026-01-10",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Sarah Wilson",
+          "doc": "Meeting Agenda — Riverside Medical Clinic, 2026-01-10",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "James Carter",
+          "doc": "Meeting Agenda — Riverside Medical Clinic, 2026-01-10",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Linda Torres",
+          "doc": "Meeting Agenda — Riverside Medical Clinic, 2026-01-10",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Michael Chen",
+          "doc": "Meeting Agenda — Riverside Medical Clinic, 2026-01-10",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Patricia Moore",
+          "doc": "Meeting Agenda — Riverside Medical Clinic, 2026-01-10",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        }
+      ]
+    },
+    "claude-opus-4-8-nothink": {
+      "n_docs": 105,
+      "n_labeled": 105,
+      "label_agreement": {
+        "tier_exact": 0.8286,
+        "roles_exact": 0.5714,
+        "extra_sensitive_acc": 0.8667,
+        "roles_over_granted_total": 41,
+        "roles_under_granted_total": 19
+      },
+      "flows": {
+        "total": 2520,
+        "induced_privacy_violations": 44,
+        "privacy_violation_rate": 0.01746,
+        "induced_overblocks": 27,
+        "overblock_rate": 0.01071
+      },
+      "attribution": {
+        "permitted_roles too broad": 44
+      },
+      "violations": [
+        {
+          "requester": "Alice Johnson",
+          "doc": "Prescription — Robert Lee, 2026-01-22",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Jennifer Walsh",
+          "doc": "Prescription — Patricia Moore, 2026-02-20",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Alice Johnson",
+          "doc": "Lab Report — John Smith, 2026-01-15",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Jennifer Walsh",
+          "doc": "Lab Report — James Carter, 2026-02-05",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Alice Johnson",
+          "doc": "Radiology Report — Robert Lee, 2026-01-05",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Alice Johnson",
+          "doc": "Discharge Summary — Robert Lee, 2026-01-08",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Patricia Davis",
+          "doc": "Referral Letter — John Smith, 2026-01-15",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Tom Reyes",
+          "doc": "Referral Letter — Robert Lee, 2026-01-22",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Alice Johnson",
+          "doc": "Referral Letter — Robert Lee, 2026-01-22",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Carlos Mendez",
+          "doc": "Referral Letter — Linda Torres, 2026-02-18",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Sarah Chen",
+          "doc": "Insurance Claim — John Smith, 2026-01-15",
+          "human_tier": "financial",
+          "llm_tier": "financial",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Patricia Davis",
+          "doc": "Insurance Claim — John Smith, 2026-01-15",
+          "human_tier": "financial",
+          "llm_tier": "financial",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Sarah Chen",
+          "doc": "Insurance Claim — Emily Brown, 2026-01-20",
+          "human_tier": "financial",
+          "llm_tier": "clinical_sensitive",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Doctor"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Kevin O'Brien",
+          "doc": "Insurance Claim — Linda Torres, 2026-02-18",
+          "human_tier": "financial",
+          "llm_tier": "financial",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Carlos Mendez",
+          "doc": "Insurance Claim — Linda Torres, 2026-02-18",
+          "human_tier": "financial",
+          "llm_tier": "financial",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Marcus Webb",
+          "doc": "Insurance Claim — Maria Gonzalez, 2026-02-03",
+          "human_tier": "financial",
+          "llm_tier": "clinical_sensitive",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Doctor"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Aisha Patel",
+          "doc": "Insurance Claim — Maria Gonzalez, 2026-02-03",
+          "human_tier": "financial",
+          "llm_tier": "clinical_sensitive",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Doctor"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Kevin O'Brien",
+          "doc": "Billing Statement — Linda Torres, 2026-03-01",
+          "human_tier": "financial",
+          "llm_tier": "financial",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Carlos Mendez",
+          "doc": "Billing Statement — Linda Torres, 2026-03-01",
+          "human_tier": "financial",
+          "llm_tier": "financial",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Patricia Davis",
+          "doc": "Prior Authorization — John Smith, 2026-01-10",
+          "human_tier": "financial",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Tom Reyes",
+          "doc": "Prior Authorization — Robert Lee, 2026-01-15",
+          "human_tier": "financial",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Carlos Mendez",
+          "doc": "Prior Authorization — Linda Torres, 2026-02-01",
+          "human_tier": "financial",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Marcus Webb",
+          "doc": "Explanation Of Benefits — Robert Lee, 2026-02-10",
+          "human_tier": "financial",
+          "llm_tier": "financial",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Tom Reyes",
+          "doc": "Explanation Of Benefits — Robert Lee, 2026-02-10",
+          "human_tier": "financial",
+          "llm_tier": "financial",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "John Smith",
+          "doc": "Meeting Agenda — Riverside Medical Clinic, 2026-02-10",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Emily Brown",
+          "doc": "Meeting Agenda — Riverside Medical Clinic, 2026-02-10",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Robert Lee",
+          "doc": "Meeting Agenda — Riverside Medical Clinic, 2026-02-10",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Maria Gonzalez",
+          "doc": "Meeting Agenda — Riverside Medical Clinic, 2026-02-10",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "David Park",
+          "doc": "Meeting Agenda — Riverside Medical Clinic, 2026-02-10",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Sarah Wilson",
+          "doc": "Meeting Agenda — Riverside Medical Clinic, 2026-02-10",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "James Carter",
+          "doc": "Meeting Agenda — Riverside Medical Clinic, 2026-02-10",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Linda Torres",
+          "doc": "Meeting Agenda — Riverside Medical Clinic, 2026-02-10",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Michael Chen",
+          "doc": "Meeting Agenda — Riverside Medical Clinic, 2026-02-10",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Patricia Moore",
+          "doc": "Meeting Agenda — Riverside Medical Clinic, 2026-02-10",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "John Smith",
+          "doc": "Policy Memo — Riverside Medical Clinic, 2026-03-01",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Emily Brown",
+          "doc": "Policy Memo — Riverside Medical Clinic, 2026-03-01",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Robert Lee",
+          "doc": "Policy Memo — Riverside Medical Clinic, 2026-03-01",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Maria Gonzalez",
+          "doc": "Policy Memo — Riverside Medical Clinic, 2026-03-01",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "David Park",
+          "doc": "Policy Memo — Riverside Medical Clinic, 2026-03-01",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Sarah Wilson",
+          "doc": "Policy Memo — Riverside Medical Clinic, 2026-03-01",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        }
+      ]
+    },
+    "claude-sonnet-5": {
+      "n_docs": 105,
+      "n_labeled": 105,
+      "label_agreement": {
+        "tier_exact": 0.819,
+        "roles_exact": 0.5238,
+        "extra_sensitive_acc": 0.8667,
+        "roles_over_granted_total": 53,
+        "roles_under_granted_total": 26
+      },
+      "flows": {
+        "total": 2520,
+        "induced_privacy_violations": 64,
+        "privacy_violation_rate": 0.0254,
+        "induced_overblocks": 34,
+        "overblock_rate": 0.01349
+      },
+      "attribution": {
+        "permitted_roles too broad": 64
+      },
+      "violations": [
+        {
+          "requester": "Nurse Patricia Davis",
+          "doc": "Referral Letter — John Smith, 2026-01-15",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Tom Reyes",
+          "doc": "Referral Letter — Robert Lee, 2026-01-22",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Carlos Mendez",
+          "doc": "Referral Letter — Linda Torres, 2026-02-18",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Sarah Chen",
+          "doc": "Insurance Claim — John Smith, 2026-01-15",
+          "human_tier": "financial",
+          "llm_tier": "financial",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Sarah Chen",
+          "doc": "Insurance Claim — Emily Brown, 2026-01-20",
+          "human_tier": "financial",
+          "llm_tier": "clinical_sensitive",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Doctor"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Marcus Webb",
+          "doc": "Insurance Claim — Robert Lee, 2026-01-22",
+          "human_tier": "financial",
+          "llm_tier": "financial",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Kevin O'Brien",
+          "doc": "Insurance Claim — Linda Torres, 2026-02-18",
+          "human_tier": "financial",
+          "llm_tier": "financial",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Carlos Mendez",
+          "doc": "Insurance Claim — Linda Torres, 2026-02-18",
+          "human_tier": "financial",
+          "llm_tier": "financial",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Marcus Webb",
+          "doc": "Insurance Claim — Maria Gonzalez, 2026-02-03",
+          "human_tier": "financial",
+          "llm_tier": "clinical_sensitive",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Doctor"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Aisha Patel",
+          "doc": "Insurance Claim — Maria Gonzalez, 2026-02-03",
+          "human_tier": "financial",
+          "llm_tier": "clinical_sensitive",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Doctor"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Sarah Chen",
+          "doc": "Billing Statement — John Smith, 2026-02-01",
+          "human_tier": "financial",
+          "llm_tier": "financial",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Sarah Chen",
+          "doc": "Billing Statement — Emily Brown, 2026-02-01",
+          "human_tier": "financial",
+          "llm_tier": "clinical_sensitive",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Doctor"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Marcus Webb",
+          "doc": "Billing Statement — Robert Lee, 2026-02-05",
+          "human_tier": "financial",
+          "llm_tier": "financial",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Tom Reyes",
+          "doc": "Billing Statement — Robert Lee, 2026-02-05",
+          "human_tier": "financial",
+          "llm_tier": "financial",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Kevin O'Brien",
+          "doc": "Billing Statement — Linda Torres, 2026-03-01",
+          "human_tier": "financial",
+          "llm_tier": "financial",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Carlos Mendez",
+          "doc": "Billing Statement — Linda Torres, 2026-03-01",
+          "human_tier": "financial",
+          "llm_tier": "financial",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Patricia Davis",
+          "doc": "Prior Authorization — John Smith, 2026-01-10",
+          "human_tier": "financial",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Tom Reyes",
+          "doc": "Prior Authorization — Robert Lee, 2026-01-15",
+          "human_tier": "financial",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Carlos Mendez",
+          "doc": "Prior Authorization — Linda Torres, 2026-02-01",
+          "human_tier": "financial",
+          "llm_tier": "financial",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Sarah Chen",
+          "doc": "Explanation Of Benefits — John Smith, 2026-02-10",
+          "human_tier": "financial",
+          "llm_tier": "financial",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Patricia Davis",
+          "doc": "Explanation Of Benefits — John Smith, 2026-02-10",
+          "human_tier": "financial",
+          "llm_tier": "financial",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Sarah Chen",
+          "doc": "Explanation Of Benefits — Emily Brown, 2026-02-10",
+          "human_tier": "financial",
+          "llm_tier": "clinical_sensitive",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Doctor"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Marcus Webb",
+          "doc": "Explanation Of Benefits — Robert Lee, 2026-02-10",
+          "human_tier": "financial",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Tom Reyes",
+          "doc": "Explanation Of Benefits — Robert Lee, 2026-02-10",
+          "human_tier": "financial",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "John Smith",
+          "doc": "Staff Schedule — Riverside Medical Clinic, 2026-07-07",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Emily Brown",
+          "doc": "Staff Schedule — Riverside Medical Clinic, 2026-07-07",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Robert Lee",
+          "doc": "Staff Schedule — Riverside Medical Clinic, 2026-07-07",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Maria Gonzalez",
+          "doc": "Staff Schedule — Riverside Medical Clinic, 2026-07-07",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "David Park",
+          "doc": "Staff Schedule — Riverside Medical Clinic, 2026-07-07",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Sarah Wilson",
+          "doc": "Staff Schedule — Riverside Medical Clinic, 2026-07-07",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "James Carter",
+          "doc": "Staff Schedule — Riverside Medical Clinic, 2026-07-07",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Linda Torres",
+          "doc": "Staff Schedule — Riverside Medical Clinic, 2026-07-07",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Michael Chen",
+          "doc": "Staff Schedule — Riverside Medical Clinic, 2026-07-07",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Patricia Moore",
+          "doc": "Staff Schedule — Riverside Medical Clinic, 2026-07-07",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "John Smith",
+          "doc": "Meeting Agenda — Riverside Medical Clinic, 2026-01-10",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Emily Brown",
+          "doc": "Meeting Agenda — Riverside Medical Clinic, 2026-01-10",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Robert Lee",
+          "doc": "Meeting Agenda — Riverside Medical Clinic, 2026-01-10",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Maria Gonzalez",
+          "doc": "Meeting Agenda — Riverside Medical Clinic, 2026-01-10",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "David Park",
+          "doc": "Meeting Agenda — Riverside Medical Clinic, 2026-01-10",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Sarah Wilson",
+          "doc": "Meeting Agenda — Riverside Medical Clinic, 2026-01-10",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        }
+      ]
+    },
+    "claude-haiku-4-5": {
+      "n_docs": 105,
+      "n_labeled": 105,
+      "label_agreement": {
+        "tier_exact": 0.8381,
+        "roles_exact": 0.3048,
+        "extra_sensitive_acc": 0.9429,
+        "roles_over_granted_total": 89,
+        "roles_under_granted_total": 20
+      },
+      "flows": {
+        "total": 2520,
+        "induced_privacy_violations": 39,
+        "privacy_violation_rate": 0.01548,
+        "induced_overblocks": 28,
+        "overblock_rate": 0.01111
+      },
+      "attribution": {
+        "permitted_roles too broad": 39
+      },
+      "violations": [
+        {
+          "requester": "Jennifer Walsh",
+          "doc": "Clinical Note — Linda Torres, 2026-02-18",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Alice Johnson",
+          "doc": "Prescription — John Smith, 2026-01-15",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Alice Johnson",
+          "doc": "Prescription — Emily Brown, 2026-01-20",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_sensitive",
+          "human_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Alice Johnson",
+          "doc": "Prescription — Robert Lee, 2026-01-22",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Jennifer Walsh",
+          "doc": "Prescription — Patricia Moore, 2026-02-20",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Alice Johnson",
+          "doc": "Lab Report — John Smith, 2026-01-15",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Jennifer Walsh",
+          "doc": "Lab Report — James Carter, 2026-02-05",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Jennifer Walsh",
+          "doc": "Lab Report — Linda Torres, 2026-02-18",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Jennifer Walsh",
+          "doc": "Lab Report — Patricia Moore, 2026-02-20",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Jennifer Walsh",
+          "doc": "Radiology Report — Linda Torres, 2026-01-10",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Alice Johnson",
+          "doc": "Discharge Summary — Emily Brown, 2026-01-20",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_sensitive",
+          "human_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Alice Johnson",
+          "doc": "Discharge Summary — John Smith, 2026-01-16",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Jennifer Walsh",
+          "doc": "Discharge Summary — Linda Torres, 2026-02-19",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Alice Johnson",
+          "doc": "Discharge Summary — Robert Lee, 2026-01-08",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Patricia Davis",
+          "doc": "Referral Letter — John Smith, 2026-01-15",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Tom Reyes",
+          "doc": "Referral Letter — Robert Lee, 2026-01-22",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Alice Johnson",
+          "doc": "Referral Letter — Robert Lee, 2026-01-22",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Patricia Davis",
+          "doc": "Referral Letter — Emily Brown, 2026-01-20",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_sensitive",
+          "human_roles": [
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Doctor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Carlos Mendez",
+          "doc": "Referral Letter — Linda Torres, 2026-02-18",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Jennifer Walsh",
+          "doc": "Referral Letter — Linda Torres, 2026-02-18",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Jennifer Walsh",
+          "doc": "Referral Letter — James Carter, 2026-02-05",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Sarah Chen",
+          "doc": "Insurance Claim — Emily Brown, 2026-01-20",
+          "human_tier": "financial",
+          "llm_tier": "clinical_sensitive",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Patricia Davis",
+          "doc": "Insurance Claim — Emily Brown, 2026-01-20",
+          "human_tier": "financial",
+          "llm_tier": "clinical_sensitive",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Marcus Webb",
+          "doc": "Insurance Claim — Robert Lee, 2026-01-22",
+          "human_tier": "financial",
+          "llm_tier": "financial",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Marcus Webb",
+          "doc": "Insurance Claim — Maria Gonzalez, 2026-02-03",
+          "human_tier": "financial",
+          "llm_tier": "clinical_sensitive",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Doctor"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Aisha Patel",
+          "doc": "Insurance Claim — Maria Gonzalez, 2026-02-03",
+          "human_tier": "financial",
+          "llm_tier": "clinical_sensitive",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Doctor"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Patricia Davis",
+          "doc": "Prior Authorization — John Smith, 2026-01-10",
+          "human_tier": "financial",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Tom Reyes",
+          "doc": "Prior Authorization — Robert Lee, 2026-01-15",
+          "human_tier": "financial",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Carlos Mendez",
+          "doc": "Prior Authorization — Linda Torres, 2026-02-01",
+          "human_tier": "financial",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "John Smith",
+          "doc": "Meeting Agenda — Riverside Medical Clinic, 2026-01-10",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Emily Brown",
+          "doc": "Meeting Agenda — Riverside Medical Clinic, 2026-01-10",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Robert Lee",
+          "doc": "Meeting Agenda — Riverside Medical Clinic, 2026-01-10",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Maria Gonzalez",
+          "doc": "Meeting Agenda — Riverside Medical Clinic, 2026-01-10",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "David Park",
+          "doc": "Meeting Agenda — Riverside Medical Clinic, 2026-01-10",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Sarah Wilson",
+          "doc": "Meeting Agenda — Riverside Medical Clinic, 2026-01-10",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "James Carter",
+          "doc": "Meeting Agenda — Riverside Medical Clinic, 2026-01-10",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Linda Torres",
+          "doc": "Meeting Agenda — Riverside Medical Clinic, 2026-01-10",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Michael Chen",
+          "doc": "Meeting Agenda — Riverside Medical Clinic, 2026-01-10",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Patricia Moore",
+          "doc": "Meeting Agenda — Riverside Medical Clinic, 2026-01-10",
+          "human_tier": "internal",
+          "llm_tier": "internal",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "HR Manager",
+            "IT Contractor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        }
+      ]
+    },
+    "gpt-5.4": {
+      "n_docs": 105,
+      "n_labeled": 105,
+      "label_agreement": {
+        "tier_exact": 0.8571,
+        "roles_exact": 0.2286,
+        "extra_sensitive_acc": 0.8952,
+        "roles_over_granted_total": 72,
+        "roles_under_granted_total": 52
+      },
+      "flows": {
+        "total": 2520,
+        "induced_privacy_violations": 9,
+        "privacy_violation_rate": 0.00357,
+        "induced_overblocks": 100,
+        "overblock_rate": 0.03968
+      },
+      "attribution": {
+        "permitted_roles too broad": 9
+      },
+      "violations": [
+        {
+          "requester": "Nurse Patricia Davis",
+          "doc": "Referral Letter — John Smith, 2026-01-15",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Doctor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Tom Reyes",
+          "doc": "Referral Letter — Robert Lee, 2026-01-22",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Doctor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Carlos Mendez",
+          "doc": "Referral Letter — Linda Torres, 2026-02-18",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Doctor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Sarah Chen",
+          "doc": "Insurance Claim — Emily Brown, 2026-01-20",
+          "human_tier": "financial",
+          "llm_tier": "clinical_sensitive",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Marcus Webb",
+          "doc": "Insurance Claim — Maria Gonzalez, 2026-02-03",
+          "human_tier": "financial",
+          "llm_tier": "clinical_sensitive",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Doctor",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Aisha Patel",
+          "doc": "Insurance Claim — Maria Gonzalez, 2026-02-03",
+          "human_tier": "financial",
+          "llm_tier": "clinical_sensitive",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Doctor",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Patricia Davis",
+          "doc": "Prior Authorization — John Smith, 2026-01-10",
+          "human_tier": "financial",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Doctor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Tom Reyes",
+          "doc": "Prior Authorization — Robert Lee, 2026-01-15",
+          "human_tier": "financial",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Carlos Mendez",
+          "doc": "Prior Authorization — Linda Torres, 2026-02-01",
+          "human_tier": "financial",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        }
+      ]
+    },
+    "gpt-5.4-mini": {
+      "n_docs": 105,
+      "n_labeled": 105,
+      "label_agreement": {
+        "tier_exact": 0.8286,
+        "roles_exact": 0.8,
+        "extra_sensitive_acc": 0.9238,
+        "roles_over_granted_total": 13,
+        "roles_under_granted_total": 19
+      },
+      "flows": {
+        "total": 2520,
+        "induced_privacy_violations": 11,
+        "privacy_violation_rate": 0.00437,
+        "induced_overblocks": 26,
+        "overblock_rate": 0.01032
+      },
+      "attribution": {
+        "permitted_roles too broad": 11
+      },
+      "violations": [
+        {
+          "requester": "Nurse Patricia Davis",
+          "doc": "Referral Letter — John Smith, 2026-01-15",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Tom Reyes",
+          "doc": "Referral Letter — Robert Lee, 2026-01-22",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Patricia Davis",
+          "doc": "Referral Letter — Emily Brown, 2026-01-20",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Carlos Mendez",
+          "doc": "Referral Letter — Linda Torres, 2026-02-18",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Kevin O'Brien",
+          "doc": "Insurance Claim — Linda Torres, 2026-02-18",
+          "human_tier": "financial",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Carlos Mendez",
+          "doc": "Insurance Claim — Linda Torres, 2026-02-18",
+          "human_tier": "financial",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Marcus Webb",
+          "doc": "Insurance Claim — Maria Gonzalez, 2026-02-03",
+          "human_tier": "financial",
+          "llm_tier": "clinical_sensitive",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Aisha Patel",
+          "doc": "Insurance Claim — Maria Gonzalez, 2026-02-03",
+          "human_tier": "financial",
+          "llm_tier": "clinical_sensitive",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Patricia Davis",
+          "doc": "Prior Authorization — John Smith, 2026-01-10",
+          "human_tier": "financial",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Tom Reyes",
+          "doc": "Prior Authorization — Robert Lee, 2026-01-15",
+          "human_tier": "financial",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Carlos Mendez",
+          "doc": "Prior Authorization — Linda Torres, 2026-02-01",
+          "human_tier": "financial",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        }
+      ]
+    },
+    "gpt-5.4-nano": {
+      "n_docs": 105,
+      "n_labeled": 105,
+      "label_agreement": {
+        "tier_exact": 0.819,
+        "roles_exact": 0.6857,
+        "extra_sensitive_acc": 0.9333,
+        "roles_over_granted_total": 27,
+        "roles_under_granted_total": 22
+      },
+      "flows": {
+        "total": 2520,
+        "induced_privacy_violations": 16,
+        "privacy_violation_rate": 0.00635,
+        "induced_overblocks": 36,
+        "overblock_rate": 0.01429
+      },
+      "attribution": {
+        "permitted_roles too broad": 16
+      },
+      "violations": [
+        {
+          "requester": "Nurse Lisa Kim",
+          "doc": "Clinical Note — David Park, 2026-03-01",
+          "human_tier": "clinical_sensitive",
+          "llm_tier": "clinical_sensitive",
+          "human_roles": [
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Alice Johnson",
+          "doc": "Prescription — John Smith, 2026-01-15",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Jennifer Walsh",
+          "doc": "Lab Report — Michael Chen, 2026-02-12",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse",
+            "Patient"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Patricia Davis",
+          "doc": "Referral Letter — John Smith, 2026-01-15",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_sensitive",
+          "human_roles": [
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Tom Reyes",
+          "doc": "Referral Letter — Robert Lee, 2026-01-22",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Patricia Davis",
+          "doc": "Referral Letter — Emily Brown, 2026-01-20",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Carlos Mendez",
+          "doc": "Referral Letter — Linda Torres, 2026-02-18",
+          "human_tier": "clinical_standard",
+          "llm_tier": "clinical_sensitive",
+          "human_roles": [
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Sarah Chen",
+          "doc": "Insurance Claim — John Smith, 2026-01-15",
+          "human_tier": "financial",
+          "llm_tier": "financial",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Patricia Davis",
+          "doc": "Insurance Claim — John Smith, 2026-01-15",
+          "human_tier": "financial",
+          "llm_tier": "financial",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Sarah Chen",
+          "doc": "Insurance Claim — Emily Brown, 2026-01-20",
+          "human_tier": "financial",
+          "llm_tier": "financial",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Patricia Davis",
+          "doc": "Insurance Claim — Emily Brown, 2026-01-20",
+          "human_tier": "financial",
+          "llm_tier": "financial",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Dr. Kevin O'Brien",
+          "doc": "Insurance Claim — Linda Torres, 2026-02-18",
+          "human_tier": "financial",
+          "llm_tier": "financial",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Carlos Mendez",
+          "doc": "Insurance Claim — Linda Torres, 2026-02-18",
+          "human_tier": "financial",
+          "llm_tier": "financial",
+          "human_roles": [
+            "Billing Specialist"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Patricia Davis",
+          "doc": "Prior Authorization — John Smith, 2026-01-10",
+          "human_tier": "financial",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Tom Reyes",
+          "doc": "Prior Authorization — Robert Lee, 2026-01-15",
+          "human_tier": "financial",
+          "llm_tier": "clinical_standard",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        },
+        {
+          "requester": "Nurse Carlos Mendez",
+          "doc": "Prior Authorization — Linda Torres, 2026-02-01",
+          "human_tier": "financial",
+          "llm_tier": "clinical_sensitive",
+          "human_roles": [
+            "Billing Specialist",
+            "Doctor"
+          ],
+          "llm_roles": [
+            "Billing Specialist",
+            "Doctor",
+            "Nurse"
+          ],
+          "cause": "permitted_roles too broad"
+        }
+      ]
+    }
+  }
+}

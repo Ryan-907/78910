@@ -1,0 +1,566 @@
+{
+  "artifact": "stage1_audit_scores",
+  "artifact_version": "1.0.0",
+  "vocab_version": "1.2.0",
+  "sheet": "stage1/artifacts/audit/audit_sheet_v1.0.0.csv",
+  "rows_total": 400,
+  "rows_annotated": 400,
+  "rows_unfilled": 0,
+  "partial": false,
+  "sampling": {
+    "seed": 7926,
+    "requested_n": 25,
+    "actual_n": 25,
+    "min_per_tier": 3,
+    "tier_sizes": {
+      "clinical_sensitive": 10,
+      "clinical_standard": 39,
+      "employment": 21,
+      "financial": 25,
+      "internal": 9,
+      "public": 1
+    },
+    "tier_quota": {
+      "clinical_sensitive": 4,
+      "clinical_standard": 7,
+      "employment": 5,
+      "financial": 5,
+      "internal": 3,
+      "public": 1
+    },
+    "tier_realized": {
+      "clinical_sensitive": 4,
+      "clinical_standard": 7,
+      "employment": 5,
+      "financial": 5,
+      "internal": 3,
+      "public": 1
+    },
+    "document_types_covered": 21,
+    "document_type_counts": {
+      "billing_statement": 1,
+      "clinical_note": 2,
+      "contractor_agreement": 1,
+      "credentialing_file": 1,
+      "discharge_summary": 2,
+      "employment_contract": 1,
+      "explanation_of_benefits": 1,
+      "insurance_claim": 1,
+      "insurance_verification": 1,
+      "lab_report": 1,
+      "meeting_agenda": 1,
+      "mental_health_assessment": 2,
+      "performance_review": 1,
+      "policy_memo": 1,
+      "prescription": 1,
+      "prior_authorization": 2,
+      "public_pamphlet": 1,
+      "radiology_report": 1,
+      "referral_letter": 1,
+      "salary_letter": 1,
+      "staff_schedule": 1
+    },
+    "procedure": "min(MIN_PER_TIER, tier size) floor per tier, remainder by largest-remainder over leftover documents (ties by tier name); within tier, round-robin over seed-shuffled document types; final order by doc_id. random.Random(seed) only.",
+    "vocab_version": "1.0.0",
+    "corpus_sha256": "49cdd9c89112f605ee228da5c2489a2de2b58dc56379a257faed8a6302c1b3d0",
+    "doc_ids": [
+      "doc_003",
+      "doc_008",
+      "doc_014",
+      "doc_021",
+      "doc_026",
+      "doc_032",
+      "doc_035",
+      "doc_036",
+      "doc_037",
+      "doc_045",
+      "doc_053",
+      "doc_059",
+      "doc_062",
+      "doc_064",
+      "doc_067",
+      "doc_070",
+      "doc_074",
+      "doc_080",
+      "doc_085",
+      "doc_089",
+      "doc_092",
+      "doc_095",
+      "doc_098",
+      "doc_100",
+      "doc_103"
+    ],
+    "sheet_rows": 400
+  },
+  "interval": "Wilson score, 95%",
+  "direction_note": "Misses (FN) are the dangerous direction: an undetected information type means the future subset check passes over information it never saw, the document is released, and the decision looks correct. False positives fail closed and are self-correcting.",
+  "overall": {
+    "tp": 177,
+    "fp": 1,
+    "fn": 0,
+    "tn": 222,
+    "support_present": 177,
+    "support_detected": 178,
+    "precision": 0.9944,
+    "recall": 1.0,
+    "f1": 0.9972,
+    "miss_rate": 0.0,
+    "precision_ci95": [
+      0.9689,
+      0.999
+    ],
+    "recall_ci95": [
+      0.9788,
+      1.0
+    ]
+  },
+  "by_information_type": {
+    "name": {
+      "tp": 20,
+      "fp": 0,
+      "fn": 0,
+      "tn": 5,
+      "support_present": 20,
+      "support_detected": 20,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "miss_rate": 0.0,
+      "precision_ci95": [
+        0.8389,
+        1.0
+      ],
+      "recall_ci95": [
+        0.8389,
+        1.0
+      ]
+    },
+    "date_of_birth": {
+      "tp": 21,
+      "fp": 0,
+      "fn": 0,
+      "tn": 4,
+      "support_present": 21,
+      "support_detected": 21,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "miss_rate": 0.0,
+      "precision_ci95": [
+        0.8454,
+        1.0
+      ],
+      "recall_ci95": [
+        0.8454,
+        1.0
+      ]
+    },
+    "ssn": {
+      "tp": 8,
+      "fp": 0,
+      "fn": 0,
+      "tn": 17,
+      "support_present": 8,
+      "support_detected": 8,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "miss_rate": 0.0,
+      "precision_ci95": [
+        0.6756,
+        1.0
+      ],
+      "recall_ci95": [
+        0.6756,
+        1.0
+      ]
+    },
+    "home_address": {
+      "tp": 18,
+      "fp": 0,
+      "fn": 0,
+      "tn": 7,
+      "support_present": 18,
+      "support_detected": 18,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "miss_rate": 0.0,
+      "precision_ci95": [
+        0.8241,
+        1.0
+      ],
+      "recall_ci95": [
+        0.8241,
+        1.0
+      ]
+    },
+    "emergency_contact": {
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "tn": 21,
+      "support_present": 4,
+      "support_detected": 4,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "miss_rate": 0.0,
+      "precision_ci95": [
+        0.5101,
+        1.0
+      ],
+      "recall_ci95": [
+        0.5101,
+        1.0
+      ]
+    },
+    "medical_diagnosis": {
+      "tp": 14,
+      "fp": 0,
+      "fn": 0,
+      "tn": 11,
+      "support_present": 14,
+      "support_detected": 14,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "miss_rate": 0.0,
+      "precision_ci95": [
+        0.7847,
+        1.0
+      ],
+      "recall_ci95": [
+        0.7847,
+        1.0
+      ]
+    },
+    "medical_medication": {
+      "tp": 15,
+      "fp": 0,
+      "fn": 0,
+      "tn": 10,
+      "support_present": 15,
+      "support_detected": 15,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "miss_rate": 0.0,
+      "precision_ci95": [
+        0.7961,
+        1.0
+      ],
+      "recall_ci95": [
+        0.7961,
+        1.0
+      ]
+    },
+    "medical_history": {
+      "tp": 8,
+      "fp": 0,
+      "fn": 0,
+      "tn": 17,
+      "support_present": 8,
+      "support_detected": 8,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "miss_rate": 0.0,
+      "precision_ci95": [
+        0.6756,
+        1.0
+      ],
+      "recall_ci95": [
+        0.6756,
+        1.0
+      ]
+    },
+    "mental_health": {
+      "tp": 7,
+      "fp": 0,
+      "fn": 0,
+      "tn": 18,
+      "support_present": 7,
+      "support_detected": 7,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "miss_rate": 0.0,
+      "precision_ci95": [
+        0.6457,
+        1.0
+      ],
+      "recall_ci95": [
+        0.6457,
+        1.0
+      ]
+    },
+    "billing_code": {
+      "tp": 15,
+      "fp": 0,
+      "fn": 0,
+      "tn": 10,
+      "support_present": 15,
+      "support_detected": 15,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "miss_rate": 0.0,
+      "precision_ci95": [
+        0.7961,
+        1.0
+      ],
+      "recall_ci95": [
+        0.7961,
+        1.0
+      ]
+    },
+    "insurance_info": {
+      "tp": 14,
+      "fp": 1,
+      "fn": 0,
+      "tn": 10,
+      "support_present": 14,
+      "support_detected": 15,
+      "precision": 0.9333,
+      "recall": 1.0,
+      "f1": 0.9655,
+      "miss_rate": 0.0,
+      "precision_ci95": [
+        0.7018,
+        0.9881
+      ],
+      "recall_ci95": [
+        0.7847,
+        1.0
+      ]
+    },
+    "salary": {
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "tn": 20,
+      "support_present": 5,
+      "support_detected": 5,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "miss_rate": 0.0,
+      "precision_ci95": [
+        0.5655,
+        1.0
+      ],
+      "recall_ci95": [
+        0.5655,
+        1.0
+      ]
+    },
+    "employment_contract": {
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "tn": 19,
+      "support_present": 6,
+      "support_detected": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "miss_rate": 0.0,
+      "precision_ci95": [
+        0.6097,
+        1.0
+      ],
+      "recall_ci95": [
+        0.6097,
+        1.0
+      ]
+    },
+    "contract_terms": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "tn": 24,
+      "support_present": 1,
+      "support_detected": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "miss_rate": 0.0,
+      "precision_ci95": [
+        0.2065,
+        1.0
+      ],
+      "recall_ci95": [
+        0.2065,
+        1.0
+      ]
+    },
+    "job_title": {
+      "tp": 14,
+      "fp": 0,
+      "fn": 0,
+      "tn": 11,
+      "support_present": 14,
+      "support_detected": 14,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "miss_rate": 0.0,
+      "precision_ci95": [
+        0.7847,
+        1.0
+      ],
+      "recall_ci95": [
+        0.7847,
+        1.0
+      ]
+    },
+    "medical_license": {
+      "tp": 7,
+      "fp": 0,
+      "fn": 0,
+      "tn": 18,
+      "support_present": 7,
+      "support_detected": 7,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "miss_rate": 0.0,
+      "precision_ci95": [
+        0.6457,
+        1.0
+      ],
+      "recall_ci95": [
+        0.6457,
+        1.0
+      ]
+    }
+  },
+  "by_sensitivity_tier": {
+    "clinical_sensitive": {
+      "tp": 33,
+      "fp": 1,
+      "fn": 0,
+      "tn": 30,
+      "support_present": 33,
+      "support_detected": 34,
+      "precision": 0.9706,
+      "recall": 1.0,
+      "f1": 0.9851,
+      "miss_rate": 0.0,
+      "precision_ci95": [
+        0.8508,
+        0.9948
+      ],
+      "recall_ci95": [
+        0.8957,
+        1.0
+      ]
+    },
+    "clinical_standard": {
+      "tp": 63,
+      "fp": 0,
+      "fn": 0,
+      "tn": 49,
+      "support_present": 63,
+      "support_detected": 63,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "miss_rate": 0.0,
+      "precision_ci95": [
+        0.9425,
+        1.0
+      ],
+      "recall_ci95": [
+        0.9425,
+        1.0
+      ]
+    },
+    "employment": {
+      "tp": 34,
+      "fp": 0,
+      "fn": 0,
+      "tn": 46,
+      "support_present": 34,
+      "support_detected": 34,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "miss_rate": 0.0,
+      "precision_ci95": [
+        0.8985,
+        1.0
+      ],
+      "recall_ci95": [
+        0.8985,
+        1.0
+      ]
+    },
+    "financial": {
+      "tp": 42,
+      "fp": 0,
+      "fn": 0,
+      "tn": 38,
+      "support_present": 42,
+      "support_detected": 42,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "miss_rate": 0.0,
+      "precision_ci95": [
+        0.9162,
+        1.0
+      ],
+      "recall_ci95": [
+        0.9162,
+        1.0
+      ]
+    },
+    "internal": {
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "tn": 44,
+      "support_present": 4,
+      "support_detected": 4,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "miss_rate": 0.0,
+      "precision_ci95": [
+        0.5101,
+        1.0
+      ],
+      "recall_ci95": [
+        0.5101,
+        1.0
+      ]
+    },
+    "public": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "tn": 15,
+      "support_present": 1,
+      "support_detected": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "miss_rate": 0.0,
+      "precision_ci95": [
+        0.2065,
+        1.0
+      ],
+      "recall_ci95": [
+        0.2065,
+        1.0
+      ]
+    }
+  },
+  "false_positive_rules": {
+    "insurance_info": {
+      "insurance.carrier_plan": 1
+    }
+  }
+}

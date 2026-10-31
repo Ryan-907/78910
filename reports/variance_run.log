@@ -1,0 +1,599 @@
+Loaded 105 clinic documents. 5 draws x 3 models
+
+--- re-labeling with claude-opus-4-8 (5 draws) ---
+  [claude-opus-4-8] 420 calls to make (105 cached), 4 workers
+  [claude-opus-4-8] s1    1/420 Clinical Note — Emily Brown, 2026-01-20    -> clinical_sensitive
+  [claude-opus-4-8] s1    2/420 Clinical Note — John Smith, 2026-01-15     -> clinical_standard
+  [claude-opus-4-8] s1    3/420 Clinical Note — Robert Lee, 2026-01-22     -> clinical_standard
+  [claude-opus-4-8] s1    4/420 Clinical Note — Michael Chen, 2026-02-12   -> clinical_standard
+  [claude-opus-4-8] s1    5/420 Clinical Note — James Carter, 2026-02-05   -> clinical_standard
+  [claude-opus-4-8] s1    6/420 Clinical Note — Patricia Moore, 2026-02-20 -> clinical_sensitive
+  [claude-opus-4-8] s1    7/420 Clinical Note — Maria Gonzalez, 2026-02-03 -> clinical_sensitive
+  [claude-opus-4-8] s1    8/420 Clinical Note — David Park, 2026-03-01     -> clinical_sensitive
+  [claude-opus-4-8] s1    9/420 Clinical Note — Linda Torres, 2026-02-18   -> clinical_standard
+  [claude-opus-4-8] s1   10/420 Clinical Note — Sarah Wilson, 2026-03-05   -> clinical_sensitive
+  [claude-opus-4-8] s1   11/420 Prescription — James Carter, 2026-02-05    -> clinical_standard
+  [claude-opus-4-8] s1   12/420 Prescription — Michael Chen, 2026-02-12    -> clinical_standard
+  [claude-opus-4-8] s1   13/420 Prescription — Robert Lee, 2026-01-22      -> clinical_standard
+  [claude-opus-4-8] s1   14/420 Prescription — John Smith, 2026-01-15      -> clinical_standard
+  [claude-opus-4-8] s1   15/420 Prescription — Emily Brown, 2026-01-20     -> clinical_sensitive
+  [claude-opus-4-8] s1   16/420 Prescription — Maria Gonzalez, 2026-02-03  -> clinical_sensitive
+  [claude-opus-4-8] s1   17/420 Prescription — Linda Torres, 2026-02-18    -> clinical_standard
+  [claude-opus-4-8] s1   18/420 Prescription — Patricia Moore, 2026-02-20  -> clinical_standard
+  [claude-opus-4-8] s1   19/420 Lab Report — Emily Brown, 2026-01-20       -> clinical_sensitive
+  [claude-opus-4-8] s1   20/420 Lab Report — John Smith, 2026-01-15        -> clinical_standard
+  [claude-opus-4-8] s1   21/420 Lab Report — Robert Lee, 2026-01-22        -> clinical_standard
+  [claude-opus-4-8] s1   22/420 Lab Report — Linda Torres, 2026-02-18      -> clinical_standard
+  [claude-opus-4-8] s1   23/420 Lab Report — Michael Chen, 2026-02-12      -> clinical_standard
+  [claude-opus-4-8] s1   24/420 Lab Report — Patricia Moore, 2026-02-20    -> clinical_standard
+  [claude-opus-4-8] s1   25/420 Lab Report — James Carter, 2026-02-05      -> clinical_standard
+  [claude-opus-4-8] s1   26/420 Lab Report — David Park, 2026-03-01        -> clinical_sensitive
+  [claude-opus-4-8] s1   27/420 Radiology Report — Emily Brown, 2026-01-18 -> clinical_sensitive
+  [claude-opus-4-8] s1   28/420 Radiology Report — James Carter, 2026-01-2 -> clinical_standard
+  [claude-opus-4-8] s1   29/420 Radiology Report — Robert Lee, 2026-01-05  -> clinical_standard
+  [claude-opus-4-8] s1   30/420 Radiology Report — Linda Torres, 2026-01-1 -> clinical_standard
+  [claude-opus-4-8] s1   31/420 Discharge Summary — Emily Brown, 2026-01-2 -> clinical_sensitive
+  [claude-opus-4-8] s1   32/420 Radiology Report — Patricia Moore, 2026-02 -> clinical_standard
+  [claude-opus-4-8] s1   33/420 Discharge Summary — Sarah Wilson, 2026-03- -> clinical_sensitive
+  [claude-opus-4-8] s1   34/420 Discharge Summary — Robert Lee, 2026-01-08 -> clinical_standard
+  [claude-opus-4-8] s1   35/420 Discharge Summary — Linda Torres, 2026-02- -> clinical_standard
+  [claude-opus-4-8] s1   36/420 Mental Health Assessment — Sarah Wilson, 2 -> clinical_sensitive
+  [claude-opus-4-8] s1   37/420 Mental Health Assessment — Maria Gonzalez, -> clinical_sensitive
+  [claude-opus-4-8] s1   38/420 Mental Health Assessment — David Park, 202 -> clinical_sensitive
+  [claude-opus-4-8] s1   39/420 Discharge Summary — John Smith, 2026-01-16 -> clinical_standard
+  [claude-opus-4-8] s1   40/420 Mental Health Assessment — James Carter, 2 -> clinical_sensitive
+  [claude-opus-4-8] s1   41/420 Mental Health Assessment — Patricia Moore, -> clinical_sensitive
+  [claude-opus-4-8] s1   42/420 Referral Letter — John Smith, 2026-01-15   -> clinical_standard
+  [claude-opus-4-8] s1   43/420 Referral Letter — James Carter, 2026-02-05 -> clinical_standard
+  [claude-opus-4-8] s1   44/420 Referral Letter — Robert Lee, 2026-01-22   -> clinical_standard
+  [claude-opus-4-8] s1   45/420 Referral Letter — Emily Brown, 2026-01-20  -> clinical_sensitive
+  [claude-opus-4-8] s1   46/420 Referral Letter — Linda Torres, 2026-02-18 -> clinical_standard
+  [claude-opus-4-8] s1   47/420 Referral Letter — Michael Chen, 2026-02-12 -> clinical_standard
+  [claude-opus-4-8] s1   48/420 Insurance Claim — Emily Brown, 2026-01-20  -> clinical_sensitive
+  [claude-opus-4-8] s1   49/420 Insurance Claim — Robert Lee, 2026-01-22   -> financial
+  [claude-opus-4-8] s1   50/420 Insurance Claim — John Smith, 2026-01-15   -> financial
+  [claude-opus-4-8] s1   51/420 Insurance Claim — Michael Chen, 2026-02-12 -> financial
+  [claude-opus-4-8] s1   52/420 Insurance Claim — James Carter, 2026-02-05 -> clinical_standard
+  [claude-opus-4-8] s1   53/420 Insurance Claim — Linda Torres, 2026-02-18 -> financial
+  [claude-opus-4-8] s1   54/420 Insurance Claim — Maria Gonzalez, 2026-02- -> clinical_sensitive
+  [claude-opus-4-8] s1   55/420 Billing Statement — John Smith, 2026-02-01 -> financial
+  [claude-opus-4-8] s1   56/420 Billing Statement — Robert Lee, 2026-02-05 -> financial
+  [claude-opus-4-8] s1   57/420 Billing Statement — Emily Brown, 2026-02-0 -> clinical_sensitive
+  [claude-opus-4-8] s1   58/420 Billing Statement — Patricia Moore, 2026-0 -> financial
+  [claude-opus-4-8] s1   59/420 Billing Statement — James Carter, 2026-02- -> financial
+  [claude-opus-4-8] s1   60/420 Billing Statement — Linda Torres, 2026-03- -> clinical_standard
+  [claude-opus-4-8] s1   61/420 Prior Authorization — Maria Gonzalez, 2026 -> clinical_sensitive
+  [claude-opus-4-8] s1   62/420 Prior Authorization — Robert Lee, 2026-01- -> clinical_standard
+  [claude-opus-4-8] s1   63/420 Prior Authorization — Sarah Wilson, 2026-0 -> clinical_sensitive
+  [claude-opus-4-8] s1   64/420 Prior Authorization — John Smith, 2026-01- -> clinical_standard
+  [claude-opus-4-8] s1   65/420 Prior Authorization — Linda Torres, 2026-0 -> clinical_standard
+  [claude-opus-4-8] s1   66/420 Explanation Of Benefits — John Smith, 2026 -> financial
+  [claude-opus-4-8] s1   67/420 Explanation Of Benefits — James Carter, 20 -> financial
+  [claude-opus-4-8] s1   68/420 Explanation Of Benefits — Robert Lee, 2026 -> clinical_standard
+  [claude-opus-4-8] s1   69/420 Explanation Of Benefits — Emily Brown, 202 -> clinical_sensitive
+  [claude-opus-4-8] s1   70/420 Insurance Claim — Patricia Moore, 2026-02- -> financial
+  [claude-opus-4-8] s1   71/420 Insurance Verification — John Smith, 2026- -> clinical_standard
+  [claude-opus-4-8] s1   72/420 Insurance Verification — Patricia Moore, 2 -> clinical_standard
+  [claude-opus-4-8] s1   73/420 Salary Letter — Dr. Sarah Chen, 2026-01-01 -> employment
+  [claude-opus-4-8] s1   74/420 Salary Letter — Dr. Marcus Webb, 2026-01-0 -> employment
+  [claude-opus-4-8] s1   75/420 Insurance Verification — Michael Chen, 202 -> clinical_standard
+  [claude-opus-4-8] s1   76/420 Insurance Verification — Emily Brown, 2026 -> clinical_sensitive
+  [claude-opus-4-8] s1   77/420 Salary Letter — Dr. Aisha Patel, 2026-01-0 -> employment
+  [claude-opus-4-8] s1   78/420 Salary Letter — Dr. Kevin O'Brien, 2026-01 -> employment
+  [claude-opus-4-8] s1   79/420 Salary Letter — Nurse Patricia Davis, 2026 -> employment
+  [claude-opus-4-8] s1   80/420 Employment Contract — Dr. Kevin O'Brien, 2 -> employment
+  [claude-opus-4-8] s1   81/420 Salary Letter — Alice Johnson, 2026-01-01  -> employment
+  [claude-opus-4-8] s1   82/420 Employment Contract — Dr. Aisha Patel, 202 -> employment
+  [claude-opus-4-8] s1   83/420 Employment Contract — Nurse Lisa Kim, 2023 -> employment
+  [claude-opus-4-8] s1   84/420 Employment Contract — Jennifer Walsh, 2024 -> employment
+  [claude-opus-4-8] s1   85/420 Performance Review — Dr. Sarah Chen, 2026- -> employment
+  [claude-opus-4-8] s1   86/420 Performance Review — Alice Johnson, 2026-0 -> employment
+  [claude-opus-4-8] s1   87/420 Performance Review — Nurse Patricia Davis, -> employment
+  [claude-opus-4-8] s1   88/420 Performance Review — Nurse Tom Reyes, 2026 -> employment
+  [claude-opus-4-8] s1   89/420 Credentialing File — Dr. Sarah Chen, 2026- -> employment
+  [claude-opus-4-8] s1   90/420 Contractor Agreement — Carol White, 2026-0 -> employment
+  [claude-opus-4-8] s1   91/420 Credentialing File — Dr. Aisha Patel, 2026 -> employment
+  [claude-opus-4-8] s1   92/420 Contractor Agreement — Frank Turner, 2026- -> employment
+  [claude-opus-4-8] s1   93/420 Credentialing File — Dr. Kevin O'Brien, 20 -> employment
+  [claude-opus-4-8] s1   94/420 Staff Schedule — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8] s1   95/420 Staff Schedule — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8] s1   96/420 Contractor Agreement — Carol White, 2025-0 -> employment
+  [claude-opus-4-8] s1   97/420 Meeting Agenda — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8] s1   98/420 Staff Schedule — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8] s1   99/420 Meeting Agenda — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8] s1  100/420 Policy Memo — Riverside Medical Clinic, 20 -> internal
+  [claude-opus-4-8] s1  101/420 Meeting Agenda — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8] s1  102/420 Policy Memo — Riverside Medical Clinic, 20 -> internal
+  [claude-opus-4-8] s1  103/420 Policy Memo — Riverside Medical Clinic, 20 -> internal
+  [claude-opus-4-8] s1  104/420 Employment Contract — Dr. Marcus Webb, 202 -> employment
+  [claude-opus-4-8] s2  105/420 Clinical Note — John Smith, 2026-01-15     -> clinical_standard
+  [claude-opus-4-8] s2  106/420 Clinical Note — Emily Brown, 2026-01-20    -> clinical_sensitive
+  [claude-opus-4-8] s2  107/420 Clinical Note — Robert Lee, 2026-01-22     -> clinical_standard
+  [claude-opus-4-8] s2  108/420 Clinical Note — James Carter, 2026-02-05   -> clinical_standard
+  [claude-opus-4-8] s2  109/420 Clinical Note — Michael Chen, 2026-02-12   -> clinical_standard
+  [claude-opus-4-8] s1  110/420 Public Pamphlet — Riverside Medical Clinic -> public
+  [claude-opus-4-8] s2  111/420 Clinical Note — David Park, 2026-03-01     -> clinical_sensitive
+  [claude-opus-4-8] s2  112/420 Clinical Note — Maria Gonzalez, 2026-02-03 -> clinical_sensitive
+  [claude-opus-4-8] s2  113/420 Clinical Note — Patricia Moore, 2026-02-20 -> clinical_sensitive
+  [claude-opus-4-8] s2  114/420 Clinical Note — Linda Torres, 2026-02-18   -> clinical_standard
+  [claude-opus-4-8] s2  115/420 Clinical Note — Sarah Wilson, 2026-03-05   -> clinical_sensitive
+  [claude-opus-4-8] s2  116/420 Prescription — James Carter, 2026-02-05    -> clinical_standard
+  [claude-opus-4-8] s2  117/420 Prescription — John Smith, 2026-01-15      -> clinical_standard
+  [claude-opus-4-8] s2  118/420 Prescription — Michael Chen, 2026-02-12    -> clinical_standard
+  [claude-opus-4-8] s2  119/420 Prescription — Robert Lee, 2026-01-22      -> clinical_standard
+  [claude-opus-4-8] s2  120/420 Prescription — Emily Brown, 2026-01-20     -> clinical_sensitive
+  [claude-opus-4-8] s2  121/420 Prescription — Patricia Moore, 2026-02-20  -> clinical_standard
+  [claude-opus-4-8] s2  122/420 Prescription — Linda Torres, 2026-02-18    -> clinical_standard
+  [claude-opus-4-8] s2  123/420 Prescription — Maria Gonzalez, 2026-02-03  -> clinical_sensitive
+  [claude-opus-4-8] s2  124/420 Lab Report — Emily Brown, 2026-01-20       -> clinical_sensitive
+  [claude-opus-4-8] s2  125/420 Lab Report — John Smith, 2026-01-15        -> clinical_standard
+  [claude-opus-4-8] s2  126/420 Lab Report — Robert Lee, 2026-01-22        -> clinical_standard
+  [claude-opus-4-8] s2  127/420 Lab Report — James Carter, 2026-02-05      -> clinical_standard
+  [claude-opus-4-8] s2  128/420 Lab Report — David Park, 2026-03-01        -> clinical_sensitive
+  [claude-opus-4-8] s2  129/420 Lab Report — Linda Torres, 2026-02-18      -> clinical_standard
+  [claude-opus-4-8] s2  130/420 Lab Report — Michael Chen, 2026-02-12      -> clinical_standard
+  [claude-opus-4-8] s2  131/420 Lab Report — Patricia Moore, 2026-02-20    -> clinical_standard
+  [claude-opus-4-8] s2  132/420 Radiology Report — Emily Brown, 2026-01-18 -> clinical_sensitive
+  [claude-opus-4-8] s2  133/420 Radiology Report — James Carter, 2026-01-2 -> clinical_standard
+  [claude-opus-4-8] s2  134/420 Radiology Report — Robert Lee, 2026-01-05  -> clinical_standard
+  [claude-opus-4-8] s2  135/420 Radiology Report — Linda Torres, 2026-01-1 -> clinical_standard
+  [claude-opus-4-8] s2  136/420 Discharge Summary — Emily Brown, 2026-01-2 -> clinical_sensitive
+  [claude-opus-4-8] s2  137/420 Radiology Report — Patricia Moore, 2026-02 -> clinical_standard
+  [claude-opus-4-8] s2  138/420 Discharge Summary — John Smith, 2026-01-16 -> clinical_standard
+  [claude-opus-4-8] s2  139/420 Discharge Summary — Robert Lee, 2026-01-08 -> clinical_standard
+  [claude-opus-4-8] s2  140/420 Discharge Summary — Linda Torres, 2026-02- -> clinical_standard
+  [claude-opus-4-8] s2  141/420 Discharge Summary — Sarah Wilson, 2026-03- -> clinical_sensitive
+  [claude-opus-4-8] s2  142/420 Mental Health Assessment — Maria Gonzalez, -> clinical_sensitive
+  [claude-opus-4-8] s2  143/420 Mental Health Assessment — Sarah Wilson, 2 -> clinical_sensitive
+  [claude-opus-4-8] s2  144/420 Mental Health Assessment — David Park, 202 -> clinical_sensitive
+  [claude-opus-4-8] s2  145/420 Mental Health Assessment — James Carter, 2 -> clinical_sensitive
+  [claude-opus-4-8] s2  146/420 Mental Health Assessment — Patricia Moore, -> clinical_sensitive
+  [claude-opus-4-8] s2  147/420 Referral Letter — John Smith, 2026-01-15   -> clinical_standard
+  [claude-opus-4-8] s2  148/420 Referral Letter — Robert Lee, 2026-01-22   -> clinical_standard
+  [claude-opus-4-8] s2  149/420 Referral Letter — Linda Torres, 2026-02-18 -> clinical_standard
+  [claude-opus-4-8] s2  150/420 Referral Letter — James Carter, 2026-02-05 -> clinical_standard
+  [claude-opus-4-8] s2  151/420 Referral Letter — Michael Chen, 2026-02-12 -> clinical_standard
+  [claude-opus-4-8] s2  152/420 Referral Letter — Emily Brown, 2026-01-20  -> clinical_sensitive
+  [claude-opus-4-8] s2  153/420 Insurance Claim — Emily Brown, 2026-01-20  -> clinical_sensitive
+  [claude-opus-4-8] s2  154/420 Insurance Claim — John Smith, 2026-01-15   -> financial
+  [claude-opus-4-8] s2  155/420 Insurance Claim — Robert Lee, 2026-01-22   -> financial
+  [claude-opus-4-8] s2  156/420 Insurance Claim — James Carter, 2026-02-05 -> clinical_standard
+  [claude-opus-4-8] s2  157/420 Insurance Claim — Michael Chen, 2026-02-12 -> clinical_standard
+  [claude-opus-4-8] s2  158/420 Insurance Claim — Linda Torres, 2026-02-18 -> clinical_standard
+  [claude-opus-4-8] s2  159/420 Insurance Claim — Maria Gonzalez, 2026-02- -> clinical_sensitive
+  [claude-opus-4-8] s2  160/420 Insurance Claim — Patricia Moore, 2026-02- -> financial
+  [claude-opus-4-8] s2  161/420 Billing Statement — Robert Lee, 2026-02-05 -> financial
+  [claude-opus-4-8] s2  162/420 Billing Statement — James Carter, 2026-02- -> financial
+  [claude-opus-4-8] s2  163/420 Billing Statement — John Smith, 2026-02-01 -> financial
+  [claude-opus-4-8] s2  164/420 Billing Statement — Emily Brown, 2026-02-0 -> clinical_sensitive
+  [claude-opus-4-8] s2  165/420 Prior Authorization — John Smith, 2026-01- -> clinical_standard
+  [claude-opus-4-8] s2  166/420 Billing Statement — Patricia Moore, 2026-0 -> financial
+  [claude-opus-4-8] s2  167/420 Billing Statement — Linda Torres, 2026-03- -> clinical_standard
+  [claude-opus-4-8] s2  168/420 Prior Authorization — Robert Lee, 2026-01- -> clinical_standard
+  [claude-opus-4-8] s2  169/420 Prior Authorization — Sarah Wilson, 2026-0 -> clinical_sensitive
+  [claude-opus-4-8] s2  170/420 Prior Authorization — Maria Gonzalez, 2026 -> clinical_sensitive
+  [claude-opus-4-8] s2  171/420 Prior Authorization — Linda Torres, 2026-0 -> clinical_standard
+  [claude-opus-4-8] s2  172/420 Explanation Of Benefits — John Smith, 2026 -> financial
+  [claude-opus-4-8] s2  173/420 Explanation Of Benefits — Robert Lee, 2026 -> clinical_standard
+  [claude-opus-4-8] s2  174/420 Explanation Of Benefits — James Carter, 20 -> financial
+  [claude-opus-4-8] s2  175/420 Insurance Verification — John Smith, 2026- -> clinical_standard
+  [claude-opus-4-8] s2  176/420 Explanation Of Benefits — Emily Brown, 202 -> financial
+  [claude-opus-4-8] s2  177/420 Salary Letter — Dr. Sarah Chen, 2026-01-01 -> employment
+  [claude-opus-4-8] s2  178/420 Insurance Verification — Patricia Moore, 2 -> clinical_standard
+  [claude-opus-4-8] s2  179/420 Insurance Verification — Michael Chen, 202 -> clinical_standard
+  [claude-opus-4-8] s2  180/420 Salary Letter — Dr. Marcus Webb, 2026-01-0 -> employment
+  [claude-opus-4-8] s2  181/420 Salary Letter — Dr. Aisha Patel, 2026-01-0 -> employment
+  [claude-opus-4-8] s2  182/420 Salary Letter — Nurse Patricia Davis, 2026 -> employment
+  [claude-opus-4-8] s2  183/420 Salary Letter — Alice Johnson, 2026-01-01  -> employment
+  [claude-opus-4-8] s2  184/420 Salary Letter — Dr. Kevin O'Brien, 2026-01 -> employment
+  [claude-opus-4-8] s2  185/420 Employment Contract — Dr. Kevin O'Brien, 2 -> employment
+  [claude-opus-4-8] s2  186/420 Insurance Verification — Emily Brown, 2026 -> clinical_sensitive
+  [claude-opus-4-8] s2  187/420 Employment Contract — Nurse Lisa Kim, 2023 -> employment
+  [claude-opus-4-8] s2  188/420 Employment Contract — Dr. Aisha Patel, 202 -> employment
+  [claude-opus-4-8] s2  189/420 Employment Contract — Jennifer Walsh, 2024 -> employment
+  [claude-opus-4-8] s2  190/420 Performance Review — Nurse Tom Reyes, 2026 -> employment
+  [claude-opus-4-8] s2  191/420 Performance Review — Dr. Sarah Chen, 2026- -> employment
+  [claude-opus-4-8] s2  192/420 Credentialing File — Dr. Sarah Chen, 2026- -> employment
+  [claude-opus-4-8] s2  193/420 Credentialing File — Dr. Kevin O'Brien, 20 -> employment
+  [claude-opus-4-8] s2  194/420 Performance Review — Alice Johnson, 2026-0 -> employment
+  [claude-opus-4-8] s2  195/420 Credentialing File — Dr. Aisha Patel, 2026 -> employment
+  [claude-opus-4-8] s2  196/420 Performance Review — Nurse Patricia Davis, -> employment
+  [claude-opus-4-8] s2  197/420 Contractor Agreement — Carol White, 2025-0 -> employment
+  [claude-opus-4-8] s2  198/420 Contractor Agreement — Carol White, 2026-0 -> employment
+  [claude-opus-4-8] s2  199/420 Contractor Agreement — Frank Turner, 2026- -> employment
+  [claude-opus-4-8] s2  200/420 Staff Schedule — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8] s2  201/420 Meeting Agenda — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8] s2  202/420 Staff Schedule — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8] s2  203/420 Meeting Agenda — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8] s2  204/420 Meeting Agenda — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8] s2  205/420 Policy Memo — Riverside Medical Clinic, 20 -> internal
+  [claude-opus-4-8] s2  206/420 Public Pamphlet — Riverside Medical Clinic -> public
+  [claude-opus-4-8] s2  207/420 Policy Memo — Riverside Medical Clinic, 20 -> internal
+  [claude-opus-4-8] s2  208/420 Employment Contract — Dr. Marcus Webb, 202 -> employment
+  [claude-opus-4-8] s2  209/420 Staff Schedule — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8] s3  210/420 Clinical Note — Emily Brown, 2026-01-20    -> clinical_sensitive
+  [claude-opus-4-8] s3  211/420 Clinical Note — John Smith, 2026-01-15     -> clinical_standard
+  [claude-opus-4-8] s3  212/420 Clinical Note — Michael Chen, 2026-02-12   -> clinical_standard
+  [claude-opus-4-8] s3  213/420 Clinical Note — Robert Lee, 2026-01-22     -> clinical_standard
+  [claude-opus-4-8] s3  214/420 Clinical Note — James Carter, 2026-02-05   -> clinical_standard
+  [claude-opus-4-8] s3  215/420 Clinical Note — Maria Gonzalez, 2026-02-03 -> clinical_sensitive
+  [claude-opus-4-8] s3  216/420 Clinical Note — Linda Torres, 2026-02-18   -> clinical_standard
+  [claude-opus-4-8] s3  217/420 Clinical Note — David Park, 2026-03-01     -> clinical_sensitive
+  [claude-opus-4-8] s2  218/420 Policy Memo — Riverside Medical Clinic, 20 -> internal
+  [claude-opus-4-8] s3  219/420 Clinical Note — Sarah Wilson, 2026-03-05   -> clinical_sensitive
+  [claude-opus-4-8] s3  220/420 Prescription — John Smith, 2026-01-15      -> clinical_standard
+  [claude-opus-4-8] s3  221/420 Prescription — James Carter, 2026-02-05    -> clinical_standard
+  [claude-opus-4-8] s3  222/420 Clinical Note — Patricia Moore, 2026-02-20 -> clinical_sensitive
+  [claude-opus-4-8] s3  223/420 Prescription — Emily Brown, 2026-01-20     -> clinical_sensitive
+  [claude-opus-4-8] s3  224/420 Prescription — Robert Lee, 2026-01-22      -> clinical_standard
+  [claude-opus-4-8] s3  225/420 Prescription — Michael Chen, 2026-02-12    -> clinical_standard
+  [claude-opus-4-8] s3  226/420 Prescription — Maria Gonzalez, 2026-02-03  -> clinical_sensitive
+  [claude-opus-4-8] s3  227/420 Prescription — Patricia Moore, 2026-02-20  -> clinical_standard
+  [claude-opus-4-8] s3  228/420 Lab Report — John Smith, 2026-01-15        -> clinical_standard
+  [claude-opus-4-8] s3  229/420 Prescription — Linda Torres, 2026-02-18    -> clinical_standard
+  [claude-opus-4-8] s3  230/420 Lab Report — Emily Brown, 2026-01-20       -> clinical_sensitive
+  [claude-opus-4-8] s3  231/420 Lab Report — Robert Lee, 2026-01-22        -> clinical_standard
+  [claude-opus-4-8] s3  232/420 Lab Report — James Carter, 2026-02-05      -> clinical_standard
+  [claude-opus-4-8] s3  233/420 Lab Report — David Park, 2026-03-01        -> clinical_sensitive
+  [claude-opus-4-8] s3  234/420 Lab Report — Michael Chen, 2026-02-12      -> clinical_standard
+  [claude-opus-4-8] s3  235/420 Lab Report — Linda Torres, 2026-02-18      -> clinical_standard
+  [claude-opus-4-8] s3  236/420 Lab Report — Patricia Moore, 2026-02-20    -> clinical_standard
+  [claude-opus-4-8] s3  237/420 Radiology Report — James Carter, 2026-01-2 -> clinical_standard
+  [claude-opus-4-8] s3  238/420 Radiology Report — Emily Brown, 2026-01-18 -> clinical_sensitive
+  [claude-opus-4-8] s3  239/420 Radiology Report — Robert Lee, 2026-01-05  -> clinical_standard
+  [claude-opus-4-8] s3  240/420 Radiology Report — Linda Torres, 2026-01-1 -> clinical_standard
+  [claude-opus-4-8] s3  241/420 Discharge Summary — Emily Brown, 2026-01-2 -> clinical_sensitive
+  [claude-opus-4-8] s3  242/420 Radiology Report — Patricia Moore, 2026-02 -> clinical_standard
+  [claude-opus-4-8] s3  243/420 Discharge Summary — Linda Torres, 2026-02- -> clinical_standard
+  [claude-opus-4-8] s3  244/420 Discharge Summary — John Smith, 2026-01-16 -> clinical_standard
+  [claude-opus-4-8] s3  245/420 Discharge Summary — Sarah Wilson, 2026-03- -> clinical_sensitive
+  [claude-opus-4-8] s3  246/420 Discharge Summary — Robert Lee, 2026-01-08 -> clinical_standard
+  [claude-opus-4-8] s3  247/420 Mental Health Assessment — Maria Gonzalez, -> clinical_sensitive
+  [claude-opus-4-8] s3  248/420 Mental Health Assessment — Sarah Wilson, 2 -> clinical_sensitive
+  [claude-opus-4-8] s3  249/420 Mental Health Assessment — James Carter, 2 -> clinical_sensitive
+  [claude-opus-4-8] s3  250/420 Mental Health Assessment — Patricia Moore, -> clinical_sensitive
+  [claude-opus-4-8] s3  251/420 Mental Health Assessment — David Park, 202 -> clinical_sensitive
+  [claude-opus-4-8] s3  252/420 Referral Letter — John Smith, 2026-01-15   -> clinical_standard
+  [claude-opus-4-8] s3  253/420 Referral Letter — Robert Lee, 2026-01-22   -> clinical_standard
+  [claude-opus-4-8] s3  254/420 Referral Letter — Linda Torres, 2026-02-18 -> clinical_standard
+  [claude-opus-4-8] s3  255/420 Referral Letter — James Carter, 2026-02-05 -> clinical_standard
+  [claude-opus-4-8] s3  256/420 Referral Letter — Emily Brown, 2026-01-20  -> clinical_sensitive
+  [claude-opus-4-8] s3  257/420 Referral Letter — Michael Chen, 2026-02-12 -> clinical_standard
+  [claude-opus-4-8] s3  258/420 Insurance Claim — Robert Lee, 2026-01-22   -> financial
+  [claude-opus-4-8] s3  259/420 Insurance Claim — John Smith, 2026-01-15   -> financial
+  [claude-opus-4-8] s3  260/420 Insurance Claim — James Carter, 2026-02-05 -> clinical_standard
+  [claude-opus-4-8] s3  261/420 Insurance Claim — Emily Brown, 2026-01-20  -> clinical_sensitive
+  [claude-opus-4-8] s3  262/420 Insurance Claim — Linda Torres, 2026-02-18 -> clinical_standard
+  [claude-opus-4-8] s3  263/420 Insurance Claim — Patricia Moore, 2026-02- -> financial
+  [claude-opus-4-8] s3  264/420 Insurance Claim — Michael Chen, 2026-02-12 -> financial
+  [claude-opus-4-8] s3  265/420 Insurance Claim — Maria Gonzalez, 2026-02- -> clinical_sensitive
+  [claude-opus-4-8] s3  266/420 Billing Statement — James Carter, 2026-02- -> financial
+  [claude-opus-4-8] s3  267/420 Billing Statement — John Smith, 2026-02-01 -> financial
+  [claude-opus-4-8] s3  268/420 Billing Statement — Emily Brown, 2026-02-0 -> clinical_sensitive
+  [claude-opus-4-8] s3  269/420 Billing Statement — Linda Torres, 2026-03- -> clinical_standard
+  [claude-opus-4-8] s3  270/420 Billing Statement — Robert Lee, 2026-02-05 -> financial
+  [claude-opus-4-8] s3  271/420 Billing Statement — Patricia Moore, 2026-0 -> financial
+  [claude-opus-4-8] s3  272/420 Prior Authorization — John Smith, 2026-01- -> clinical_standard
+  [claude-opus-4-8] s3  273/420 Prior Authorization — Sarah Wilson, 2026-0 -> clinical_sensitive
+  [claude-opus-4-8] s3  274/420 Prior Authorization — Maria Gonzalez, 2026 -> clinical_sensitive
+  [claude-opus-4-8] s3  275/420 Prior Authorization — Robert Lee, 2026-01- -> clinical_standard
+  [claude-opus-4-8] s3  276/420 Prior Authorization — Linda Torres, 2026-0 -> clinical_standard
+  [claude-opus-4-8] s3  277/420 Explanation Of Benefits — John Smith, 2026 -> financial
+  [claude-opus-4-8] s3  278/420 Explanation Of Benefits — James Carter, 20 -> financial
+  [claude-opus-4-8] s3  279/420 Explanation Of Benefits — Robert Lee, 2026 -> financial
+  [claude-opus-4-8] s3  280/420 Explanation Of Benefits — Emily Brown, 202 -> clinical_sensitive
+  [claude-opus-4-8] s3  281/420 Insurance Verification — John Smith, 2026- -> clinical_standard
+  [claude-opus-4-8] s3  282/420 Insurance Verification — Patricia Moore, 2 -> clinical_standard
+  [claude-opus-4-8] s3  283/420 Insurance Verification — Emily Brown, 2026 -> clinical_sensitive
+  [claude-opus-4-8] s3  284/420 Salary Letter — Dr. Sarah Chen, 2026-01-01 -> employment
+  [claude-opus-4-8] s3  285/420 Insurance Verification — Michael Chen, 202 -> clinical_standard
+  [claude-opus-4-8] s3  286/420 Salary Letter — Dr. Kevin O'Brien, 2026-01 -> employment
+  [claude-opus-4-8] s3  287/420 Salary Letter — Dr. Aisha Patel, 2026-01-0 -> employment
+  [claude-opus-4-8] s3  288/420 Salary Letter — Nurse Patricia Davis, 2026 -> employment
+  [claude-opus-4-8] s3  289/420 Salary Letter — Dr. Marcus Webb, 2026-01-0 -> employment
+  [claude-opus-4-8] s3  290/420 Employment Contract — Dr. Kevin O'Brien, 2 -> employment
+  [claude-opus-4-8] s3  291/420 Salary Letter — Alice Johnson, 2026-01-01  -> employment
+  [claude-opus-4-8] s3  292/420 Performance Review — Dr. Sarah Chen, 2026- -> employment
+  [claude-opus-4-8] s3  293/420 Employment Contract — Jennifer Walsh, 2024 -> employment
+  [claude-opus-4-8] s3  294/420 Employment Contract — Dr. Aisha Patel, 202 -> employment
+  [claude-opus-4-8] s3  295/420 Employment Contract — Nurse Lisa Kim, 2023 -> employment
+  [claude-opus-4-8] s3  296/420 Credentialing File — Dr. Sarah Chen, 2026- -> employment
+  [claude-opus-4-8] s3  297/420 Performance Review — Nurse Patricia Davis, -> employment
+  [claude-opus-4-8] s3  298/420 Performance Review — Alice Johnson, 2026-0 -> employment
+  [claude-opus-4-8] s3  299/420 Performance Review — Nurse Tom Reyes, 2026 -> employment
+  [claude-opus-4-8] s3  300/420 Credentialing File — Dr. Kevin O'Brien, 20 -> employment
+  [claude-opus-4-8] s3  301/420 Credentialing File — Dr. Aisha Patel, 2026 -> employment
+  [claude-opus-4-8] s3  302/420 Contractor Agreement — Frank Turner, 2026- -> employment
+  [claude-opus-4-8] s3  303/420 Staff Schedule — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8] s3  304/420 Staff Schedule — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8] s3  305/420 Contractor Agreement — Carol White, 2025-0 -> employment
+  [claude-opus-4-8] s3  306/420 Meeting Agenda — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8] s3  307/420 Meeting Agenda — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8] s3  308/420 Contractor Agreement — Carol White, 2026-0 -> employment
+  [claude-opus-4-8] s3  309/420 Meeting Agenda — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8] s3  310/420 Policy Memo — Riverside Medical Clinic, 20 -> internal
+  [claude-opus-4-8] s3  311/420 Policy Memo — Riverside Medical Clinic, 20 -> internal
+  [claude-opus-4-8] s3  312/420 Policy Memo — Riverside Medical Clinic, 20 -> internal
+  [claude-opus-4-8] s3  313/420 Public Pamphlet — Riverside Medical Clinic -> public
+  [claude-opus-4-8] s3  314/420 Employment Contract — Dr. Marcus Webb, 202 -> employment
+  [claude-opus-4-8] s3  315/420 Staff Schedule — Riverside Medical Clinic, -> internal
+  [claude-opus-4-8] s4  316/420 Clinical Note — John Smith, 2026-01-15     -> clinical_standard
+  [claude-opus-4-8] s4  317/420 Clinical Note — Robert Lee, 2026-01-22     -> clinical_standard
+  [claude-opus-4-8] s4  318/420 Clinical Note — James Carter, 2026-02-05   -> clinical_standard
+  [claude-opus-4-8] s4  319/420 Clinical Note — Michael Chen, 2026-02-12   -> clinical_standard
+  [claude-opus-4-8] s4  320/420 Clinical Note — Linda Torres, 2026-02-18   -> clinical_standard
+  [claude-opus-4-8] s4  321/420 Clinical Note — Emily Brown, 2026-01-20    -> clinical_sensitive
+  [claude-opus-4-8] s4  322/420 Clinical Note — David Park, 2026-03-01     -> clinical_sensitive
+  [claude-opus-4-8] s4  323/420 Clinical Note — Maria Gonzalez, 2026-02-03 -> clinical_sensitive
+  [claude-opus-4-8] s4  324/420 Clinical Note — Patricia Moore, 2026-02-20 -> clinical_sensitive
+  [claude-opus-4-8] s4  325/420 Clinical Note — Sarah Wilson, 2026-03-05   -> clinical_sensitive
+  [claude-opus-4-8] s4  326/420 Prescription — James Carter, 2026-02-05    -> clinical_standard
+  [claude-opus-4-8] s4  327/420 Prescription — John Smith, 2026-01-15      -> clinical_standard
+  [claude-opus-4-8] s4  328/420 Prescription — Michael Chen, 2026-02-12    -> clinical_standard
+  [claude-opus-4-8] s4  329/420 Prescription — Robert Lee, 2026-01-22      -> clinical_standard
+  [claude-opus-4-8] s4  330/420 Prescription — Emily Brown, 2026-01-20     -> clinical_sensitive
+  [claude-opus-4-8] s4  331/420 Prescription — Maria Gonzalez, 2026-02-03  -> clinical_sensitive
+  [claude-opus-4-8] s4  332/420 Prescription — Patricia Moore, 2026-02-20  -> clinical_standard
+  [claude-opus-4-8] s4  333/420 Lab Report — John Smith, 2026-01-15        -> clinical_standard
+  [claude-opus-4-8] s4  334/420 Lab Report — Robert Lee, 2026-01-22        -> clinical_standard
+  [claude-opus-4-8] s4  335/420 Lab Report — Emily Brown, 2026-01-20       -> clinical_sensitive
+  [claude-opus-4-8] s4  336/420 Prescription — Linda Torres, 2026-02-18    -> clinical_standard
+  [claude-opus-4-8] s4  337/420 Lab Report — James Carter, 2026-02-05      -> clinical_standard
+  [claude-opus-4-8] s4  338/420 Lab Report — Linda Torres, 2026-02-18      -> clinical_standard
+  [claude-opus-4-8] s4  339/420 Lab Report — Patricia Moore, 2026-02-20    -> clinical_standard
+  [claude-opus-4-8] s4  340/420 Lab Report — Michael Chen, 2026-02-12      -> clinical_standard
+  [claude-opus-4-8] s4  341/420 Radiology Report — Emily Brown, 2026-01-18 -> clinical_sensitive
+  [claude-opus-4-8] s4  342/420 Lab Report — David Park, 2026-03-01        -> clinical_sensitive
+  [claude-opus-4-8] s4  343/420 Radiology Report — James Carter, 2026-01-2 -> clinical_standard
+  [claude-opus-4-8] s4  344/420 Radiology Report — Robert Lee, 2026-01-05  -> clinical_standard
+  [claude-opus-4-8] s4  345/420 Radiology Report — Linda Torres, 2026-01-1 -> clinical_standard
+  [claude-opus-4-8] s4  346/420 Discharge Summary — Emily Brown, 2026-01-2 -> clinical_sensitive
+  [claude-opus-4-8] s4  347/420 Radiology Report — Patricia Moore, 2026-02 -> clinical_standard
+  [claude-opus-4-8] s4  348/420 Discharge Summary — John Smith, 2026-01-16 -> clinical_standard
+  [claude-opus-4-8] s4  349/420 Discharge Summary — Sarah Wilson, 2026-03- -> clinical_sensitive
+  [claude-opus-4-8] s4  350/420 Discharge Summary — Linda Torres, 2026-02- -> clinical_standard
+  [claude-opus-4-8] s4  351/420 Discharge Summary — Robert Lee, 2026-01-08 -> clinical_standard
+  [claude-opus-4-8] s4  352/420 Mental Health Assessment — Maria Gonzalez, -> clinical_sensitive
+  [claude-opus-4-8] s4  353/420 Mental Health Assessment — Sarah Wilson, 2 -> clinical_sensitive
+  [claude-opus-4-8] s4  354/420 Mental Health Assessment — James Carter, 2 -> clinical_sensitive
+  [claude-opus-4-8] s4  355/420 Mental Health Assessment — David Park, 202 -> clinical_sensitive
+  [claude-opus-4-8] s4  356/420 Mental Health Assessment — Patricia Moore, -> clinical_sensitive
+  [claude-opus-4-8] s4  357/420 Referral Letter — John Smith, 2026-01-15   -> clinical_standard
+  [claude-opus-4-8] s4  358/420 Referral Letter — Robert Lee, 2026-01-22   -> clinical_standard
+  [claude-opus-4-8] s4  359/420 Referral Letter — Linda Torres, 2026-02-18 -> clinical_standard
+  [claude-opus-4-8] s4  360/420 Referral Letter — James Carter, 2026-02-05 -> clinical_standard
+  [claude-opus-4-8] s4  361/420 Referral Letter — Emily Brown, 2026-01-20  -> clinical_sensitive
+  [claude-opus-4-8] s4  362/420 Referral Letter — Michael Chen, 2026-02-12 -> clinical_standard
+  [claude-opus-4-8] s4  363/420 Insurance Claim — John Smith, 2026-01-15   -> clinical_standard
+  [claude-opus-4-8] s4  364/420 Insurance Claim — Emily Brown, 2026-01-20  -> clinical_sensitive
+  [claude-opus-4-8] s4  365/420 Insurance Claim — James Carter, 2026-02-05 -> clinical_standard
+  [claude-opus-4-8] s4  366/420 Insurance Claim — Michael Chen, 2026-02-12 -> financial
+  [claude-opus-4-8] s4  367/420 Insurance Claim — Linda Torres, 2026-02-18 -> clinical_standard
+  [claude-opus-4-8] s4  368/420 Insurance Claim — Maria Gonzalez, 2026-02- -> clinical_sensitive
+  [claude-opus-4-8] s4  369/420 Insurance Claim — Patricia Moore, 2026-02- -> financial
+  [claude-opus-4-8] s4  370/420 Insurance Claim — Robert Lee, 2026-01-22   -> financial
+  [claude-opus-4-8] s4  371/420 Billing Statement — John Smith, 2026-02-01 -> financial
+  [claude-opus-4-8] s4  372/420 Billing Statement — Robert Lee, 2026-02-05 -> financial
+  [claude-opus-4-8] s4  373/420 Billing Statement — James Carter, 2026-02- -> financial
+  [claude-opus-4-8] s4  374/420 Billing Statement — Linda Torres, 2026-03- -> financial
+  [claude-opus-4-8] s4  375/420 Billing Statement — Patricia Moore, 2026-0 -> financial
+  [claude-opus-4-8] s4  376/420 Prior Authorization — John Smith, 2026-01- -> clinical_standard
+  [claude-opus-4-8] s4  377/420 Billing Statement — Emily Brown, 2026-02-0 -> financial
+  [claude-opus-4-8] s4  378/420 Prior Authorization — Maria Gonzalez, 2026 -> clinical_sensitive
+  [claude-opus-4-8] s4  379/420 Prior Authorization — Robert Lee, 2026-01- -> clinical_standard
+  [claude-opus-4-8] s4  380/420 Prior Authorization — Sarah Wilson, 2026-0 -> clinical_sensitive
+  [claude-opus-4-8] s4  381/420 Prior Authorization — Linda Torres, 2026-0 -> clinical_standard
+  [claude-opus-4-8] s4  382/420 Explanation Of Benefits — John Smith, 2026 -> financial
+  [claude-opus-4-8] s4  383/420 Explanation Of Benefits — James Carter, 20 -> financial
+  [claude-opus-4-8] s4  384/420 Explanation Of Benefits — Robert Lee, 2026 -> financial
+  [claude-opus-4-8] s4  385/420 Insurance Verification — John Smith, 2026- -> clinical_standard
+  [claude-opus-4-8] s4  386/420 Explanation Of Benefits — Emily Brown, 202 -> clinical_sensitive
+  [claude-opus-4-8] s4  387/420 Insurance Verification — Michael Chen, 202 -> clinical_standard
+  [claude-opus-4-8] s4  388/420 Salary Letter — Dr. Sarah Chen, 2026-01-01 -> employment
+  [claude-opus-4-8] s4  389/420 Insurance Verification — Patricia Moore, 2 -> clinical_standard
+  [claude-opus-4-8] s4  390/420 Salary Letter — Dr. Marcus Webb, 2026-01-0 -> employment
+  [claude-opus-4-8] s4  391/420 Salary Letter — Dr. Aisha Patel, 2026-01-0 -> employment
+  [claude-opus-4-8] s4  392/420 Insurance Verification — Emily Brown, 2026 -> clinical_sensitive
+  [claude-opus-4-8] s4  393/420 Salary Letter — Alice Johnson, 2026-01-01  -> employment
+  [claude-opus-4-8] s4  394/420 Salary Letter — Nurse Patricia Davis, 2026 -> employment
+  [claude-opus-4-8] s4  395/420 Salary Letter — Dr. Kevin O'Brien, 2026-01 -> employment
+  [claude-opus-4-8] s4  396/420 Employment Contract — Dr. Kevin O'Brien, 2 -> employment
+  [claude-opus-4-8] s4  397/420 Employment Contract — Dr. Aisha Patel, 202 -> employment
+  [claude-opus-4-8] s4  398/420 Employment Contract — Jennifer Walsh, 2024 -> employment
+  [claude-opus-4-8] s4  399/420 Performance Review — Dr. Sarah Chen, 2026- -> employment
+  [claude-opus-4-8] s4  400/420 Performance Review — Nurse Patricia Davis, -> employment
+  [claude-opus-4-8] s4  401/420 Performance Review — Nurse Tom Reyes, 2026 -> employment
+  [claude-opus-4-8] s4  402/420 Credentialing File — Dr. Sarah Chen, 2026- -> employment
+  [claude-opus-4-8] s4  403/420 Credentialing File — Dr. Kevin O'Brien, 20 -> employment
+  [claude-opus-4-8] s4  404/420 Credentialing File — Dr. Aisha Patel, 2026 -> employment
+  [claude-opus-4-8] s4  405/420 Contractor Agreement — Carol White, 2026-0 -> employment
+  [claude-opus-4-8] s4  406/420 Contractor Agreement — Frank Turner, 2026- -> employment
+  [claude-opus-4-8] s4  407/420 Employment Contract — Nurse Lisa Kim, 2023 -> employment
+  [claude-opus-4-8] s4  408/420 Staff Schedule — Riverside Medical Clinic, -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-opus-4-8] s4  409/420 Staff Schedule — Riverside Medical Clinic, -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-opus-4-8] s4  410/420 Contractor Agreement — Carol White, 2025-0 -> employment
+  [claude-opus-4-8] s4  411/420 Staff Schedule — Riverside Medical Clinic, -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-opus-4-8] s4  412/420 Meeting Agenda — Riverside Medical Clinic, -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-opus-4-8] s4  413/420 Meeting Agenda — Riverside Medical Clinic, -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-opus-4-8] s4  414/420 Meeting Agenda — Riverside Medical Clinic, -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-opus-4-8] s4  415/420 Policy Memo — Riverside Medical Clinic, 20 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-opus-4-8] s4  416/420 Policy Memo — Riverside Medical Clinic, 20 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-opus-4-8] s4  417/420 Policy Memo — Riverside Medical Clinic, 20 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-opus-4-8] s4  418/420 Public Pamphlet — Riverside Medical Clinic -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-opus-4-8] s4  419/420 Employment Contract — Dr. Marcus Webb, 202 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-opus-4-8] s4  420/420 Performance Review — Alice Johnson, 2026-0 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-opus-4-8] done: 513 labels across 5 sample(s) (420 new calls, 12 errors)
+--- re-labeling with claude-sonnet-5 (5 draws) ---
+  [claude-sonnet-5] 420 calls to make (105 cached), 4 workers
+  [claude-sonnet-5] s1    1/420 Clinical Note — John Smith, 2026-01-15     -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1    2/420 Clinical Note — Robert Lee, 2026-01-22     -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1    3/420 Clinical Note — Emily Brown, 2026-01-20    -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1    4/420 Clinical Note — James Carter, 2026-02-05   -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1    5/420 Clinical Note — Michael Chen, 2026-02-12   -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1    6/420 Clinical Note — Linda Torres, 2026-02-18   -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1    7/420 Clinical Note — Patricia Moore, 2026-02-20 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1    8/420 Clinical Note — Maria Gonzalez, 2026-02-03 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1    9/420 Clinical Note — David Park, 2026-03-01     -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   10/420 Prescription — John Smith, 2026-01-15      -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   11/420 Prescription — Emily Brown, 2026-01-20     -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   12/420 Clinical Note — Sarah Wilson, 2026-03-05   -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   13/420 Prescription — Robert Lee, 2026-01-22      -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   14/420 Prescription — James Carter, 2026-02-05    -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   15/420 Prescription — Linda Torres, 2026-02-18    -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   16/420 Prescription — Michael Chen, 2026-02-12    -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   17/420 Prescription — Patricia Moore, 2026-02-20  -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   18/420 Prescription — Maria Gonzalez, 2026-02-03  -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   19/420 Lab Report — Robert Lee, 2026-01-22        -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   20/420 Lab Report — John Smith, 2026-01-15        -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   21/420 Lab Report — Emily Brown, 2026-01-20       -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   22/420 Lab Report — Linda Torres, 2026-02-18      -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   23/420 Lab Report — Michael Chen, 2026-02-12      -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   24/420 Lab Report — James Carter, 2026-02-05      -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   25/420 Lab Report — Patricia Moore, 2026-02-20    -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   26/420 Lab Report — David Park, 2026-03-01        -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   27/420 Radiology Report — Emily Brown, 2026-01-18 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   28/420 Radiology Report — Linda Torres, 2026-01-1 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   29/420 Radiology Report — Robert Lee, 2026-01-05  -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   30/420 Radiology Report — James Carter, 2026-01-2 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   31/420 Radiology Report — Patricia Moore, 2026-02 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   32/420 Discharge Summary — Emily Brown, 2026-01-2 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   33/420 Discharge Summary — John Smith, 2026-01-16 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   34/420 Discharge Summary — Robert Lee, 2026-01-08 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   35/420 Discharge Summary — Sarah Wilson, 2026-03- -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   36/420 Discharge Summary — Linda Torres, 2026-02- -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   37/420 Mental Health Assessment — Maria Gonzalez, -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   38/420 Mental Health Assessment — Sarah Wilson, 2 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   39/420 Mental Health Assessment — David Park, 202 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   40/420 Mental Health Assessment — Patricia Moore, -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   41/420 Mental Health Assessment — James Carter, 2 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   42/420 Referral Letter — John Smith, 2026-01-15   -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   43/420 Referral Letter — Robert Lee, 2026-01-22   -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   44/420 Referral Letter — Emily Brown, 2026-01-20  -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   45/420 Referral Letter — Linda Torres, 2026-02-18 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   46/420 Referral Letter — James Carter, 2026-02-05 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   47/420 Referral Letter — Michael Chen, 2026-02-12 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   48/420 Insurance Claim — John Smith, 2026-01-15   -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   49/420 Insurance Claim — Robert Lee, 2026-01-22   -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   50/420 Insurance Claim — Emily Brown, 2026-01-20  -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   51/420 Insurance Claim — James Carter, 2026-02-05 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   52/420 Insurance Claim — Michael Chen, 2026-02-12 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   53/420 Insurance Claim — Maria Gonzalez, 2026-02- -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   54/420 Insurance Claim — Linda Torres, 2026-02-18 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   55/420 Insurance Claim — Patricia Moore, 2026-02- -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   56/420 Billing Statement — John Smith, 2026-02-01 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   57/420 Billing Statement — Emily Brown, 2026-02-0 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   58/420 Billing Statement — James Carter, 2026-02- -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   59/420 Billing Statement — Robert Lee, 2026-02-05 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   60/420 Billing Statement — Linda Torres, 2026-03- -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   61/420 Billing Statement — Patricia Moore, 2026-0 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   62/420 Prior Authorization — John Smith, 2026-01- -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   63/420 Prior Authorization — Robert Lee, 2026-01- -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   64/420 Prior Authorization — Maria Gonzalez, 2026 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   65/420 Explanation Of Benefits — John Smith, 2026 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   66/420 Prior Authorization — Sarah Wilson, 2026-0 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   67/420 Prior Authorization — Linda Torres, 2026-0 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   68/420 Explanation Of Benefits — Emily Brown, 202 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   69/420 Explanation Of Benefits — James Carter, 20 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   70/420 Explanation Of Benefits — Robert Lee, 2026 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   71/420 Insurance Verification — John Smith, 2026- -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   72/420 Insurance Verification — Emily Brown, 2026 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   73/420 Insurance Verification — Patricia Moore, 2 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   74/420 Insurance Verification — Michael Chen, 202 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   75/420 Salary Letter — Dr. Sarah Chen, 2026-01-01 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   76/420 Salary Letter — Dr. Marcus Webb, 2026-01-0 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   77/420 Salary Letter — Dr. Aisha Patel, 2026-01-0 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   78/420 Salary Letter — Dr. Kevin O'Brien, 2026-01 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   79/420 Salary Letter — Nurse Patricia Davis, 2026 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   80/420 Salary Letter — Alice Johnson, 2026-01-01  -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   81/420 Employment Contract — Dr. Aisha Patel, 202 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   82/420 Employment Contract — Dr. Kevin O'Brien, 2 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   83/420 Employment Contract — Nurse Lisa Kim, 2023 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   84/420 Employment Contract — Jennifer Walsh, 2024 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   85/420 Performance Review — Dr. Sarah Chen, 2026- -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   86/420 Performance Review — Alice Johnson, 2026-0 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   87/420 Performance Review — Nurse Patricia Davis, -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   88/420 Performance Review — Nurse Tom Reyes, 2026 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   89/420 Credentialing File — Dr. Sarah Chen, 2026- -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   90/420 Credentialing File — Dr. Aisha Patel, 2026 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   91/420 Credentialing File — Dr. Kevin O'Brien, 20 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   92/420 Contractor Agreement — Carol White, 2026-0 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   93/420 Contractor Agreement — Frank Turner, 2026- -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   94/420 Contractor Agreement — Carol White, 2025-0 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   95/420 Staff Schedule — Riverside Medical Clinic, -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   96/420 Staff Schedule — Riverside Medical Clinic, -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   97/420 Staff Schedule — Riverside Medical Clinic, -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   98/420 Meeting Agenda — Riverside Medical Clinic, -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1   99/420 Meeting Agenda — Riverside Medical Clinic, -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1  100/420 Meeting Agenda — Riverside Medical Clinic, -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1  101/420 Policy Memo — Riverside Medical Clinic, 20 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1  102/420 Policy Memo — Riverside Medical Clinic, 20 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1  103/420 Policy Memo — Riverside Medical Clinic, 20 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1  104/420 Public Pamphlet — Riverside Medical Clinic -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  105/420 Clinical Note — John Smith, 2026-01-15     -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s1  106/420 Employment Contract — Dr. Marcus Webb, 202 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  107/420 Clinical Note — Emily Brown, 2026-01-20    -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  108/420 Clinical Note — Robert Lee, 2026-01-22     -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  109/420 Clinical Note — Michael Chen, 2026-02-12   -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  110/420 Clinical Note — James Carter, 2026-02-05   -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  111/420 Clinical Note — Linda Torres, 2026-02-18   -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  112/420 Clinical Note — Patricia Moore, 2026-02-20 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  113/420 Clinical Note — Maria Gonzalez, 2026-02-03 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  114/420 Clinical Note — David Park, 2026-03-01     -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  115/420 Clinical Note — Sarah Wilson, 2026-03-05   -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  116/420 Prescription — John Smith, 2026-01-15      -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  117/420 Prescription — Emily Brown, 2026-01-20     -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  118/420 Prescription — James Carter, 2026-02-05    -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  119/420 Prescription — Robert Lee, 2026-01-22      -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  120/420 Prescription — Michael Chen, 2026-02-12    -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  121/420 Prescription — Linda Torres, 2026-02-18    -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  122/420 Prescription — Patricia Moore, 2026-02-20  -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  123/420 Prescription — Maria Gonzalez, 2026-02-03  -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  124/420 Lab Report — John Smith, 2026-01-15        -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  125/420 Lab Report — Robert Lee, 2026-01-22        -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  126/420 Lab Report — Emily Brown, 2026-01-20       -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  127/420 Lab Report — James Carter, 2026-02-05      -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  128/420 Lab Report — Michael Chen, 2026-02-12      -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  129/420 Lab Report — Linda Torres, 2026-02-18      -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  130/420 Lab Report — David Park, 2026-03-01        -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  131/420 Lab Report — Patricia Moore, 2026-02-20    -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  132/420 Radiology Report — Emily Brown, 2026-01-18 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  133/420 Radiology Report — Linda Torres, 2026-01-1 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  134/420 Radiology Report — Robert Lee, 2026-01-05  -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  135/420 Radiology Report — James Carter, 2026-01-2 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  136/420 Radiology Report — Patricia Moore, 2026-02 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  137/420 Discharge Summary — Emily Brown, 2026-01-2 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  138/420 Discharge Summary — John Smith, 2026-01-16 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  139/420 Discharge Summary — Linda Torres, 2026-02- -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  140/420 Discharge Summary — Robert Lee, 2026-01-08 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  141/420 Discharge Summary — Sarah Wilson, 2026-03- -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  142/420 Mental Health Assessment — Maria Gonzalez, -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  143/420 Mental Health Assessment — Sarah Wilson, 2 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  144/420 Mental Health Assessment — David Park, 202 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  145/420 Mental Health Assessment — Patricia Moore, -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  146/420 Mental Health Assessment — James Carter, 2 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  147/420 Referral Letter — John Smith, 2026-01-15   -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  148/420 Referral Letter — Robert Lee, 2026-01-22   -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  149/420 Referral Letter — Emily Brown, 2026-01-20  -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  150/420 Referral Letter — James Carter, 2026-02-05 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  151/420 Referral Letter — Linda Torres, 2026-02-18 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  152/420 Referral Letter — Michael Chen, 2026-02-12 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  153/420 Insurance Claim — John Smith, 2026-01-15   -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  154/420 Insurance Claim — Emily Brown, 2026-01-20  -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  155/420 Insurance Claim — Robert Lee, 2026-01-22   -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  156/420 Insurance Claim — James Carter, 2026-02-05 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  157/420 Insurance Claim — Michael Chen, 2026-02-12 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  158/420 Insurance Claim — Patricia Moore, 2026-02- -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  159/420 Insurance Claim — Linda Torres, 2026-02-18 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  160/420 Insurance Claim — Maria Gonzalez, 2026-02- -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  161/420 Billing Statement — John Smith, 2026-02-01 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  162/420 Billing Statement — Emily Brown, 2026-02-0 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  163/420 Billing Statement — Robert Lee, 2026-02-05 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  164/420 Billing Statement — James Carter, 2026-02- -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  165/420 Billing Statement — Linda Torres, 2026-03- -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  166/420 Billing Statement — Patricia Moore, 2026-0 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  167/420 Prior Authorization — John Smith, 2026-01- -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  168/420 Prior Authorization — Robert Lee, 2026-01- -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  169/420 Prior Authorization — Maria Gonzalez, 2026 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  170/420 Prior Authorization — Linda Torres, 2026-0 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  171/420 Prior Authorization — Sarah Wilson, 2026-0 -> ERROR BadRequestError: Error code: 400 - {'typ
+  [claude-sonnet-5] s2  172/420 Explanation Of Benefits — John Smith, 2026 -> ERROR BadRequestError: Error code: 400 - {'typ

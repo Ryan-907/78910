@@ -1,0 +1,68 @@
+doc_id,title,document_type,sensitivity_tier,subject_name,permitted_receiver_roles,conflicting_types
+doc_000,"Clinical Note — John Smith, 2026-01-15",clinical_note,clinical_standard,John Smith,Doctor;Nurse,ssn
+doc_001,"Clinical Note — Emily Brown, 2026-01-20",clinical_note,clinical_standard,Emily Brown,Doctor;Nurse,mental_health;ssn
+doc_002,"Clinical Note — Robert Lee, 2026-01-22",clinical_note,clinical_standard,Robert Lee,Doctor;Nurse,ssn
+doc_004,"Clinical Note — Michael Chen, 2026-02-12",clinical_note,clinical_standard,Michael Chen,Doctor;Nurse,ssn
+doc_005,"Clinical Note — Linda Torres, 2026-02-18",clinical_note,clinical_standard,Linda Torres,Doctor;Nurse,ssn
+doc_006,"Clinical Note — Patricia Moore, 2026-02-20",clinical_note,clinical_standard,Patricia Moore,Doctor;Nurse,mental_health;ssn
+doc_009,"Clinical Note — Sarah Wilson, 2026-03-05",clinical_note,clinical_sensitive,Sarah Wilson,Doctor,ssn
+doc_018,"Lab Report — John Smith, 2026-01-15",lab_report,clinical_standard,John Smith,Doctor;Nurse,ssn
+doc_019,"Lab Report — Robert Lee, 2026-01-22",lab_report,clinical_standard,Robert Lee,Doctor;Nurse,ssn
+doc_021,"Lab Report — James Carter, 2026-02-05",lab_report,clinical_standard,James Carter,Doctor;Nurse,ssn
+doc_023,"Lab Report — Linda Torres, 2026-02-18",lab_report,clinical_standard,Linda Torres,Doctor;Nurse,ssn
+doc_024,"Lab Report — Patricia Moore, 2026-02-20",lab_report,clinical_standard,Patricia Moore,Doctor;Nurse,ssn
+doc_025,"Lab Report — David Park, 2026-03-01",lab_report,clinical_standard,David Park,Doctor;Nurse,ssn
+doc_031,"Discharge Summary — Emily Brown, 2026-01-20",discharge_summary,clinical_standard,Emily Brown,Doctor;Nurse,ssn
+doc_033,"Discharge Summary — Linda Torres, 2026-02-19",discharge_summary,clinical_standard,Linda Torres,Doctor;Nurse,ssn
+doc_034,"Discharge Summary — Robert Lee, 2026-01-08",discharge_summary,clinical_standard,Robert Lee,Doctor;Nurse,ssn
+doc_035,"Discharge Summary — Sarah Wilson, 2026-03-10",discharge_summary,clinical_standard,Sarah Wilson,Doctor;Nurse,mental_health;ssn
+doc_036,"Mental Health Assessment — Maria Gonzalez, 2026-02-03",mental_health_assessment,clinical_sensitive,Maria Gonzalez,Doctor,ssn
+doc_037,"Mental Health Assessment — Sarah Wilson, 2026-03-05",mental_health_assessment,clinical_sensitive,Sarah Wilson,Doctor,ssn
+doc_038,"Mental Health Assessment — David Park, 2026-03-01",mental_health_assessment,clinical_sensitive,David Park,Doctor,ssn
+doc_039,"Mental Health Assessment — Patricia Moore, 2026-02-20",mental_health_assessment,clinical_sensitive,Patricia Moore,Doctor,ssn
+doc_040,"Mental Health Assessment — James Carter, 2026-02-05",mental_health_assessment,clinical_sensitive,James Carter,Doctor,ssn
+doc_044,"Referral Letter — Linda Torres, 2026-02-18",referral_letter,clinical_standard,Linda Torres,Doctor,ssn
+doc_045,"Referral Letter — James Carter, 2026-02-05",referral_letter,clinical_standard,James Carter,Doctor,ssn
+doc_047,"Insurance Claim — John Smith, 2026-01-15",insurance_claim,financial,John Smith,Billing Specialist,emergency_contact;medical_diagnosis;medical_history;medical_medication;ssn
+doc_048,"Insurance Claim — Emily Brown, 2026-01-20",insurance_claim,financial,Emily Brown,Billing Specialist,medical_diagnosis;ssn
+doc_049,"Insurance Claim — Robert Lee, 2026-01-22",insurance_claim,financial,Robert Lee,Billing Specialist,medical_diagnosis;medical_medication;ssn
+doc_050,"Insurance Claim — James Carter, 2026-02-05",insurance_claim,financial,James Carter,Billing Specialist,medical_diagnosis;medical_history;medical_medication;ssn
+doc_051,"Insurance Claim — Michael Chen, 2026-02-12",insurance_claim,financial,Michael Chen,Billing Specialist,medical_diagnosis;medical_medication;ssn
+doc_052,"Insurance Claim — Linda Torres, 2026-02-18",insurance_claim,financial,Linda Torres,Billing Specialist,emergency_contact;medical_diagnosis;medical_medication;ssn
+doc_053,"Insurance Claim — Patricia Moore, 2026-02-20",insurance_claim,financial,Patricia Moore,Billing Specialist,emergency_contact;medical_diagnosis;medical_medication;ssn
+doc_054,"Insurance Claim — Maria Gonzalez, 2026-02-03",insurance_claim,financial,Maria Gonzalez,Billing Specialist,medical_medication;mental_health;ssn
+doc_055,"Billing Statement — John Smith, 2026-02-01",billing_statement,financial,John Smith,Billing Specialist,medical_diagnosis;medical_medication;ssn
+doc_056,"Billing Statement — Emily Brown, 2026-02-01",billing_statement,financial,Emily Brown,Billing Specialist,medical_diagnosis;ssn
+doc_057,"Billing Statement — Robert Lee, 2026-02-05",billing_statement,financial,Robert Lee,Billing Specialist,medical_diagnosis;medical_medication
+doc_058,"Billing Statement — James Carter, 2026-02-15",billing_statement,financial,James Carter,Billing Specialist,medical_diagnosis
+doc_059,"Billing Statement — Linda Torres, 2026-03-01",billing_statement,financial,Linda Torres,Billing Specialist,medical_diagnosis;medical_medication;ssn
+doc_060,"Billing Statement — Patricia Moore, 2026-03-01",billing_statement,financial,Patricia Moore,Billing Specialist,medical_diagnosis;ssn
+doc_061,"Prior Authorization — John Smith, 2026-01-10",prior_authorization,financial,John Smith,Doctor;Billing Specialist,emergency_contact;medical_diagnosis;medical_history;medical_medication;ssn
+doc_063,"Prior Authorization — Maria Gonzalez, 2026-02-10",prior_authorization,clinical_sensitive,Maria Gonzalez,Doctor,ssn
+doc_065,"Prior Authorization — Linda Torres, 2026-02-01",prior_authorization,financial,Linda Torres,Doctor;Billing Specialist,medical_diagnosis;medical_medication;ssn
+doc_066,"Explanation Of Benefits — John Smith, 2026-02-10",explanation_of_benefits,financial,John Smith,Billing Specialist,medical_diagnosis;ssn
+doc_067,"Explanation Of Benefits — Emily Brown, 2026-02-10",explanation_of_benefits,financial,Emily Brown,Billing Specialist,medical_diagnosis
+doc_068,"Explanation Of Benefits — Robert Lee, 2026-02-10",explanation_of_benefits,financial,Robert Lee,Billing Specialist,medical_diagnosis;medical_medication
+doc_069,"Explanation Of Benefits — James Carter, 2026-02-20",explanation_of_benefits,financial,James Carter,Billing Specialist,medical_diagnosis;medical_medication
+doc_070,"Insurance Verification — John Smith, 2026-01-14",insurance_verification,financial,John Smith,Billing Specialist;Doctor;Nurse,emergency_contact;medical_diagnosis;medical_history;medical_medication;ssn
+doc_071,"Insurance Verification — Emily Brown, 2026-01-19",insurance_verification,financial,Emily Brown,Billing Specialist;Doctor;Nurse,medical_diagnosis;ssn
+doc_072,"Insurance Verification — Patricia Moore, 2026-02-19",insurance_verification,financial,Patricia Moore,Billing Specialist;Doctor;Nurse,medical_diagnosis;medical_medication;ssn
+doc_073,"Insurance Verification — Michael Chen, 2026-02-11",insurance_verification,financial,Michael Chen,Billing Specialist;Doctor;Nurse,medical_diagnosis;medical_medication;ssn
+doc_074,"Salary Letter — Dr. Sarah Chen, 2026-01-01",salary_letter,employment,Dr. Sarah Chen,HR Manager,date_of_birth;home_address;name
+doc_075,"Salary Letter — Dr. Marcus Webb, 2026-01-01",salary_letter,employment,Dr. Marcus Webb,HR Manager,date_of_birth;home_address;name
+doc_076,"Salary Letter — Dr. Aisha Patel, 2026-01-01",salary_letter,employment,Dr. Aisha Patel,HR Manager,date_of_birth;home_address;mental_health;name
+doc_077,"Salary Letter — Dr. Kevin O'Brien, 2026-01-01",salary_letter,employment,Dr. Kevin O'Brien,HR Manager,date_of_birth;home_address;name
+doc_078,"Salary Letter — Nurse Patricia Davis, 2026-01-01",salary_letter,employment,Nurse Patricia Davis,HR Manager,date_of_birth;home_address
+doc_079,"Salary Letter — Alice Johnson, 2026-01-01",salary_letter,employment,Alice Johnson,HR Manager,date_of_birth;home_address;name
+doc_080,"Employment Contract — Dr. Aisha Patel, 2022-03-01",employment_contract,employment,Dr. Aisha Patel,HR Manager,date_of_birth;home_address;mental_health;name
+doc_081,"Employment Contract — Dr. Kevin O'Brien, 2020-07-01",employment_contract,employment,Dr. Kevin O'Brien,HR Manager,date_of_birth;home_address;name
+doc_082,"Employment Contract — Nurse Lisa Kim, 2023-08-01",employment_contract,employment,Nurse Lisa Kim,HR Manager,date_of_birth;home_address;mental_health
+doc_083,"Employment Contract — Jennifer Walsh, 2024-01-15",employment_contract,employment,Jennifer Walsh,HR Manager,date_of_birth;home_address;name
+doc_084,"Performance Review — Dr. Sarah Chen, 2026-01-15",performance_review,employment,Dr. Sarah Chen,HR Manager,date_of_birth;home_address;name
+doc_085,"Performance Review — Nurse Patricia Davis, 2026-01-15",performance_review,employment,Nurse Patricia Davis,HR Manager,date_of_birth;home_address
+doc_086,"Performance Review — Alice Johnson, 2026-01-15",performance_review,employment,Alice Johnson,HR Manager,date_of_birth;home_address;name
+doc_087,"Performance Review — Nurse Tom Reyes, 2026-01-15",performance_review,employment,Nurse Tom Reyes,HR Manager,date_of_birth;home_address
+doc_091,"Contractor Agreement — Carol White, 2026-01-01",contractor_agreement,employment,Carol White,HR Manager,date_of_birth;home_address;name
+doc_092,"Contractor Agreement — Frank Turner, 2026-01-01",contractor_agreement,employment,Frank Turner,HR Manager,date_of_birth;home_address;name
+doc_093,"Contractor Agreement — Carol White, 2025-01-01",contractor_agreement,employment,Carol White,HR Manager,date_of_birth;home_address;name
+doc_104,"Employment Contract — Dr. Marcus Webb, 2021-09-01",employment_contract,employment,Dr. Marcus Webb,HR Manager,date_of_birth;home_address;name

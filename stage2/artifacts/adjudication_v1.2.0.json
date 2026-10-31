@@ -1,0 +1,1843 @@
+{
+  "artifact": "stage2b_adjudication",
+  "vocab_version": "1.2.0",
+  "linkage_version": "1.2.0",
+  "corpus_sha256": "49cdd9c89112f605ee228da5c2489a2de2b58dc56379a257faed8a6302c1b3d0",
+  "flows": 2520,
+  "properties": {
+    "monotonicity": {
+      "baseline_permits": 259,
+      "extended_permits": 178,
+      "is_subset": true,
+      "is_strict_subset": true,
+      "violations": [],
+      "converted_permit_to_deny": 81
+    },
+    "content_free": {
+      "flows_compared": 2520,
+      "content_free": true,
+      "mismatches": [],
+      "mismatch_count": 0
+    },
+    "stateless": {
+      "seed": 7926,
+      "flows_compared": 2520,
+      "stateless": true,
+      "mismatch_count": 0,
+      "mismatches": []
+    }
+  },
+  "m1_over_delivery_closed": {
+    "flows_closed": 81,
+    "baseline_permits": 259,
+    "extended_permits": 178,
+    "by_information_type": {
+      "ssn": 57,
+      "medical_diagnosis": 24,
+      "medical_medication": 18,
+      "date_of_birth": 18,
+      "home_address": 18,
+      "name": 14,
+      "mental_health": 7,
+      "emergency_contact": 5,
+      "medical_history": 4
+    },
+    "by_information_type_sole_cause": {
+      "ssn": 36,
+      "medical_diagnosis": 2
+    },
+    "by_role": {
+      "Billing Specialist": 25,
+      "Doctor": 24,
+      "HR Manager": 18,
+      "Nurse": 14
+    },
+    "by_tier": {
+      "financial": 31,
+      "clinical_standard": 25,
+      "employment": 18,
+      "clinical_sensitive": 7
+    },
+    "by_document_type": {
+      "clinical_note": 9,
+      "lab_report": 8,
+      "discharge_summary": 8,
+      "insurance_verification": 8,
+      "insurance_claim": 8,
+      "prior_authorization": 7,
+      "billing_statement": 6,
+      "salary_letter": 6,
+      "employment_contract": 5,
+      "mental_health_assessment": 4,
+      "explanation_of_benefits": 4,
+      "performance_review": 4,
+      "credentialing_file": 3,
+      "referral_letter": 1
+    }
+  },
+  "m2_over_blocks_introduced": {
+    "measurable": true,
+    "provenance": {
+      "available": true,
+      "labels_read": 487,
+      "fully_audited_documents": 25,
+      "note": "Over-blocks are measured only on the 25 fully-audited documents, where every detection carries a human label and the type set can be rebuilt exactly."
+    },
+    "scope_flows": 600,
+    "scope_documents": 25,
+    "over_blocks_introduced": 0,
+    "over_block_rate_in_scope": 0.0,
+    "by_role": {},
+    "by_type": {},
+    "silent_passes_under_classifier": 0
+  },
+  "m2_over_block_flows": [],
+  "m2_silent_pass_flows": [],
+  "m3_denial_overlap": {
+    "denials_total": 2342,
+    "buckets": {
+      "role_only": 1054,
+      "both_role_and_attribute": 840,
+      "attribute_and_other_check": 219,
+      "other_check_only": 148,
+      "attribute_only": 81
+    },
+    "attribute_only_note": "Flows the fifth check uniquely catches: role, context and assignment all pass, and only the information-type check refuses them.",
+    "attribute_only_by_type": {
+      "ssn": 57,
+      "medical_diagnosis": 24,
+      "medical_medication": 18,
+      "date_of_birth": 18,
+      "home_address": 18,
+      "name": 14,
+      "mental_health": 7,
+      "emergency_contact": 5,
+      "medical_history": 4
+    },
+    "attribute_only_by_role": {
+      "Billing Specialist": 25,
+      "Doctor": 24,
+      "HR Manager": 18,
+      "Nurse": 14
+    }
+  },
+  "m3_role_field_ablation": {
+    "note": "permitted_receiver_roles removed (every role permitted on every document); checks 1, 2, 4 and 5 unchanged.",
+    "permits_without_role_field_4check": 427,
+    "permits_without_role_field_5check": 278,
+    "permits_with_role_field_4check": 259,
+    "permits_with_role_field_5check": 178,
+    "flows_the_role_field_uniquely_blocks": 100,
+    "by_role": {
+      "Patient": 90,
+      "Nurse": 7,
+      "Doctor": 3
+    },
+    "by_tier": {
+      "internal": 90,
+      "financial": 7,
+      "clinical_standard": 3
+    },
+    "by_document_type": {
+      "staff_schedule": 30,
+      "meeting_agenda": 30,
+      "policy_memo": 30,
+      "explanation_of_benefits": 4,
+      "referral_letter": 3,
+      "billing_statement": 2,
+      "prior_authorization": 1
+    },
+    "examples": [
+      {
+        "agent": "John Smith",
+        "role": "Patient",
+        "doc_id": "doc_094",
+        "document_type": "staff_schedule",
+        "sensitivity_tier": "internal"
+      },
+      {
+        "agent": "John Smith",
+        "role": "Patient",
+        "doc_id": "doc_095",
+        "document_type": "staff_schedule",
+        "sensitivity_tier": "internal"
+      },
+      {
+        "agent": "John Smith",
+        "role": "Patient",
+        "doc_id": "doc_096",
+        "document_type": "staff_schedule",
+        "sensitivity_tier": "internal"
+      },
+      {
+        "agent": "John Smith",
+        "role": "Patient",
+        "doc_id": "doc_097",
+        "document_type": "meeting_agenda",
+        "sensitivity_tier": "internal"
+      },
+      {
+        "agent": "John Smith",
+        "role": "Patient",
+        "doc_id": "doc_098",
+        "document_type": "meeting_agenda",
+        "sensitivity_tier": "internal"
+      },
+      {
+        "agent": "John Smith",
+        "role": "Patient",
+        "doc_id": "doc_099",
+        "document_type": "meeting_agenda",
+        "sensitivity_tier": "internal"
+      },
+      {
+        "agent": "John Smith",
+        "role": "Patient",
+        "doc_id": "doc_100",
+        "document_type": "policy_memo",
+        "sensitivity_tier": "internal"
+      },
+      {
+        "agent": "John Smith",
+        "role": "Patient",
+        "doc_id": "doc_101",
+        "document_type": "policy_memo",
+        "sensitivity_tier": "internal"
+      },
+      {
+        "agent": "John Smith",
+        "role": "Patient",
+        "doc_id": "doc_102",
+        "document_type": "policy_memo",
+        "sensitivity_tier": "internal"
+      },
+      {
+        "agent": "Emily Brown",
+        "role": "Patient",
+        "doc_id": "doc_094",
+        "document_type": "staff_schedule",
+        "sensitivity_tier": "internal"
+      },
+      {
+        "agent": "Emily Brown",
+        "role": "Patient",
+        "doc_id": "doc_095",
+        "document_type": "staff_schedule",
+        "sensitivity_tier": "internal"
+      },
+      {
+        "agent": "Emily Brown",
+        "role": "Patient",
+        "doc_id": "doc_096",
+        "document_type": "staff_schedule",
+        "sensitivity_tier": "internal"
+      },
+      {
+        "agent": "Emily Brown",
+        "role": "Patient",
+        "doc_id": "doc_097",
+        "document_type": "meeting_agenda",
+        "sensitivity_tier": "internal"
+      },
+      {
+        "agent": "Emily Brown",
+        "role": "Patient",
+        "doc_id": "doc_098",
+        "document_type": "meeting_agenda",
+        "sensitivity_tier": "internal"
+      },
+      {
+        "agent": "Emily Brown",
+        "role": "Patient",
+        "doc_id": "doc_099",
+        "document_type": "meeting_agenda",
+        "sensitivity_tier": "internal"
+      },
+      {
+        "agent": "Emily Brown",
+        "role": "Patient",
+        "doc_id": "doc_100",
+        "document_type": "policy_memo",
+        "sensitivity_tier": "internal"
+      },
+      {
+        "agent": "Emily Brown",
+        "role": "Patient",
+        "doc_id": "doc_101",
+        "document_type": "policy_memo",
+        "sensitivity_tier": "internal"
+      },
+      {
+        "agent": "Emily Brown",
+        "role": "Patient",
+        "doc_id": "doc_102",
+        "document_type": "policy_memo",
+        "sensitivity_tier": "internal"
+      },
+      {
+        "agent": "Robert Lee",
+        "role": "Patient",
+        "doc_id": "doc_094",
+        "document_type": "staff_schedule",
+        "sensitivity_tier": "internal"
+      },
+      {
+        "agent": "Robert Lee",
+        "role": "Patient",
+        "doc_id": "doc_095",
+        "document_type": "staff_schedule",
+        "sensitivity_tier": "internal"
+      },
+      {
+        "agent": "Robert Lee",
+        "role": "Patient",
+        "doc_id": "doc_096",
+        "document_type": "staff_schedule",
+        "sensitivity_tier": "internal"
+      },
+      {
+        "agent": "Robert Lee",
+        "role": "Patient",
+        "doc_id": "doc_097",
+        "document_type": "meeting_agenda",
+        "sensitivity_tier": "internal"
+      },
+      {
+        "agent": "Robert Lee",
+        "role": "Patient",
+        "doc_id": "doc_098",
+        "document_type": "meeting_agenda",
+        "sensitivity_tier": "internal"
+      },
+      {
+        "agent": "Robert Lee",
+        "role": "Patient",
+        "doc_id": "doc_099",
+        "document_type": "meeting_agenda",
+        "sensitivity_tier": "internal"
+      },
+      {
+        "agent": "Robert Lee",
+        "role": "Patient",
+        "doc_id": "doc_100",
+        "document_type": "policy_memo",
+        "sensitivity_tier": "internal"
+      }
+    ]
+  },
+  "m4_unreachable_documents": {
+    "count": 67,
+    "note": "Every role the label admits is refused by the fifth check, so no agent can reach the document. A policy defect, surfaced here because nothing else in the pipeline would.",
+    "by_document_type": {
+      "insurance_claim": 8,
+      "clinical_note": 7,
+      "lab_report": 6,
+      "billing_statement": 6,
+      "salary_letter": 6,
+      "mental_health_assessment": 5,
+      "employment_contract": 5,
+      "discharge_summary": 4,
+      "explanation_of_benefits": 4,
+      "insurance_verification": 4,
+      "performance_review": 4,
+      "prior_authorization": 3,
+      "contractor_agreement": 3,
+      "referral_letter": 2
+    },
+    "by_tier": {
+      "financial": 24,
+      "clinical_standard": 18,
+      "employment": 18,
+      "clinical_sensitive": 7
+    },
+    "by_conflicting_type": {
+      "ssn": 44,
+      "medical_diagnosis": 23,
+      "date_of_birth": 18,
+      "home_address": 18,
+      "medical_medication": 17,
+      "name": 14,
+      "mental_health": 7,
+      "emergency_contact": 5,
+      "medical_history": 4
+    },
+    "documents": [
+      {
+        "doc_id": "doc_000",
+        "title": "Clinical Note — John Smith, 2026-01-15",
+        "document_type": "clinical_note",
+        "sensitivity_tier": "clinical_standard",
+        "subject_name": "John Smith",
+        "permitted_receiver_roles": [
+          "Doctor",
+          "Nurse"
+        ],
+        "blocking_types_by_role": {
+          "Doctor": [
+            "ssn"
+          ],
+          "Nurse": [
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_001",
+        "title": "Clinical Note — Emily Brown, 2026-01-20",
+        "document_type": "clinical_note",
+        "sensitivity_tier": "clinical_standard",
+        "subject_name": "Emily Brown",
+        "permitted_receiver_roles": [
+          "Doctor",
+          "Nurse"
+        ],
+        "blocking_types_by_role": {
+          "Doctor": [
+            "ssn"
+          ],
+          "Nurse": [
+            "mental_health",
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "mental_health",
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_002",
+        "title": "Clinical Note — Robert Lee, 2026-01-22",
+        "document_type": "clinical_note",
+        "sensitivity_tier": "clinical_standard",
+        "subject_name": "Robert Lee",
+        "permitted_receiver_roles": [
+          "Doctor",
+          "Nurse"
+        ],
+        "blocking_types_by_role": {
+          "Doctor": [
+            "ssn"
+          ],
+          "Nurse": [
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_004",
+        "title": "Clinical Note — Michael Chen, 2026-02-12",
+        "document_type": "clinical_note",
+        "sensitivity_tier": "clinical_standard",
+        "subject_name": "Michael Chen",
+        "permitted_receiver_roles": [
+          "Doctor",
+          "Nurse"
+        ],
+        "blocking_types_by_role": {
+          "Doctor": [
+            "ssn"
+          ],
+          "Nurse": [
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_005",
+        "title": "Clinical Note — Linda Torres, 2026-02-18",
+        "document_type": "clinical_note",
+        "sensitivity_tier": "clinical_standard",
+        "subject_name": "Linda Torres",
+        "permitted_receiver_roles": [
+          "Doctor",
+          "Nurse"
+        ],
+        "blocking_types_by_role": {
+          "Doctor": [
+            "ssn"
+          ],
+          "Nurse": [
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_006",
+        "title": "Clinical Note — Patricia Moore, 2026-02-20",
+        "document_type": "clinical_note",
+        "sensitivity_tier": "clinical_standard",
+        "subject_name": "Patricia Moore",
+        "permitted_receiver_roles": [
+          "Doctor",
+          "Nurse"
+        ],
+        "blocking_types_by_role": {
+          "Doctor": [
+            "ssn"
+          ],
+          "Nurse": [
+            "mental_health",
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "mental_health",
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_009",
+        "title": "Clinical Note — Sarah Wilson, 2026-03-05",
+        "document_type": "clinical_note",
+        "sensitivity_tier": "clinical_sensitive",
+        "subject_name": "Sarah Wilson",
+        "permitted_receiver_roles": [
+          "Doctor"
+        ],
+        "blocking_types_by_role": {
+          "Doctor": [
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_018",
+        "title": "Lab Report — John Smith, 2026-01-15",
+        "document_type": "lab_report",
+        "sensitivity_tier": "clinical_standard",
+        "subject_name": "John Smith",
+        "permitted_receiver_roles": [
+          "Doctor",
+          "Nurse"
+        ],
+        "blocking_types_by_role": {
+          "Doctor": [
+            "ssn"
+          ],
+          "Nurse": [
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_019",
+        "title": "Lab Report — Robert Lee, 2026-01-22",
+        "document_type": "lab_report",
+        "sensitivity_tier": "clinical_standard",
+        "subject_name": "Robert Lee",
+        "permitted_receiver_roles": [
+          "Doctor",
+          "Nurse"
+        ],
+        "blocking_types_by_role": {
+          "Doctor": [
+            "ssn"
+          ],
+          "Nurse": [
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_021",
+        "title": "Lab Report — James Carter, 2026-02-05",
+        "document_type": "lab_report",
+        "sensitivity_tier": "clinical_standard",
+        "subject_name": "James Carter",
+        "permitted_receiver_roles": [
+          "Doctor",
+          "Nurse"
+        ],
+        "blocking_types_by_role": {
+          "Doctor": [
+            "ssn"
+          ],
+          "Nurse": [
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_023",
+        "title": "Lab Report — Linda Torres, 2026-02-18",
+        "document_type": "lab_report",
+        "sensitivity_tier": "clinical_standard",
+        "subject_name": "Linda Torres",
+        "permitted_receiver_roles": [
+          "Doctor",
+          "Nurse"
+        ],
+        "blocking_types_by_role": {
+          "Doctor": [
+            "ssn"
+          ],
+          "Nurse": [
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_024",
+        "title": "Lab Report — Patricia Moore, 2026-02-20",
+        "document_type": "lab_report",
+        "sensitivity_tier": "clinical_standard",
+        "subject_name": "Patricia Moore",
+        "permitted_receiver_roles": [
+          "Doctor",
+          "Nurse"
+        ],
+        "blocking_types_by_role": {
+          "Doctor": [
+            "ssn"
+          ],
+          "Nurse": [
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_025",
+        "title": "Lab Report — David Park, 2026-03-01",
+        "document_type": "lab_report",
+        "sensitivity_tier": "clinical_standard",
+        "subject_name": "David Park",
+        "permitted_receiver_roles": [
+          "Doctor",
+          "Nurse"
+        ],
+        "blocking_types_by_role": {
+          "Doctor": [
+            "ssn"
+          ],
+          "Nurse": [
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_031",
+        "title": "Discharge Summary — Emily Brown, 2026-01-20",
+        "document_type": "discharge_summary",
+        "sensitivity_tier": "clinical_standard",
+        "subject_name": "Emily Brown",
+        "permitted_receiver_roles": [
+          "Doctor",
+          "Nurse"
+        ],
+        "blocking_types_by_role": {
+          "Doctor": [
+            "ssn"
+          ],
+          "Nurse": [
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_033",
+        "title": "Discharge Summary — Linda Torres, 2026-02-19",
+        "document_type": "discharge_summary",
+        "sensitivity_tier": "clinical_standard",
+        "subject_name": "Linda Torres",
+        "permitted_receiver_roles": [
+          "Doctor",
+          "Nurse"
+        ],
+        "blocking_types_by_role": {
+          "Doctor": [
+            "ssn"
+          ],
+          "Nurse": [
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_034",
+        "title": "Discharge Summary — Robert Lee, 2026-01-08",
+        "document_type": "discharge_summary",
+        "sensitivity_tier": "clinical_standard",
+        "subject_name": "Robert Lee",
+        "permitted_receiver_roles": [
+          "Doctor",
+          "Nurse"
+        ],
+        "blocking_types_by_role": {
+          "Doctor": [
+            "ssn"
+          ],
+          "Nurse": [
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_035",
+        "title": "Discharge Summary — Sarah Wilson, 2026-03-10",
+        "document_type": "discharge_summary",
+        "sensitivity_tier": "clinical_standard",
+        "subject_name": "Sarah Wilson",
+        "permitted_receiver_roles": [
+          "Doctor",
+          "Nurse"
+        ],
+        "blocking_types_by_role": {
+          "Doctor": [
+            "ssn"
+          ],
+          "Nurse": [
+            "mental_health",
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "mental_health",
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_036",
+        "title": "Mental Health Assessment — Maria Gonzalez, 2026-02-03",
+        "document_type": "mental_health_assessment",
+        "sensitivity_tier": "clinical_sensitive",
+        "subject_name": "Maria Gonzalez",
+        "permitted_receiver_roles": [
+          "Doctor"
+        ],
+        "blocking_types_by_role": {
+          "Doctor": [
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_037",
+        "title": "Mental Health Assessment — Sarah Wilson, 2026-03-05",
+        "document_type": "mental_health_assessment",
+        "sensitivity_tier": "clinical_sensitive",
+        "subject_name": "Sarah Wilson",
+        "permitted_receiver_roles": [
+          "Doctor"
+        ],
+        "blocking_types_by_role": {
+          "Doctor": [
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_038",
+        "title": "Mental Health Assessment — David Park, 2026-03-01",
+        "document_type": "mental_health_assessment",
+        "sensitivity_tier": "clinical_sensitive",
+        "subject_name": "David Park",
+        "permitted_receiver_roles": [
+          "Doctor"
+        ],
+        "blocking_types_by_role": {
+          "Doctor": [
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_039",
+        "title": "Mental Health Assessment — Patricia Moore, 2026-02-20",
+        "document_type": "mental_health_assessment",
+        "sensitivity_tier": "clinical_sensitive",
+        "subject_name": "Patricia Moore",
+        "permitted_receiver_roles": [
+          "Doctor"
+        ],
+        "blocking_types_by_role": {
+          "Doctor": [
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_040",
+        "title": "Mental Health Assessment — James Carter, 2026-02-05",
+        "document_type": "mental_health_assessment",
+        "sensitivity_tier": "clinical_sensitive",
+        "subject_name": "James Carter",
+        "permitted_receiver_roles": [
+          "Doctor"
+        ],
+        "blocking_types_by_role": {
+          "Doctor": [
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_044",
+        "title": "Referral Letter — Linda Torres, 2026-02-18",
+        "document_type": "referral_letter",
+        "sensitivity_tier": "clinical_standard",
+        "subject_name": "Linda Torres",
+        "permitted_receiver_roles": [
+          "Doctor"
+        ],
+        "blocking_types_by_role": {
+          "Doctor": [
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_045",
+        "title": "Referral Letter — James Carter, 2026-02-05",
+        "document_type": "referral_letter",
+        "sensitivity_tier": "clinical_standard",
+        "subject_name": "James Carter",
+        "permitted_receiver_roles": [
+          "Doctor"
+        ],
+        "blocking_types_by_role": {
+          "Doctor": [
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_047",
+        "title": "Insurance Claim — John Smith, 2026-01-15",
+        "document_type": "insurance_claim",
+        "sensitivity_tier": "financial",
+        "subject_name": "John Smith",
+        "permitted_receiver_roles": [
+          "Billing Specialist"
+        ],
+        "blocking_types_by_role": {
+          "Billing Specialist": [
+            "emergency_contact",
+            "medical_diagnosis",
+            "medical_history",
+            "medical_medication",
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "emergency_contact",
+          "medical_diagnosis",
+          "medical_history",
+          "medical_medication",
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_048",
+        "title": "Insurance Claim — Emily Brown, 2026-01-20",
+        "document_type": "insurance_claim",
+        "sensitivity_tier": "financial",
+        "subject_name": "Emily Brown",
+        "permitted_receiver_roles": [
+          "Billing Specialist"
+        ],
+        "blocking_types_by_role": {
+          "Billing Specialist": [
+            "medical_diagnosis",
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "medical_diagnosis",
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_049",
+        "title": "Insurance Claim — Robert Lee, 2026-01-22",
+        "document_type": "insurance_claim",
+        "sensitivity_tier": "financial",
+        "subject_name": "Robert Lee",
+        "permitted_receiver_roles": [
+          "Billing Specialist"
+        ],
+        "blocking_types_by_role": {
+          "Billing Specialist": [
+            "medical_diagnosis",
+            "medical_medication",
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "medical_diagnosis",
+          "medical_medication",
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_050",
+        "title": "Insurance Claim — James Carter, 2026-02-05",
+        "document_type": "insurance_claim",
+        "sensitivity_tier": "financial",
+        "subject_name": "James Carter",
+        "permitted_receiver_roles": [
+          "Billing Specialist"
+        ],
+        "blocking_types_by_role": {
+          "Billing Specialist": [
+            "medical_diagnosis",
+            "medical_history",
+            "medical_medication",
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "medical_diagnosis",
+          "medical_history",
+          "medical_medication",
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_051",
+        "title": "Insurance Claim — Michael Chen, 2026-02-12",
+        "document_type": "insurance_claim",
+        "sensitivity_tier": "financial",
+        "subject_name": "Michael Chen",
+        "permitted_receiver_roles": [
+          "Billing Specialist"
+        ],
+        "blocking_types_by_role": {
+          "Billing Specialist": [
+            "medical_diagnosis",
+            "medical_medication",
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "medical_diagnosis",
+          "medical_medication",
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_052",
+        "title": "Insurance Claim — Linda Torres, 2026-02-18",
+        "document_type": "insurance_claim",
+        "sensitivity_tier": "financial",
+        "subject_name": "Linda Torres",
+        "permitted_receiver_roles": [
+          "Billing Specialist"
+        ],
+        "blocking_types_by_role": {
+          "Billing Specialist": [
+            "emergency_contact",
+            "medical_diagnosis",
+            "medical_medication",
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "emergency_contact",
+          "medical_diagnosis",
+          "medical_medication",
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_053",
+        "title": "Insurance Claim — Patricia Moore, 2026-02-20",
+        "document_type": "insurance_claim",
+        "sensitivity_tier": "financial",
+        "subject_name": "Patricia Moore",
+        "permitted_receiver_roles": [
+          "Billing Specialist"
+        ],
+        "blocking_types_by_role": {
+          "Billing Specialist": [
+            "emergency_contact",
+            "medical_diagnosis",
+            "medical_medication",
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "emergency_contact",
+          "medical_diagnosis",
+          "medical_medication",
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_054",
+        "title": "Insurance Claim — Maria Gonzalez, 2026-02-03",
+        "document_type": "insurance_claim",
+        "sensitivity_tier": "financial",
+        "subject_name": "Maria Gonzalez",
+        "permitted_receiver_roles": [
+          "Billing Specialist"
+        ],
+        "blocking_types_by_role": {
+          "Billing Specialist": [
+            "medical_medication",
+            "mental_health",
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "medical_medication",
+          "mental_health",
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_055",
+        "title": "Billing Statement — John Smith, 2026-02-01",
+        "document_type": "billing_statement",
+        "sensitivity_tier": "financial",
+        "subject_name": "John Smith",
+        "permitted_receiver_roles": [
+          "Billing Specialist"
+        ],
+        "blocking_types_by_role": {
+          "Billing Specialist": [
+            "medical_diagnosis",
+            "medical_medication",
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "medical_diagnosis",
+          "medical_medication",
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_056",
+        "title": "Billing Statement — Emily Brown, 2026-02-01",
+        "document_type": "billing_statement",
+        "sensitivity_tier": "financial",
+        "subject_name": "Emily Brown",
+        "permitted_receiver_roles": [
+          "Billing Specialist"
+        ],
+        "blocking_types_by_role": {
+          "Billing Specialist": [
+            "medical_diagnosis",
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "medical_diagnosis",
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_057",
+        "title": "Billing Statement — Robert Lee, 2026-02-05",
+        "document_type": "billing_statement",
+        "sensitivity_tier": "financial",
+        "subject_name": "Robert Lee",
+        "permitted_receiver_roles": [
+          "Billing Specialist"
+        ],
+        "blocking_types_by_role": {
+          "Billing Specialist": [
+            "medical_diagnosis",
+            "medical_medication"
+          ]
+        },
+        "conflicting_types": [
+          "medical_diagnosis",
+          "medical_medication"
+        ]
+      },
+      {
+        "doc_id": "doc_058",
+        "title": "Billing Statement — James Carter, 2026-02-15",
+        "document_type": "billing_statement",
+        "sensitivity_tier": "financial",
+        "subject_name": "James Carter",
+        "permitted_receiver_roles": [
+          "Billing Specialist"
+        ],
+        "blocking_types_by_role": {
+          "Billing Specialist": [
+            "medical_diagnosis"
+          ]
+        },
+        "conflicting_types": [
+          "medical_diagnosis"
+        ]
+      },
+      {
+        "doc_id": "doc_059",
+        "title": "Billing Statement — Linda Torres, 2026-03-01",
+        "document_type": "billing_statement",
+        "sensitivity_tier": "financial",
+        "subject_name": "Linda Torres",
+        "permitted_receiver_roles": [
+          "Billing Specialist"
+        ],
+        "blocking_types_by_role": {
+          "Billing Specialist": [
+            "medical_diagnosis",
+            "medical_medication",
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "medical_diagnosis",
+          "medical_medication",
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_060",
+        "title": "Billing Statement — Patricia Moore, 2026-03-01",
+        "document_type": "billing_statement",
+        "sensitivity_tier": "financial",
+        "subject_name": "Patricia Moore",
+        "permitted_receiver_roles": [
+          "Billing Specialist"
+        ],
+        "blocking_types_by_role": {
+          "Billing Specialist": [
+            "medical_diagnosis",
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "medical_diagnosis",
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_061",
+        "title": "Prior Authorization — John Smith, 2026-01-10",
+        "document_type": "prior_authorization",
+        "sensitivity_tier": "financial",
+        "subject_name": "John Smith",
+        "permitted_receiver_roles": [
+          "Doctor",
+          "Billing Specialist"
+        ],
+        "blocking_types_by_role": {
+          "Doctor": [
+            "ssn"
+          ],
+          "Billing Specialist": [
+            "emergency_contact",
+            "medical_diagnosis",
+            "medical_history",
+            "medical_medication",
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "emergency_contact",
+          "medical_diagnosis",
+          "medical_history",
+          "medical_medication",
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_063",
+        "title": "Prior Authorization — Maria Gonzalez, 2026-02-10",
+        "document_type": "prior_authorization",
+        "sensitivity_tier": "clinical_sensitive",
+        "subject_name": "Maria Gonzalez",
+        "permitted_receiver_roles": [
+          "Doctor"
+        ],
+        "blocking_types_by_role": {
+          "Doctor": [
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_065",
+        "title": "Prior Authorization — Linda Torres, 2026-02-01",
+        "document_type": "prior_authorization",
+        "sensitivity_tier": "financial",
+        "subject_name": "Linda Torres",
+        "permitted_receiver_roles": [
+          "Doctor",
+          "Billing Specialist"
+        ],
+        "blocking_types_by_role": {
+          "Doctor": [
+            "ssn"
+          ],
+          "Billing Specialist": [
+            "medical_diagnosis",
+            "medical_medication",
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "medical_diagnosis",
+          "medical_medication",
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_066",
+        "title": "Explanation Of Benefits — John Smith, 2026-02-10",
+        "document_type": "explanation_of_benefits",
+        "sensitivity_tier": "financial",
+        "subject_name": "John Smith",
+        "permitted_receiver_roles": [
+          "Billing Specialist"
+        ],
+        "blocking_types_by_role": {
+          "Billing Specialist": [
+            "medical_diagnosis",
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "medical_diagnosis",
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_067",
+        "title": "Explanation Of Benefits — Emily Brown, 2026-02-10",
+        "document_type": "explanation_of_benefits",
+        "sensitivity_tier": "financial",
+        "subject_name": "Emily Brown",
+        "permitted_receiver_roles": [
+          "Billing Specialist"
+        ],
+        "blocking_types_by_role": {
+          "Billing Specialist": [
+            "medical_diagnosis"
+          ]
+        },
+        "conflicting_types": [
+          "medical_diagnosis"
+        ]
+      },
+      {
+        "doc_id": "doc_068",
+        "title": "Explanation Of Benefits — Robert Lee, 2026-02-10",
+        "document_type": "explanation_of_benefits",
+        "sensitivity_tier": "financial",
+        "subject_name": "Robert Lee",
+        "permitted_receiver_roles": [
+          "Billing Specialist"
+        ],
+        "blocking_types_by_role": {
+          "Billing Specialist": [
+            "medical_diagnosis",
+            "medical_medication"
+          ]
+        },
+        "conflicting_types": [
+          "medical_diagnosis",
+          "medical_medication"
+        ]
+      },
+      {
+        "doc_id": "doc_069",
+        "title": "Explanation Of Benefits — James Carter, 2026-02-20",
+        "document_type": "explanation_of_benefits",
+        "sensitivity_tier": "financial",
+        "subject_name": "James Carter",
+        "permitted_receiver_roles": [
+          "Billing Specialist"
+        ],
+        "blocking_types_by_role": {
+          "Billing Specialist": [
+            "medical_diagnosis",
+            "medical_medication"
+          ]
+        },
+        "conflicting_types": [
+          "medical_diagnosis",
+          "medical_medication"
+        ]
+      },
+      {
+        "doc_id": "doc_070",
+        "title": "Insurance Verification — John Smith, 2026-01-14",
+        "document_type": "insurance_verification",
+        "sensitivity_tier": "financial",
+        "subject_name": "John Smith",
+        "permitted_receiver_roles": [
+          "Billing Specialist",
+          "Doctor",
+          "Nurse"
+        ],
+        "blocking_types_by_role": {
+          "Billing Specialist": [
+            "emergency_contact",
+            "medical_diagnosis",
+            "medical_history",
+            "medical_medication",
+            "ssn"
+          ],
+          "Doctor": [
+            "ssn"
+          ],
+          "Nurse": [
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "emergency_contact",
+          "medical_diagnosis",
+          "medical_history",
+          "medical_medication",
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_071",
+        "title": "Insurance Verification — Emily Brown, 2026-01-19",
+        "document_type": "insurance_verification",
+        "sensitivity_tier": "financial",
+        "subject_name": "Emily Brown",
+        "permitted_receiver_roles": [
+          "Billing Specialist",
+          "Doctor",
+          "Nurse"
+        ],
+        "blocking_types_by_role": {
+          "Billing Specialist": [
+            "medical_diagnosis",
+            "ssn"
+          ],
+          "Doctor": [
+            "ssn"
+          ],
+          "Nurse": [
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "medical_diagnosis",
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_072",
+        "title": "Insurance Verification — Patricia Moore, 2026-02-19",
+        "document_type": "insurance_verification",
+        "sensitivity_tier": "financial",
+        "subject_name": "Patricia Moore",
+        "permitted_receiver_roles": [
+          "Billing Specialist",
+          "Doctor",
+          "Nurse"
+        ],
+        "blocking_types_by_role": {
+          "Billing Specialist": [
+            "medical_diagnosis",
+            "medical_medication",
+            "ssn"
+          ],
+          "Doctor": [
+            "ssn"
+          ],
+          "Nurse": [
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "medical_diagnosis",
+          "medical_medication",
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_073",
+        "title": "Insurance Verification — Michael Chen, 2026-02-11",
+        "document_type": "insurance_verification",
+        "sensitivity_tier": "financial",
+        "subject_name": "Michael Chen",
+        "permitted_receiver_roles": [
+          "Billing Specialist",
+          "Doctor",
+          "Nurse"
+        ],
+        "blocking_types_by_role": {
+          "Billing Specialist": [
+            "medical_diagnosis",
+            "medical_medication",
+            "ssn"
+          ],
+          "Doctor": [
+            "ssn"
+          ],
+          "Nurse": [
+            "ssn"
+          ]
+        },
+        "conflicting_types": [
+          "medical_diagnosis",
+          "medical_medication",
+          "ssn"
+        ]
+      },
+      {
+        "doc_id": "doc_074",
+        "title": "Salary Letter — Dr. Sarah Chen, 2026-01-01",
+        "document_type": "salary_letter",
+        "sensitivity_tier": "employment",
+        "subject_name": "Dr. Sarah Chen",
+        "permitted_receiver_roles": [
+          "HR Manager"
+        ],
+        "blocking_types_by_role": {
+          "HR Manager": [
+            "date_of_birth",
+            "home_address",
+            "name"
+          ]
+        },
+        "conflicting_types": [
+          "date_of_birth",
+          "home_address",
+          "name"
+        ]
+      },
+      {
+        "doc_id": "doc_075",
+        "title": "Salary Letter — Dr. Marcus Webb, 2026-01-01",
+        "document_type": "salary_letter",
+        "sensitivity_tier": "employment",
+        "subject_name": "Dr. Marcus Webb",
+        "permitted_receiver_roles": [
+          "HR Manager"
+        ],
+        "blocking_types_by_role": {
+          "HR Manager": [
+            "date_of_birth",
+            "home_address",
+            "name"
+          ]
+        },
+        "conflicting_types": [
+          "date_of_birth",
+          "home_address",
+          "name"
+        ]
+      },
+      {
+        "doc_id": "doc_076",
+        "title": "Salary Letter — Dr. Aisha Patel, 2026-01-01",
+        "document_type": "salary_letter",
+        "sensitivity_tier": "employment",
+        "subject_name": "Dr. Aisha Patel",
+        "permitted_receiver_roles": [
+          "HR Manager"
+        ],
+        "blocking_types_by_role": {
+          "HR Manager": [
+            "date_of_birth",
+            "home_address",
+            "mental_health",
+            "name"
+          ]
+        },
+        "conflicting_types": [
+          "date_of_birth",
+          "home_address",
+          "mental_health",
+          "name"
+        ]
+      },
+      {
+        "doc_id": "doc_077",
+        "title": "Salary Letter — Dr. Kevin O'Brien, 2026-01-01",
+        "document_type": "salary_letter",
+        "sensitivity_tier": "employment",
+        "subject_name": "Dr. Kevin O'Brien",
+        "permitted_receiver_roles": [
+          "HR Manager"
+        ],
+        "blocking_types_by_role": {
+          "HR Manager": [
+            "date_of_birth",
+            "home_address",
+            "name"
+          ]
+        },
+        "conflicting_types": [
+          "date_of_birth",
+          "home_address",
+          "name"
+        ]
+      },
+      {
+        "doc_id": "doc_078",
+        "title": "Salary Letter — Nurse Patricia Davis, 2026-01-01",
+        "document_type": "salary_letter",
+        "sensitivity_tier": "employment",
+        "subject_name": "Nurse Patricia Davis",
+        "permitted_receiver_roles": [
+          "HR Manager"
+        ],
+        "blocking_types_by_role": {
+          "HR Manager": [
+            "date_of_birth",
+            "home_address"
+          ]
+        },
+        "conflicting_types": [
+          "date_of_birth",
+          "home_address"
+        ]
+      },
+      {
+        "doc_id": "doc_079",
+        "title": "Salary Letter — Alice Johnson, 2026-01-01",
+        "document_type": "salary_letter",
+        "sensitivity_tier": "employment",
+        "subject_name": "Alice Johnson",
+        "permitted_receiver_roles": [
+          "HR Manager"
+        ],
+        "blocking_types_by_role": {
+          "HR Manager": [
+            "date_of_birth",
+            "home_address",
+            "name"
+          ]
+        },
+        "conflicting_types": [
+          "date_of_birth",
+          "home_address",
+          "name"
+        ]
+      },
+      {
+        "doc_id": "doc_080",
+        "title": "Employment Contract — Dr. Aisha Patel, 2022-03-01",
+        "document_type": "employment_contract",
+        "sensitivity_tier": "employment",
+        "subject_name": "Dr. Aisha Patel",
+        "permitted_receiver_roles": [
+          "HR Manager"
+        ],
+        "blocking_types_by_role": {
+          "HR Manager": [
+            "date_of_birth",
+            "home_address",
+            "mental_health",
+            "name"
+          ]
+        },
+        "conflicting_types": [
+          "date_of_birth",
+          "home_address",
+          "mental_health",
+          "name"
+        ]
+      },
+      {
+        "doc_id": "doc_081",
+        "title": "Employment Contract — Dr. Kevin O'Brien, 2020-07-01",
+        "document_type": "employment_contract",
+        "sensitivity_tier": "employment",
+        "subject_name": "Dr. Kevin O'Brien",
+        "permitted_receiver_roles": [
+          "HR Manager"
+        ],
+        "blocking_types_by_role": {
+          "HR Manager": [
+            "date_of_birth",
+            "home_address",
+            "name"
+          ]
+        },
+        "conflicting_types": [
+          "date_of_birth",
+          "home_address",
+          "name"
+        ]
+      },
+      {
+        "doc_id": "doc_082",
+        "title": "Employment Contract — Nurse Lisa Kim, 2023-08-01",
+        "document_type": "employment_contract",
+        "sensitivity_tier": "employment",
+        "subject_name": "Nurse Lisa Kim",
+        "permitted_receiver_roles": [
+          "HR Manager"
+        ],
+        "blocking_types_by_role": {
+          "HR Manager": [
+            "date_of_birth",
+            "home_address",
+            "mental_health"
+          ]
+        },
+        "conflicting_types": [
+          "date_of_birth",
+          "home_address",
+          "mental_health"
+        ]
+      },
+      {
+        "doc_id": "doc_083",
+        "title": "Employment Contract — Jennifer Walsh, 2024-01-15",
+        "document_type": "employment_contract",
+        "sensitivity_tier": "employment",
+        "subject_name": "Jennifer Walsh",
+        "permitted_receiver_roles": [
+          "HR Manager"
+        ],
+        "blocking_types_by_role": {
+          "HR Manager": [
+            "date_of_birth",
+            "home_address",
+            "name"
+          ]
+        },
+        "conflicting_types": [
+          "date_of_birth",
+          "home_address",
+          "name"
+        ]
+      },
+      {
+        "doc_id": "doc_084",
+        "title": "Performance Review — Dr. Sarah Chen, 2026-01-15",
+        "document_type": "performance_review",
+        "sensitivity_tier": "employment",
+        "subject_name": "Dr. Sarah Chen",
+        "permitted_receiver_roles": [
+          "HR Manager"
+        ],
+        "blocking_types_by_role": {
+          "HR Manager": [
+            "date_of_birth",
+            "home_address",
+            "name"
+          ]
+        },
+        "conflicting_types": [
+          "date_of_birth",
+          "home_address",
+          "name"
+        ]
+      },
+      {
+        "doc_id": "doc_085",
+        "title": "Performance Review — Nurse Patricia Davis, 2026-01-15",
+        "document_type": "performance_review",
+        "sensitivity_tier": "employment",
+        "subject_name": "Nurse Patricia Davis",
+        "permitted_receiver_roles": [
+          "HR Manager"
+        ],
+        "blocking_types_by_role": {
+          "HR Manager": [
+            "date_of_birth",
+            "home_address"
+          ]
+        },
+        "conflicting_types": [
+          "date_of_birth",
+          "home_address"
+        ]
+      },
+      {
+        "doc_id": "doc_086",
+        "title": "Performance Review — Alice Johnson, 2026-01-15",
+        "document_type": "performance_review",
+        "sensitivity_tier": "employment",
+        "subject_name": "Alice Johnson",
+        "permitted_receiver_roles": [
+          "HR Manager"
+        ],
+        "blocking_types_by_role": {
+          "HR Manager": [
+            "date_of_birth",
+            "home_address",
+            "name"
+          ]
+        },
+        "conflicting_types": [
+          "date_of_birth",
+          "home_address",
+          "name"
+        ]
+      },
+      {
+        "doc_id": "doc_087",
+        "title": "Performance Review — Nurse Tom Reyes, 2026-01-15",
+        "document_type": "performance_review",
+        "sensitivity_tier": "employment",
+        "subject_name": "Nurse Tom Reyes",
+        "permitted_receiver_roles": [
+          "HR Manager"
+        ],
+        "blocking_types_by_role": {
+          "HR Manager": [
+            "date_of_birth",
+            "home_address"
+          ]
+        },
+        "conflicting_types": [
+          "date_of_birth",
+          "home_address"
+        ]
+      },
+      {
+        "doc_id": "doc_091",
+        "title": "Contractor Agreement — Carol White, 2026-01-01",
+        "document_type": "contractor_agreement",
+        "sensitivity_tier": "employment",
+        "subject_name": "Carol White",
+        "permitted_receiver_roles": [
+          "HR Manager"
+        ],
+        "blocking_types_by_role": {
+          "HR Manager": [
+            "date_of_birth",
+            "home_address",
+            "name"
+          ]
+        },
+        "conflicting_types": [
+          "date_of_birth",
+          "home_address",
+          "name"
+        ]
+      },
+      {
+        "doc_id": "doc_092",
+        "title": "Contractor Agreement — Frank Turner, 2026-01-01",
+        "document_type": "contractor_agreement",
+        "sensitivity_tier": "employment",
+        "subject_name": "Frank Turner",
+        "permitted_receiver_roles": [
+          "HR Manager"
+        ],
+        "blocking_types_by_role": {
+          "HR Manager": [
+            "date_of_birth",
+            "home_address",
+            "name"
+          ]
+        },
+        "conflicting_types": [
+          "date_of_birth",
+          "home_address",
+          "name"
+        ]
+      },
+      {
+        "doc_id": "doc_093",
+        "title": "Contractor Agreement — Carol White, 2025-01-01",
+        "document_type": "contractor_agreement",
+        "sensitivity_tier": "employment",
+        "subject_name": "Carol White",
+        "permitted_receiver_roles": [
+          "HR Manager"
+        ],
+        "blocking_types_by_role": {
+          "HR Manager": [
+            "date_of_birth",
+            "home_address",
+            "name"
+          ]
+        },
+        "conflicting_types": [
+          "date_of_birth",
+          "home_address",
+          "name"
+        ]
+      },
+      {
+        "doc_id": "doc_104",
+        "title": "Employment Contract — Dr. Marcus Webb, 2021-09-01",
+        "document_type": "employment_contract",
+        "sensitivity_tier": "employment",
+        "subject_name": "Dr. Marcus Webb",
+        "permitted_receiver_roles": [
+          "HR Manager"
+        ],
+        "blocking_types_by_role": {
+          "HR Manager": [
+            "date_of_birth",
+            "home_address",
+            "name"
+          ]
+        },
+        "conflicting_types": [
+          "date_of_birth",
+          "home_address",
+          "name"
+        ]
+      }
+    ]
+  }
+}
